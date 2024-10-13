@@ -1,0 +1,468 @@
+#+hugo_base_dir: ../
+#+hugo_section: start
+#+seq_todo: DRAFT DONE
+
+* Start
+** DONE Using Kanata to remap any keyboard                   :start:keyboard:
+CLOSED: [2024-03-28 Thu 16:51]
+:PROPERTIES:
+:EXPORT_FILE_NAME: index
+:EXPORT_HUGO_BUNDLE: using-kanata-to-remap-any-keyboard
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :aliases /s/7b0dccc6
+:EXPORT_HUGO_IMAGES: /start/using-kanata-to-remap-any-keyboard/kanata-icon.png
+:EXPORT_HUGO_MENU:
+:END:
+#+begin_export hugo
+{{< figure src="/start/using-kanata-to-remap-any-keyboard/kanata-icon.svg" width= "400px" title="Kanata logo" alt="Kanata logo is a pink keycap with a darker pink K legend" align="center" >}}
+#+end_export
+
+#+begin_export html
+<style>
+aside {
+  padding-left: 0.5rem;
+  margin-left: 40%;
+  float: block-end;
+  box-shadow: inset 5px 0 5px -5px #29627e;
+  font-style: italic;
+  font-size: medium;
+  text-align: right;
+  color: #29627e;
+}
+</style>
+#+end_export
+#+begin_aside
+You can jump straight to [[*Installation][Installation]] or [[*Configuration][Configuration]].
+#+end_aside
+Computer keyboards were designed with historical baggage and for entirely different workflows than we use today and with very little regard for usability. Ergonomic keyboards are great and I personally use a 42-key [[https://github.com/foostan/crkbd][Corne keyboard]] with my desktop and that's what got me to learn to fully touch type and significantly aleviated shoulder stiffness. But what if I could have a similar experience on a laptop, well with [[https://github.com/jtroo/kanata][Kanata]] keyboard remapping I can get some of the important pieces. Kanata is a *lot* more powerful than what I'll describe here but this should set someone up enough to dive deeper into customizing.
+#+hugo: more
+
+*** Disclaimer
+By the nature of keyboard re-mapping, you're essentially running a [[https://en.wikipedia.org/wiki/Keystroke_logging][key-logger]]. So please use this based on your personal risk profile, as the software will process every keystroke, like your passwords. As of the time of writing this guide, March 2024, I personally believe this software is safe to run. This isn't meant to scare anyone but it's meant to inform your consent.
+
+*** Personal Background / Motivation
+I didn't learn to type at all until I was in tenth grade, due to lack of opportunities. So when we finally got a computer and started attending a school that required submitting typed homework, I had to learn in a hurry. But the real motivator was being able to chat with friends on [[https://www.wikipedia.org/wiki/ICQ][ICQ]][fn:1] and MSN Messenger. I was so horrid at typing that instead of SHIFTing to capitalize I would just leave CAPS LOCK on until my friend asked why I was yelling, I had to idea you could SHOUT with text. So I evolved an excellent 7 finger typing style that got up to 70+ words per minute on good days. Switching to the Corne meant learning split ergo key layout along-side proper 10 finger touch typing. But once I got used to that, anything else felt so clunky, especially typing on a laptop keyboard. The biggest things I missed were [[../../posts/20220414_qmk-caps-word/][home row mods]], layer switching with my thumbs so I could use the home row for more functions (primarily arrow key navigation with =h j k l=), and left-thumb =space= and right thumb =backspace=, enter Kanata.
+
+*** Intended audience
+Apparently I'm writing guides for /very niche/ audiences, a likely audience of one, perhaps. This particular post is for anyone that is interested in non-standard mappings for their keyboard but slanted more towards those who want to get cross-platform [[https://qmk.fm][QMK]]-like functionality with any standard keyboard. Running the application will be geared towards Linux for now, since that's my primary operating system but [[https://github.com/jtroo/kanata/tree/main?tab=readme-ov-file#usage][I'll link to instructions]] for other OSes (since cross-platform is a desired feature for me, no lock-ins ever!).[fn:2]
+
+*** Terminology basics
+There are some potentially confusing terms so I'll try to capture those here:
+- Input: this is an overloaded term to mean both the input (key presses), as well as the device (keyboard), and the operating system mapping of the device to a file (especially in Linux since everything is a file in Unix and friends land).
+- Process: this is the actual Kanata application that is running and capturing your keystrokes from input (all three meanings of input) changing them based on your config before the Operating System "sees" the keystroke.
+- Config: the customization that you define for Kanata to do the mapping from the physical keys being pressed to what you what you want to happen.
+
+*** Installation
+This is a potential can of worms and very dependent on your operating system, skill-level, and preferences. So here's *a* way to do it and it's definitely not the best way since it won't automatically update the software.[fn:3]
+
+I recommend making a folder in your =.local= directory to store the executable that can be downloaded from the [[https://github.com/jtroo/kanata/releases][releases page.]] Make sure the executable is named =kanata=
+#+begin_src sh
+  mkdir -p ~/.local/share/bin
+  chmod u+x ~/.local/share/bin/kanata
+#+end_src
+I wouldn't advice adding the directory to your path, but explicit call Kanata with a full path. During the initial configuration and testing it would be best to just run the application directly, once you're happy with the original layout (you'll absolutely be tweaking stuff later) then we'll write a service to automatically run it.
+
+*** Permissions
+In order for Kanata to run, it needs to be able to read the keyboard input before any other process does. Since this is a security concern the process needs to be run as root (administrator access level) to read input directly. However, that means the process would have root access to everything, which is also not a good idea.
+
+So we'll follow [[https://en.wikipedia.org/wiki/Principle_of_least_privilege][the principle of least privillege]]. One way to do that is to create groups and give each group just a specific permission and if an user needs to do a few specific things then that user can be added to those specific groups and get one permission from each specific group.
+
+The documentation in the Kanata covers how to [[https://github.com/jtroo/kanata/blob/main/docs/setup-linux.md][set this up on Linux]], but I'll include commands and commentary here.
+ 1. Create the specific group that will only have permission to read input devices =uinput=
+ 2. Add our user to the =input= and =uinput= groups
+ 3. Define the rules for the group =uinput= by creating a rules file
+ 4. Reload the devices with the new permission in place
+ 5. Reload the drivers
+
+#+begin_src sh
+
+# 1
+sudo groupadd uinput
+
+# 2
+sudo usermod -aG input $USER
+sudo usermod -aG uinput $USER
+
+# 3
+sudo echo 'KERNEL=="uinput", MODE="0660", GROUP="uinput", OPTIONS+="static_node=uinput"' > /etc/udev/rules.d/99-input.rules
+
+# 4
+sudo udevadm control --reload && udevadm trigger --verbose --sysname-match=uniput
+
+# 5
+sudo modprobe uinput
+#+end_src
+
+*** Configuration
+Kanata has many different ways of picking up which configuration file to use[fn:4]. The [[https://github.com/jtroo/kanata/blob/main/docs/config.adoc][configuration guide]] is exhaustive and a great resource but it can also be intimidating so here's a getting started overview.
+
+Here we'll stick with the default method of creating a file called =kanata.kbd= in the =~/.config/kanata/= directory. The [[https://github.com/jtroo/kanata/blob/main/cfg_samples/minimal.kbd][minimal.kbd]] is a good place to start to see how things work. The basic premise is that there are different sections (explained below) all of which follow the structure:
+#+begin_src emacs-lisp
+  (section-name
+   section-specific-information
+  )
+  (next-section
+  )
+#+end_src
+
+**** defcfg
+This section stores the "global" options that applies to all of Kanata. I want Kanata to process every key pressed whether I explicitly told it to remap it or not. And I want it to show me what layer (the current map) it's on when I press a key to change the layer. We'll want to set this to no later on after we've finalized our mapping to make Kanata run faster.
+#+begin_src emacs-lisp
+(defcfg
+	process-unmapped-keys yes
+	log-layer-changes yes
+)
+#+end_src
+
+**** defsrc
+This section can only appear once in the configuration, it tells Kanata which source keys it should expect to map to other things. There's no specific reason for which keys appear on what line, I have it organized it the way it appears on my laptop keyboard from top left to right, just for visual ease. You can find a [[https://github.com/jtroo/kanata/blob/main/cfg_samples/all_keys_in_defsrc.kbd][list of all keys]] in the repo.
+#+begin_src emacs-lisp
+(defsrc
+	esc
+	grv
+	caps
+	a s d f g h j k l scln
+	lalt spc ralt
+)
+#+end_src
+
+**** deflayer
+You can define many layers and activate them by pressing keys you define. I'm just defining two layers: the always active layer which means keys that I want to permanently remap to do something different and a second layer that only activates when I hold down the =caps lock=, which I'm calling cap-mod, you can pick any key and call the layer anything you want.
+
+Note that the keys that are being remapped need to be in the same order as the source layer above. Also there are =_=, these are called transparent keys. As in their mapping isn't changed and passed through transparently. The =@= denotes an alias, discussed a bit later.
+
+In this example, the default layer is changing the functionality of all the keys, except =g=, =h=, and =spc= because they're transparent. I'm also "permanently" changing the left-alt to be =escape= and the right-alt to be =backspace=. The cap-mod layer changes =h= =j= =k= =l= to become the arrow keys.[fn:5]
+
+#+begin_src  emacs-lisp
+(deflayer default
+	@esc
+	@grv
+	@cap
+	@a @s @d @f _ _ @j @k @l @scln
+	esc _ bspc
+)
+(deflayer cap-mod
+	_
+	_
+	_
+	_ _ _ _ _ left down up rght _
+	_ _ _
+)
+#+end_src
+
+**** defvar
+Kanata lets you fine tune behavior quite a bit by specifying things like how long a key should be pressed for it to be counted as "held". While you can type in those values (in milliseconds) each time, it's easier to define them as a variable in one place and refer to throughout.
+
+#+begin_src emacs-lisp
+(defvar
+	tap-time 200
+	hold-time 250
+)
+#+end_src
+
+**** defalias
+This is where we define all the aliases (=@=) we used in the default layer. An alias take the form of:
+=name-of-alias-without-@sign (type-of-functionality options-for-that-function multiple-options-are-space-separated)=
+
+I'm using three types of functionality, what [[https://github.com/jtroo/kanata/blob/main/docs/config.adoc#actions][Kanata calls Actions]] to change the functionality of the =esc,= =`,= and the home-row keys to act as [[https://precondition.github.io/home-row-mods][home-row modifiers]].
+- [[https://github.com/jtroo/kanata/blob/main/docs/config.adoc#tap-hold][tap-hold]]: This let's us define what happens when we tap a key vs. hold a key. Let's take =@a= for example, there are two a's in there a¹ and a², I'll explain the difference:
+  =a¹ (tap-hold $tap-time $hold-time a² lmet)=
+  - =a¹= is the name of the alias, it could be anything; like alpha.
+  - =tap-hold= is the name of the action which takes 4 options.
+    - =$tap-time= the number of milliseconds the key can be pressed while still being considered a single press.
+    - =$hold-time= the number of milliseconds for which the key must remain pressed for it count as a hold.
+    - =a²= is the key code we want Kanata to use when tapped, so this has to be =a= if we want to type the letter a.
+    - =lmet= is the key code we want Kanata to use when the key is held, in this case left-meta (Windows or Mac logo key).
+- [[https://github.com/jtroo/kanata/blob/main/docs/config.adoc#tap-hold][tap-hold-press]]: Similar to tap-hold but helps managing pressing timing situations better, especially for =caps lock= which I use as a layer switcher to activate the =cap-mod= layer for the movement keys.
+- [[https://github.com/jtroo/kanata/blob/main/docs/config.adoc#caps-word][caps-word]]: This is an excellent function that lets you type CAPITALIZED_WORDS and automatically turns off the CAPS if it's not a letter or an underscore. Useful for typing environment variables which are typically written in that form.
+#+begin_src emacs-lisp
+(defalias
+	esc (tap-hold-press $tap-time $hold-time esc caps)
+	grv (tap-hold-press $tap-time $hold-time S-grv grv)
+	capsword (caps-word 2000)
+	cap (tap-hold-press $tap-time $hold-time @capsword (layer-toggle cap-mod))
+	a (tap-hold $tap-time $hold-time a lmet)
+	s (tap-hold $tap-time $hold-time s lalt)
+	d (tap-hold $tap-time $hold-time d lsft)
+	f (tap-hold $tap-time $hold-time f lctl)
+	j (tap-hold $tap-time $hold-time j rctl)
+	k (tap-hold $tap-time $hold-time k rsft)
+	l (tap-hold $tap-time $hold-time l lalt)
+	scln (tap-hold $tap-time $hold-time scln lmet)
+)
+#+end_src
+
+**** Putting the config together
+
+#+begin_details :trim-post nil
+#+begin_summary
+Here's the full kanata.kbd file that you can save as =~/.config/kanata/kanata.kbd= if you want to try my config (click arrow to expand).
+#+end_summary
+#+begin_src emacs-lisp
+;; global configuration options
+(defcfg
+	process-unmapped-keys yes
+	log-layer-changes no
+)
+
+;; define keys that will be modified (all keys still processed)
+(defsrc
+	esc
+	grv
+	caps
+	a s d f g h j k l scln
+	lalt spc ralt
+)
+
+;; default/base layer modifications always active
+(deflayer default
+	@esc
+	@grv
+	@cap
+	@a @s @d @f _ _ @j @k @l @scln
+	esc _ bspc
+)
+
+;; shifted layer activated by holding CAPS lock
+(deflayer cap-mod
+	_
+	_
+	_
+	_ _ _ _ _ left down up rght _
+	_ bspc _
+)
+
+;; values used by multiple changes
+(defvar
+	tap-time 200
+	hold-time 250
+)
+
+;; remapping between physical keys and functionality
+(defalias
+	esc (tap-hold-press $tap-time $hold-time esc caps)
+	grv (tap-hold-press $tap-time $hold-time S-grv grv)
+	capsword (caps-word 2000)
+	cap (tap-hold-press $tap-time $hold-time @capsword (layer-toggle cap-mod))
+	a (tap-hold $tap-time $hold-time a lmet)
+	s (tap-hold $tap-time $hold-time s lalt)
+	d (tap-hold $tap-time $hold-time d lsft)
+	f (tap-hold $tap-time $hold-time f lctl)
+	j (tap-hold $tap-time $hold-time j rctl)
+	k (tap-hold $tap-time $hold-time k rsft)
+	l (tap-hold $tap-time $hold-time l lalt)
+	scln (tap-hold $tap-time $hold-time scln lmet)
+)
+
+#+end_src
+#+end_details
+#+begin_export html
+<br />
+#+end_export
+
+*** Testing Kanata
+We can finally give it a spin. It's best to just run Kanata in a terminal window and see the output to make sure it's doing what you expect. You can specify the full path and the full path to the config to take away any weird path issues:
+#+begin_src sh
+~/.local/share/bin/kanata --cfg ~/.config/kanata/kanata.kbd
+#+end_src
+If there are any errors in the config or the permissions, Kanata gives really good/descriptive errors:
+#+begin_export hugo
+{{< figure src="kanata-error.png" width= "85%" title="Rust style descriptive error message showing exact issue" alt="Console output showing Kanata error in keyword cap being unkown and shows the exact location of the error" align="center" >}}
+#+end_export
+Continue testing until the layout feels comfortable. Once you're ready, set =log-layer-changes false= and now we're ready to run it as a service.
+
+*** Running Kanata as a service
+I've discussed [[../writing-system-automation-scripts-and-services/#service][running something as a service]] in another post, so some of the why's and details are there. For Kanata, create a file called =kanata.service= and place it in =~/.config/systemd/user/=:
+#+begin_src service
+[Unit]
+Description=Kanata keyboard remapper
+Documentation=https://github.com/jtroo/kanata
+
+[Service]
+Type=simple
+ExecStart=/home/%u/.local/share/bin/kanata
+Restart=no
+
+[Install]
+WantedBy=default.target
+#+end_src
+
+To enable the service, so it starts every time you are logged in, run:
+#+begin_src sh
+systemctl --user enable kanata.service
+systemctl --user start kanata.service
+#+end_src
+
+If you need to make changes to your config you have to restart the service or you can [[https://github.com/jtroo/kanata/blob/main/docs/config.adoc#live-reload][setup live re-loading]].
+#+begin_src sh
+systemctl --user restart kanata.service
+#+end_src
+
+Hope this gets you further in your [[https://systemcrafters.net/][system crafting]] and ergonomic computing journey!
+
+*** Footnotes
+
+[fn:5] =g= is never remapped but since the entire "home-row" is being mapped it's easier to leave =g= in there to make visually matching up the config easier.
+[fn:4] Running Kanata with the =--cfg= option would be a good way to test out a few different configurations by supplying a different file:
+#+begin_src sh
+~/.local/share/bin/kanata --cfg ~/dotfiles/kanata/example1.cfg
+#+end_src
+Kanata also provides the ability to load multiple configuration files and switch at run-time.
+[fn:3] Not automatically updating is generally not a good idea, but unless this package makes it into your distribution's maintained repo it might be a good idea to just manually update. This might mitigate any malicious repo takeover since you're literally running a key-logger.
+[fn:2] There are other key mapping software available as discussed in the Kanata repo but I wanted to stick with the QMK familiarity in terms of terminology, platform independence, and even easier key-mapping.
+[fn:1] Apparently ICQ still exists, I fully expected it to be a historical footnote. Looks like it has had an interesting and somewhat checkered past.
+
+** DONE Writing system automation scripts and services :start:linux:terminal:
+CLOSED: [2024-02-14 Wed 14:35]
+:PROPERTIES:
+:EXPORT_FILE_NAME: index
+:EXPORT_HUGO_BUNDLE: writing-system-automation-scripts-and-services
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :aliases '(/s/ad49dddf /start/writing-system-automation-script-and-service)
+:EXPORT_HUGO_IMAGES: /start/writing-system-automation-scripts-and-services/header.jpg
+:EXPORT_HUGO_MENU:
+:END:
+
+#+begin_export hugo
+{{< figure src="/start/writing-system-automation-scripts-and-services/header.jpg" width="600px" align="center" alt="A watercolor painting with a pink/blue swirly border around a rectangle split along the diagonal with the left being black and the right being white. The text reads 'Alacritty Auto Theme' in the inverse color of the background." >}}
+#+end_export
+
+Fundamentally automation is being smart about being lazy, I like that. Writing scripts to do small tasks is an easy way to be lazy but there are times when you don't want to run the script and remember to start it each time you log in. That's where services come in handy, a lot of applications install their service to automatically do things. As an user you can do that too without needing admin rights. This article/guide goes through writing a small =bash= script, creating a =systemd= service, and running it as a regular user.
+#+hugo: more
+
+Since learning is easier in the context of a project where I'm solving a real problem, this article is focused on creating everything I need to automatically change the theme of my terminal emulator =Alacritty= when the system changes between light-dark theme. If you just want the project itself, the repos are on [[https://github.com/shombando/alacritty-auto-theme][Github]] or [[https://git.sr.ht/~shom/alacritty-auto-theme][Sourcehut]].
+
+*** Intended audience
+This entry is written for an audience that might be interested in tweaking their system/wants to make small scripts but does not necessarily have a programming background so I'm aiming to explain what is happening and why do it that way. I'll also try to point out larger concepts around programming/logic and link to those definitions.
+
+*** Motivation behind this project
+I like and use the Alacritty terminal emulator, but it does not automatically follow the system theme. The issue tracker discussion made it clear this feature won't be supported. Fair enough and as an open system we can add our own customization, so that's great. After switching to =TOML= and [[/posts/20240124_alacritty-toml-and-partial-imports][discovering partial imports]], I knew I could scratch my own itch. Someone [[https://www.christianfosli.com/posts/2024-on-colorscheme-changed/][wrote a rust tool]](post updated to z-bus since original publication but still relevant bits) which was helpful as a guide but I wanted something with low dependency that could be used without installing a whole build environment or running binaries that you can't see. So I made a =bash= script and a =systemd= service and it was fun(?) to learn more about =dbus=.
+
+*** Background
+Alacritty provides the ability for an user to define themes (or override parts of a theme). All of this is achieved via the =alacritty.toml= configuration file (which also let your configure everything else about the application). With the switch to TOML, Alacritty allows the import of other =.toml= files that have themes defined, so it's easy to keep configuration separate from the current theme. Also if any of the configuration files are updated, the terminal windows will auto-reload (if ~live_config_reload = true~ is set). This functionality makes it possible to import a =theme.toml= file and update the contents of the file and have Alacritty change themes live. Unfortunately, Alacritty does not automatically follow the current system theme preference so we have to create our own solution for that piece.
+
+So how does it work? Breaking the problem down we can see there are two big pieces to this that are independent of each other; changing the theme for Alacritty programmatically and making the theme follow the system theme (light/dark mode). This is the concept around [[https://en.wikipedia.org/wiki/Scope_(project_management)][scope]] and [[https://en.wikipedia.org/wiki/Requirements_management][requirements]] management, note that scope and requirements are loaded terms also used for software development and often in the same sentence but their meaning changes with context.
+
+*** Changing theme programmatically
+Since Alacritty is capable of doing a live-reload of it's config file, any behavior can be changed in without relaunching the terminal. However, doing it cleanly requires creating three additional =.toml= files to contain all the theme information. That way the main configuration file doesn't need to be changed (and risk messing up the whole configuration and making the terminal potential unusable) each time the theme changes. This is the concept around [[https://en.wikipedia.org/wiki/Separation_of_concerns][separation of concerns]] and can definitely be applied to simple scripts and config files.
+
+Let's look at the files:
+=alacritty.toml⬇️=
+#+begin_src toml
+  live_config_reload = true
+  import = [ "~/.config/alacritty/alacritty-auto-theme/theme.toml" ]
+  # Rest of Alacritty config
+#+end_src
+=theme.toml⬇️=
+#+begin_src toml
+  import = [ "~/.config/alacritty/alacritty-auto-theme/light_theme.toml" ]
+#+end_src
+
+The main config file =alacritty.toml= just points to (~imports~) a file called =theme.toml= so whatever theme name or actual theme colors are in that file are loaded (as shown above, it'll load the light theme). But changing that file with the name of the preferred light and dark theme each time would be painful, so we'll introduce two more files =light_theme.toml= and =dark_theme.toml= which will contain the names/color definition of the preferred theme. This way, the user only has to update those two files with their preferred theme and the script can just switch =theme.toml= to point to one or the other. This is the simplest use case of [[https://en.wikipedia.org/wiki/Modular_programming][modularity]] to avoid the human and the computer from editing the contents of the same document and gain more predictability.
+
+=light_theme.toml⬇️=
+#+begin_src toml
+  import = [ '~/.config/alacritty/themes/themes/pencil_light.toml' ]
+#+end_src
+=dark_theme.toml⬇️=
+#+begin_src toml
+  import = [ '~/.config/alacritty/themes/themes/nord.toml' ]
+#+end_src
+
+At this point you can manually change the light/dark theme independent of the system theme by changing what is inside the =theme.toml= file. However, we'd prefer that the human never actually directly touches the that file, so we can define two aliases ~alacritty-light~ or ~alacritty-dark~ to make it convenient without having to edit the file manually.
+#+begin_src sh
+alias alacritty-light="echo \"import = [ '~/.config/alacritty/alacritty-auto-theme/light_theme.toml' ]\" > ~/.config/alacritty/alacritty-auto-theme/theme.toml"
+alias alacritty-dark="echo \"import = [ '~/.config/alacritty/alacritty-auto-theme/dark_theme.toml' ]\" > ~/.config/alacritty/alacritty-auto-theme/theme.toml"
+#+end_src
+
+And just with that we can change our terminal theme by just calling a single command. Part one is done and successful, take the W and celebrate!
+
+*** Automating theme change to follow system theme
+This part is a little more involved. Since Alacritty does not provide any mechanism to determine what the current system theme preference is, we have to listen for the system announcing when the theme is changing. On Linux a lot of that communication is done over [[https://en.wikipedia.org/wiki/D-Bus][D-Bus]] and listening to the right message will tell us when the theme changes and then we can take action.
+
+=dbus-monitor= allows us to listen to the all the messages or we can set filters to only listen to specific events. I didn't know much about the workings of =dbus= so the Rust tool article linked above and several Stack Overflow threads helped me to get the syntax figured out. You can just run =dbus-monitor= without any filters in your terminal now to see everything talking on it. But in your script we'll only listen for the setting change notification.
+
+**** Script
+=AlacrittyAutoTheme.sh⬇️=
+#+begin_src sh
+    #!/bin/bash
+    interface="org.freedesktop.portal.Settings"
+    monitor_path="/org/freedesktop/portal/desktop"
+    monitor_member="SettingChanged"
+    count=0 #D-Bus fires the change event 4 times so we'll only act on it once
+
+    dbus-monitor --profile "interface='$interface',path=$monitor_path,member=$monitor_member" |
+        while read line; do
+          	let count++
+    		if [ $count = 3 ]; then
+          		theme="$(gsettings get org.gnome.desktop.interface color-scheme)"
+          		if [[ "$theme" == "'prefer-dark'" ]]; then
+          			#Need to set with full paths, goofy things are happening otherwise
+          			echo "$(echo import = [ \'~/.config/alacritty/alacritty-auto-theme/dark_theme.toml\' ] > ~/.config/alacritty/alacritty-auto-theme/theme.toml)"
+          		else
+          			echo "$(echo import = [ \'~/.config/alacritty/alacritty-auto-theme/light_theme.toml\' ] > ~/.config/alacritty/alacritty-auto-theme/theme.toml)"
+          		fi
+          		count=0
+    		fi
+        done
+#+end_src
+
+So what's happening here:
+- First we set up the filter (line 2-4) for settings changed then we start monitoring =dbus= (line 7).
+- We keep listening until we have matched our filter, now we can execute our commands. You'll see that the first thing we do is increment a counter (line 9) and only take action the 4th time (line 10), that's because the message goes out on =dbus= 4 times and I don't know why but we only need to act once.
+- We read the current theme (line 11) so we don't have to keep track of what it was, this is called [[https://en.wikipedia.org/wiki/Composability][stateless]] design. [^fn:1]
+- We set the appropriate theme based on what the user selected (lines 12-17). Note: we could have called the aliases we defined in the previous section but the user could change the alias or it could get removed for whatever reason and we don't want to create a dependency outside the scope of our control.
+- We reset the counter so we can start counting again the next time there's a new event (line 19).
+
+We can leave a terminal open all the time and keep that script running in it. That would work but we want it to auto-start every time we're logged in and monitor in the background. That's what a =systemd= service allows us to do:
+
+**** Service
+=AlacrittyAutoTheme.service⬇️=
+#+begin_src conf
+  [Unit]
+  Description=Alacritty automated theme switching based on Gnome system theme
+  Require=dbus.service
+  After=dbus.service
+
+  [Service]
+  ExecStart=/bin/bash /home/%u/.config/alacritty/alacritty-auto-theme/AlacrittyAutoTheme.sh
+  Type=simple
+  Restart=on-failure
+
+  [Install]
+  WantedBy=default.target
+#+end_src
+
+We don't really need to understand this beyond following the template, but here's a [[https://www.digitalocean.com/community/tutorials/understanding-systemd-units-and-unit-files][good resource]]. So what's happening here:
+- =[Unit]=: Describes what this service does and what it is dependent upon
+- =[Service]=: What do we want to happen? We want to run our script, so we have to say how to do that ~/bin/bash~ and where it is located ~./home/%u/.config/alacritty/alacritty-auto-theme/AlacrittyAutoTheme.sh~ [^fn:2]
+- =[Install]=: We want it to run only for the current user.
+
+**** Install
+Alright, we're finally at the point where we can put it all these small pieces and make it all work together.
+#+begin_src sh
+  mkdir -p ~/.config/systemd/user/
+  cp ./AlacrittyAutoTheme.service ~/.config/systemd/user/
+  systemctl --user enable AlacrittyAutoTheme.service
+  systemctl --user start AlacrittyAutoTheme.service
+#+end_src
+We create an user space =systemd= service folder[^fn:3] so that we don't need admin rights on the machine to run the script as a service when we log-in. Then we copy the service to that folder and use =systemctl= command to talk to =systemd= and tell it to enable and then start our service (note =--user= so for user space).
+
+The idea of arranging small tools to accomplish a big task is called [[https://en.wikipedia.org/wiki/Composability][composability]]  I'm burying the lede here because all the other concepts I've mentioned before fall under composability but it's too top down and theoretical until you see the whole toolchain being put together.
+
+That's it, we've scratched our own itch, created a standalone tool that could be used by others, and learned about concepts.
+
+*** Conclusion
+We've followed the [[https://en.wikipedia.org/wiki/Unix_philosophy][UNIX philosophy]] fairly closely and making tools that are much more complex fundamentally follows a similar flow. I wanted to write this article as an exercise to understand the basics required to do something that most Linux users would consider rather straightforward. I still don't know if it's written at an appropriate level for the intended audience but I ended up having to write a LOT more than I would have imagined at the start. I want to continue making things I know more accessible to others so if this applies to you, I would love to hear your thoughts and feedback and happy to help if you have any questions.
+
+[^fn:1]: =gsettings= is only available on the Gnome desktop environment so we could support other systems by checking what system we're on and calling the appropriate function to read the current state.
+[^fn:2]: Systemd service does not understand relative paths like =~= (to point to home directory), but it has it's own [[https://www.freedesktop.org/software/systemd/man/latest/systemd.unit.html#Specifiers][Specifiers]] like =%u=.
+[^fn:3]: The =-p= only makes a new folder if one doesn't exist.
+
+** DRAFT Hosting Applications on a VPS                           :foss:linux:
+:PROPERTIES:
+:EXPORT_FILE_NAME: index
+:EXPORT_HUGO_BUNDLE: hosting-applications-on-a-vps
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :aliases /s/704014a3
+:EXPORT_HUGO_IMAGES: /start/hosting-applications-on-a-vps/image.jpg
+:EXPORT_HUGO_MENU:
+:END:
+A Virtual Private Server (VPS) is essentially just like a computer running in the other room. The big difference is you can't see it or touch it or troubleshoot by slapping the side of the case even if you wanted to because it's not a real machine. It's pretending to be a single computer but it exists as a virtual computer borrowing processors, memory, hard drive from it's host machine.

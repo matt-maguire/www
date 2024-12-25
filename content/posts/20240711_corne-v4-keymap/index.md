@@ -1,11 +1,11 @@
 +++
 title = "Corne v4 Keyboard Keymap"
-author = ["Matt Maguire"]
 date = 2024-07-11
-lastmod = 2024-10-13T18:04:37+11:00
+lastmod = 2024-12-25T16:30:34+11:00
 tags = ["keyboards", "corne"]
+categories = ["Blog"]
 draft = false
-weight = 2001
+weight = 2010
 +++
 
 I recently acquired a pre-built Corne 46-key ergonomic split keyboard.

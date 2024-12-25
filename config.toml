@@ -20,7 +20,7 @@ hasCJKLanguage = false
 # default amount of posts in each pages
 #paginate = 12
 # google analytics code [UA-XXXXXXXX-X]
-googleAnalytics = "G-4LYRM7F4VF"
+googleAnalytics = "GT-5R34JLF"
 # copyright description used only for seo schema
 copyright = ""
 
@@ -476,7 +476,7 @@ enableEmoji = true
     enable = false
     # Google Analytics
     [params.analytics.google]
-      id = ""
+      id = "GT-5R34JLF"
       # whether to anonymize IP
       anonymizeIP = true
     # Fathom Analytics

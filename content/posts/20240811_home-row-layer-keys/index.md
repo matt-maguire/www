@@ -1,11 +1,11 @@
 +++
 title = "Home Row Layer Keys"
 date = 2024-08-11
-lastmod = 2024-12-25T16:30:34+11:00
+lastmod = 2024-12-26T07:19:00+11:00
 tags = ["Computers", "Keyboards"]
 categories = ["Blog"]
 draft = false
-weight = 2005
+weight = 2004
 +++
 
 {{< figure src="IMG_0418sm-1536x733.jpg" >}}

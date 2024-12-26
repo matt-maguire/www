@@ -1,11 +1,11 @@
 +++
 title = "Elecraft K2 Amplifier Keying Circuit"
 date = 2014-04-20
-lastmod = 2024-12-25T16:30:34+11:00
+lastmod = 2024-12-26T07:19:00+11:00
 tags = ["hamradio"]
 categories = ["Blog"]
 draft = false
-weight = 2017
+weight = 2016
 +++
 
 {{< figure src="20141420-IMG_0118-Version-2-768x1024-1.jpg" >}}

@@ -8,9 +8,9 @@ themesDir = "themes"
 # website title
 title = "Matt's Musings"
 
-# determines default content language ["en", "en-Shaw", "fr", "pl", ...]
+# determines default content language ["en", "en-shaw", "fr", "pl", ...]
 defaultContentLanguage = "en"
-# language code ["en", "en-Shaw", "fr", "pl", ...]
+# language code ["en", "en-shaw", "fr", "pl", ...]
 languageCode = "en"
 # language name ["English", "简体中文", "Français", "Polski", ...]
 languageName = "English"
@@ -585,6 +585,7 @@ enableEmoji = true
     languageName = "English"
     hasCJKLanguage = false
     copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
+
     [languages.en.menu]
       [[languages.en.menu.main]]
         weight = 1
@@ -675,14 +676,14 @@ enableEmoji = true
           id = "@MattEducator"
           prefix = "https://mathstodon.xyz/"
 
-  [languages.en-Shaw]
+  [languages.en-shaw]
     weight = 2
-    languageCode = "en-Shaw"
+    languageCode = "en-shaw"
     languageName = "𐑦𐑙𐑜𐑤𐑦𐑖"
     hasCJKLanguage = false
     copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
-    [languages.en-Shaw.menu]
-      [[languages.en-Shaw.menu.main]]
+    [languages.en-shaw.menu]
+      [[languages.en-shaw.menu.main]]
         weight = 1
         identifier = "posts"
         pre = ""
@@ -690,7 +691,7 @@ enableEmoji = true
         name = "𐑐𐑴𐑕𐑑𐑕"
         url = "/posts/"
         title = ""
-      [[languages.en-Shaw.menu.main]]
+      [[languages.en-shaw.menu.main]]
         weight = 2
         identifier = "tags"
         pre = ""
@@ -698,7 +699,7 @@ enableEmoji = true
         name = "𐑑𐑨𐑜𐑟"
         url = "/tags/"
         title = ""
-      [[languages.en-Shaw.menu.main]]
+      [[languages.en-shaw.menu.main]]
         weight = 3
         identifier = "categories"
         pre = ""
@@ -706,14 +707,14 @@ enableEmoji = true
         name = "𐑒𐑨𐑑𐑩𐑜𐑮𐑰𐑟"
         url = "/categories/"
         title = ""
-      [[languages.en-Shaw.menu.main]]
+      [[languages.en-shaw.menu.main]]
         weight = 4
         identifier = "documentation"
         pre = ""
         name = "𐑛𐑪𐑒𐑕"
         url = "/categories/documentation/"
         title = ""
-      [[languages.en-Shaw.menu.main]]
+      [[languages.en-shaw.menu.main]]
         weight = 5
         identifier = "about"
         pre = ""
@@ -721,7 +722,7 @@ enableEmoji = true
         name = "𐑩𐑚𐑬𐑑"
         url = "/about/"
         title = ""
-      [[languages.en-Shaw.menu.main]]
+      [[languages.en-shaw.menu.main]]
         weight = 6
         identifier = "github"
         pre = "<i class='fab fa-github fa-fw' aria-hidden='true'></i>"
@@ -729,8 +730,20 @@ enableEmoji = true
         name = ""
         url = "https://github.com/Fastbyte01/KeepIt"
         title = "GitHub"
-    [languages.en-Shaw.params]
-      [languages.en-Shaw.params.search]
+    [languages.en-shaw.params]
+    [languages.en-shaw.params.header.title]
+      # URL of the LOGO
+      logo = ""
+      # title name
+      name = "𐑥𐑨𐑑𐑕 𐑥𐑿𐑟𐑦𐑙𐑟"
+      # you can add extra information before the name (HTML format is supported), such as icons
+      #pre = "<i class='icon fa-graduation-cap fa-fw' aria-hidden='true'></i>"
+      pre = ""
+      # you can add extra information after the name (HTML format is supported), such as icons
+      post = ""
+      # whether to use typeit animation for title name
+      typeit = false
+      [languages.en-shaw.params.search]
         enable = true
         type = "algolia"
         contentLength = 4000
@@ -739,13 +752,13 @@ enableEmoji = true
         snippetLength = 50
         highlightTag = "em"
         absoluteURL = false
-        [languages.en-Shaw.params.search.algolia]
-          index = "index.en-Shaw"
+        [languages.en-shaw.params.search.algolia]
+          index = "index.en-shaw"
           appID = "PASDMWALPK"
           searchKey = "b42948e51daaa93df92381c8e2ac0f93"
-      [languages.en-Shaw.params.home]
+      [languages.en-shaw.params.home]
         rss = 10
-        [languages.en-Shaw.params.home.profile]
+        [languages.en-shaw.params.home.profile]
           enable = true
           gravatarEmail = "matt@teachmaths.org"
           #avatarURL = "/images/avatar.png"
@@ -754,7 +767,128 @@ enableEmoji = true
           typeit = true
           social = true
           disclaimer = ""
-      [languages.en-Shaw.params.social]
+      [languages.en-shaw.params.social]
+        GitHub = "matt-maguire"
+        Twitter = "MattEducator"
+        Linkedin = "maguire-matt"
+        Facebook = "matt.maguire.507"
+        Flickr = "184821753@N07"
+        Bluesky = "did:plc:bwqa4zsom3inhbtbedvah7uf"
+        Matrix = "@matt-maguire:matrix.org"
+        #Telegram = "xxxx"
+        #Youtubelegacy = "xxxx"
+        Email = "webmaster@m.teachmaths.org"
+        RSS = true
+        [languages.en-shaw.params.social.Mastodon]
+          id = "@MattEducator"
+          prefix = "https://mathstodon.xyz/"
+
+  [languages.eo]
+    weight = 2
+    languageCode = "eo"
+    languageName = "Esperanto"
+    hasCJKLanguage = false
+    copyright = "Ĉi-tiu verkaĵo estas permesilita per Kreema Komunuma Atributa-NeKomerca 4.0 Tutmonda Permesilo."
+    [languages.eo.menu]
+      [[languages.eo.menu.main]]
+        weight = 1
+        identifier = "posts"
+        pre = ""
+        post = ""
+        name = "Afiŝoj"
+        url = "/posts/"
+        title = ""
+      [[languages.eo.menu.main]]
+        weight = 2
+        identifier = "tags"
+        pre = ""
+        post = ""
+        name = "Etikedoj"
+        url = "/tags/"
+        title = ""
+      [[languages.eo.menu.main]]
+        weight = 3
+        identifier = "categories"
+        pre = ""
+        post = ""
+        name = "Kategorioj"
+        url = "/categories/"
+        title = ""
+      [[languages.eo.menu.main]]
+        weight = 4
+        identifier = "documentation"
+        pre = ""
+        name = "Dokumentoj"
+        url = "/categories/documentation/"
+        title = ""
+      [[languages.eo.menu.main]]
+        weight = 5
+        identifier = "about"
+        pre = ""
+        post = ""
+        name = "Pri"
+        url = "/about/"
+        title = ""
+      [[languages.eo.menu.main]]
+        weight = 6
+        identifier = "github"
+        pre = "<i class='fab fa-github fa-fw' aria-hidden='true'></i>"
+        post = ""
+        name = ""
+        url = "https://github.com/Fastbyte01/KeepIt"
+        title = "GitHub"
+    [languages.eo.params]
+    [languages.eo.params.header.title]
+      # URL of the LOGO
+      logo = ""
+      # title name
+      name = "Meditoj de Mateo"
+      # you can add extra information before the name (HTML format is supported), such as icons
+      #pre = "<i class='icon fa-graduation-cap fa-fw' aria-hidden='true'></i>"
+      pre = ""
+      # you can add extra information after the name (HTML format is supported), such as icons
+      post = ""
+      # whether to use typeit animation for title name
+      typeit = false
+      [languages.eo.params.search]
+        enable = true
+        type = "algolia"
+        contentLength = 4000
+        placeholder = ""
+        maxResultLength = 10
+        snippetLength = 50
+        highlightTag = "em"
+        absoluteURL = false
+        [languages.eo.params.search.algolia]
+          index = "index.eo"
+          appID = "PASDMWALPK"
+          searchKey = "b42948e51daaa93df92381c8e2ac0f93"
+      [languages.eo.params.home]
+        rss = 10
+        [languages.eo.params.home.profile]
+          enable = true
+          gravatarEmail = "matt@teachmaths.org"
+          #avatarURL = "/images/avatar.png"
+          title = ""
+          subtitle = "Multspecaj meditoj de mia serpentumante menso..."
+          typeit = true
+          social = true
+          disclaimer = ""
+      [languages.eo.params.social]
+        GitHub = "matt-maguire"
+        Twitter = "MattEducator"
+        Linkedin = "maguire-matt"
+        Facebook = "matt.maguire.507"
+        Flickr = "184821753@N07"
+        Bluesky = "did:plc:bwqa4zsom3inhbtbedvah7uf"
+        Matrix = "@matt-maguire:matrix.org"
+        #Telegram = "xxxx"
+        #Youtubelegacy = "xxxx"
+        Email = "webmaster@m.teachmaths.org"
+        RSS = true
+        [languages.eo.params.social.Mastodon]
+          id = "@MattEducator"
+          prefix = "https://mathstodon.xyz/"
         GitHub = "matt-maguire"
         #Weibo = "xxxx"
         #Steam = "xxxx"

@@ -1,11 +1,11 @@
 +++
 title = "34 Key Layout for Corne Keyboard"
 date = 2024-07-15
-lastmod = 2024-12-25T16:30:34+11:00
+lastmod = 2024-12-26T07:19:00+11:00
 tags = ["keyboards", "corne"]
 categories = ["Blog"]
 draft = false
-weight = 2009
+weight = 2008
 +++
 
 I’ve been experimenting a bit more with the Corne keyboard. I saw a [video from Ben Vallack](https://youtu.be/8wZ8FRwOzhU?si=Y1a1JSbGsN1vZizU) where he lays out a mapping for his 34-key keyboard.

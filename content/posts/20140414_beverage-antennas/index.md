@@ -1,11 +1,11 @@
 +++
 title = "Beverage Antennas"
 date = 2014-04-14
-lastmod = 2024-12-25T16:30:34+11:00
+lastmod = 2024-12-26T07:19:00+11:00
 tags = ["hamradio"]
 categories = ["Blog"]
 draft = false
-weight = 2018
+weight = 2017
 +++
 
 {{< figure src="20140414-Figure_D-11_Long-wire_antenna_FM_7-93_1995.gif" >}}

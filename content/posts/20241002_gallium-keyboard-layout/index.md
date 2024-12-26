@@ -1,7 +1,7 @@
 +++
 title = "Gallium Keyboard Layout"
 date = 2024-10-02
-lastmod = 2024-12-25T16:30:34+11:00
+lastmod = 2024-12-26T07:19:00+11:00
 tags = ["Computers", "Keyboards"]
 categories = ["Blog"]
 draft = false

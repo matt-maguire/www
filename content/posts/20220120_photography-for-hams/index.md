@@ -1,11 +1,11 @@
 +++
 title = "Digital Photography for Hams"
 date = 2022-01-20
-lastmod = 2024-12-25T16:30:34+11:00
+lastmod = 2024-12-26T07:19:00+11:00
 tags = ["photography", "hamradio"]
 categories = ["Blog"]
 draft = false
-weight = 2013
+weight = 2012
 +++
 
 {{< figure src="20200120-Screenshot_2022-02-02_21-07-23-1024x550.png" >}}

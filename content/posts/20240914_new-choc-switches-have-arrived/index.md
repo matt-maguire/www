@@ -1,11 +1,11 @@
 +++
 title = "New Choc Switches Have Arrived!"
 date = 2024-09-14
-lastmod = 2024-12-25T16:30:34+11:00
+lastmod = 2024-12-26T07:19:00+11:00
 tags = ["Computers", "Keyboards"]
 categories = ["Blog"]
 draft = false
-weight = 2003
+weight = 3001
 +++
 
 {{< figure src="IMG_0442-1152x1536.jpg" >}}

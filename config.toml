@@ -3,7 +3,7 @@ baseURL = "https://web.teachmaths.org"
 # theme
 theme = "KeepIt"
 # themes directory
-themesDir = "themes"
+#themesDir = "themes"
 
 # website title
 title = "Matt's Musings"
@@ -46,7 +46,7 @@ enableEmoji = true
     pre = ""
     # you can add extra information after the name (HTML format is supported), such as icons
     post = ""
-    name = "Posts"
+    name = "Blog"
     url = "/posts/"
     # title will be shown when you hover on this menu link
     title = ""
@@ -65,6 +65,14 @@ enableEmoji = true
     post = ""
     name = "Categories"
     url = "/categories/"
+    title = ""
+  [[menu.main]]
+    weight = 4
+    identifier = "docs"
+    pre = ""
+    post = ""
+    name = "Docs"
+    url = "/docs/"
     title = ""
 
 [params]
@@ -116,7 +124,7 @@ enableEmoji = true
     # whether to show the author
     author = true
     # site creation time
-    since = 2024
+    since = 2014
     # ICP info only in China (HTML format is supported)
     icp = ""
     # license info (HTML format is supported)
@@ -376,7 +384,7 @@ enableEmoji = true
         clientSecret = ""
       # Valine comment config (https://github.com/xCss/Valine)
       [params.page.comment.valine]
-        enable = true
+        enable = false
         appId = "QGzwQXOqs5JOhN4RGPOkR2mR-MdYXbMMI"
         appKey = "WBmoGyJtbqUswvfLh6L8iEBr"
         placeholder = ""
@@ -589,11 +597,11 @@ enableEmoji = true
     [languages.en.menu]
       [[languages.en.menu.main]]
         weight = 1
-        identifier = "posts"
+        identifier = "blog"
         pre = ""
         post = ""
-        name = "Posts"
-        url = "/posts/"
+        name = "Blog"
+        url = "/categories/blog/"
         title = ""
       [[languages.en.menu.main]]
         weight = 2
@@ -613,31 +621,15 @@ enableEmoji = true
         title = ""
       [[languages.en.menu.main]]
         weight = 4
-        identifier = "documentation"
+        identifier = "docs"
         pre = ""
         post = ""
         name = "Docs"
-        url = "/categories/documentation/"
+        url = "/docs/"
         title = ""
-      [[languages.en.menu.main]]
-        weight = 5
-        identifier = "about"
-        pre = ""
-        post = ""
-        name = "About"
-        url = "/about/"
-        title = ""
-      [[languages.en.menu.main]]
-        weight = 6
-        identifier = "github"
-        pre = "<i class='fab fa-github fa-fw' aria-hidden='true'></i>"
-        post = ""
-        name = ""
-        url = "https://github.com/Fastbyte01/KeepIt"
-        title = "GitHub"
     [languages.en.params]
       [languages.en.params.search]
-        enable = true
+        enable = false
         type = "algolia"
         contentLength = 4000
         placeholder = ""
@@ -688,7 +680,7 @@ enableEmoji = true
         identifier = "posts"
         pre = ""
         post = ""
-        name = "𐑐𐑴𐑕𐑑𐑕"
+        name = "𐑚𐑤𐑪𐑜"
         url = "/posts/"
         title = ""
       [[languages.en-shaw.menu.main]]
@@ -709,27 +701,12 @@ enableEmoji = true
         title = ""
       [[languages.en-shaw.menu.main]]
         weight = 4
-        identifier = "documentation"
+        identifier = "docs"
         pre = ""
+        post = ""
         name = "𐑛𐑪𐑒𐑕"
-        url = "/categories/documentation/"
+        url = "/docs/"
         title = ""
-      [[languages.en-shaw.menu.main]]
-        weight = 5
-        identifier = "about"
-        pre = ""
-        post = ""
-        name = "𐑩𐑚𐑬𐑑"
-        url = "/about/"
-        title = ""
-      [[languages.en-shaw.menu.main]]
-        weight = 6
-        identifier = "github"
-        pre = "<i class='fab fa-github fa-fw' aria-hidden='true'></i>"
-        post = ""
-        name = ""
-        url = "https://github.com/Fastbyte01/KeepIt"
-        title = "GitHub"
     [languages.en-shaw.params]
     [languages.en-shaw.params.header.title]
       # URL of the LOGO
@@ -744,7 +721,7 @@ enableEmoji = true
       # whether to use typeit animation for title name
       typeit = false
       [languages.en-shaw.params.search]
-        enable = true
+        enable = false
         type = "algolia"
         contentLength = 4000
         placeholder = ""
@@ -795,7 +772,7 @@ enableEmoji = true
         identifier = "posts"
         pre = ""
         post = ""
-        name = "Afiŝoj"
+        name = "Blogo"
         url = "/posts/"
         title = ""
       [[languages.eo.menu.main]]
@@ -816,27 +793,12 @@ enableEmoji = true
         title = ""
       [[languages.eo.menu.main]]
         weight = 4
-        identifier = "documentation"
+        identifier = "docs"
         pre = ""
+        post = ""
         name = "Dokumentoj"
-        url = "/categories/documentation/"
+        url = "/docs/"
         title = ""
-      [[languages.eo.menu.main]]
-        weight = 5
-        identifier = "about"
-        pre = ""
-        post = ""
-        name = "Pri"
-        url = "/about/"
-        title = ""
-      [[languages.eo.menu.main]]
-        weight = 6
-        identifier = "github"
-        pre = "<i class='fab fa-github fa-fw' aria-hidden='true'></i>"
-        post = ""
-        name = ""
-        url = "https://github.com/Fastbyte01/KeepIt"
-        title = "GitHub"
     [languages.eo.params]
     [languages.eo.params.header.title]
       # URL of the LOGO
@@ -851,7 +813,7 @@ enableEmoji = true
       # whether to use typeit animation for title name
       typeit = false
       [languages.eo.params.search]
-        enable = true
+        enable = false
         type = "algolia"
         contentLength = 4000
         placeholder = ""

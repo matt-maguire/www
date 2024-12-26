@@ -1,7 +1,7 @@
 +++
 title = "Corne V4.1 Mini"
 date = 2024-07-21
-lastmod = 2024-12-26T07:19:00+11:00
+lastmod = 2024-12-26T16:33:49+11:00
 tags = ["keyboards", "corne"]
 categories = ["Blog"]
 draft = false

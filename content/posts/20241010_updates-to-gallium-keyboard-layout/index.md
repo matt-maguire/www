@@ -1,7 +1,7 @@
 +++
 title = "Updates to Gallium Keyboard Layout"
 date = 2024-10-10
-lastmod = 2024-12-26T07:19:00+11:00
+lastmod = 2024-12-26T16:33:48+11:00
 categories = ["Blog"]
 draft = false
 weight = 2001

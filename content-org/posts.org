@@ -12,6 +12,61 @@
 
 * Content
 
+** DONE Migrating Blog from Wordpress to Org Mode
+*** DONE Migrating my Blog from Wordpress to Org Mode
+:PROPERTIES:
+:EXPORT_HUGO_BUNDLE: 20241226_org-mode-blog
+:EXPORT_FILE_NAME: index
+:EXPORT_DATE: 2024-12-26
+:END:
+
+Lately I have been using Org Mode with Emacs quite a bit to help get better organised at work and keep track of meetings. The next logical step was to migrate my blog away from Wordpress and integrate it into my Org Mode workflow.
+
+The benefits are:
+- not having to host and maintain a Wordpress instance on my home computer, the with security risks that that entails.
+- a static website hosted on GitHub will generally load quicker, and is not dependent on a consumer-grade internet connection that goes down from time to time.
+- since I am already using Org Mode/Emacs in my day-to-day work, it is convenient having a common format for all my notes, be they personal or for publication.
+
+Now that I am on the Christmas break, I have had some time to investigate the various options, and I have settled on using ox-hugo to export my Org Mode blog posts and documents to a Hugo website using the ''KeepIt'' theme. This theme has some nice features such as $\KaTeX$ support for rendering maths equations and multi-lingual support for writing articles in other languages/scripts (such as Esperanto or the Shavian alphabet).
+
+I've now reached the point where I think I can now decommission the Wordpress website, so let's see how we go!
+
+*** DONE 𐑥𐑲𐑜𐑮𐑱𐑑𐑦𐑙 𐑥𐑲 𐑚𐑤𐑪𐑜 𐑓𐑮𐑪𐑥 ·𐑢𐑻𐑛𐑐𐑮𐑧𐑕 𐑑 ·𐑹𐑜 𐑥𐑴𐑛
+:PROPERTIES:
+:EXPORT_HUGO_BUNDLE: 20241226_org-mode-blog
+:EXPORT_FILE_NAME: index.en-shaw.md
+:EXPORT_DATE: 2024-12-26
+:END:
+
+𐑤𐑱𐑑𐑤𐑦 𐑲 𐑣𐑨𐑝 𐑚𐑰𐑯 𐑿𐑟𐑦𐑙 ·𐑹𐑜 𐑥𐑴𐑛 𐑢𐑦𐑞 ·𐑰𐑥𐑨𐑒𐑕 𐑒𐑢𐑲𐑑 𐑩 𐑚𐑦𐑑 𐑑 𐑣𐑧𐑤𐑐 𐑜𐑧𐑑 𐑚𐑧𐑑𐑼 𐑹𐑜𐑨𐑯𐑲𐑟𐑛 𐑨𐑑 𐑐𐑻𐑒 𐑯 𐑒𐑰𐑐 𐑑𐑮𐑨𐑒 𐑝 𐑥𐑰𐑑𐑦𐑙𐑟. 𐑞 𐑯𐑧𐑒𐑕𐑑 𐑤𐑪𐑡𐑦𐑒𐑩𐑤 𐑕𐑑𐑧𐑐 𐑢𐑩𐑟 𐑑 𐑥𐑲𐑜𐑮𐑱𐑑 𐑥𐑲 𐑚𐑤𐑪𐑜 𐑩𐑢𐑱 𐑓𐑮𐑪𐑥 ·𐑢𐑻𐑛𐑐𐑮𐑧𐑕 𐑯 𐑦𐑯𐑑𐑩𐑜𐑮𐑱𐑑 𐑦𐑑 𐑦𐑯𐑑𐑵 𐑥𐑲 ·𐑹𐑜 𐑥𐑴𐑛 𐑢𐑻𐑒𐑓𐑤𐑴.
+
+𐑞 𐑚𐑧𐑯𐑩𐑓𐑩𐑑𐑕 𐑸:
+- 𐑯𐑪𐑑 𐑣𐑨𐑝𐑦𐑙 𐑑 𐑣𐑴𐑑𐑕 𐑯 𐑥𐑱𐑯𐑑𐑱𐑯 𐑩 ·𐑢𐑻𐑛𐑐𐑮𐑧𐑕 𐑦𐑯𐑕𐑑𐑩𐑯𐑕 𐑪𐑯 𐑥𐑲 𐑣𐑴𐑥 𐑒𐑪𐑥𐑐𐑿𐑑𐑼, 𐑢𐑦𐑞 𐑞 𐑕𐑧𐑒𐑿𐑮𐑩𐑑𐑦 𐑮𐑦𐑕𐑒𐑕 𐑞𐑨𐑑 𐑞𐑨𐑑 𐑧𐑯𐑑𐑲𐑤𐑟.
+- 𐑩 𐑕𐑑𐑨𐑑𐑦𐑒 𐑢𐑧𐑚𐑕𐑲𐑑 𐑣𐑴𐑑𐑕𐑩𐑛 𐑪𐑯 ·𐑜𐑦𐑑𐑣𐑳𐑚 𐑢𐑦𐑤 𐑡𐑧𐑯𐑼𐑩𐑤𐑦 𐑤𐑴𐑛 𐑒𐑢𐑦𐑒𐑼, 𐑯 𐑦𐑑 𐑦𐑟 𐑯𐑪𐑑 𐑛𐑩𐑐𐑧𐑯𐑛𐑩𐑯𐑑 𐑪𐑯 𐑩 𐑒𐑪𐑯𐑕𐑿𐑥𐑼-𐑜𐑮𐑱𐑛 𐑦𐑯𐑑𐑼𐑯𐑧𐑑 𐑒𐑪𐑯𐑧𐑒𐑖𐑩𐑯 𐑞𐑨𐑑 𐑜𐑴𐑟 𐑛𐑬𐑯 𐑓𐑮𐑪𐑥 𐑑𐑲𐑥 𐑑 𐑑𐑲𐑥.
+- 𐑕𐑦𐑯𐑕 𐑲 𐑨𐑥 𐑷𐑤𐑮𐑧𐑛𐑦 𐑿𐑟𐑦𐑙 ·𐑹𐑜 𐑥𐑴𐑛/𐑰𐑥𐑨𐑒𐑕 𐑦𐑯 𐑥𐑲 𐑛𐑱 𐑑 𐑛𐑲 𐑢𐑻𐑒, 𐑦𐑑 𐑦𐑟 𐑒𐑩𐑯𐑝𐑰𐑯𐑾𐑯𐑑 𐑣𐑨𐑝𐑦𐑙 𐑩 𐑒𐑪𐑥𐑩𐑯 𐑓𐑹𐑥𐑨𐑑 𐑓𐑹 𐑷𐑤 𐑥𐑲 𐑯𐑴𐑑𐑕, 𐑚𐑰 𐑞𐑲 𐑐𐑻𐑕𐑩𐑯𐑩𐑤 𐑹 𐑓𐑹 𐑐𐑳𐑚𐑤𐑦𐑒𐑱𐑖𐑩𐑯.
+
+𐑯𐑬 𐑞𐑨𐑑 𐑲 𐑨𐑥 𐑪𐑯 𐑞 ·𐑒𐑮𐑦𐑕𐑥𐑩𐑕 𐑚𐑤𐑱𐑒, 𐑲 𐑣𐑨𐑝 𐑣𐑨𐑛 𐑕𐑳𐑥 𐑑𐑲𐑥 𐑑 𐑦𐑯𐑝𐑧𐑕𐑑𐑦𐑜𐑱𐑑 𐑞 𐑝𐑺𐑾𐑕 𐑪𐑐𐑖𐑩𐑯𐑟, 𐑯 𐑲 𐑣𐑨𐑝 𐑕𐑧𐑑𐑩𐑤𐑛 𐑪𐑯 𐑿𐑟𐑦𐑙 ·𐑪𐑒𐑕-𐑣𐑿𐑜𐑴 𐑑 𐑧𐑒𐑕𐑐𐑹𐑑 𐑥𐑲 ·𐑹𐑜 𐑥𐑴𐑛 𐑚𐑤𐑪𐑜 𐑐𐑴𐑑𐑕𐑑 𐑯 𐑛𐑪𐑒𐑿𐑥𐑩𐑯𐑑𐑕 𐑑 𐑩 ·𐑣𐑿𐑜𐑴 𐑢𐑧𐑚𐑕𐑲𐑑 𐑿𐑟𐑦𐑙 𐑞 ''𐑒𐑰𐑐𐑦𐑑'' 𐑔𐑰𐑥. 𐑞𐑦𐑕 𐑔𐑰𐑥 𐑣𐑨𐑟 𐑕𐑳𐑥 𐑯𐑲𐑕 𐑓𐑰𐑗𐑩𐑟 𐑕𐑳𐑗 𐑕𐑡 𐑨𐑟 ·𐑒𐑱𐑑𐑧𐑒 𐑕𐑩𐑐𐑹𐑑 𐑓𐑹 𐑮𐑧𐑯𐑛𐑼𐑦𐑙 𐑥𐑨𐑔𐑕 𐑰𐑒𐑐𐑱𐑠𐑩𐑯𐑟 𐑯 𐑥𐑳𐑤𐑑𐑦𐑤𐑦𐑯𐑜𐑐𐑩𐑤 𐑕𐑩𐑐𐑹𐑑 𐑓𐑹 𐑮𐑲𐑑𐑦𐑙 𐑸𐑑𐑦𐑒𐑩𐑤𐑟 𐑦𐑯 𐑳𐑞𐑼 𐑤𐑨𐑙𐑜𐑢𐑦𐑡𐑩𐑟/𐑕𐑒𐑮𐑦𐑓𐑑𐑕 (𐑕𐑳𐑗 𐑨𐑟 ·𐑧𐑕𐑐𐑼𐑭𐑯𐑑𐑴 𐑹 𐑞 𐑖𐑱𐑝𐑾𐑯 𐑨𐑚𐑓𐑩𐑚𐑧𐑑).
+
+𐑲𐑝 𐑯𐑬 𐑮𐑰𐑗𐑑 𐑞 𐑐𐑶𐑯𐑑 𐑣𐑢𐑺 𐑲 𐑔𐑦𐑙𐑒 𐑲 𐑒𐑨𐑯 𐑛𐑰𐑒𐑩𐑥𐑦𐑖𐑩𐑯 𐑞 ·𐑢𐑻𐑛𐑐𐑮𐑧𐑕 𐑢𐑧𐑚𐑕𐑲𐑑, 𐑕𐑴 𐑤𐑧𐑑𐑕 𐑕𐑰 𐑣𐑬 𐑢𐑰 𐑜𐑴!
+
+*** DONE Migrating Blog from Wordpress to Org Mode
+:PROPERTIES:
+:EXPORT_HUGO_BUNDLE: 20241226_org-mode-blog
+:EXPORT_FILE_NAME: index.eo.md
+:EXPORT_DATE: 2024-12-26
+:END:
+
+Lastatempe mi uzis sufiĉe ofte Org-reĝimon kun Emacs por pli bone organizi ĉe oficejo kaj spuri kunvenojn. La venonta logika paŝo estis migrigi mian blogon el Wordpress kaj integri ĝin en mian Org-reĝiman laborfluon.
+
+La profitoj estas:
+- ne plu devi gastisi kaj subteni Wordpress-an instancon ĉe mia hejma komputilo, kun la sekurecaj riskoj kiujn tio kunportas.
+- statika retejo gastigita ĉe GitHub ĝenerale ŝarĝas pli rapide kaj ne dependas de konsumanta grado de interreta alliĝo kiu malfunkcias de tempo al tempo.
+- pro tio ke mi jam uzadas Emacs/Org-reĝimon en mia ĉiutaga laboro, estas oportuna havi unuigitan formaton por ĉiuj miaj notoj, ĉu personaj aŭ ĉu por eldonado.
+
+Pro tio ke okazas la kristnaska ferio, mi havas la tempon esplori la diversajn eblecojn, kaj mi alvenis al uzi ox-hugo-n por eksporti miajn Org-reĝimajn blogafiŝojn kaj dokumentojn al Hugo retejo bazite je la ''KeepIt'' retejtemo. Tiu temo posedas utilajn funkciojn kiel subteno de $\KaTeX$ por aperigi matematikajn ekvaciojn, kaj multlingva subteno por verki artikolojn per aliaj lingvoj/alfabetoj (kiel Esperanto aŭ la Ŝava alfabeto).
+
+Mi nun atingis la tempopunkton kiam mi kredas ke mi povas malstarigi la Wordpress-an retejon, do ni vidu kiel mi faros!
+
 ** DONE Updates to Gallium Keyboard Layout
 :PROPERTIES:
 :EXPORT_FILE_NAME: index
@@ -128,7 +183,7 @@ In my Corne 5×3 keyboard, I still have the Choc Brown switches that the keyboar
 
 I think I’ll eventually swap them out for some spare Choc Red switches that I ordered, but for now I’ll leave the Choc Browns in place so I have a baseline point of comparison.
 
-*** DONE 𐑯𐑿 ·𐑗𐑪𐑒 𐑕𐑢𐑦𐑗𐑩𐑟 𐑣𐑨𐑝 𐑼𐑲𐑝𐑛! :Computers:Keyboards:
+*** TODO 𐑯𐑿 ·𐑗𐑪𐑒 𐑕𐑢𐑦𐑗𐑩𐑟 𐑣𐑨𐑝 𐑼𐑲𐑝𐑛! :Computers:Keyboards:
 :PROPERTIES:
 :CUSTOM_ID: new-choc-switches-have-arrived.en_Shaw
 :EXPORT_HUGO_BUNDLE: 20240914_new-choc-switches-have-arrived

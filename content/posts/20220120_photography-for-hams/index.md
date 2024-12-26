@@ -1,7 +1,7 @@
 +++
 title = "Digital Photography for Hams"
 date = 2022-01-20
-lastmod = 2024-12-26T07:19:00+11:00
+lastmod = 2024-12-26T16:33:49+11:00
 tags = ["photography", "hamradio"]
 categories = ["Blog"]
 draft = false

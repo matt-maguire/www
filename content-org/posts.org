@@ -13,7 +13,7 @@
 * Content
 
 ** DONE Migrating Blog from Wordpress to Org Mode
-*** DONE Migrating my Blog from Wordpress to Org Mode
+*** DONE Migrating my Blog from Wordpress to Org Mode :Emacs:OrgMode:Esperanto:Shavian:𐑖𐑱𐑝𐑾𐑯:
 :PROPERTIES:
 :EXPORT_HUGO_BUNDLE: 20241226_org-mode-blog
 :EXPORT_FILE_NAME: index
@@ -31,7 +31,7 @@ Now that I am on the Christmas break, I have had some time to investigate the va
 
 I've now reached the point where I think I can now decommission the Wordpress website, so let's see how we go!
 
-*** DONE 𐑥𐑲𐑜𐑮𐑱𐑑𐑦𐑙 𐑥𐑲 𐑚𐑤𐑪𐑜 𐑓𐑮𐑪𐑥 ·𐑢𐑻𐑛𐑐𐑮𐑧𐑕 𐑑 ·𐑹𐑜 𐑥𐑴𐑛
+*** DONE 𐑥𐑲𐑜𐑮𐑱𐑑𐑦𐑙 𐑥𐑲 𐑚𐑤𐑪𐑜 𐑓𐑮𐑪𐑥 ·𐑢𐑻𐑛𐑐𐑮𐑧𐑕 𐑑 ·𐑹𐑜 𐑥𐑴𐑛 :𐑰𐑥𐑨𐑒𐑕:𐑹𐑜𐑥𐑴𐑛:𐑧𐑕𐑐𐑼𐑭𐑯𐑑𐑴:𐑖𐑱𐑝𐑾𐑯:
 :PROPERTIES:
 :EXPORT_HUGO_BUNDLE: 20241226_org-mode-blog
 :EXPORT_FILE_NAME: index.en-shaw.md
@@ -49,7 +49,7 @@ I've now reached the point where I think I can now decommission the Wordpress we
 
 𐑲𐑝 𐑯𐑬 𐑮𐑰𐑗𐑑 𐑞 𐑐𐑶𐑯𐑑 𐑣𐑢𐑺 𐑲 𐑔𐑦𐑙𐑒 𐑲 𐑒𐑨𐑯 𐑛𐑰𐑒𐑩𐑥𐑦𐑖𐑩𐑯 𐑞 ·𐑢𐑻𐑛𐑐𐑮𐑧𐑕 𐑢𐑧𐑚𐑕𐑲𐑑, 𐑕𐑴 𐑤𐑧𐑑𐑕 𐑕𐑰 𐑣𐑬 𐑢𐑰 𐑜𐑴!
 
-*** DONE Migrating Blog from Wordpress to Org Mode
+*** DONE Migrating Blog from Wordpress to Org Mode :Emacs:OrgMode:Esperanto:Shavian:𐑖𐑱𐑝𐑾𐑯:
 :PROPERTIES:
 :EXPORT_HUGO_BUNDLE: 20241226_org-mode-blog
 :EXPORT_FILE_NAME: index.eo.md

@@ -1,7 +1,7 @@
 +++
 title = "Sony A7R4 Selfie Solution"
 date = 2019-10-04
-lastmod = 2024-12-26T16:33:49+11:00
+lastmod = 2024-12-26T17:56:42+11:00
 tags = ["photography"]
 categories = ["Blog"]
 draft = false

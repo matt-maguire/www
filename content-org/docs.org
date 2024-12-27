@@ -40,3 +40,32 @@ The following websites have resources I have stumbled across that may be useful 
 *** Other Resources
 - https://github.com/rossant/awesome-math — a curated list of maths learning resources
 - https://www.cultofpedagogy.com/ — lots of interesting pedagogical resources
+
+** DONE Programming Languages :Programming:LISP:
+:PROPERTIES:
+:EXPORT_FILE_NAME: index
+:EXPORT_HUGO_BUNDLE: programming-languages
+:EXPORT_DATE: 2024-12-28
+:EXPORT_HUGO_MENU:
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER:
+:END:
+
+*** LISPs
+**** Scheme
+Scheme is a variant of LISP that was famously used at MIT to teach students about functional programming concepts. It is also used in the GNU Guile Scheme as an extension language.
+
+Some resources are:
+- [[https://ocw.mit.edu/courses/6-001-structure-and-interpretation-of-computer-programs-spring-2005/video_galleries/video-lectures/][SCIP programming course]] from MIT is free.
+
+**** Common Lisp
+Common LISP implementations tend to be much larger than Scheme, which makes it powerful for solving practical probems, but this large feature set could be a bit of a distractor when first starting out.
+- Differences between Scheme and Lisp are descibed at https://wiki.c2.com/?LispSchemeDifferences.
+- SBCL (Steel Belt Common Lisp) is a good choice, particularly when combined with Emacs and SLIME. Instructions for setting it up are available at https://github.com/rabbibotton/clog/blob/main/LEARN.md.
+
+**** Emacs Lisp
+This is of course a good one to learn if you use the Emacs editor. Since it is already sell integrated into the editor, no need to waste time setting up external compilers and connectors such as SLIME.
+- Elisp is well documented in the Emacs Manual and the Emacs help system. Examples:
+  - [[https://www.gnu.org/software/emacs/manual/html_node/eintr/index.html][Introduction to Programming in Elisp]]
+  - [[https://www.gnu.org/software/emacs/manual/html_node/elisp/index.html][Elisp Reference Manual]]
+- it has powerful tools such as Edebug exist, profilers, regression testing, benchmarkers, ...
+- it is single-threaded, so may not be suitable for some applications.

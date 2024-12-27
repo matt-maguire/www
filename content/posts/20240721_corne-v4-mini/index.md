@@ -1,11 +1,11 @@
 +++
 title = "Corne V4.1 Mini"
 date = 2024-07-21
-lastmod = 2024-12-26T17:56:42+11:00
+lastmod = 2024-12-27T12:49:24+11:00
 tags = ["keyboards", "corne"]
 categories = ["Blog"]
 draft = false
-weight = 2006
+weight = 2011
 +++
 
 I’ve had so much fun with my Corne V4 keyboard, I decided to take advantage of the sale the vendor had going, and order a second one! My idea was to keep the 46-key Corne at home connected to my Linux workstation, and acquire a 40-key Corne V4 mini to carry around with my laptop. I ordered the same choc brown switches as before, but instead of black keycaps I ordered white keycaps. This would allow me to swap the different coloured keycaps in order to better highlight the home keys. And here it is:

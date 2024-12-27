@@ -1,18 +1,15 @@
 +++
 title = "Corne v4 Keyboard Keymap"
 date = 2024-07-11
-lastmod = 2024-12-26T17:56:42+11:00
+lastmod = 2024-12-27T12:49:24+11:00
 tags = ["keyboards", "corne"]
 categories = ["Blog"]
 draft = false
-weight = 2009
+weight = 2014
+featuredImage = "20240711-corne_6x3.jpg"
 +++
 
 I recently acquired a pre-built Corne 46-key ergonomic split keyboard.
-
-{{< figure src="20240711-corne_6x3.jpg" title="My new Corne keyboard" >}}
-
-<!--more-->
 
 Rather than use the default QWERTY keyboard arrangement, I have programmed it to use a [COLEMAK-DH](https://colemakmods.github.io/mod-dh/) layout, which allows for much more efficient typing. Because there are a reduced number of keys, many of the keys need to be overloaded with multiple functions. This is normally done with two techniques:
 

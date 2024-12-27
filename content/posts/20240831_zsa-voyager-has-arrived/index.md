@@ -1,14 +1,13 @@
 +++
 title = "ZSA Voyager has arrived!"
 date = 2024-08-31
-lastmod = 2024-12-26T17:56:42+11:00
+lastmod = 2024-12-27T12:49:24+11:00
 tags = ["Computers", "Keyboards"]
 categories = ["Blog"]
 draft = false
-weight = 2003
+weight = 2008
+featuredImage = "20240831-voyager-1536x1033.jpg"
 +++
-
-{{< figure src="voyager-1536x1033.jpg" >}}
 
 After experiencing some reliability issues between my Corne keyboards and my Macbook (but no issues using them with my Linux workstation), I decided to invest in a [Voyager keyboard from ZSA](https://www.zsa.io/voyager).
 
@@ -24,13 +23,13 @@ The benefit of the international keycaps is that if your hands are not in a prop
 
 Within less than a week of ordering the Voyager, I had it in my hands. It is very nicely packaged, with extra switches and keycaps and a tool to help you change them out.
 
-{{< figure src="voyager_box-edited.jpg" >}}
+{{< figure src="20240831-voyager_box-edited.jpg" >}}
 
 I replaced the “t” and “n” blank home keys with keycaps that have a “bump” to help you find the homerow quickly by feel. I also replaced the small inner thumb keys with “Space” and “Cmd” keycaps and left all the remaining keycaps blank.
 
 I couldn’t use the keyboard straight away though, as I wasn’t familiar with the default layout, and the blank keycaps didn’t provide any clues. The next step was therefore to implement in the Voyager the familiar ISRT layout I have been using with my Corne keyboards. The Oryx online configuration tool made this very easy. It was a little more fiddly than the Vial GUI I was using with the Cornes, but is ultimately more powerful than Vial, implements version control, and allows keymaps to be easily shared without needing to spend a lot of time documenting the layout.
 
-{{< figure src="isrt-layout.png" >}}
+{{< figure src="20240831-isrt-layout.png" >}}
 
 There is a link to my Oryx layout [here](https://configure.zsa.io/voyager/layouts/jYDdw/VA4le/0), and I talk a bit about this layout in previous posts on [ISRT]({{< relref "20240803_isrt-keyboard-layout" >}}) and [Home Row Layers]({{< relref "20240811_home-row-layer-keys" >}}). I have tried to align the Voyager and Corne layouts, making use of the outer pinky column where it is available while still making it usable on the Corne mini 5×3 configuration.
 

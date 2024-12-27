@@ -1,14 +1,13 @@
 +++
 title = "Gallium Keyboard Layout"
 date = 2024-10-02
-lastmod = 2024-12-26T17:56:42+11:00
+lastmod = 2024-12-27T12:49:24+11:00
 tags = ["Computers", "Keyboards"]
 categories = ["Blog"]
 draft = false
-weight = 2002
+weight = 2005
+featuredImage = "20241002-gallium-1536x678.png"
 +++
-
-{{< figure src="20241002-gallium-1536x678.png" >}}
 
 I’ve been using the ISRT keyboard layout for a while now, and it is becoming more intuitive to type on. However, I’ve been hearing a lot about [Graphite](https://github.com/rdavison/graphite-layout) and [Gallium](https://github.com/GalileoBlues/Gallium) on the Alt Keyboard Layout forums, which has made me a little curious. So, I set up a keymap to see what all the fuss is about.
 
@@ -43,7 +42,7 @@ Here is the row-staggered angle-modded Gallium layout that I implemented on my M
 
 I also created a [layout for my ZSA Voyager](https://configure.zsa.io/voyager/layouts/KWgaz/94W5A/0) using their web configuration tool.
 
-{{< figure src="Screenshot_2024-10-02_17-33-57-1024x589.png" >}}
+{{< figure src="20241002-Screenshot_2024-10-02_17-33-57-1024x589.png" >}}
 
 Before I had the “Shift” modifier on a left thumb key and the “Control” modifier on a right thumb key. It is common at the end of a sentence to have a space followed by a capital letter. By having “Space” and “Shift” together on the left thumb cluster, this creates an awkward same-finger motion on the left thumb, so I moved the “Shift” key to the right thumb cluster.
 

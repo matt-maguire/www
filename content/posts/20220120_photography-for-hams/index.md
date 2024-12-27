@@ -1,14 +1,13 @@
 +++
 title = "Digital Photography for Hams"
 date = 2022-01-20
-lastmod = 2024-12-26T17:56:42+11:00
+lastmod = 2024-12-27T12:49:24+11:00
 tags = ["photography", "hamradio"]
 categories = ["Blog"]
 draft = false
-weight = 2012
+weight = 2017
+featuredImage = "20200120-Screenshot_2022-02-02_21-07-23-1024x550.png"
 +++
-
-{{< figure src="20200120-Screenshot_2022-02-02_21-07-23-1024x550.png" >}}
 
 Last night I spoke about Digital Photography at the [Manly Warringah Radio Society](https://www.mwrs.org.au/), a club for ham radio operators. I decided to structure the talk in such a way that it drew parallels between digital photography and ham radio.
 
@@ -18,4 +17,6 @@ I talked about photography’s _exposure triangle_, and linked it back to techni
 
 Finally, I talked about using a raw file editor to provide a photographer with more freedom in processing an image, and briefly introduced the open source [darktable project](https://www.darktable.org/) as an example of such an editor.
 
-A recording of the talk will be available on the [MWRS YouTube channel](https://www.youtube.com/user/VK2MB) in due course. The presentation slides I used may be found [here](20220120-photography_for_hams.pdf).
+A recording of the talk will be available on the [MWRS YouTube channel](https://www.youtube.com/user/VK2MB) in due course. Here are the presentation slides I used:
+
+{{< embed-pdf url="20220120-photography_for_hams.pdf" >}}

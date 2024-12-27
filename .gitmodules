@@ -1,15 +1,6 @@
-[submodule "themes/ananke"]
-	path = themes/ananke
-	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
-[submodule "themes/PaperMod"]
-	path = themes/PaperMod
-	url = https://github.com/adityatelange/hugo-PaperMod.git
-[submodule "themes/DoIt"]
-	path = themes/DoIt
-	url = https://github.com/HEIGE-PCloud/DoIt.git
-[submodule "themes/hextra"]
-	path = themes/hextra
-	url = https://github.com/imfing/hextra.git
 [submodule "themes/KeepIt"]
 	path = themes/KeepIt
 	url = https://github.com/matt-maguire/KeepIt.git
+[submodule "themes/hugo-embed-pdf-shortcode"]
+	path = themes/hugo-embed-pdf-shortcode
+	url = https://github.com/matt-maguire/hugo-embed-pdf-shortcode.git

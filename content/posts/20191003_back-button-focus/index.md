@@ -1,11 +1,11 @@
 +++
 title = "Should I use Back Button Focus on Sony A7R4?"
 date = 2019-10-03
-lastmod = 2024-12-26T17:56:42+11:00
+lastmod = 2024-12-27T12:49:25+11:00
 tags = ["photography"]
 categories = ["Blog"]
 draft = false
-weight = 2015
+weight = 2020
 +++
 
 I just recently acquired the new Sony A7R4 mirrorless full frame camera, and have been working through the focusing systems on this camera. One of the questions that comes up is whether or not to use back button focus.

@@ -1,13 +1,12 @@
 +++
 title = "Updates to Gallium Keyboard Layout"
 date = 2024-10-10
-lastmod = 2024-12-26T17:56:41+11:00
+lastmod = 2024-12-27T12:49:24+11:00
 categories = ["Blog"]
 draft = false
-weight = 2001
+weight = 2004
+featuredImage = "20241010-Screenshot_2024-10-10_18-16-04-1024x234.png"
 +++
-
-{{< figure src="Screenshot_2024-10-10_18-16-04-1024x234.png" >}}
 
 I’ve been practising on the Gallium layout that I mentioned [last time]({{< relref "20241002_gallium-keyboard-layout" >}}), and while I am still fighting the muscle memory that I built up with the ISRT layout, I am gradually getting used to it and am currently at around the 25 wpm mark (similar to my maximum speed in Morse Code).
 

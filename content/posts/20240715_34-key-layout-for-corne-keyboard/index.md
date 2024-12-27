@@ -1,14 +1,16 @@
 +++
 title = "34 Key Layout for Corne Keyboard"
 date = 2024-07-15
-lastmod = 2024-12-26T17:56:42+11:00
+lastmod = 2024-12-27T12:49:24+11:00
 tags = ["keyboards", "corne"]
 categories = ["Blog"]
 draft = false
-weight = 2008
+weight = 2013
 +++
 
-I’ve been experimenting a bit more with the Corne keyboard. I saw a [video from Ben Vallack](https://youtu.be/8wZ8FRwOzhU?si=Y1a1JSbGsN1vZizU) where he lays out a mapping for his 34-key keyboard.
+I’ve been experimenting a bit more with the Corne keyboard. I saw a video from Ben Vallack where he lays out a mapping for his 34-key keyboard.
+
+{{< youtube 8wZ8FRwOzhU >}}
 
 In this video, he explains how holding down layer and modifier keys can cause fatigue, which he avoids by using “sticky” layer keys and “one-shot” modifiers. In the layout I am currently using, I use a similar layer scheme to Ben in which the shift key is moved to the left thumb. This is the layout I am currently working with:
 

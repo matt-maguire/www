@@ -1,14 +1,13 @@
 +++
 title = "How to calculate the series resistor for an LED"
 date = 2022-02-02
-lastmod = 2024-12-26T17:56:42+11:00
+lastmod = 2024-12-27T12:49:24+11:00
 tags = ["electronics"]
 categories = ["Blog"]
 draft = false
-weight = 2011
+weight = 2016
+featuredImage = "20220202-Screen-Shot-2022-02-02-at-6.32.54-pm.png"
 +++
-
-{{< figure src="20220202-Screen-Shot-2022-02-02-at-6.32.54-pm.png" >}}
 
 When we connect an LED to to a battery, we often need to connect a resistor is series to limit the current. I saw this question come up in a facebook group, and thought it might be useful to use this as a simple illustrative example of doing circuit design.
 

@@ -1,7 +1,9 @@
 baseURL = "https://www.teachmaths.org"
 
 # theme
-theme = "KeepIt"
+#theme = "KeepIt"
+theme = ["hugo-embed-pdf-shortcode","KeepIt"]
+enableInlineShortcodes = true
 # themes directory
 #themesDir = "themes"
 

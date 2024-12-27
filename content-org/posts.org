@@ -12,17 +12,19 @@
 
 * Content
 
-** DONE Migrating Blog from Wordpress to Org Mode
-*** DONE Migrating my Blog from Wordpress to Org Mode :Emacs:OrgMode:Esperanto:Shavian:𐑖𐑱𐑝𐑾𐑯:
+** DONE Migrating my Blog from Wordpress to Org Mode :Emacs:OrgMode:Esperanto:Shavian:𐑖𐑱𐑝𐑾𐑯:
 :PROPERTIES:
-:EXPORT_HUGO_BUNDLE: 20241226_org-mode-blog
 :EXPORT_FILE_NAME: index
+:EXPORT_HUGO_BUNDLE: 20241226_org-mode-blog
 :EXPORT_DATE: 2024-12-26
+:EXPORT_HUGO_MENU:
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER:
 :END:
 
 Lately I have been using Org Mode with Emacs quite a bit to help get better organised at work and keep track of meetings. The next logical step was to migrate my blog away from Wordpress and integrate it into my Org Mode workflow.
 
 The benefits are:
+#+hugo: more
 - not having to host and maintain a Wordpress instance on my home computer, the with security risks that that entails.
 - a static website hosted on GitHub will generally load quicker, and is not dependent on a consumer-grade internet connection that goes down from time to time.
 - since I am already using Org Mode/Emacs in my day-to-day work, it is convenient having a common format for all my notes, be they personal or for publication.
@@ -31,11 +33,17 @@ Now that I am on the Christmas break, I have had some time to investigate the va
 
 I've now reached the point where I think I can now decommission the Wordpress website, so let's see how we go!
 
-*** DONE 𐑥𐑲𐑜𐑮𐑱𐑑𐑦𐑙 𐑥𐑲 𐑚𐑤𐑪𐑜 𐑓𐑮𐑪𐑥 ·𐑢𐑻𐑛𐑐𐑮𐑧𐑕 𐑑 ·𐑹𐑜 𐑥𐑴𐑛 :𐑰𐑥𐑨𐑒𐑕:𐑹𐑜𐑥𐑴𐑛:𐑧𐑕𐑐𐑼𐑭𐑯𐑑𐑴:𐑖𐑱𐑝𐑾𐑯:
+If you feel like a bit of a chuckle, check out this video on the ubiquitousness of Emacs:
+
+#+hugo: {{< youtube urcL86UpqZc >}}
+
+** DONE 𐑥𐑲𐑜𐑮𐑱𐑑𐑦𐑙 𐑥𐑲 𐑚𐑤𐑪𐑜 𐑓𐑮𐑪𐑥 ·𐑢𐑻𐑛𐑐𐑮𐑧𐑕 𐑑 ·𐑹𐑜 𐑥𐑴𐑛 :𐑰𐑥𐑨𐑒𐑕:𐑹𐑜𐑥𐑴𐑛:𐑧𐑕𐑐𐑼𐑭𐑯𐑑𐑴:𐑖𐑱𐑝𐑾𐑯:
 :PROPERTIES:
-:EXPORT_HUGO_BUNDLE: 20241226_org-mode-blog
 :EXPORT_FILE_NAME: index.en-shaw.md
+:EXPORT_HUGO_BUNDLE: 20241226_org-mode-blog
 :EXPORT_DATE: 2024-12-26
+:EXPORT_HUGO_MENU:
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER:
 :END:
 
 𐑤𐑱𐑑𐑤𐑦 𐑲 𐑣𐑨𐑝 𐑚𐑰𐑯 𐑿𐑟𐑦𐑙 ·𐑹𐑜 𐑥𐑴𐑛 𐑢𐑦𐑞 ·𐑰𐑥𐑨𐑒𐑕 𐑒𐑢𐑲𐑑 𐑩 𐑚𐑦𐑑 𐑑 𐑣𐑧𐑤𐑐 𐑜𐑧𐑑 𐑚𐑧𐑑𐑼 𐑹𐑜𐑨𐑯𐑲𐑟𐑛 𐑨𐑑 𐑐𐑻𐑒 𐑯 𐑒𐑰𐑐 𐑑𐑮𐑨𐑒 𐑝 𐑥𐑰𐑑𐑦𐑙𐑟. 𐑞 𐑯𐑧𐑒𐑕𐑑 𐑤𐑪𐑡𐑦𐑒𐑩𐑤 𐑕𐑑𐑧𐑐 𐑢𐑩𐑟 𐑑 𐑥𐑲𐑜𐑮𐑱𐑑 𐑥𐑲 𐑚𐑤𐑪𐑜 𐑩𐑢𐑱 𐑓𐑮𐑪𐑥 ·𐑢𐑻𐑛𐑐𐑮𐑧𐑕 𐑯 𐑦𐑯𐑑𐑩𐑜𐑮𐑱𐑑 𐑦𐑑 𐑦𐑯𐑑𐑵 𐑥𐑲 ·𐑹𐑜 𐑥𐑴𐑛 𐑢𐑻𐑒𐑓𐑤𐑴.
@@ -49,11 +57,17 @@ I've now reached the point where I think I can now decommission the Wordpress we
 
 𐑲𐑝 𐑯𐑬 𐑮𐑰𐑗𐑑 𐑞 𐑐𐑶𐑯𐑑 𐑣𐑢𐑺 𐑲 𐑔𐑦𐑙𐑒 𐑲 𐑒𐑨𐑯 𐑛𐑰𐑒𐑩𐑥𐑦𐑖𐑩𐑯 𐑞 ·𐑢𐑻𐑛𐑐𐑮𐑧𐑕 𐑢𐑧𐑚𐑕𐑲𐑑, 𐑕𐑴 𐑤𐑧𐑑𐑕 𐑕𐑰 𐑣𐑬 𐑢𐑰 𐑜𐑴!
 
-*** DONE Migrating Blog from Wordpress to Org Mode :Emacs:OrgMode:Esperanto:Shavian:𐑖𐑱𐑝𐑾𐑯:
+𐑦𐑓 𐑿 𐑓𐑰𐑤 𐑤𐑲𐑒 𐑩 𐑚𐑦𐑑 𐑝 𐑩 𐑗𐑳𐑒𐑩𐑤, 𐑗𐑧𐑒 𐑬𐑑 𐑞𐑦𐑕 𐑝𐑦𐑛𐑦𐑴 𐑪𐑯 𐑞 𐑿𐑚𐑦𐑒𐑢𐑦𐑑𐑩𐑕𐑯𐑩𐑕 𐑝 𐑰𐑥𐑨𐑒𐑕:
+
+#+hugo: {{< youtube urcL86UpqZc >}}
+
+** DONE Migrating Blog from Wordpress to Org Mode :Emacs:OrgMode:Esperanto:Shavian:𐑖𐑱𐑝𐑾𐑯:
 :PROPERTIES:
-:EXPORT_HUGO_BUNDLE: 20241226_org-mode-blog
 :EXPORT_FILE_NAME: index.eo.md
+:EXPORT_HUGO_BUNDLE: 20241226_org-mode-blog
 :EXPORT_DATE: 2024-12-26
+:EXPORT_HUGO_MENU:
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER:
 :END:
 
 Lastatempe mi uzis sufiĉe ofte Org-reĝimon kun Emacs por pli bone organizi ĉe oficejo kaj spuri kunvenojn. La venonta logika paŝo estis migrigi mian blogon el Wordpress kaj integri ĝin en mian Org-reĝiman laborfluon.
@@ -67,16 +81,18 @@ Pro tio ke okazas la kristnaska ferio, mi havas la tempon esplori la diversajn e
 
 Mi nun atingis la tempopunkton kiam mi kredas ke mi povas malstarigi la Wordpress-an retejon, do ni vidu kiel mi faros!
 
+Se vi volas ion por ridetigi vin, spektu la suban videon pri la ĉiel utila Emacs:
+
+#+hugo: {{< youtube urcL86UpqZc >}}
+
 ** DONE Updates to Gallium Keyboard Layout
 :PROPERTIES:
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20241010_updates-to-gallium-keyboard-layout
 :EXPORT_DATE: 2024-10-10
 :EXPORT_HUGO_MENU:
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER:
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featuredImage "20241010-Screenshot_2024-10-10_18-16-04-1024x234.png"
 :END:
-
-[[file:Screenshot_2024-10-10_18-16-04-1024x234.png]]
 
 I’ve been practising on the Gallium layout that I mentioned [[#gallium-keyboard-layout][last time]], and while I am still fighting the muscle memory that I built up with the ISRT layout, I am gradually getting used to it and am currently at around the 25 wpm mark (similar to my maximum speed in Morse Code).
 #+hugo: more
@@ -98,7 +114,6 @@ Some other discoveries I made recently from Ben’s new video and from other sou
 - The Gallium layout has just been released in DreymaR’s [[https://github.com/DreymaR/BigBagKbdTrixPKL/tree/master/Layouts/Gallium][EPKL key mapping tool]]. This tool is Windows-based, which means that I have very little use for it myself. One of the cool features it has though is the Extend layer which converts the mostly useless CAPSLOCK key into a layer-switching key. This is such a useful feature, which I have implemented on my macbook using [[https://karabiner-elements.pqrs.org/][Karabiner Elements]]. The config file I use is available in [[https://github.com/matt-maguire/kbd_firmware/blob/custom/keyboards/crkbd/vial-kb/karabiner.json][my github]].
 
 
-
 ** DONE Gallium Keyboard Layout :Computers:Keyboards:
 :PROPERTIES:
 :CUSTOM_ID: gallium-keyboard-layout
@@ -106,10 +121,8 @@ Some other discoveries I made recently from Ben’s new video and from other sou
 :EXPORT_HUGO_BUNDLE: 20241002_gallium-keyboard-layout
 :EXPORT_DATE: 2024-10-02
 :EXPORT_HUGO_MENU:
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER:
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featuredImage "20241002-gallium-1536x678.png"
 :END:
-
-[[file:20241002-gallium-1536x678.png]]
 
 I’ve been using the ISRT keyboard layout for a while now, and it is becoming more intuitive to type on. However, I’ve been hearing a lot about [[https://github.com/rdavison/graphite-layout][Graphite]] and [[https://github.com/GalileoBlues/Gallium][Gallium]] on the Alt Keyboard Layout forums, which has made me a little curious. So, I set up a keymap to see what all the fuss is about.
 #+hugo: more
@@ -143,47 +156,45 @@ Here is the row-staggered angle-modded Gallium layout that I implemented on my M
 
 I also created a [[https://configure.zsa.io/voyager/layouts/KWgaz/94W5A/0][layout for my ZSA Voyager]] using their web configuration tool.
 
-[[file:Screenshot_2024-10-02_17-33-57-1024x589.png]]
+[[file:20241002-Screenshot_2024-10-02_17-33-57-1024x589.png]]
 
 Before I had the “Shift” modifier on a left thumb key and the “Control” modifier on a right thumb key. It is common at the end of a sentence to have a space followed by a capital letter. By having “Space” and “Shift” together on the left thumb cluster, this creates an awkward same-finger motion on the left thumb, so I moved the “Shift” key to the right thumb cluster.
 
 I’m going to spend a little time building some fluency with this new layout to see if it is really worthwhile compared to ISRT, and will keep you updated here on what I discover.
 
-** New Choc Switches Have Arrived!
-*** DONE New Choc Switches Have Arrived! :Computers:Keyboards:
+
+** DONE New Choc Switches Have Arrived! :Computers:Keyboards:
 :PROPERTIES:
 :CUSTOM_ID: new-choc-switches-have-arrived
 :EXPORT_HUGO_BUNDLE: 20240914_new-choc-switches-have-arrived
 :EXPORT_FILE_NAME: index.en.md
 :EXPORT_DATE: 2024-09-14
 :EXPORT_HUGO_MENU:
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER:
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featuredImage "20240914-IMG_0442-1152x1536.jpg"
 :END:
-
-[[file:IMG_0442-1152x1536.jpg]]
 
 I have been really enjoying the Choc Red switches that shipped with my [[#zsa-voyager-has-arrived][ZSA Voyager keyboard]]. I was however curious how a lighter-weight switch might feel. I was considering ordering some Pro Red 35g linear switches, but then I heard about the [[https://keebd.com/products/ambients-silent-linear-twilight-choc-switches][Kailh Ambients]] line of silent linear switches and decided to give the Twilight 35g switches a try. On ordering them from a local vendor, they arrived a few days later, and on my Voyager keyboard I swapped out the Choc Reds for the Ambients Twilights.
 #+attr_html: alt="Left half of a ZSA Voyager split keyboard with one keycap at the top left removed to expose a light green coloured Ambients Twilight silent linear low profile switch."
 
-[[file:IMG_0445-1536x1503.jpg]]
+[[file:20240914-IMG_0445-1536x1503.jpg]]
 
 They do have a lovely feel with the soft cushioning/damping at the end of the switch’s travel, although when typing with them I felt my error rate creeping up. I found that with the soft feel of the switches, I was pressing them a bit more slowly and hesitantly, which was causing false activations on my layer-tap and mod-tap keys. So, I need to be a bit more diligent about “tapping” rather than “pressing” the keys. I also have not had a lot of time for focused typing practice lately due to a slightly hectic schedule at work this time of year, and I’ve seen my typing speed drop off a bit. I’m sure it won’t take long to get back to my previous speed.
 
 I decided to populate my Corne 6×3 keyboard with the Choc Reds I removed from my Voyager. I removed the Choc Browns, inserted the Choc Reds and replaced the keycaps.
 
 #+attr_html: alt="Left half of a Corne 6x3 ergoomic split keyboard with one keycap at the top left removed to expose a Choc Red low profile linear keyswitch."
-[[file:IMG_0443-1536x1093.jpg]]
+[[file:20240914-IMG_0443-1536x1093.jpg]]
 
 In the Corne the Choc Reds don’t feel quite as nice as when they were in the Voyager — I put this down to the more solid construction of the Voyager. However, the Choc Reds in the Corne feel much better than the Choc Browns they replaced, with less effort required (50g vs 60g, and no scratchy “tactile bump” such as it is in the low profile Choc switches).
 
 In my Corne 5×3 keyboard, I still have the Choc Brown switches that the keyboard shipped with.
 
 #+attr_html: alt="Left half of Corne 5x3 mini ergoomic split keyboard with one keycap at the top left removed to expose a Choc Brown low profile tactile keyswitch."
-[[file:IMG_0446-1536x1261.jpg]]
+[[file:20240914-IMG_0446-1536x1261.jpg]]
 
 I think I’ll eventually swap them out for some spare Choc Red switches that I ordered, but for now I’ll leave the Choc Browns in place so I have a baseline point of comparison.
 
-*** TODO 𐑯𐑿 ·𐑗𐑪𐑒 𐑕𐑢𐑦𐑗𐑩𐑟 𐑣𐑨𐑝 𐑼𐑲𐑝𐑛! :Computers:Keyboards:
+** TODO 𐑯𐑿 ·𐑗𐑪𐑒 𐑕𐑢𐑦𐑗𐑩𐑟 𐑣𐑨𐑝 𐑼𐑲𐑝𐑛! :Computers:Keyboards:
 :PROPERTIES:
 :CUSTOM_ID: new-choc-switches-have-arrived.en_Shaw
 :EXPORT_HUGO_BUNDLE: 20240914_new-choc-switches-have-arrived
@@ -218,6 +229,7 @@ In my Corne 5×3 keyboard, I still have the Choc Brown switches that the keyboar
 
 I think I’ll eventually swap them out for some spare Choc Red switches that I ordered, but for now I’ll leave the Choc Browns in place so I have a baseline point of comparison.
 
+
 ** DONE ZSA Voyager has arrived! :Computers:Keyboards:
 :PROPERTIES:
 :CUSTOM_ID: zsa-voyager-has-arrived
@@ -225,10 +237,8 @@ I think I’ll eventually swap them out for some spare Choc Red switches that I 
 :EXPORT_HUGO_BUNDLE: 20240831_zsa-voyager-has-arrived
 :EXPORT_DATE: 2024-08-31
 :EXPORT_HUGO_MENU:
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER:
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featuredImage "20240831-voyager-1536x1033.jpg"
 :END:
-
-[[file:voyager-1536x1033.jpg]]
 
 After experiencing some reliability issues between my Corne keyboards and my Macbook (but no issues using them with my Linux workstation), I decided to invest in a [[https://www.zsa.io/voyager][Voyager keyboard from ZSA]].
 
@@ -244,13 +254,13 @@ The benefit of the international keycaps is that if your hands are not in a prop
 
 Within less than a week of ordering the Voyager, I had it in my hands. It is very nicely packaged, with extra switches and keycaps and a tool to help you change them out.
 
-[[file:voyager_box-edited.jpg]]
+[[file:20240831-voyager_box-edited.jpg]]
 
 I replaced the “t” and “n” blank home keys with keycaps that have a “bump” to help you find the homerow quickly by feel. I also replaced the small inner thumb keys with “Space” and “Cmd” keycaps and left all the remaining keycaps blank.
 
 I couldn’t use the keyboard straight away though, as I wasn’t familiar with the default layout, and the blank keycaps didn’t provide any clues. The next step was therefore to implement in the Voyager the familiar ISRT layout I have been using with my Corne keyboards. The Oryx online configuration tool made this very easy. It was a little more fiddly than the Vial GUI I was using with the Cornes, but is ultimately more powerful than Vial, implements version control, and allows keymaps to be easily shared without needing to spend a lot of time documenting the layout.
 
-[[file:isrt-layout.png]]
+[[file:20240831-isrt-layout.png]]
 
 There is a link to my Oryx layout [[https://configure.zsa.io/voyager/layouts/jYDdw/VA4le/0][here]], and I talk a bit about this layout in previous posts on [[#isrt-keyboard-layout][ISRT]] and [[#home-row-layer-keys][Home Row Layers]]. I have tried to align the Voyager and Corne layouts, making use of the outer pinky column where it is available while still making it usable on the Corne mini 5×3 configuration.
 
@@ -267,10 +277,8 @@ In the meantime, I will keep working on building typing speed on my ISRT layout.
 :EXPORT_HUGO_BUNDLE: 20240811_home-row-layer-keys
 :EXPORT_DATE: 2024-08-11
 :EXPORT_HUGO_MENU:
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER:
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featuredImage "20240811-IMG_0418sm-1536x733.jpg"
 :END:
-
-[[file:IMG_0418sm-1536x733.jpg]]
 
 I’ve been practising the [[https://github.com/DreymaR/BigBagKbdTrixPKL/blob/master/Layouts/ISRT/README.md][ISRT]] layout on https://keybr.com/ and am slowly getting used to it. The Miryoku system of layers is quite easy to work with, but I’ve noticed a couple of issues:
 
@@ -376,12 +384,10 @@ As usual, the Vial layout is on my [[https://github.com/matt-maguire/kbd_firmwar
 :EXPORT_HUGO_BUNDLE: 20240803_isrt-keyboard-layout
 :EXPORT_DATE: 2024-08-03
 :EXPORT_HUGO_MENU:
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER:
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featuredImage "20240803-isrt-anglemod.en_.ansi_-1024x312.jpg"
 :END:
 
 *** ISRT
-
-[[file:20240803-isrt-anglemod.en_.ansi_-1024x312.jpg]]
 
 I have been training on the Colemak-DH layout with my Corne keyboards, and I am getting used to it, even though my typing speed is still slow. I found another [[https://youtu.be/dg2TT1OJlQs?si=ZiAzPIMkbCAMG02X][video from Ben Vallack]] about the [[https://www.zsa.io/voyager][ZSA Voyager]] keyboard, and looked into his layout on that keyboard. He seems to have dropped the idea of layer toggles due to the increased cognitive load of keeping track of which layer you are in. Instead, he now holds his home row keys to select layers. I might look into this approach at some point, but for now I am quite happy with the Miryoku setup.
 
@@ -466,7 +472,6 @@ I am currently using two websites to help with this:
 
 - https://monkeytype.com: this website DOES support ISRT! I was quite surprised. It is possible to set up a custom wordset, where one of the english language corpuses is filtered to include only letters from the ISRT home row. As my typing improves, I can gradually move letters from the excluded list to the list of allowed letters, and then the site behaves in a similar way to keybr.com (albeit without the per-letter statistics and adaptive letter focus).
 
-
 ** DONE Corne V4.1 Mini :keyboards:corne:
 :PROPERTIES:
 :CUSTOM_ID: corne-v4-mini
@@ -538,7 +543,9 @@ I've since learned that one important difference between rev 4.0 and 4.1 is that
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER:
 :END:
 
-I’ve been experimenting a bit more with the Corne keyboard. I saw a [[https://youtu.be/8wZ8FRwOzhU?si=Y1a1JSbGsN1vZizU][video from Ben Vallack]] where he lays out a mapping for his 34-key keyboard.
+I’ve been experimenting a bit more with the Corne keyboard. I saw a video from Ben Vallack where he lays out a mapping for his 34-key keyboard.
+
+#+hugo: {{< youtube 8wZ8FRwOzhU >}}
 
 In this video, he explains how holding down layer and modifier keys can cause fatigue, which he avoids by using “sticky” layer keys and “one-shot” modifiers. In the layout I am currently using, I use a similar layer scheme to Ben in which the shift key is moved to the left thumb. This is the layout I am currently working with:
 
@@ -569,13 +576,9 @@ As I use the keyboard more, I’ll get a better idea what else I will need to ad
 :EXPORT_HUGO_BUNDLE: 20240711_corne-v4-keymap
 :EXPORT_DATE: 2024-07-11
 :EXPORT_HUGO_MENU:
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER:
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featuredImage "20240711-corne_6x3.jpg"
 :END:
 I recently acquired a pre-built Corne 46-key ergonomic split keyboard.
-
-#+ATTR_HTML: :title My new Corne keyboard
-[[file:20240711-corne_6x3.jpg]]
-#+hugo: more
 
 Rather than use the default QWERTY keyboard arrangement, I have programmed it to use a [[https://colemakmods.github.io/mod-dh/][COLEMAK-DH]] layout, which allows for much more efficient typing. Because there are a reduced number of keys, many of the keys need to be overloaded with multiple functions. This is normally done with two techniques:
 - Tap-Modifiers: If you tap a key, it will output its normal character. However, if you hold the key, it can act as a modifier such as Shift, Ctrl, Alt, etc.. This means you don't need to dedicate separate keys for this, and these modifiers can be placed on the home row of the keyboard where you don't need to reach for them.
@@ -637,14 +640,16 @@ I’ll post updates here as I gain more experience and have something to report.
 :EXPORT_HUGO_BUNDLE: 20220130_its-a-heartache
 :EXPORT_DATE: 2022-01-30
 :EXPORT_HUGO_MENU:
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER:
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featuredImage "20220130-IMG_4547_01-999x1024.jpg"
 :END:
 
-[[file:20220130-IMG_4547_01-999x1024.jpg]]
+On the Australian TV Series Doctor Doctor, there’s a recurring piece of music that is playing using fingerpicking on the ukulele based on Bonnie Tyler’s hit song It’s a Heartache. A quick search on YouTube discovered that it comes from the lead-in of a music video by the Wellington International Ukulele Orchestra:
 
-On the Australian TV Series Doctor Doctor, there’s a recurring piece of music that is playing using fingerpicking on the ukulele based on Bonnie Tyler’s hit song It’s a Heartache. A quick search on YouTube discovered that it comes from the lead-in of a [[https://youtu.be/GqynAAYdLW8][music video by the Wellington International Ukulele Orchestra]].
+#+hugo: {{< youtube GqynAAYdLW8 >}}
 
-I was keen to learn how to play something like it on my own ukulele, and a further search turned up a [[https://youtu.be/pCswBsuddrc][tutorial by Helmut Bickel]], where he has some hand-written tablature in the background of the video. To have the tab in a more convenient format, I wrote it up using the [[http://lilypond.org/][lilypond]] music typesetting software, and the resulting PDF is [[file:20220130-heartache-tab.pdf][reproduced here]].
+I was keen to learn how to play something like it on my own ukulele, and a further search turned up a [[https://youtu.be/pCswBsuddrc][tutorial by Helmut Bickel]], where he has some hand-written tablature in the background of the video. To have the tab in a more convenient format, I wrote it up using the [[http://lilypond.org/][lilypond]] music typesetting software, and the resulting PDF is reproduced below:
+
+#+hugo: {{< embed-pdf url="20220130-heartache-tab.pdf" >}}
 
 ** DONE How to calculate the series resistor for an LED :electronics:
 :PROPERTIES:
@@ -653,10 +658,8 @@ I was keen to learn how to play something like it on my own ukulele, and a furth
 :EXPORT_HUGO_BUNDLE: 20220202_led-series-resistor
 :EXPORT_DATE: 2022-02-02
 :EXPORT_HUGO_MENU:
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER:
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featuredImage "20220202-Screen-Shot-2022-02-02-at-6.32.54-pm.png"
 :END:
-
-[[file:20220202-Screen-Shot-2022-02-02-at-6.32.54-pm.png]]
 
 When we connect an LED to to a battery, we often need to connect a resistor is series to limit the current. I saw this question come up in a facebook group, and thought it might be useful to use this as a simple illustrative example of doing circuit design.
 
@@ -717,7 +720,6 @@ This is still acceptable. So, we have now completed our circuit design:
 
 [[file:20220202-quicklatex.com-fecf716ddc8012b94614dba19222cab7_l3.svg]]
 
-
 ** DONE Digital Photography for Hams :photography:hamradio:
 :PROPERTIES:
 :CUSTOM_ID: photography-for-hams
@@ -725,10 +727,8 @@ This is still acceptable. So, we have now completed our circuit design:
 :EXPORT_HUGO_BUNDLE: 20220120_photography-for-hams
 :EXPORT_DATE: 2022-01-20
 :EXPORT_HUGO_MENU:
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER:
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featuredImage "20200120-Screenshot_2022-02-02_21-07-23-1024x550.png"
 :END:
-
-[[file:20200120-Screenshot_2022-02-02_21-07-23-1024x550.png]]
 
 Last night I spoke about Digital Photography at the [[https://www.mwrs.org.au/][Manly Warringah Radio Society]], a club for ham radio operators. I decided to structure the talk in such a way that it drew parallels between digital photography and ham radio.
 
@@ -738,7 +738,10 @@ I talked about photography’s /exposure triangle/, and linked it back to techni
 
 Finally, I talked about using a raw file editor to provide a photographer with more freedom in processing an image, and briefly introduced the open source [[https://www.darktable.org/][darktable project]] as an example of such an editor.
 
-A recording of the talk will be available on the [[https://www.youtube.com/user/VK2MB][MWRS YouTube channel]] in due course. The presentation slides I used may be found [[file:20220120-photography_for_hams.pdf][here]].
+A recording of the talk will be available on the [[https://www.youtube.com/user/VK2MB][MWRS YouTube channel]] in due course. Here are the presentation slides I used:
+
+#+hugo: {{< embed-pdf url="20220120-photography_for_hams.pdf" >}}
+
 
 ** DONE 〜て-Form Song :languages:japanese:
 :PROPERTIES:
@@ -863,10 +866,8 @@ Feel free to comment if you have other suggestions to allow for easy transition 
 :EXPORT_HUGO_BUNDLE: 20140420_elecraft-k2-amplifier-keying-circuit
 :EXPORT_DATE: 2014-04-20
 :EXPORT_HUGO_MENU:
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER:
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featuredImage "20141420-IMG_0118-Version-2-768x1024-1.jpg"
 :END:
-
-[[file:20141420-IMG_0118-Version-2-768x1024-1.jpg]]
 
 I have been building an [[http://www.elecraft.com/k2_page.htm][Elecraft K2 kit radio]], and I completed construction this Easter weekend.
 
@@ -936,4 +937,8 @@ At my local radio club, one of the members likes to hop on the 80 metre band wit
 
 I didn’t know anthing about this topic, so I thought it would be great to go away, do some research and learn about them so I could deliver a lecture. It seems indeed that beverage antennas are a great option for receiving signals on the low bands, but they do require a huge amount of space, and are less well suited at a transmissing antenna.
 
-The [[https://youtu.be/xnVgbdkK_Iw][lecture was recorded]] and can be found on the club’s YouTube channel. The [[https://www.slideshare.net/VK2MB/april-2014-lecture-beverage-antennas][slidepack]] is available on slideshare.
+The lecture was recorded and can be found on the club’s YouTube channel:
+
+#+hugo: {{< youtube xnVgbdkK_Iw >}}
+
+The [[https://www.slideshare.net/VK2MB/april-2014-lecture-beverage-antennas][slidepack]] is available on slideshare.

@@ -1,12 +1,11 @@
 +++
 title = "Migrating Blog from Wordpress to Org Mode"
 date = 2024-12-26
-lastmod = 2024-12-26T17:56:41+11:00
-tags = ["Emacs", "OrgReĝimo", "Esperanto", "Ŝava", "𐑖𐑱𐑝𐑾𐑯"]
+lastmod = 2024-12-27T12:49:24+11:00
+tags = ["Emacs", "OrgMode", "Esperanto", "Shavian", "𐑖𐑱𐑝𐑾𐑯"]
 categories = ["Blog"]
 draft = false
-weight = 3003
-author = "Matt Maguire"
+weight = 2003
 +++
 
 Lastatempe mi uzis sufiĉe ofte Org-reĝimon kun Emacs por pli bone organizi ĉe oficejo kaj spuri kunvenojn. La venonta logika paŝo estis migrigi mian blogon el Wordpress kaj integri ĝin en mian Org-reĝiman laborfluon.
@@ -20,3 +19,7 @@ La profitoj estas:
 Pro tio ke okazas la kristnaska ferio, mi havas la tempon esplori la diversajn eblecojn, kaj mi alvenis al uzi ox-hugo-n por eksporti miajn Org-reĝimajn blogafiŝojn kaj dokumentojn al Hugo retejo bazite je la ''KeepIt'' retejtemo. Tiu temo posedas utilajn funkciojn kiel subteno de \\(\KaTeX\\) por aperigi matematikajn ekvaciojn, kaj multlingva subteno por verki artikolojn per aliaj lingvoj/alfabetoj (kiel Esperanto aŭ la Ŝava alfabeto).
 
 Mi nun atingis la tempopunkton kiam mi kredas ke mi povas malstarigi la Wordpress-an retejon, do ni vidu kiel mi faros!
+
+Se vi volas ion por ridetigi vin, spektu la suban videon pri la ĉiel utila Emacs:
+
+{{< youtube urcL86UpqZc >}}

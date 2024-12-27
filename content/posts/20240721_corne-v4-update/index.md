@@ -1,11 +1,11 @@
 +++
 title = "Corne V4 Update"
 date = 2024-07-21
-lastmod = 2024-12-26T17:56:42+11:00
+lastmod = 2024-12-27T12:49:24+11:00
 tags = ["keyboards", "corne"]
 categories = ["Blog"]
 draft = false
-weight = 2007
+weight = 2012
 +++
 
 I’ve been continuing my journey into split mechanical keyboards. The 46-key Corne v4 Board that I recently bought seemed to have an unreliable USB connection on the left-hand side, with it losing power if the cable was lightly depressed. If the USB cable was connected to the right-hand side then it worked reliably. I decided to disassemble the left hand side and inspect the soldering on the USB connector to see if there could be a dry joint.

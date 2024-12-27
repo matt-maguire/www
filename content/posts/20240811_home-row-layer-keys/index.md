@@ -1,14 +1,13 @@
 +++
 title = "Home Row Layer Keys"
 date = 2024-08-11
-lastmod = 2024-12-26T17:56:42+11:00
+lastmod = 2024-12-27T12:49:24+11:00
 tags = ["Computers", "Keyboards"]
 categories = ["Blog"]
 draft = false
-weight = 2004
+weight = 2009
+featuredImage = "20240811-IMG_0418sm-1536x733.jpg"
 +++
-
-{{< figure src="IMG_0418sm-1536x733.jpg" >}}
 
 I’ve been practising the [ISRT](https://github.com/DreymaR/BigBagKbdTrixPKL/blob/master/Layouts/ISRT/README.md) layout on <https://keybr.com/> and am slowly getting used to it. The Miryoku system of layers is quite easy to work with, but I’ve noticed a couple of issues:
 

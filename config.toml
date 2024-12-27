@@ -32,6 +32,8 @@ enableRobotsTXT = true
 enableGitInfo = true
 # whether to use emoji code
 enableEmoji = true
+#workaround for Sydney being ahead of UTC
+buildFuture=true
 
 # Author config
 [author]

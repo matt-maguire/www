@@ -41,7 +41,8 @@ The following websites have resources I have stumbled across that may be useful 
 - https://github.com/rossant/awesome-math — a curated list of maths learning resources
 - https://www.cultofpedagogy.com/ — lots of interesting pedagogical resources
 
-** DONE Programming Languages :Programming:LISP:
+** Programming Languages
+*** DONE Programming Languages :Programming:LISP:
 :PROPERTIES:
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: programming-languages
@@ -50,22 +51,87 @@ The following websites have resources I have stumbled across that may be useful 
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER:
 :END:
 
-*** LISPs
-**** Scheme
-Scheme is a variant of LISP that was famously used at MIT to teach students about functional programming concepts. It is also used in the GNU Guile Scheme as an extension language.
+**** LISPs
+***** Scheme
+Scheme is a variant of LISP that was famously used at MIT to teach students about functional programming concepts. It is also used in the GNU Guile extension language.
 
 Some resources are:
-- [[https://ocw.mit.edu/courses/6-001-structure-and-interpretation-of-computer-programs-spring-2005/video_galleries/video-lectures/][SCIP programming course]] from MIT is free.
+- [[https://media.githubusercontent.com/media/sarabander/sicp-pdf/master/sicp.pdf][Structure and Interpretation of Computer Programs]] (SICP) book.
+- [[https://ocw.mit.edu/courses/6-001-structure-and-interpretation-of-computer-programs-spring-2005/video_galleries/video-lectures/][SICP programming course]] from MIT is free.
+- Learning GNU Guile variant of Scheme: https://www.gnu.org/software/guile/learn/
 
-**** Common Lisp
+***** Common Lisp
 Common LISP implementations tend to be much larger than Scheme, which makes it powerful for solving practical probems, but this large feature set could be a bit of a distractor when first starting out.
 - Differences between Scheme and Lisp are descibed at https://wiki.c2.com/?LispSchemeDifferences.
 - SBCL (Steel Belt Common Lisp) is a good choice, particularly when combined with Emacs and SLIME. Instructions for setting it up are available at https://github.com/rabbibotton/clog/blob/main/LEARN.md.
 
-**** Emacs Lisp
-This is of course a good one to learn if you use the Emacs editor. Since it is already sell integrated into the editor, no need to waste time setting up external compilers and connectors such as SLIME.
+***** Emacs Lisp
+This is of course a good one to learn if you use the Emacs editor. Since it is already well integrated into the editor, no need to waste time setting up external compilers and connectors such as SLIME.
 - Elisp is well documented in the Emacs Manual and the Emacs help system. Examples:
   - [[https://www.gnu.org/software/emacs/manual/html_node/eintr/index.html][Introduction to Programming in Elisp]]
   - [[https://www.gnu.org/software/emacs/manual/html_node/elisp/index.html][Elisp Reference Manual]]
-- it has powerful tools such as Edebug exist, profilers, regression testing, benchmarkers, ...
+- it has powerful tools such as Edebug, profilers, regression testing, benchmarkers, ...
 - it is single-threaded, so may not be suitable for some applications.
+
+*** DONE Programadaj Lingvoj :Programado:LISP:
+:PROPERTIES:
+:EXPORT_FILE_NAME: index.eo.md
+:EXPORT_HUGO_BUNDLE: programming-languages
+:EXPORT_DATE: 2024-12-28
+:EXPORT_HUGO_MENU:
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER:
+:END:
+
+**** LISPs
+***** Scheme
+Scheme estas varianto de LISP kiu estas fame uzita ĉe MIT por instruii studentojn pri konceptoj de funkcieca programado. Ĝi ankaŭ estas uzata en la GNU Guile etenda lingvo.
+
+Kelkaj rimedoj estas:
+- [[https://media.githubusercontent.com/media/sarabander/sicp-pdf/master/sicp.pdf][Strukturo kaj Interpretado de Komputilaj Programoj]] (SIKP) libro.
+- [[https://ocw.mit.edu/courses/6-001-structure-and-interpretation-of-computer-programs-spring-2005/video_galleries/video-lectures/][SIKP programada kurso]] de MIT estas senpaga.
+- Por lerni GNU Guile varianto de Scheme: https://www.gnu.org/software/guile/learn/
+
+***** Komuna Lisp
+Komuna LISP efektivigoj ofte estas pli grandaj ol Scheme, kiu igas ĝin pli potenca por solvi praktikajn problemojn, sed tiu granda funkciaro povas esti iom de distro kiam oni unue komencas.
+- Diferencoj inter Scheme kaj Lisp estas priskribitaj ĉe https://wiki.c2.com/?LispSchemeDifferences.
+- SBKL (Steel Belt Komuna Lisp) estas bona elekto, precipe kiam uzate kun Emacs kaj SLIME. Instruktoj por starigi ĝin disponas ĉe https://github.com/rabbibotton/clog/blob/main/LEARN.md.
+
+***** Emacs Lisp
+Tiu kompreneble estas bona por lerni se oni jam uzas la Emacs redaktilo. Pro tio ke ĝi jam estas bone integrita en la redaktilon, ne necesas malŝpari tempon starigi eksternajn kompililojn kaj konektilojn kiel SLIME.
+- Elisp estas bone dokumentita en la Emacs manlibro kaj la Emacs helpa sistemo. Ekzemploj:
+  - [[https://www.gnu.org/software/emacs/manual/html_node/eintr/index.html][Enkonduko al Programado en Elisp]]
+  - [[https://www.gnu.org/software/emacs/manual/html_node/elisp/index.html][Elisp Referenca Manlibro]]
+- Ĝi posedas potencaj iloj kiaj Edebug, profililoj, regressa testiloj, komparmarkiloj, ktp.
+- Ĝi estas unu-fadena, do pro tio povas esti malkonvena por kelkaj aplikaĵoj.
+
+
+*** DONE 𐑐𐑮𐑴𐑜𐑮𐑨𐑥𐑦𐑙 𐑤𐑨𐑙𐑜𐑢𐑦𐑡𐑩𐑟  :𐑐𐑮𐑴𐑜𐑮𐑨𐑥𐑦𐑙:𐑮𐑦𐑕𐑐:
+:PROPERTIES:
+:EXPORT_FILE_NAME: index.en-shaw.md
+:EXPORT_HUGO_BUNDLE: programming-languages
+:EXPORT_DATE: 2024-12-28
+:EXPORT_HUGO_MENU:
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER:
+:END:
+
+**** ·𐑮𐑦𐑕𐑐𐑕
+***** ·𐑕𐑒𐑰𐑥
+·𐑕𐑒𐑰𐑥 𐑦𐑟 𐑩 𐑝𐑺𐑾𐑯𐑑 𐑝 ·𐑤𐑦𐑕𐑐 𐑞𐑨𐑑 𐑢𐑪𐑟 𐑓𐑱𐑥𐑩𐑕𐑤𐑦 𐑿𐑟𐑛 𐑨𐑑 ·𐑥𐑦𐑑 𐑑 𐑑𐑰𐑗 𐑕𐑑𐑿𐑛𐑩𐑯𐑑𐑕 𐑩𐑚𐑬𐑑 𐑓𐑳𐑯𐑒𐑖𐑩𐑯𐑩𐑤 𐑐𐑮𐑴𐑜𐑮𐑨𐑥𐑦𐑙 𐑒𐑪𐑯𐑕𐑧𐑐𐑑𐑕. 𐑦𐑑 𐑦𐑟 𐑭𐑤𐑕𐑴 𐑿𐑟𐑥 𐑦𐑯 𐑞 ·𐑜𐑯𐑵 𐑜𐑲𐑤 𐑧𐑒𐑕𐑑𐑧𐑯𐑖𐑩𐑯 𐑤𐑨𐑙𐑜𐑢𐑦𐑡.
+
+𐑕𐑳𐑥 𐑮𐑦𐑟𐑹𐑕𐑩𐑟 𐑸:
+- [[https://media.githubusercontent.com/media/sarabander/sicp-pdf/master/sicp.pdf][𐑕𐑑𐑮𐑳𐑒𐑗𐑼 𐑯 𐑦𐑯𐑑𐑻𐑐𐑮𐑩𐑑𐑱𐑖𐑩𐑯 𐑝 𐑒𐑩𐑥𐑐𐑿𐑑𐑼 𐑐𐑮𐑴𐑜𐑮𐑨𐑥𐑟]] (·𐑕𐑦𐑒𐑐) 𐑚𐑫𐑒.
+- [[https://ocw.mit.edu/courses/6-001-structure-and-interpretation-of-computer-programs-spring-2005/video_galleries/video-lectures/][·𐑕𐑦𐑒𐑐 𐑐𐑮𐑴𐑒𐑮𐑨𐑥𐑦𐑙 𐑒𐑹𐑕]] 𐑓𐑮𐑪𐑥 ·𐑥𐑦𐑑 𐑦𐑟 𐑓𐑮𐑰.
+- 𐑤𐑻𐑯𐑦𐑙 𐑞 ·𐑜𐑯𐑵 𐑜𐑲𐑤 𐑝𐑺𐑾𐑯𐑑 𐑝 ·𐑕𐑒𐑰𐑥: https://www.gnu.org/software/guile/learn/
+
+***** 𐑒𐑪𐑥𐑩𐑯 ·𐑤𐑦𐑕𐑐
+𐑒𐑪𐑥𐑩𐑯 ·𐑤𐑦𐑕𐑐 𐑦𐑥𐑐𐑤𐑩𐑥𐑩𐑯𐑑𐑱𐑖𐑩𐑯𐑟 𐑑𐑧𐑯𐑛 𐑑 𐑚𐑰 𐑥𐑳𐑗 𐑤𐑸𐑡𐑼 𐑞𐑨𐑯 ·𐑕𐑒𐑰𐑥, 𐑢𐑦𐑗 𐑥𐑱𐑒𐑕 𐑦𐑑 𐑐𐑬𐑢𐑼𐑓𐑩𐑤 𐑓 𐑕𐑪𐑚𐑝𐑦𐑙 𐑐𐑮𐑨𐑒𐑑𐑦𐑒𐑩𐑤 𐑐𐑮𐑪𐑚𐑤𐑩𐑥𐑟, 𐑚𐑳𐑑 𐑞𐑦𐑕 𐑤𐑸𐑡 𐑓𐑰𐑗𐑼 𐑕𐑧𐑑 𐑒𐑫𐑛 𐑚𐑰 𐑩 𐑚𐑦𐑑 𐑝 𐑩 𐑛𐑦𐑕𐑑𐑮𐑨𐑒𐑑𐑼 𐑢𐑧𐑯 𐑓𐑻𐑕𐑑 𐑕𐑑𐑸𐑑𐑦𐑙 𐑬𐑑.
+- 𐑛𐑦𐑓𐑮𐑩𐑯𐑕𐑩𐑟 𐑚𐑩𐑑𐑒𐑰𐑯 ·𐑕𐑒𐑰𐑥 𐑯 ·𐑤𐑦𐑕𐑐 𐑸 𐑛𐑩𐑕𐑒𐑮𐑲𐑚𐑛 𐑨𐑑 https://wiki.c2.com/?LispSchemeDifferences.
+- ·𐑕𐑚𐑒𐑤 (𐑕𐑑𐑰𐑤 𐑚𐑧𐑤𐑑 𐑒𐑪𐑥𐑩𐑯 𐑤𐑦𐑕𐑐) 𐑦𐑟 𐑩 𐑜𐑫𐑛 𐑗𐑶𐑕, 𐑐𐑼𐑑𐑦𐑒𐑘𐑩𐑤𐑼𐑤𐑦 𐑢𐑧𐑯 𐑒𐑩𐑥𐑚𐑲𐑯𐑛 𐑢𐑦𐑞 ·𐑰𐑥𐑨𐑒𐑕 𐑯 ·𐑕𐑤𐑲𐑥. 𐑦𐑯𐑕𐑑𐑮𐑳𐑒𐑗𐑩𐑯𐑕 𐑓 𐑕𐑧𐑑𐑦𐑙 𐑦𐑑 𐑳𐑐 𐑸 𐑩𐑝𐑱𐑤𐑩𐑚𐑩𐑤 𐑨𐑑 https://github.com/rabbibotton/clog/blob/main/LEARN.md.
+
+***** ·𐑰𐑥𐑨𐑒𐑕 𐑤𐑦𐑕𐑐
+𐑞𐑦𐑕 𐑦𐑟 𐑝 𐑒𐑹𐑕 𐑩 𐑜𐑫𐑛 𐑢𐑳𐑯 𐑑 𐑤𐑻𐑯 𐑦𐑓 𐑿 𐑿𐑟 𐑞 ·𐑰𐑥𐑨𐑒𐑕 𐑧𐑛𐑦𐑑𐑼. 𐑕𐑦𐑯𐑕 𐑦𐑑 𐑦𐑟 𐑭𐑤𐑮𐑧𐑛𐑦 𐑢𐑧𐑤 𐑦𐑯𐑑𐑦𐑜𐑮𐑱𐑑𐑩𐑛 𐑦𐑯𐑑𐑵 𐑞 𐑧𐑛𐑦𐑑𐑼, 𐑯𐑴 𐑯𐑰𐑛 𐑑 𐑢𐑱𐑕𐑑 𐑑𐑲𐑥 𐑕𐑧𐑑𐑦𐑙 𐑳𐑐 𐑧𐑒𐑕𐑑𐑻𐑯𐑩𐑤 𐑒𐑪𐑥𐑐𐑲𐑤𐑼𐑟 𐑯 𐑒𐑩𐑯𐑧𐑒𐑑𐑼𐑟 𐑕𐑳𐑗 𐑨𐑟 ·𐑕𐑤𐑲𐑥.
+- ·𐑰𐑤𐑦𐑕𐑐 𐑦𐑟 𐑢𐑧𐑤 𐑛𐑪𐑒𐑘𐑩𐑥𐑧𐑯𐑑𐑩𐑛 𐑦𐑯 𐑞 ·𐑰𐑥𐑨𐑒𐑕 𐑥𐑨𐑯𐑘𐑫𐑩𐑤 𐑯 𐑞 ·𐑰𐑥𐑨𐑒𐑕 𐑣𐑧𐑤𐑐 𐑕𐑦𐑕𐑑𐑩𐑥. 𐑦𐑜𐑟𐑭𐑥𐑐𐑩𐑤𐑟:
+  - [[https://www.gnu.org/software/emacs/manual/html_node/eintr/index.html][𐑦𐑯𐑑𐑮𐑩𐑛𐑳𐑒𐑗𐑩𐑯 𐑑 𐑐𐑮𐑴𐑜𐑮𐑨𐑥𐑦𐑙 𐑦𐑯 ·𐑰𐑤𐑦𐑕𐑐]]
+  - [[https://www.gnu.org/software/emacs/manual/html_node/elisp/index.html][𐑰𐑤𐑦𐑕𐑐 𐑮𐑧𐑓𐑼𐑩𐑯𐑕 𐑥𐑨𐑯𐑘𐑫𐑩𐑤]]
+- 𐑦𐑑 𐑣𐑨𐑟 𐑐𐑬𐑼𐑓𐑩𐑤 𐑑𐑵𐑤𐑟 𐑕𐑳𐑗 𐑨𐑟 ·𐑰𐑛𐑰𐑚𐑳𐑜, 𐑐𐑮𐑴𐑓𐑲𐑤𐑼𐑟, 𐑮𐑰𐑜𐑮𐑧𐑖𐑩𐑯 𐑑𐑧𐑕𐑑𐑦𐑙, 𐑚𐑧𐑯𐑗𐑥𐑸𐑒𐑼𐑟, ...
+- 𐑦𐑑 𐑦𐑟 𐑕𐑦𐑯𐑜𐑩𐑤-𐑔𐑮𐑧𐑛𐑩𐑛, 𐑕𐑴 𐑥𐑱 𐑯𐑪𐑑 𐑚𐑰 𐑕𐑵𐑑𐑩𐑚𐑩𐑤 𐑓 𐑕𐑳𐑥 𐑨𐑐𐑤𐑦𐑒𐑱𐑖𐑩𐑯𐑟.

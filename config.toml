@@ -429,11 +429,11 @@ buildFuture=true
         enable = false
       # Utterances comment config (https://utteranc.es/)
       [params.page.comment.utterances]
-        enable = false
+        enable = true
         # owner/repo
-        repo = ""
+        repo = "matt-maguire/www"
         issueTerm = "pathname"
-        label = ""
+        label = "comment"
         lightTheme = "github-light"
         darkTheme = "github-dark"
     # Third-party library config

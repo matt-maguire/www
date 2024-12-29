@@ -1,11 +1,11 @@
 +++
 title = "𐑯𐑿 ·𐑗𐑪𐑒 𐑕𐑢𐑦𐑗𐑩𐑟 𐑣𐑨𐑝 𐑼𐑲𐑝𐑛!"
 date = 2024-09-14
-lastmod = 2024-12-27T12:49:24+11:00
+lastmod = 2024-12-29T16:49:42+11:00
 tags = ["Computers", "Keyboards"]
 categories = ["Blog"]
 draft = true
-weight = 2007
+weight = 3002
 +++
 
 {{< figure src="IMG_0442-1152x1536.jpg" >}}

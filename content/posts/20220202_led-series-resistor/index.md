@@ -1,11 +1,11 @@
 +++
 title = "How to calculate the series resistor for an LED"
 date = 2022-02-02
-lastmod = 2024-12-27T12:49:24+11:00
+lastmod = 2024-12-29T16:49:42+11:00
 tags = ["electronics"]
 categories = ["Blog"]
 draft = false
-weight = 2016
+weight = 3001
 featuredImage = "20220202-Screen-Shot-2022-02-02-at-6.32.54-pm.png"
 +++
 

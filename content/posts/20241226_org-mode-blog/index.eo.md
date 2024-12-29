@@ -1,11 +1,11 @@
 +++
 title = "Migrating Blog from Wordpress to Org Mode"
 date = 2024-12-26
-lastmod = 2024-12-27T12:49:24+11:00
+lastmod = 2024-12-29T16:49:42+11:00
 tags = ["Emacs", "OrgMode", "Esperanto", "Shavian", "𐑖𐑱𐑝𐑾𐑯"]
 categories = ["Blog"]
 draft = false
-weight = 2003
+weight = 3003
 +++
 
 Lastatempe mi uzis sufiĉe ofte Org-reĝimon kun Emacs por pli bone organizi ĉe oficejo kaj spuri kunvenojn. La venonta logika paŝo estis migrigi mian blogon el Wordpress kaj integri ĝin en mian Org-reĝiman laborfluon.

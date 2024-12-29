@@ -1,11 +1,11 @@
 +++
 title = "〜て-Form Song"
 date = 2021-12-24
-lastmod = 2024-12-27T12:49:25+11:00
+lastmod = 2024-12-29T16:49:43+11:00
 tags = ["languages", "japanese"]
 categories = ["Blog"]
 draft = false
-weight = 2018
+weight = 3001
 +++
 
 When I was studying Japanese at TAFE, our teacher Masa-sensei taught us a silly song to remember how to produce the 〜て form of a verb, given its 〜ます stem or its dictionary form.

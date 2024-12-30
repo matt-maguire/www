@@ -823,6 +823,48 @@ For group 2 verbs, you can easily convert, just taking off ‘ます’ from ま
 
 To find out more about the 〜て form of Japanese verbs, you can refer to [[http://guidetojapanese.org/learn/complete/progressive_tense][Tae Kim’s Japanese Grammar Guide]].
 
+*** DONE 〜て-𐑓𐑹𐑥 𐑕𐑪𐑙 :𐑤𐑨𐑙𐑜𐑢𐑦𐑡𐑩𐑟:𐑡𐑨𐑐𐑩𐑯𐑰𐑟:
+:PROPERTIES:
+:CUSTOM_ID: te-form-song.en-shaw
+:EXPORT_FILE_NAME: index.en-shaw.md
+:EXPORT_HUGO_BUNDLE: 20211224_te-form-song
+:EXPORT_DATE: 2021-12-24
+:END:
+
+𐑢𐑧𐑯 𐑲 𐑢𐑪𐑟 𐑕𐑑𐑳𐑛𐑦𐑦𐑙 ·𐑡𐑨𐑐𐑩𐑯𐑰𐑟 𐑨𐑑 ·𐑑𐑱𐑓, 𐑬𐑼 𐑑𐑰𐑗𐑼 ·𐑥𐑳𐑕𐑳-𐑕𐑧𐑯𐑖𐑱 𐑑𐑷𐑑 𐑳𐑕 𐑩 𐑕𐑦𐑤𐑦 𐑕𐑪𐑙 𐑑 𐑮𐑦𐑥𐑧𐑥𐑚𐑼 𐑣𐑬 𐑑 𐑐𐑮𐑩𐑛𐑿𐑕 𐑞 〜て 𐑓𐑹𐑥 𐑝 𐑩 𐑝𐑻𐑚, 𐑜𐑦𐑝𐑩𐑯 𐑦𐑑𐑕 〜ます 𐑕𐑑𐑧𐑥 𐑹 𐑦𐑑𐑕 𐑛𐑦𐑒𐑖𐑩𐑯𐑼𐑦 𐑓𐑹𐑥.
+
+𐑣𐑰 𐑑o𐑤𐑛 𐑳𐑕 𐑞𐑨𐑑 𐑣𐑰 𐑛𐑦𐑟𐑲𐑯𐑛 𐑞 𐑕𐑪𐑙 𐑑 𐑚𐑰 𐑕𐑳𐑙 𐑑 𐑞 𐑑𐑿𐑯 𐑝 "𐑕𐑨𐑯𐑑𐑩 𐑒𐑤𐑷𐑟 𐑦𐑟 𐑒𐑳𐑥𐑦𐑙 𐑑 𐑑𐑬𐑯" 𐑕𐑴 𐑞a𐑑 𐑧𐑝𐑮𐑦 𐑘𐑽 𐑨𐑑 𐑒𐑮𐑦𐑕𐑥𐑩𐑕 𐑑𐑲𐑥 𐑢𐑰 𐑢𐑫𐑛 𐑣𐑽 𐑞 𐑑𐑿𐑯 𐑯 𐑚𐑰 𐑮𐑦𐑥𐑲𐑯𐑛𐑩𐑛 𐑝 𐑣𐑬 𐑑 𐑥𐑱𐑒 𐑞 〜て 𐑓𐑹𐑥.
+
+𐑢𐑧𐑤, 𐑦𐑑 𐑢𐑻𐑒𐑑 -- 𐑰𐑝𐑩𐑯 𐑞𐑴 𐑞𐑨𐑑 𐑢𐑪𐑟 𐑥𐑹 𐑞𐑨𐑯 10 𐑘𐑽𐑟 𐑩𐑜𐑴, 𐑲 𐑕𐑑𐑦𐑤 𐑮𐑦𐑥𐑧𐑥𐑚𐑼 𐑞𐑨𐑑 𐑕𐑪𐑙 𐑨𐑟 𐑦𐑑 𐑒𐑳𐑥𐑟 𐑳𐑐 𐑑 𐑒𐑮𐑦𐑕𐑥𐑩𐑕.
+
+#+begin_example
+まさ先生、どうもありがとうございました 😁
+
+〜て 𐑓𐑹𐑥 𐑕𐑪𐑙:
+
+いちり-って、みびに-んで、
+
+き-いて、ぎ-いで、
+
+します-して、
+
+きます-きて、いきます-いって。
+
+うつる-って、むぶぬ-んで、
+
+く-いて、ぐ-いで、
+
+す.する-して、
+
+くる-きて、いく-いって。
+
+𐑓 𐑜𐑮𐑵𐑐 2 𐑝𐑻𐑚𐑟, 𐑿 𐑒𐑨𐑯 𐑰𐑟𐑩𐑤𐑦 𐑒𐑪𐑯𐑝𐑻𐑑, 𐑡𐑳𐑕𐑑 𐑪𐑓 ‘ます’ 𐑓𐑮𐑪𐑥 ます-𐑓𐑹𐑥, 𐑯 𐑩 て 𐑦𐑟 𐑢𐑪𐑑 𐑿 𐑐𐑫𐑑!
+
+(𐑚𐑨𐑒 𐑑 𐑓𐑻𐑕𐑑 𐑝𐑻𐑕)
+#+end_example
+
+𐑑 𐑓𐑲𐑯𐑛 𐑬𐑑 𐑥𐑹 𐑩𐑚𐑬𐑑 𐑞 〜て 𐑓𐑹𐑥 𐑝 ·𐑡𐑨𐑐𐑩𐑯𐑰𐑟 𐑝𐑻𐑚𐑟, 𐑿 𐑒𐑨𐑯 𐑮𐑦𐑓𐑻 𐑑 [[http://guidetojapanese.org/learn/complete/progressive_tense][·𐑑𐑱 𐑒𐑦𐑥𐑟 𐑡𐑨𐑐𐑩𐑯𐑰𐑟 𐑜𐑮𐑨𐑥𐑼 𐑜𐑲𐑛]].
+
 ** Sony A7R4 Selfie Solution
 *** DONE Sony A7R4 Selfie Solution :photography:
 :PROPERTIES:

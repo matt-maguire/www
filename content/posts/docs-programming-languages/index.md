@@ -1,17 +1,19 @@
 +++
 title = "Programming Languages"
 date = 2024-12-28
-lastmod = 2024-12-28T11:12:46+11:00
+lastmod = 2024-12-30T12:38:33+11:00
 tags = ["Programming", "LISP"]
 categories = ["Docs"]
 draft = false
 weight = 3001
+author = "Matt Maguire"
+hiddenFromHomePage = true
 +++
 
-# LISPs {#lisps}
+## LISPs {#lisps}
 
 
-## Scheme {#scheme}
+### Scheme {#scheme}
 
 Scheme is a variant of LISP that was famously used at MIT to teach students about functional programming concepts. It is also used in the GNU Guile extension language.
 
@@ -22,7 +24,7 @@ Some resources are:
 -   Learning GNU Guile variant of Scheme: <https://www.gnu.org/software/guile/learn/>
 
 
-## Common Lisp {#common-lisp}
+### Common Lisp {#common-lisp}
 
 Common LISP implementations tend to be much larger than Scheme, which makes it powerful for solving practical probems, but this large feature set could be a bit of a distractor when first starting out.
 
@@ -30,7 +32,7 @@ Common LISP implementations tend to be much larger than Scheme, which makes it p
 -   SBCL (Steel Belt Common Lisp) is a good choice, particularly when combined with Emacs and SLIME. Instructions for setting it up are available at <https://github.com/rabbibotton/clog/blob/main/LEARN.md>.
 
 
-## Emacs Lisp {#emacs-lisp}
+### Emacs Lisp {#emacs-lisp}
 
 This is of course a good one to learn if you use the Emacs editor. Since it is already well integrated into the editor, no need to waste time setting up external compilers and connectors such as SLIME.
 

@@ -629,7 +629,7 @@ buildFuture=true
         pre = ""
         post = ""
         name = "Docs"
-        url = "/docs/"
+        url = "/categories/docs/"
         title = ""
     [languages.en.params]
       [languages.en.params.search]
@@ -709,7 +709,7 @@ buildFuture=true
         pre = ""
         post = ""
         name = "𐑛𐑪𐑒𐑕"
-        url = "/docs/"
+        url = "/categories/docs/"
         title = ""
     [languages.en-shaw.params]
     [languages.en-shaw.params.header.title]
@@ -801,7 +801,7 @@ buildFuture=true
         pre = ""
         post = ""
         name = "Dokumentoj"
-        url = "/docs/"
+        url = "/categories/docs/"
         title = ""
     [languages.eo.params]
     [languages.eo.params.header.title]

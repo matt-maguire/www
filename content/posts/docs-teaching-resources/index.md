@@ -1,13 +1,15 @@
 +++
 title = "Teaching Resources"
 date = 2024-10-10
-lastmod = 2024-12-26T14:08:54+11:00
+lastmod = 2024-12-30T12:38:33+11:00
 categories = ["Docs"]
 draft = false
-weight = 2001
+weight = 3001
+author = "Matt Maguire"
+hiddenFromHomePage = true
 +++
 
-# Miscellanous Teaching Resources {#miscellanous-teaching-resources}
+## Miscellanous Teaching Resources {#miscellanous-teaching-resources}
 
 The following websites have resources I have stumbled across that may be useful for teaching maths and science in a secondary school context:
 
@@ -24,7 +26,7 @@ The following websites have resources I have stumbled across that may be useful 
 -   <https://spacemath.gsfc.nasa.gov/> — NASA Application of maths for students
 
 
-# Other Resources {#other-resources}
+## Other Resources {#other-resources}
 
 -   <https://github.com/rossant/awesome-math> — a curated list of maths learning resources
 -   <https://www.cultofpedagogy.com/> — lots of interesting pedagogical resources

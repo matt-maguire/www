@@ -1,28 +1,27 @@
 #+hugo_base_dir: ../
-#+hugo_level_offset: 0
+#+hugo_level_offset: 1
 #+seq_todo: TODO DONE
 #+startup: indent
 #+hugo_weight: auto
 #+hugo_auto_set_lastmod: t
 #+hugo_paired_shortcodes: admonition
 #+author:
-#+hugo_custom_front_matter: :author "Matt Maguire"
+#+hugo_custom_front_matter: :author "Matt Maguire" :hiddenFromHomePage "true"
 #+filetags: @Docs
-#+hugo_section: docs
 
 
 * Content
 
-** DONE Teaching Resources
+** Teaching Resources
+*** DONE Teaching Resources
 :PROPERTIES:
 :EXPORT_FILE_NAME: index
-:EXPORT_HUGO_BUNDLE: teaching-resources
+:EXPORT_HUGO_BUNDLE: docs-teaching-resources
 :EXPORT_DATE: 2024-10-10
 :EXPORT_HUGO_MENU:
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER:
 :END:
 
-*** Miscellanous Teaching Resources
+**** Miscellanous Teaching Resources
 
 The following websites have resources I have stumbled across that may be useful for teaching maths and science in a secondary school context:
 - https://www.maths4everyone.com/ — a range of free worksheets and codebreakers.
@@ -37,7 +36,7 @@ The following websites have resources I have stumbled across that may be useful 
 - https://mathbits.com/ — MathBits resources
 - https://spacemath.gsfc.nasa.gov/ — NASA Application of maths for students
 
-*** Other Resources
+**** Other Resources
 - https://github.com/rossant/awesome-math — a curated list of maths learning resources
 - https://www.cultofpedagogy.com/ — lots of interesting pedagogical resources
 
@@ -45,10 +44,9 @@ The following websites have resources I have stumbled across that may be useful 
 *** DONE Programming Languages :Programming:LISP:
 :PROPERTIES:
 :EXPORT_FILE_NAME: index
-:EXPORT_HUGO_BUNDLE: programming-languages
+:EXPORT_HUGO_BUNDLE: docs-programming-languages
 :EXPORT_DATE: 2024-12-28
 :EXPORT_HUGO_MENU:
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER:
 :END:
 
 **** LISPs
@@ -76,10 +74,9 @@ This is of course a good one to learn if you use the Emacs editor. Since it is a
 *** DONE Programadaj Lingvoj :Programado:LISP:
 :PROPERTIES:
 :EXPORT_FILE_NAME: index.eo.md
-:EXPORT_HUGO_BUNDLE: programming-languages
+:EXPORT_HUGO_BUNDLE: docs-programming-languages
 :EXPORT_DATE: 2024-12-28
 :EXPORT_HUGO_MENU:
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER:
 :END:
 
 **** LISPs
@@ -108,10 +105,9 @@ Tiu kompreneble estas bona por lerni se oni jam uzas la Emacs redaktilo. Pro tio
 *** DONE 𐑐𐑮𐑴𐑜𐑮𐑨𐑥𐑦𐑙 𐑤𐑨𐑙𐑜𐑢𐑦𐑡𐑩𐑟  :𐑐𐑮𐑴𐑜𐑮𐑨𐑥𐑦𐑙:𐑮𐑦𐑕𐑐:
 :PROPERTIES:
 :EXPORT_FILE_NAME: index.en-shaw.md
-:EXPORT_HUGO_BUNDLE: programming-languages
+:EXPORT_HUGO_BUNDLE: docs-programming-languages
 :EXPORT_DATE: 2024-12-28
 :EXPORT_HUGO_MENU:
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER:
 :END:
 
 **** ·𐑮𐑦𐑕𐑐𐑕

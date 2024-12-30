@@ -1,17 +1,19 @@
 +++
 title = "Programadaj Lingvoj"
 date = 2024-12-28
-lastmod = 2024-12-28T11:13:06+11:00
+lastmod = 2024-12-30T12:38:33+11:00
 tags = ["Programado", "LISP"]
 categories = ["Docs"]
 draft = false
 weight = 3002
+author = "Matt Maguire"
+hiddenFromHomePage = true
 +++
 
-# LISPs {#lisps}
+## LISPs {#lisps}
 
 
-## Scheme {#scheme}
+### Scheme {#scheme}
 
 Scheme estas varianto de LISP kiu estas fame uzita ĉe MIT por instruii studentojn pri konceptoj de funkcieca programado. Ĝi ankaŭ estas uzata en la GNU Guile etenda lingvo.
 
@@ -22,7 +24,7 @@ Kelkaj rimedoj estas:
 -   Por lerni GNU Guile varianto de Scheme: <https://www.gnu.org/software/guile/learn/>
 
 
-## Komuna Lisp {#komuna-lisp}
+### Komuna Lisp {#komuna-lisp}
 
 Komuna LISP efektivigoj ofte estas pli grandaj ol Scheme, kiu igas ĝin pli potenca por solvi praktikajn problemojn, sed tiu granda funkciaro povas esti iom de distro kiam oni unue komencas.
 
@@ -30,7 +32,7 @@ Komuna LISP efektivigoj ofte estas pli grandaj ol Scheme, kiu igas ĝin pli pote
 -   SBKL (Steel Belt Komuna Lisp) estas bona elekto, precipe kiam uzate kun Emacs kaj SLIME. Instruktoj por starigi ĝin disponas ĉe <https://github.com/rabbibotton/clog/blob/main/LEARN.md>.
 
 
-## Emacs Lisp {#emacs-lisp}
+### Emacs Lisp {#emacs-lisp}
 
 Tiu kompreneble estas bona por lerni se oni jam uzas la Emacs redaktilo. Pro tio ke ĝi jam estas bone integrita en la redaktilon, ne necesas malŝpari tempon starigi eksternajn kompililojn kaj konektilojn kiel SLIME.
 

@@ -671,6 +671,35 @@ This is just an initial proposal, which may well change over time as a get more 
 - Build a smaller keyboard from parts so I can leave the Corne at home and carry a travel-friendly version. When using other PCs, it may not be convenient or even possible to play with keymaps, whereas a physical keyboard just needs to be plugged in and the PC will be none the wiser about your customised key mapping.
 
 I’ll post updates here as I gain more experience and have something to report.
+** Learn Japanese with Song Lyrics (Houki Boshi from Bleach)
+*** DONE Learn Japanese with Song Lyrics (Houki Boshi from Bleach) :music:languages:japanese:
+:PROPERTIES:
+:CUSTOM_ID: houki-boshi
+:EXPORT_FILE_NAME: index
+:EXPORT_HUGO_BUNDLE: 20220214_houki-boshi
+:EXPORT_DATE: 2022-02-14
+:END:
+
+A great way to learn a language is through songs. They are usually repetitive, often (but not always) a bit slower than regular speech, and have a catchy tune. This helps to cement words and structures into the head.
+
+I was watching an anime called [[https://en.wikipedia.org/wiki/Bleach_(TV_series)][Bleach]], and maybe a season into it they had a song at the end of each episode named [[https://www.youtube.com/watch?v=2xs_-nl6C3E][Houki Boshi]] (ほうき星) by the singer-songwriter [[https://en.wikipedia.org/wiki/Younha][Younha]]. She's actually Korean, but released an album [[https://en.wikipedia.org/wiki/Go!_Younha][Go! Younha]] in Japanese, and /Houki Boshi/ was one of the hit singles on that album.
+
+There is a live performance of the song on YouTube, which has Japanese subtitles:
+
+#+hugo: {{< youtube qaUvEOeFthE >}}
+
+Subtitles are a great resource for language learners. One of the challenges with Japanese of course is the unfamiliar writing system. These subtitles contain kanji, the Chinese-style characters that Japanese often use in their writing. One problem with kanji is that it can be difficult to work out how a kanji character is pronounced -- and the pronounciation this is often context-dependent in Japanese. One way to deal with this is to write the pronunciation above the kanji using small hiragana characters -- the hiragana provides an unambiguous guide as to how the character is pronounced. We call these little hirigana pronunciation guides /furigana/, and they are often used in children's books to help the cildren learn the pronunciation of the kanji.
+
+The video above doesn't have furigana, so in order to become more familiar with the kanji, I decided to write out the song lyrics and include the furigana. For this I used the $\LaTeX$ typesetting program with the [[https://ctan.org/pkg/leadsheets][leadsheets]] songbook package, and the /ruby/ package to add the furigana. Because I typed in the Japanese with unicode, I needed to use =xelatex= to build the PDF. I found [[https://www.animelyrics.com/anime/bleach/houkiboushi.jis.txt][here on the web]] an English translation to help remind myself what the various words mean. The final result is here:
+
+#+hugo: {{< embed-pdf url="20220214-houki_boshi.pdf" >}}
+
+As I typed up the lyrics, I looked up any words I wasn't familiar with, and studied the gramatical structures that were used (here the English translation was helpful as I could see how a particular nuance in English can be expressed in Japanese). You may notice that there is no romaji (writing Japanese with the Roman alphabet). When learning Japanese, it is recommended to learn the kana as quickly as possibly. When you write Japanese with Roman letters: it can obscure the way words change as you conjugate, it is very hard to read, and if you see real Japanese around it is almost never written in romaji. Therefore, it is best to ditch it as soon as possible.
+
+You may notice that the live performance above leaves out the first two lines of the second verse -- I presume this was to shorten the performance for television. In the bleach anime, the song is even more abridged -- only the first and last line of the first verse is sung, followed by the final chorus.
+
+Studying song lyrics is a great way to gain more exposure to a language, and is lots of fun!
+
 ** How to calculate the series resistor for an LED
 *** DONE How to calculate the series resistor for an LED :electronics:
 :PROPERTIES:

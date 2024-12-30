@@ -685,7 +685,7 @@ buildFuture=true
         pre = ""
         post = ""
         name = "𐑚𐑤𐑪𐑜"
-        url = "/posts/"
+        url = "/categories/blog/"
         title = ""
       [[languages.en-shaw.menu.main]]
         weight = 2
@@ -777,7 +777,7 @@ buildFuture=true
         pre = ""
         post = ""
         name = "Blogo"
-        url = "/posts/"
+        url = "/categories/blog/"
         title = ""
       [[languages.eo.menu.main]]
         weight = 2

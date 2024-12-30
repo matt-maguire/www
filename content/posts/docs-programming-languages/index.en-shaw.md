@@ -1,11 +1,11 @@
 +++
 title = "𐑐𐑮𐑴𐑜𐑮𐑨𐑥𐑦𐑙 𐑤𐑨𐑙𐑜𐑢𐑦𐑡𐑩𐑟"
 date = 2024-12-28
-lastmod = 2024-12-30T12:38:33+11:00
+lastmod = 2024-12-31T09:10:44+11:00
 tags = ["𐑐𐑮𐑴𐑜𐑮𐑨𐑥𐑦𐑙", "𐑮𐑦𐑕𐑐"]
 categories = ["Docs"]
 draft = false
-weight = 3003
+weight = 3002
 author = "Matt Maguire"
 hiddenFromHomePage = true
 +++
@@ -29,7 +29,9 @@ hiddenFromHomePage = true
 𐑒𐑪𐑥𐑩𐑯 ·𐑤𐑦𐑕𐑐 𐑦𐑥𐑐𐑤𐑩𐑥𐑩𐑯𐑑𐑱𐑖𐑩𐑯𐑟 𐑑𐑧𐑯𐑛 𐑑 𐑚𐑰 𐑥𐑳𐑗 𐑤𐑸𐑡𐑼 𐑞𐑨𐑯 ·𐑕𐑒𐑰𐑥, 𐑢𐑦𐑗 𐑥𐑱𐑒𐑕 𐑦𐑑 𐑐𐑬𐑢𐑼𐑓𐑩𐑤 𐑓 𐑕𐑪𐑚𐑝𐑦𐑙 𐑐𐑮𐑨𐑒𐑑𐑦𐑒𐑩𐑤 𐑐𐑮𐑪𐑚𐑤𐑩𐑥𐑟, 𐑚𐑳𐑑 𐑞𐑦𐑕 𐑤𐑸𐑡 𐑓𐑰𐑗𐑼 𐑕𐑧𐑑 𐑒𐑫𐑛 𐑚𐑰 𐑩 𐑚𐑦𐑑 𐑝 𐑩 𐑛𐑦𐑕𐑑𐑮𐑨𐑒𐑑𐑼 𐑢𐑧𐑯 𐑓𐑻𐑕𐑑 𐑕𐑑𐑸𐑑𐑦𐑙 𐑬𐑑.
 
 -   𐑛𐑦𐑓𐑮𐑩𐑯𐑕𐑩𐑟 𐑚𐑩𐑑𐑒𐑰𐑯 ·𐑕𐑒𐑰𐑥 𐑯 ·𐑤𐑦𐑕𐑐 𐑸 𐑛𐑩𐑕𐑒𐑮𐑲𐑚𐑛 𐑨𐑑 <https://wiki.c2.com/?LispSchemeDifferences>.
--   ·𐑕𐑚𐑒𐑤 (𐑕𐑑𐑰𐑤 𐑚𐑧𐑤𐑑 𐑒𐑪𐑥𐑩𐑯 𐑤𐑦𐑕𐑐) 𐑦𐑟 𐑩 𐑜𐑫𐑛 𐑗𐑶𐑕, 𐑐𐑼𐑑𐑦𐑒𐑘𐑩𐑤𐑼𐑤𐑦 𐑢𐑧𐑯 𐑒𐑩𐑥𐑚𐑲𐑯𐑛 𐑢𐑦𐑞 ·𐑰𐑥𐑨𐑒𐑕 𐑯 ·𐑕𐑤𐑲𐑥. 𐑦𐑯𐑕𐑑𐑮𐑳𐑒𐑗𐑩𐑯𐑕 𐑓 𐑕𐑧𐑑𐑦𐑙 𐑦𐑑 𐑳𐑐 𐑸 𐑩𐑝𐑱𐑤𐑩𐑚𐑩𐑤 𐑨𐑑 <https://github.com/rabbibotton/clog/blob/main/LEARN.md>.
+-   ·𐑕𐑚𐑒𐑤 (𐑕𐑑𐑰𐑤 𐑚𐑨𐑯𐑒 𐑒𐑪𐑥𐑩𐑯 𐑤𐑦𐑕𐑐) 𐑦𐑟 𐑩 𐑜𐑫𐑛 𐑗𐑶𐑕, 𐑐𐑼𐑑𐑦𐑒𐑘𐑩𐑤𐑼𐑤𐑦 𐑢𐑧𐑯 𐑒𐑩𐑥𐑚𐑲𐑯𐑛 𐑢𐑦𐑞 ·𐑰𐑥𐑨𐑒𐑕 𐑯 ·𐑕𐑤𐑲𐑥. 𐑦𐑯𐑕𐑑𐑮𐑳𐑒𐑗𐑩𐑯𐑕 𐑓 𐑕𐑧𐑑𐑦𐑙 𐑦𐑑 𐑳𐑐 𐑸 𐑩𐑝𐑱𐑤𐑩𐑚𐑩𐑤 𐑨𐑑 <https://github.com/rabbibotton/clog/blob/main/LEARN.md>.
+-   𐑛𐑪𐑒𐑿𐑥𐑩𐑯𐑑 𐑪𐑯 [𐑜𐑫𐑛 ·𐑤𐑦𐑕𐑐 𐑐𐑮𐑴𐑒𐑮𐑨𐑥𐑦𐑙 𐑕𐑑𐑲𐑤](https://courses.cs.northwestern.edu/325/readings/luv-slides.pdf)
+-   𐑪𐑯𐑤𐑲𐑯 𐑝𐑻𐑠𐑩𐑯 𐑪𐑝 ·𐑐𐑰𐑑𐑼 𐑯𐑹𐑝𐑦𐑜𐑟 [𐑐𐑱𐑐](https://courses.cs.northwestern.edu/325/readings/luv-slides.pdf) [𐑐𐑨𐑮𐑩𐑛𐑲𐑥𐑟 𐑝 𐑱.𐑲. 𐑐𐑮𐑴𐑒𐑮𐑨𐑥𐑦𐑙]
 
 
 ### ·𐑰𐑥𐑨𐑒𐑕 𐑤𐑦𐑕𐑐 {#𐑰𐑥𐑨𐑒𐑕-𐑤𐑦𐑕𐑐}

@@ -1,11 +1,11 @@
 +++
 title = "Programadaj Lingvoj"
 date = 2024-12-28
-lastmod = 2024-12-30T12:38:33+11:00
+lastmod = 2024-12-31T09:11:00+11:00
 tags = ["Programado", "LISP"]
 categories = ["Docs"]
 draft = false
-weight = 3002
+weight = 3003
 author = "Matt Maguire"
 hiddenFromHomePage = true
 +++
@@ -29,7 +29,9 @@ Kelkaj rimedoj estas:
 Komuna LISP efektivigoj ofte estas pli grandaj ol Scheme, kiu igas ĝin pli potenca por solvi praktikajn problemojn, sed tiu granda funkciaro povas esti iom de distro kiam oni unue komencas.
 
 -   Diferencoj inter Scheme kaj Lisp estas priskribitaj ĉe <https://wiki.c2.com/?LispSchemeDifferences>.
--   SBKL (Steel Belt Komuna Lisp) estas bona elekto, precipe kiam uzate kun Emacs kaj SLIME. Instruktoj por starigi ĝin disponas ĉe <https://github.com/rabbibotton/clog/blob/main/LEARN.md>.
+-   SBKL (Steel Bank Komuna Lisp) estas bona elekto, precipe kiam uzate kun Emacs kaj SLIME. Instruktoj por starigi ĝin disponas ĉe <https://github.com/rabbibotton/clog/blob/main/LEARN.md>.
+-   Dokumento pri [Bona Stilo por Programado de Lisp](https://courses.cs.northwestern.edu/325/readings/luv-slides.pdf)
+-   Surreta versio de la Peter Norvig libro [PAIP](https://courses.cs.northwestern.edu/325/readings/luv-slides.pdf) [Paradigmoj de Programado de AI]
 
 
 ### Emacs Lisp {#emacs-lisp}

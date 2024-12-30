@@ -1,7 +1,7 @@
 +++
 title = "Programming Languages"
 date = 2024-12-28
-lastmod = 2024-12-30T12:38:33+11:00
+lastmod = 2024-12-31T09:10:52+11:00
 tags = ["Programming", "LISP"]
 categories = ["Docs"]
 draft = false
@@ -29,7 +29,9 @@ Some resources are:
 Common LISP implementations tend to be much larger than Scheme, which makes it powerful for solving practical probems, but this large feature set could be a bit of a distractor when first starting out.
 
 -   Differences between Scheme and Lisp are descibed at <https://wiki.c2.com/?LispSchemeDifferences>.
--   SBCL (Steel Belt Common Lisp) is a good choice, particularly when combined with Emacs and SLIME. Instructions for setting it up are available at <https://github.com/rabbibotton/clog/blob/main/LEARN.md>.
+-   SBCL (Steel Bank Common Lisp) is a good choice, particularly when combined with Emacs and SLIME. Instructions for setting it up are available at <https://github.com/rabbibotton/clog/blob/main/LEARN.md>.
+-   Document on [Good Lisp Programming Style](https://courses.cs.northwestern.edu/325/readings/luv-slides.pdf)
+-   Online version of Peter Norvig's [PAIP](https://courses.cs.northwestern.edu/325/readings/luv-slides.pdf) [Paradigms of AI Programming]
 
 
 ### Emacs Lisp {#emacs-lisp}

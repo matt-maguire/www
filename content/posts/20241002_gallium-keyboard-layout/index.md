@@ -1,12 +1,13 @@
 +++
 title = "Gallium Keyboard Layout"
+featuredImage = "20241002-gallium-1536x678.png"
 date = 2024-10-02
-lastmod = 2024-12-29T16:49:42+11:00
+lastmod = 2024-12-30T13:56:16+11:00
 tags = ["Computers", "Keyboards", "AltKeyboardLayouts"]
 categories = ["Blog"]
 draft = false
 weight = 3001
-featuredImage = "20241002-gallium-1536x678.png"
+author = "Matt Maguire"
 +++
 
 I’ve been using the ISRT keyboard layout for a while now, and it is becoming more intuitive to type on. However, I’ve been hearing a lot about [Graphite](https://github.com/rdavison/graphite-layout) and [Gallium](https://github.com/GalileoBlues/Gallium) on the Alt Keyboard Layout forums, which has made me a little curious. So, I set up a keymap to see what all the fuss is about.

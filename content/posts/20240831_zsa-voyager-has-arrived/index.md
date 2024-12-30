@@ -1,12 +1,13 @@
 +++
 title = "ZSA Voyager has arrived!"
+featuredImage = "20240831-voyager-1536x1033.jpg"
 date = 2024-08-31
-lastmod = 2024-12-29T16:49:42+11:00
+lastmod = 2024-12-30T13:56:16+11:00
 tags = ["Computers", "Keyboards"]
 categories = ["Blog"]
 draft = false
 weight = 3001
-featuredImage = "20240831-voyager-1536x1033.jpg"
+author = "Matt Maguire"
 +++
 
 After experiencing some reliability issues between my Corne keyboards and my Macbook (but no issues using them with my Linux workstation), I decided to invest in a [Voyager keyboard from ZSA](https://www.zsa.io/voyager).

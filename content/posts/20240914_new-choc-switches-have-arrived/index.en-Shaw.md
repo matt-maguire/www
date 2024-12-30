@@ -1,11 +1,13 @@
 +++
 title = "𐑯𐑿 ·𐑗𐑪𐑒 𐑕𐑢𐑦𐑗𐑩𐑟 𐑣𐑨𐑝 𐑼𐑲𐑝𐑛!"
+featuredImage = "20240914-IMG_0442-1152x1536.jpg"
 date = 2024-09-14
-lastmod = 2024-12-29T16:49:42+11:00
+lastmod = 2024-12-30T13:56:16+11:00
 tags = ["Computers", "Keyboards"]
 categories = ["Blog"]
 draft = true
 weight = 3002
+author = "Matt Maguire"
 +++
 
 {{< figure src="IMG_0442-1152x1536.jpg" >}}

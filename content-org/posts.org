@@ -5,7 +5,7 @@
 #+hugo_weight: auto
 #+hugo_auto_set_lastmod: t
 #+hugo_paired_shortcodes: admonition
-#+author:
+#+hugo_front_matter_key_replace: description>featuredImage
 #+hugo_custom_front_matter: :author "Matt Maguire"
 #+filetags: @Blog
 
@@ -17,8 +17,7 @@
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20241229_graphite-keyboard-layout
 :EXPORT_DATE: 2024-12-29
-:EXPORT_HUGO_MENU:
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featuredImage "20241229-graphite_layout.png"
+:EXPORT_DESCRIPTION: 20241229-graphite_layout.png
 :END:
 I've been using the [[#update-gallium-keyboard-layout][Gallium keyboard layout]] for a couple of months now, and I'm pretty happy with it for typing letters. However, I've been curious whether I could do any better in terms of punctuation. This has led me to investigate the Graphite layout to see what I might be missing out on.
 #+hugo: more
@@ -73,7 +72,6 @@ I'm going to perservere with this new layout for a while, and I'll report back h
 :EXPORT_HUGO_BUNDLE: 20241226_org-mode-blog
 :EXPORT_DATE: 2024-12-26
 :EXPORT_HUGO_MENU:
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER:
 :END:
 
 Lately I have been using Org Mode with Emacs quite a bit to help get better organised at work and keep track of meetings. The next logical step was to migrate my blog away from Wordpress and integrate it into my Org Mode workflow.
@@ -98,7 +96,6 @@ If you feel like a bit of a chuckle, check out this video on the ubiquitousness 
 :EXPORT_HUGO_BUNDLE: 20241226_org-mode-blog
 :EXPORT_DATE: 2024-12-26
 :EXPORT_HUGO_MENU:
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER:
 :END:
 
 𐑤𐑱𐑑𐑤𐑦 𐑲 𐑣𐑨𐑝 𐑚𐑰𐑯 𐑿𐑟𐑦𐑙 ·𐑹𐑜 𐑥𐑴𐑛 𐑢𐑦𐑞 ·𐑰𐑥𐑨𐑒𐑕 𐑒𐑢𐑲𐑑 𐑩 𐑚𐑦𐑑 𐑑 𐑣𐑧𐑤𐑐 𐑜𐑧𐑑 𐑚𐑧𐑑𐑼 𐑹𐑜𐑨𐑯𐑲𐑟𐑛 𐑨𐑑 𐑐𐑻𐑒 𐑯 𐑒𐑰𐑐 𐑑𐑮𐑨𐑒 𐑝 𐑥𐑰𐑑𐑦𐑙𐑟. 𐑞 𐑯𐑧𐑒𐑕𐑑 𐑤𐑪𐑡𐑦𐑒𐑩𐑤 𐑕𐑑𐑧𐑐 𐑢𐑩𐑟 𐑑 𐑥𐑲𐑜𐑮𐑱𐑑 𐑥𐑲 𐑚𐑤𐑪𐑜 𐑩𐑢𐑱 𐑓𐑮𐑪𐑥 ·𐑢𐑻𐑛𐑐𐑮𐑧𐑕 𐑯 𐑦𐑯𐑑𐑩𐑜𐑮𐑱𐑑 𐑦𐑑 𐑦𐑯𐑑𐑵 𐑥𐑲 ·𐑹𐑜 𐑥𐑴𐑛 𐑢𐑻𐑒𐑓𐑤𐑴.
@@ -122,7 +119,6 @@ If you feel like a bit of a chuckle, check out this video on the ubiquitousness 
 :EXPORT_HUGO_BUNDLE: 20241226_org-mode-blog
 :EXPORT_DATE: 2024-12-26
 :EXPORT_HUGO_MENU:
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER:
 :END:
 
 Lastatempe mi uzis sufiĉe ofte Org-reĝimon kun Emacs por pli bone organizi ĉe oficejo kaj spuri kunvenojn. La venonta logika paŝo estis migrigi mian blogon el Wordpress kaj integri ĝin en mian Org-reĝiman laborfluon.
@@ -147,8 +143,7 @@ Se vi volas ion por ridetigi vin, spektu la suban videon pri la ĉiel utila Emac
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20241010_updates-to-gallium-keyboard-layout
 :EXPORT_DATE: 2024-10-10
-:EXPORT_HUGO_MENU:
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featuredImage "20241010-Screenshot_2024-10-10_18-16-04-1024x234.png"
+:EXPORT_DESCRIPTION: 20241010-Screenshot_2024-10-10_18-16-04-1024x234.png
 :END:
 
 I’ve been practising on the Gallium layout that I mentioned [[#gallium-keyboard-layout][last time]], and while I am still fighting the muscle memory that I built up with the ISRT layout, I am gradually getting used to it and am currently at around the 25 wpm mark (similar to my maximum speed in Morse Code).
@@ -177,8 +172,7 @@ Some other discoveries I made recently from Ben’s new video and from other sou
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20241002_gallium-keyboard-layout
 :EXPORT_DATE: 2024-10-02
-:EXPORT_HUGO_MENU:
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featuredImage "20241002-gallium-1536x678.png"
+:EXPORT_DESCRIPTION: 20241002-gallium-1536x678.png
 :END:
 
 I’ve been using the ISRT keyboard layout for a while now, and it is becoming more intuitive to type on. However, I’ve been hearing a lot about [[https://github.com/rdavison/graphite-layout][Graphite]] and [[https://github.com/GalileoBlues/Gallium][Gallium]] on the Alt Keyboard Layout forums, which has made me a little curious. So, I set up a keymap to see what all the fuss is about.
@@ -226,8 +220,7 @@ I’m going to spend a little time building some fluency with this new layout to
 :EXPORT_HUGO_BUNDLE: 20240914_new-choc-switches-have-arrived
 :EXPORT_FILE_NAME: index.en.md
 :EXPORT_DATE: 2024-09-14
-:EXPORT_HUGO_MENU:
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featuredImage "20240914-IMG_0442-1152x1536.jpg"
+:EXPORT_DESCRIPTION: 20240914-IMG_0442-1152x1536.jpg
 :END:
 
 I have been really enjoying the Choc Red switches that shipped with my [[#zsa-voyager-has-arrived][ZSA Voyager keyboard]]. I was however curious how a lighter-weight switch might feel. I was considering ordering some Pro Red 35g linear switches, but then I heard about the [[https://keebd.com/products/ambients-silent-linear-twilight-choc-switches][Kailh Ambients]] line of silent linear switches and decided to give the Twilight 35g switches a try. On ordering them from a local vendor, they arrived a few days later, and on my Voyager keyboard I swapped out the Choc Reds for the Ambients Twilights.
@@ -257,8 +250,7 @@ I think I’ll eventually swap them out for some spare Choc Red switches that I 
 :EXPORT_HUGO_BUNDLE: 20240914_new-choc-switches-have-arrived
 :EXPORT_FILE_NAME: index.en-Shaw.md
 :EXPORT_DATE: 2024-09-14
-:EXPORT_HUGO_MENU:
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER:
+:EXPORT_DESCRIPTION: 20240914-IMG_0442-1152x1536.jpg
 :END:
 
 [[file:IMG_0442-1152x1536.jpg]]
@@ -293,8 +285,7 @@ I think I’ll eventually swap them out for some spare Choc Red switches that I 
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20240831_zsa-voyager-has-arrived
 :EXPORT_DATE: 2024-08-31
-:EXPORT_HUGO_MENU:
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featuredImage "20240831-voyager-1536x1033.jpg"
+:EXPORT_DESCRIPTION: 20240831-voyager-1536x1033.jpg
 :END:
 
 After experiencing some reliability issues between my Corne keyboards and my Macbook (but no issues using them with my Linux workstation), I decided to invest in a [[https://www.zsa.io/voyager][Voyager keyboard from ZSA]].
@@ -334,8 +325,7 @@ In the meantime, I will keep working on building typing speed on my ISRT layout.
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20240811_home-row-layer-keys
 :EXPORT_DATE: 2024-08-11
-:EXPORT_HUGO_MENU:
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featuredImage "20240811-IMG_0418sm-1536x733.jpg"
+:EXPORT_DESCRIPTION: 20240811-IMG_0418sm-1536x733.jpg
 :END:
 
 I’ve been practising the [[https://github.com/DreymaR/BigBagKbdTrixPKL/blob/master/Layouts/ISRT/README.md][ISRT]] layout on https://keybr.com/ and am slowly getting used to it. The Miryoku system of layers is quite easy to work with, but I’ve noticed a couple of issues:
@@ -442,8 +432,7 @@ As usual, the Vial layout is on my [[https://github.com/matt-maguire/kbd_firmwar
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20240803_isrt-keyboard-layout
 :EXPORT_DATE: 2024-08-03
-:EXPORT_HUGO_MENU:
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featuredImage "20240803-isrt-anglemod.en_.ansi_-1024x312.jpg"
+:EXPORT_DESCRIPTION: 20240803-isrt-anglemod.en_.ansi_-1024x312.jpg
 :END:
 
 I have been training on the Colemak-DH layout with my Corne keyboards, and I am getting used to it, even though my typing speed is still slow. I found another [[https://youtu.be/dg2TT1OJlQs?si=ZiAzPIMkbCAMG02X][video from Ben Vallack]] about the [[https://www.zsa.io/voyager][ZSA Voyager]] keyboard, and looked into his layout on that keyboard. He seems to have dropped the idea of layer toggles due to the increased cognitive load of keeping track of which layer you are in. Instead, he now holds his home row keys to select layers. I might look into this approach at some point, but for now I am quite happy with the Miryoku setup.
@@ -536,13 +525,10 @@ I am currently using two websites to help with this:
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20240721_corne-v4-mini
 :EXPORT_DATE: 2024-07-21
-:EXPORT_HUGO_MENU:
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER:
+:EXPORT_DESCRIPTION: 20240721-corne_v4_mini-1024x365.jpg
 :END:
 
-I’ve had so much fun with my Corne V4 keyboard, I decided to take advantage of the sale the vendor had going, and order a second one! My idea was to keep the 46-key Corne at home connected to my Linux workstation, and acquire a 40-key Corne V4 mini to carry around with my laptop. I ordered the same choc brown switches as before, but instead of black keycaps I ordered white keycaps. This would allow me to swap the different coloured keycaps in order to better highlight the home keys. And here it is:
-
-[[file:20240721-corne_v4_mini-1024x365.jpg]]
+I’ve had so much fun with my Corne V4 keyboard, I decided to take advantage of the sale the vendor had going, and order a second one! My idea was to keep the 46-key Corne at home connected to my Linux workstation, and acquire a 40-key Corne V4 mini to carry around with my laptop. I ordered the same choc brown switches as before, but instead of black keycaps I ordered white keycaps. This would allow me to swap the different coloured keycaps in order to better highlight the home keys.
 
 It’s a lovely compact setup. I was finding the outer columns of keys on the 46-key model to be distracting, and so I tried removing the outer columns of switches. I then ran into a problem where Vial requires you to hold down two switches on the top far left to un.ock the keyboard — oops, I had removed the top left-most switch! Fortunately the firmware allows you to configure which keys to use for unlocking at build time, so I moved the security key setting inwards to avoid the far outer column.
 
@@ -566,16 +552,13 @@ You can find the firmware tweaks and keyboard layouts I am using in my [[https:/
 :CUSTOM_ID: corne-v4-update
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20240721_corne-v4-update
-:EXPORT_DATE: 2024-07-21
-:EXPORT_HUGO_MENU:
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER:
+:EXPORT_DATE: 2024-07-20
+:EXPORT_DESCRIPTION: 20240721-connector-1024x751.jpg
 :END:
 
 I’ve been continuing my journey into split mechanical keyboards. The 46-key Corne v4 Board that I recently bought seemed to have an unreliable USB connection on the left-hand side, with it losing power if the cable was lightly depressed. If the USB cable was connected to the right-hand side then it worked reliably. I decided to disassemble the left hand side and inspect the soldering on the USB connector to see if there could be a dry joint.
 
 I immediately ran into an issue where the case was secured with torx screws rather than phillips heads. I took a trip to the local electronics store and bought a set of torx screw drivers. Once I had the keyboard disassembled, the cause of the connection issue was quite clear: a couple of the pins hadn’t been properly soldered!
-
-[[file:20240721-connector-1024x751.jpg]]
 
 After quickly touching up the dodgy joints, I had a reliable connection and reassembled the keyboard.
 
@@ -599,8 +582,6 @@ I've since learned that one important difference between rev 4.0 and 4.1 is that
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20240715_34-key-layout-for-corne-keyboard
 :EXPORT_DATE: 2024-07-15
-:EXPORT_HUGO_MENU:
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER:
 :END:
 
 I’ve been experimenting a bit more with the Corne keyboard. I saw a video from Ben Vallack where he lays out a mapping for his 34-key keyboard.
@@ -636,8 +617,7 @@ As I use the keyboard more, I’ll get a better idea what else I will need to ad
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20240711_corne-v4-keymap
 :EXPORT_DATE: 2024-07-11
-:EXPORT_HUGO_MENU:
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featuredImage "20240711-corne_6x3.jpg"
+:EXPORT_DESCRIPTION: 20240711-corne_6x3.jpg
 :END:
 I recently acquired a pre-built Corne 46-key ergonomic split keyboard.
 
@@ -700,8 +680,7 @@ I’ll post updates here as I gain more experience and have something to report.
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20220202_led-series-resistor
 :EXPORT_DATE: 2022-02-02
-:EXPORT_HUGO_MENU:
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featuredImage "20220202-Screen-Shot-2022-02-02-at-6.32.54-pm.png"
+:EXPORT_DESCRIPTION: 20220202-Screen-Shot-2022-02-02-at-6.32.54-pm.png
 :END:
 
 When we connect an LED to to a battery, we often need to connect a resistor is series to limit the current. I saw this question come up in a facebook group, and thought it might be useful to use this as a simple illustrative example of doing circuit design.
@@ -770,8 +749,7 @@ This is still acceptable. So, we have now completed our circuit design:
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20220130_its-a-heartache
 :EXPORT_DATE: 2022-01-30
-:EXPORT_HUGO_MENU:
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featuredImage "20220130-IMG_4547_01-999x1024.jpg"
+:EXPORT_DESCRIPTION: 20220130-IMG_4547_01-999x1024.jpg
 :END:
 
 On the Australian TV Series Doctor Doctor, there’s a recurring piece of music that is playing using fingerpicking on the ukulele based on Bonnie Tyler’s hit song It’s a Heartache. A quick search on YouTube discovered that it comes from the lead-in of a music video by the Wellington International Ukulele Orchestra:
@@ -789,8 +767,7 @@ I was keen to learn how to play something like it on my own ukulele, and a furth
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20220120_photography-for-hams
 :EXPORT_DATE: 2022-01-20
-:EXPORT_HUGO_MENU:
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featuredImage "20200120-Screenshot_2022-02-02_21-07-23-1024x550.png"
+:EXPORT_DESCRIPTION: 20200120-Screenshot_2022-02-02_21-07-23-1024x550.png
 :END:
 
 Last night I spoke about Digital Photography at the [[https://www.mwrs.org.au/][Manly Warringah Radio Society]], a club for ham radio operators. I decided to structure the talk in such a way that it drew parallels between digital photography and ham radio.
@@ -812,8 +789,6 @@ A recording of the talk will be available on the [[https://www.youtube.com/user/
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20211224_te-form-song
 :EXPORT_DATE: 2021-12-24
-:EXPORT_HUGO_MENU:
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER:
 :END:
 
 When I was studying Japanese at TAFE, our teacher Masa-sensei taught us a silly song to remember how to produce the 〜て form of a verb, given its 〜ます stem or its dictionary form.
@@ -857,13 +832,10 @@ To find out more about the 〜て form of Japanese verbs, you can refer to [[htt
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20191004_a7r4-selfie-solution
 :EXPORT_DATE: 2019-10-04
-:EXPORT_HUGO_MENU:
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER:
+:EXPORT_DESCRIPTION: 20191004-961C3B92-E725-4065-9A38-54BE23EDC24B.jpeg
 :END:
 
 One of the common complaints about the Sony A7 series of cameras is that they do not have a flip-around screen that allows you to frame the shot when you are taking a selfie. I managed to put together a solution for this out of some parts I had laying around.
-
-[[file:20191004-961C3B92-E725-4065-9A38-54BE23EDC24B.jpeg]]
 
 It consists of:
 
@@ -887,13 +859,10 @@ If I want to use this setup for video vlogging, there is nowhere to mount a shot
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20191003_back-button-focus
 :EXPORT_DATE: 2019-10-03
-:EXPORT_HUGO_MENU:
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER:
+:EXPORT_DESCRIPTION: 20191003-37FE80D9-053E-4D88-B858-B13645808C57.png
 :END:
 
 I just recently acquired the new Sony A7R4 mirrorless full frame camera, and have been working through the focusing systems on this camera. One of the questions that comes up is whether or not to use back button focus.
-
-[[file:20191003-37FE80D9-053E-4D88-B858-B13645808C57.png]]
 
 As you can see, it has an “AF ON” button on the back that would be perfect for this. All you need to do is to go into the menu and set the “AF w/ Shutter” option to “OFF”. This prevents the shutter button from activating auto focus, and instead you can activate the auto focus via the “AF-ON” button on the back. I assigned the “Focus Mode” to the C3 button on the back, and set the focus mode to “AF-C” (continuous autofocus). So, how did this work out?
 
@@ -930,8 +899,7 @@ Feel free to comment if you have other suggestions to allow for easy transition 
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20140420_elecraft-k2-amplifier-keying-circuit
 :EXPORT_DATE: 2014-04-20
-:EXPORT_HUGO_MENU:
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featuredImage "20141420-IMG_0118-Version-2-768x1024-1.jpg"
+:EXPORT_DESCRIPTION: 20141420-IMG_0118-Version-2-768x1024-1.jpg
 :END:
 
 I have been building an [[http://www.elecraft.com/k2_page.htm][Elecraft K2 kit radio]], and I completed construction this Easter weekend.
@@ -993,8 +961,6 @@ Here are some pics of the completed circuit, from above and from beneath.
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20140414_beverage-antennas
 :EXPORT_DATE: 2014-04-14
-:EXPORT_HUGO_MENU:
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER:
 :END:
 
 [[file:20140414-Figure_D-11_Long-wire_antenna_FM_7-93_1995.gif]]

@@ -1,12 +1,13 @@
 +++
 title = "Graphite Keyboard Layout"
+featuredImage = "20241229-graphite_layout.png"
 date = 2024-12-29
-lastmod = 2024-12-29T20:14:29+11:00
+lastmod = 2024-12-30T13:56:16+11:00
 tags = ["Computers", "Keyboards", "AltKeyboardLayouts"]
 categories = ["Blog"]
 draft = false
 weight = 3001
-featuredImage = "20241229-graphite_layout.png"
+author = "Matt Maguire"
 +++
 
 I've been using the [Gallium keyboard layout]({{< relref "20241010_updates-to-gallium-keyboard-layout" >}}) for a couple of months now, and I'm pretty happy with it for typing letters. However, I've been curious whether I could do any better in terms of punctuation. This has led me to investigate the Graphite layout to see what I might be missing out on.

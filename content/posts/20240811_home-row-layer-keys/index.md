@@ -1,12 +1,13 @@
 +++
 title = "Home Row Layer Keys"
+featuredImage = "20240811-IMG_0418sm-1536x733.jpg"
 date = 2024-08-11
-lastmod = 2024-12-29T16:49:42+11:00
+lastmod = 2024-12-30T13:56:16+11:00
 tags = ["Computers", "Keyboards", "AltKeyboardLayouts"]
 categories = ["Blog"]
 draft = false
 weight = 3001
-featuredImage = "20240811-IMG_0418sm-1536x733.jpg"
+author = "Matt Maguire"
 +++
 
 I’ve been practising the [ISRT](https://github.com/DreymaR/BigBagKbdTrixPKL/blob/master/Layouts/ISRT/README.md) layout on <https://keybr.com/> and am slowly getting used to it. The Miryoku system of layers is quite easy to work with, but I’ve noticed a couple of issues:
@@ -31,7 +32,7 @@ I opted for a blend between the 34-key sticky layer and Miryoku layous.
 These considerations have led to the following layout:
 
 
-# BASE (Layer 0) {#base--layer-0}
+## BASE (Layer 0) {#base--layer-0}
 
 ```text
 |-----+------+------+------+------+------+------+---+------+------+------+------+------+------+-----|
@@ -49,7 +50,7 @@ These considerations have led to the following layout:
 ```
 
 
-# NUM (Layer 1) {#num--layer-1}
+## NUM (Layer 1) {#num--layer-1}
 
 ```text
 |-----+------+------+------+------+------+------+---+------+------+------+------+------+------+-----|
@@ -64,7 +65,7 @@ These considerations have led to the following layout:
 ```
 
 
-# SYM (Layer 2) {#sym--layer-2}
+## SYM (Layer 2) {#sym--layer-2}
 
 ```text
 |-----+------+------+------+------+------+------+---+------+------+------+------+------+------+-----|
@@ -79,7 +80,7 @@ These considerations have led to the following layout:
 ```
 
 
-# FUN (Layer 3) {#fun--layer-3}
+## FUN (Layer 3) {#fun--layer-3}
 
 ```text
 |-----+------+------+------+------+------+------+---+------+------+------+------+------+------+-----|
@@ -94,7 +95,7 @@ These considerations have led to the following layout:
 ```
 
 
-# ADJ (Layer 4) {#adj--layer-4}
+## ADJ (Layer 4) {#adj--layer-4}
 
 ```text
 |-----+------+------+------+------+------+------+---+------+------+------+------+------+------+-----|

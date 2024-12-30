@@ -1,16 +1,16 @@
 +++
 title = "Should I use Back Button Focus on Sony A7R4?"
+featuredImage = "20191003-37FE80D9-053E-4D88-B858-B13645808C57.png"
 date = 2019-10-03
-lastmod = 2024-12-29T16:49:43+11:00
+lastmod = 2024-12-30T13:59:43+11:00
 tags = ["photography"]
 categories = ["Blog"]
 draft = false
 weight = 3001
+author = "Matt Maguire"
 +++
 
 I just recently acquired the new Sony A7R4 mirrorless full frame camera, and have been working through the focusing systems on this camera. One of the questions that comes up is whether or not to use back button focus.
-
-{{< figure src="20191003-37FE80D9-053E-4D88-B858-B13645808C57.png" >}}
 
 As you can see, it has an “AF ON” button on the back that would be perfect for this. All you need to do is to go into the menu and set the “AF w/ Shutter” option to “OFF”. This prevents the shutter button from activating auto focus, and instead you can activate the auto focus via the “AF-ON” button on the back. I assigned the “Focus Mode” to the C3 button on the back, and set the focus mode to “AF-C” (continuous autofocus). So, how did this work out?
 

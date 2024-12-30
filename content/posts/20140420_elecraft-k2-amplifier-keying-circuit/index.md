@@ -1,12 +1,13 @@
 +++
 title = "Elecraft K2 Amplifier Keying Circuit"
+featuredImage = "20141420-IMG_0118-Version-2-768x1024-1.jpg"
 date = 2014-04-20
-lastmod = 2024-12-29T16:49:43+11:00
+lastmod = 2024-12-30T13:56:16+11:00
 tags = ["hamradio"]
 categories = ["Blog"]
 draft = false
 weight = 3001
-featuredImage = "20141420-IMG_0118-Version-2-768x1024-1.jpg"
+author = "Matt Maguire"
 +++
 
 I have been building an [Elecraft K2 kit radio](http://www.elecraft.com/k2_page.htm), and I completed construction this Easter weekend.

@@ -1,12 +1,13 @@
 +++
 title = "It's a Heartache"
+featuredImage = "20220130-IMG_4547_01-999x1024.jpg"
 date = 2022-01-30
-lastmod = 2024-12-29T16:49:42+11:00
+lastmod = 2024-12-30T13:56:16+11:00
 tags = ["music"]
 categories = ["Blog"]
 draft = false
 weight = 3001
-featuredImage = "20220130-IMG_4547_01-999x1024.jpg"
+author = "Matt Maguire"
 +++
 
 On the Australian TV Series Doctor Doctor, there’s a recurring piece of music that is playing using fingerpicking on the ukulele based on Bonnie Tyler’s hit song It’s a Heartache. A quick search on YouTube discovered that it comes from the lead-in of a music video by the Wellington International Ukulele Orchestra:

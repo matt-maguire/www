@@ -1,18 +1,18 @@
 +++
 title = "Corne V4 Update"
-date = 2024-07-21
-lastmod = 2024-12-29T16:49:42+11:00
+featuredImage = "20240721-connector-1024x751.jpg"
+date = 2024-07-20
+lastmod = 2024-12-30T13:56:16+11:00
 tags = ["keyboards", "corne"]
 categories = ["Blog"]
 draft = false
 weight = 3001
+author = "Matt Maguire"
 +++
 
 I’ve been continuing my journey into split mechanical keyboards. The 46-key Corne v4 Board that I recently bought seemed to have an unreliable USB connection on the left-hand side, with it losing power if the cable was lightly depressed. If the USB cable was connected to the right-hand side then it worked reliably. I decided to disassemble the left hand side and inspect the soldering on the USB connector to see if there could be a dry joint.
 
 I immediately ran into an issue where the case was secured with torx screws rather than phillips heads. I took a trip to the local electronics store and bought a set of torx screw drivers. Once I had the keyboard disassembled, the cause of the connection issue was quite clear: a couple of the pins hadn’t been properly soldered!
-
-{{< figure src="20240721-connector-1024x751.jpg" >}}
 
 After quickly touching up the dodgy joints, I had a reliable connection and reassembled the keyboard.
 

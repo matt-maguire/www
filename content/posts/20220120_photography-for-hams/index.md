@@ -1,12 +1,13 @@
 +++
 title = "Digital Photography for Hams"
+featuredImage = "20200120-Screenshot_2022-02-02_21-07-23-1024x550.png"
 date = 2022-01-20
-lastmod = 2024-12-29T16:49:43+11:00
+lastmod = 2024-12-30T13:56:16+11:00
 tags = ["photography", "hamradio"]
 categories = ["Blog"]
 draft = false
 weight = 3001
-featuredImage = "20200120-Screenshot_2022-02-02_21-07-23-1024x550.png"
+author = "Matt Maguire"
 +++
 
 Last night I spoke about Digital Photography at the [Manly Warringah Radio Society](https://www.mwrs.org.au/), a club for ham radio operators. I decided to structure the talk in such a way that it drew parallels between digital photography and ham radio.

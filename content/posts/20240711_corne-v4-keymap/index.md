@@ -1,12 +1,13 @@
 +++
 title = "Corne v4 Keyboard Keymap"
+featuredImage = "20240711-corne_6x3.jpg"
 date = 2024-07-11
-lastmod = 2024-12-29T16:49:42+11:00
+lastmod = 2024-12-30T13:56:16+11:00
 tags = ["Computers", "Keyboards", "Corne", "AltKeyboardLayouts"]
 categories = ["Blog"]
 draft = false
 weight = 3001
-featuredImage = "20240711-corne_6x3.jpg"
+author = "Matt Maguire"
 +++
 
 I recently acquired a pre-built Corne 46-key ergonomic split keyboard.
@@ -29,37 +30,37 @@ The firmware in this keyboard only supports 5 extra layers on top of the BASE la
 The layers can be programmed with a user-friendly open-source app. The screenshots below show the various layers I initially set up on the keyboard:
 
 
-# BASE Layer (LT0): {#base-layer--lt0}
+## BASE Layer (LT0): {#base-layer--lt0}
 
 {{< figure src="20240711-LT0.png" >}}
 
 
-# NAV Layer (LT1): {#nav-layer--lt1}
+## NAV Layer (LT1): {#nav-layer--lt1}
 
 {{< figure src="20240711-LT1.png" >}}
 
 
-# MEDIA Layer (LT2): {#media-layer--lt2}
+## MEDIA Layer (LT2): {#media-layer--lt2}
 
 {{< figure src="20240711-LT2.png" >}}
 
 
-# NUM Layer (LT3): {#num-layer--lt3}
+## NUM Layer (LT3): {#num-layer--lt3}
 
 {{< figure src="20240711-LT3.png" >}}
 
 
-# SYM Layer (LT4): {#sym-layer--lt4}
+## SYM Layer (LT4): {#sym-layer--lt4}
 
 {{< figure src="20240711-LT4.png" >}}
 
 
-# FUN Layer (LT5): {#fun-layer--lt5}
+## FUN Layer (LT5): {#fun-layer--lt5}
 
 {{< figure src="20240711-LT5.png" >}}
 
 
-# Next Steps: {#next-steps}
+## Next Steps: {#next-steps}
 
 This is just an initial proposal, which may well change over time as a get more experience. Things I will be working on going forward:
 

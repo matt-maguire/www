@@ -1,11 +1,12 @@
 +++
 title = "Beverage Antennas"
 date = 2014-04-14
-lastmod = 2024-12-29T16:49:43+11:00
+lastmod = 2024-12-30T13:56:16+11:00
 tags = ["hamradio"]
 categories = ["Blog"]
 draft = false
 weight = 3001
+author = "Matt Maguire"
 +++
 
 {{< figure src="20140414-Figure_D-11_Long-wire_antenna_FM_7-93_1995.gif" >}}

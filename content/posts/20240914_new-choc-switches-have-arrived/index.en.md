@@ -1,12 +1,13 @@
 +++
 title = "New Choc Switches Have Arrived!"
+featuredImage = "20240914-IMG_0442-1152x1536.jpg"
 date = 2024-09-14
-lastmod = 2024-12-29T16:49:42+11:00
+lastmod = 2024-12-30T13:56:16+11:00
 tags = ["Computers", "Keyboards"]
 categories = ["Blog"]
 draft = false
 weight = 3001
-featuredImage = "20240914-IMG_0442-1152x1536.jpg"
+author = "Matt Maguire"
 +++
 
 I have been really enjoying the Choc Red switches that shipped with my [ZSA Voyager keyboard]({{< relref "20240831_zsa-voyager-has-arrived" >}}). I was however curious how a lighter-weight switch might feel. I was considering ordering some Pro Red 35g linear switches, but then I heard about the [Kailh Ambients](https://keebd.com/products/ambients-silent-linear-twilight-choc-switches) line of silent linear switches and decided to give the Twilight 35g switches a try. On ordering them from a local vendor, they arrived a few days later, and on my Voyager keyboard I swapped out the Choc Reds for the Ambients Twilights.

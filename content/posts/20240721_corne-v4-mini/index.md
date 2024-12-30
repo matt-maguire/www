@@ -1,16 +1,16 @@
 +++
 title = "Corne V4.1 Mini"
+featuredImage = "20240721-corne_v4_mini-1024x365.jpg"
 date = 2024-07-21
-lastmod = 2024-12-29T16:49:42+11:00
+lastmod = 2024-12-30T13:56:16+11:00
 tags = ["keyboards", "corne"]
 categories = ["Blog"]
 draft = false
 weight = 3001
+author = "Matt Maguire"
 +++
 
-I’ve had so much fun with my Corne V4 keyboard, I decided to take advantage of the sale the vendor had going, and order a second one! My idea was to keep the 46-key Corne at home connected to my Linux workstation, and acquire a 40-key Corne V4 mini to carry around with my laptop. I ordered the same choc brown switches as before, but instead of black keycaps I ordered white keycaps. This would allow me to swap the different coloured keycaps in order to better highlight the home keys. And here it is:
-
-{{< figure src="20240721-corne_v4_mini-1024x365.jpg" >}}
+I’ve had so much fun with my Corne V4 keyboard, I decided to take advantage of the sale the vendor had going, and order a second one! My idea was to keep the 46-key Corne at home connected to my Linux workstation, and acquire a 40-key Corne V4 mini to carry around with my laptop. I ordered the same choc brown switches as before, but instead of black keycaps I ordered white keycaps. This would allow me to swap the different coloured keycaps in order to better highlight the home keys.
 
 It’s a lovely compact setup. I was finding the outer columns of keys on the 46-key model to be distracting, and so I tried removing the outer columns of switches. I then ran into a problem where Vial requires you to hold down two switches on the top far left to un.ock the keyboard — oops, I had removed the top left-most switch! Fortunately the firmware allows you to configure which keys to use for unlocking at build time, so I moved the security key setting inwards to avoid the far outer column.
 

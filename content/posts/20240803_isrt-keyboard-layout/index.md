@@ -1,12 +1,13 @@
 +++
 title = "ISRT Keyboard Layout"
+featuredImage = "20240803-isrt-anglemod.en_.ansi_-1024x312.jpg"
 date = 2024-08-03
-lastmod = 2024-12-29T18:51:13+11:00
+lastmod = 2024-12-30T13:56:16+11:00
 tags = ["Computers", "Keyboards", "Corne", "AltKeyboardLayouts"]
 categories = ["Blog"]
 draft = false
 weight = 3001
-featuredImage = "20240803-isrt-anglemod.en_.ansi_-1024x312.jpg"
+author = "Matt Maguire"
 +++
 
 I have been training on the Colemak-DH layout with my Corne keyboards, and I am getting used to it, even though my typing speed is still slow. I found another [video from Ben Vallack](https://youtu.be/dg2TT1OJlQs?si=ZiAzPIMkbCAMG02X) about the [ZSA Voyager](https://www.zsa.io/voyager) keyboard, and looked into his layout on that keyboard. He seems to have dropped the idea of layer toggles due to the increased cognitive load of keeping track of which layer you are in. Instead, he now holds his home row keys to select layers. I might look into this approach at some point, but for now I am quite happy with the Miryoku setup.

@@ -1,16 +1,16 @@
 +++
 title = "Sony A7R4 Selfie Solution"
+featuredImage = "20191004-961C3B92-E725-4065-9A38-54BE23EDC24B.jpeg"
 date = 2019-10-04
-lastmod = 2024-12-29T16:49:43+11:00
+lastmod = 2024-12-30T13:58:25+11:00
 tags = ["photography"]
 categories = ["Blog"]
 draft = false
 weight = 3001
+author = "Matt Maguire"
 +++
 
 One of the common complaints about the Sony A7 series of cameras is that they do not have a flip-around screen that allows you to frame the shot when you are taking a selfie. I managed to put together a solution for this out of some parts I had laying around.
-
-{{< figure src="20191004-961C3B92-E725-4065-9A38-54BE23EDC24B.jpeg" >}}
 
 It consists of:
 

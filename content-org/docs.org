@@ -138,11 +138,12 @@ Tiu kompreneble estas bona por lerni se oni jam uzas la Emacs redaktilo. Pro tio
 - Ĝi estas unu-fadena, do pro tio povas esti malkonvena por kelkaj aplikaĵoj.
 
 ** Shavian Alphabet
-*** DONE La Ŝava Alfabeto :esperanto:
+*** DONE La Ŝava Alfabeto :esperanto:ŝava:𐑖𐑱𐑝𐑾𐑯:
 :PROPERTIES:
 :EXPORT_FILE_NAME: index.eo.md
 :EXPORT_HUGO_BUNDLE: docs-shavian-alphabet
 :EXPORT_DATE: 2024-12-30
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :author "Matt Maguire" :hiddenFromHomePage "false"
 :END:
 
 Antaŭ longa tempo mi ĉeestis esperantan kongreson, kaj mi ricevis libreton kun strangan literojn. Mi forgesis precize kiu donis ĝin al mi, sed mi memoras ke la literoj estas propono de plibona metodo skribi. Mi dankeme akceptis la libreton, intencante ke mi provos ekzameni la proponon kiam mi havos pli da tempo. Kiam mi revenis hejmen, mi metis la libraton sur mian librobreton, kie ĝi restis plurajn jarojn.

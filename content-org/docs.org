@@ -151,7 +151,7 @@ Lastatempe mi spektis la jenan videjon:
 
 #+hugo: {{< youtube D66LrlotvCA >}}
 
-Mi pensis, «ĉu tiu estas la sama alfabeto de la stranga libreto kiun mi ricevis antaŭ multaj jaroj?» Mi elfiŝis la libreton el mia librobreton kaj konstatis ke jes, la libreto ja temas pri la Ŝava alfabeto!
+Mi pensis, «ĉu tiu estas la sama alfabeto de la stranga libreto kiun mi ricevis antaŭ multaj jaroj?» Mi elfiŝis la libreton el mia librobreto kaj konstatis ke jes, la libreto ja temas pri la Ŝava alfabeto!
 
 Mi serĉis la interreton por pli da informo pri ĉu ankoraŭ ekzistas esperantistoj kiuj uzas la Ŝavan alfabeto por skribi esperante. Estis [[https://eo.wikipedia.org/wiki/%C5%9Cava_alfabeto][artikolo ĉe vikipedio]], kaj retpaĝo starigita de Usona grupo. Ŝajnas ke la usona paĝo ne plu funkcias, do mi reproduktis la informo de tiu paĝo sube.
 

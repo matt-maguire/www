@@ -1,7 +1,7 @@
 +++
 title = "Programadaj Lingvoj"
 date = 2024-12-28
-lastmod = 2024-12-31T09:11:00+11:00
+lastmod = 2025-01-02T09:59:51+11:00
 tags = ["Programado", "LISP"]
 categories = ["Docs"]
 draft = false
@@ -32,6 +32,7 @@ Komuna LISP efektivigoj ofte estas pli grandaj ol Scheme, kiu igas ĝin pli pote
 -   SBKL (Steel Bank Komuna Lisp) estas bona elekto, precipe kiam uzate kun Emacs kaj SLIME. Instruktoj por starigi ĝin disponas ĉe <https://github.com/rabbibotton/clog/blob/main/LEARN.md>.
 -   Dokumento pri [Bona Stilo por Programado de Lisp](https://courses.cs.northwestern.edu/325/readings/luv-slides.pdf)
 -   Surreta versio de la Peter Norvig libro [PAIP](https://courses.cs.northwestern.edu/325/readings/luv-slides.pdf) [Paradigmoj de Programado de AI]
+-   Libro ["On Lisp" de Paŭlo Graham](https://paulgraham.com/onlisptext.html) disponas nun senpaga.
 
 
 ### Emacs Lisp {#emacs-lisp}

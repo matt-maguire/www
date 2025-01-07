@@ -674,6 +674,7 @@ buildFuture=true
 
   [languages.en-shaw]
     weight = 2
+    title = "𐑥𐑨𐑑𐑕 𐑥𐑿𐑟𐑦𐑙𐑟"
     languageCode = "en-shaw"
     languageName = "𐑦𐑙𐑜𐑤𐑦𐑖"
     hasCJKLanguage = false
@@ -766,6 +767,7 @@ buildFuture=true
 
   [languages.eo]
     weight = 2
+    title = "Meditoj de Mateo"
     languageCode = "eo"
     languageName = "Esperanto"
     hasCJKLanguage = false

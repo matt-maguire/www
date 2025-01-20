@@ -11,6 +11,39 @@
 #+filetags: @Blog
 
 * Content
+** Graphite Layout on Corne Keyboard
+*** DONE Graphite Layout on Corne Keyboard :Computers:Keyboards:Corne:AltKeyboardLayouts:
+:PROPERTIES:
+:CUSTOM_ID: graphite-layout-corne
+:EXPORT_FILE_NAME: index
+:EXPORT_HUGO_BUNDLE: 20250120_graphite-layout-corne
+:EXPORT_DATE: 2025-01-20
+:EXPORT_DESCRIPTION: 20250120_vial-graphite.png
+:END:
+
+I've been using the [[#graphite-keyboard-layout][Graphite keyboard layout]] on my [[#zsa-voyager-has-arrived][ZSA Voyager]] keyboard for a few weeks now, and I'm fairly happy with it. I therefore decided to update the keymap of my [[#corne-v4][Corne keyboard]] (which is for me is now a backup keyboard) from the [[#gallium-keyboard-layout][Gallium keyboard layout]] to the Graphite layout.
+
+As I [[#update-gallium-keyboard-layout][mentioned previously]], the punctuation symbols in a standard Graphite layout require the use of key overrides. By default, the Voyager web configuration tool doesn't support key overrides, and so I implemented a solution using tap dance. For the Corne keyboard, I am using the Vial configuration tool which does support key overrides, and so I tried to set this up.
+
+The key overrides on the Corne keyboard worked well, except for the comma on the right outer column of the home row. I couldn't set up a key override on that key because it is configured to be a =SHIFT= key when it is held down. It seems that Quantum keys like that are incompatible with defining key override.
+
+I could have removed the shift function from that key, but then I decided to use a tap-dance setup like I did on my Voyager keyboard, so that the Corne would behave in a similar way. Because the Corne has only 3 rows instead of 4 (ie. there is no number row at the top), I had to reassign a couple of the keys to compensate. This is a layout I ended up with:
+
+#+begin_example
+`~ b  l  d  w  z   '_ y  o  u  j  ;:
+\| n  r  t  s  g   p  h  a  e  i  ,
+CW q  x  m  c  v   k  f  .> -" /< =+
+         LA SP LC  RS RG RA
+#+end_example
+
+Some remarks:
+- The =CW= key is the CAPS WORD, moved from the number row down to the bottom row. Similarly the ==/+= key was moved from the number row down to the bottom row.
+- The keys with ='=, =.=, =-= and =/= were defined as tap-dance keys that, when held, output =_=, =>=, ="= and =<= respectively.
+- The outer column keys on the bottom row were one-shot /Left-Alt/ and /Right-Alt/ keys, and those got moved to the outer thumb keys to make room for =CW= and ==+=
+- The /space/ (=SP=), /Left-Ctrl/ (=LC=), /Right-Shift/ (=RS=) and /Right-Gui/ (=RG=) thumb keys are the same as on my voyager.
+
+On my [[https://github.com/matt-maguire/kbd_firmware/tree/custom/keyboards/crkbd/vial-kb][GitHub]] you can find a link to the corresponding Vial Layout file =[[https://github.com/matt-maguire/kbd_firmware/blob/custom/keyboards/crkbd/vial-kb/graphite_homerow_layer.vil][graphite_homerow_layer.vil]=.
+
 ** Exporting Org Mode Tables to LaTeX
 *** DONE Exporting Org Mode Tables to LaTeX :Emacs:OrgMode:LaTeX:Teaching:
 :PROPERTIES:
@@ -928,6 +961,7 @@ As I use the keyboard more, I’ll get a better idea what else I will need to ad
 ** Corne v4 Keyboard Keymap
 *** DONE Corne v4 Keyboard Keymap :Computers:Keyboards:Corne:AltKeyboardLayouts:
 :PROPERTIES:
+:CUSTOM_ID: corne-v4
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20240711_corne-v4-keymap
 :EXPORT_DATE: 2024-07-11

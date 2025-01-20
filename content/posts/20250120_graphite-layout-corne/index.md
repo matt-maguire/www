@@ -2,7 +2,7 @@
 title = "Graphite Layout on Corne Keyboard"
 featuredImage = "20250120_vial-graphite.png"
 date = 2025-01-20
-lastmod = 2025-01-20T16:18:52+11:00
+lastmod = 2025-01-20T16:31:55+11:00
 tags = ["Computers", "Keyboards", "Corne", "AltKeyboardLayouts"]
 categories = ["Blog"]
 draft = false
@@ -32,4 +32,4 @@ Some remarks:
 -   The outer column keys on the bottom row were one-shot _Left-Alt_ and _Right-Alt_ keys, and those got moved to the outer thumb keys to make room for `CW` and `=+`
 -   The _space_ (`SP`), _Left-Ctrl_ (`LC`), _Right-Shift_ (`RS`) and _Right-Gui_ (`RG`) thumb keys are the same as on my voyager.
 
-On my [GitHub](https://github.com/matt-maguire/kbd_firmware/tree/custom/keyboards/crkbd/vial-kb) you can find a link to the corresponding Vial Layout file `[[https://github.com/matt-maguire/kbd_firmware/blob/custom/keyboards/crkbd/vial-kb/graphite_homerow_layer.vil][graphite_homerow_layer.vil]`.
+On my [GitHub](https://github.com/matt-maguire/kbd_firmware/tree/custom/keyboards/crkbd/vial-kb) you can find a link to the corresponding Vial Layout file [`graphite_homerow_layer.vil`](https://github.com/matt-maguire/kbd_firmware/blob/custom/keyboards/crkbd/vial-kb/graphite_homerow_layer.vil).

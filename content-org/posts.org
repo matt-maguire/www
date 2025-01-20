@@ -42,7 +42,7 @@ Some remarks:
 - The outer column keys on the bottom row were one-shot /Left-Alt/ and /Right-Alt/ keys, and those got moved to the outer thumb keys to make room for =CW= and ==+=
 - The /space/ (=SP=), /Left-Ctrl/ (=LC=), /Right-Shift/ (=RS=) and /Right-Gui/ (=RG=) thumb keys are the same as on my voyager.
 
-On my [[https://github.com/matt-maguire/kbd_firmware/tree/custom/keyboards/crkbd/vial-kb][GitHub]] you can find a link to the corresponding Vial Layout file =[[https://github.com/matt-maguire/kbd_firmware/blob/custom/keyboards/crkbd/vial-kb/graphite_homerow_layer.vil][graphite_homerow_layer.vil]=.
+On my [[https://github.com/matt-maguire/kbd_firmware/tree/custom/keyboards/crkbd/vial-kb][GitHub]] you can find a link to the corresponding Vial Layout file [[https://github.com/matt-maguire/kbd_firmware/blob/custom/keyboards/crkbd/vial-kb/graphite_homerow_layer.vil][=graphite_homerow_layer.vil=]].
 
 ** Exporting Org Mode Tables to LaTeX
 *** DONE Exporting Org Mode Tables to LaTeX :Emacs:OrgMode:LaTeX:Teaching:

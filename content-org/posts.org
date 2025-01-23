@@ -1142,7 +1142,7 @@ To have the tab in a more convenient format, I wrote it up using the [[http://li
 #+hugo: {{< embed-pdf url="20220130-heartache-tab.pdf" >}}
 
 ** Digital Photography for Hams
-*** DONE Digital Photography for Hams :photography:hamradio:
+*** DONE Digital Photography for Hams :Photography:HamRadio:
 :PROPERTIES:
 :CUSTOM_ID: photography-for-hams
 :EXPORT_FILE_NAME: index
@@ -1164,7 +1164,7 @@ A recording of the talk will be available on the [[https://www.youtube.com/user/
 #+hugo: {{< embed-pdf url="20220120-photography_for_hams.pdf" >}}
 
 ** 〜て-Form Song
-*** DONE 〜て-Form Song :languages:japanese:
+*** DONE 〜て-Form Song :Languages:Japanese:
 :PROPERTIES:
 :CUSTOM_ID: te-form-song
 :EXPORT_FILE_NAME: index
@@ -1249,7 +1249,7 @@ To find out more about the 〜て form of Japanese verbs, you can refer to [[htt
 𐑑 𐑓𐑲𐑯𐑛 𐑬𐑑 𐑥𐑹 𐑩𐑚𐑬𐑑 𐑞 〜て 𐑓𐑹𐑥 𐑝 ·𐑡𐑨𐑐𐑩𐑯𐑰𐑟 𐑝𐑻𐑚𐑟, 𐑿 𐑒𐑨𐑯 𐑮𐑦𐑓𐑻 𐑑 [[http://guidetojapanese.org/learn/complete/progressive_tense][·𐑑𐑱 𐑒𐑦𐑥𐑟 𐑡𐑨𐑐𐑩𐑯𐑰𐑟 𐑜𐑮𐑨𐑥𐑼 𐑜𐑲𐑛]].
 
 ** Sony A7R4 Selfie Solution
-*** DONE Sony A7R4 Selfie Solution :photography:
+*** DONE Sony A7R4 Selfie Solution :Photography:
 :PROPERTIES:
 :CUSTOM_ID: a7r4-selfie-solution
 :EXPORT_FILE_NAME: index
@@ -1276,7 +1276,7 @@ In this way, the camera can be placed on the Joby gorillapod which acts as a “
 If I want to use this setup for video vlogging, there is nowhere to mount a shotgun mic, so likely I would use a lavalier mic plugged into the camera itself, or perhaps into a second smartphone acting as a voice recorder.
 
 ** Should I use Back Button Focus on Sony A7R4?
-*** DONE Should I use Back Button Focus on Sony A7R4? :photography:
+*** DONE Should I use Back Button Focus on Sony A7R4? :Photography:
 :PROPERTIES:
 :CUSTOM_ID: back-button-focus
 :EXPORT_FILE_NAME: index
@@ -1316,7 +1316,7 @@ So, that’s the way I’ve set up the camera for now — normally in AF-C mode 
 Feel free to comment if you have other suggestions to allow for easy transition between auto-focus, BBF, selfie and third-party/untrained user workflows.
 
 ** Elecraft K2 Amplifier Keying Circuit
-*** DONE Elecraft K2 Amplifier Keying Circuit :hamradio:
+*** DONE [#B] Elecraft K2 Amplifier Keying Circuit :HamRadio:Electronics:
 :PROPERTIES:
 :CUSTOM_ID: elecraft-k2-amplifier-keying-circuit
 :EXPORT_FILE_NAME: index
@@ -1378,7 +1378,7 @@ Here are some pics of the completed circuit, from above and from beneath.
 [[file:20140420-IMG_0118-Version-2-768x1024-1.jpg]]
 
 ** Beverage Antennas
-*** DONE Beverage Antennas :hamradio:
+*** DONE Beverage Antennas :HamRadio:
 :PROPERTIES:
 :CUSTOM_ID: beverage-antennas
 :EXPORT_FILE_NAME: index

@@ -1,8 +1,8 @@
 +++
 title = "Beverage Antennas"
 date = 2014-04-14
-lastmod = 2025-01-23T18:19:59+11:00
-tags = ["hamradio"]
+lastmod = 2025-01-24T09:06:47+11:00
+tags = ["HamRadio"]
 categories = ["Blog"]
 draft = false
 weight = 3001

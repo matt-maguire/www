@@ -1,8 +1,8 @@
 +++
-title = "Using Org Mode / Latex for Lesson Notes"
+title = "Using Org Mode / LaTeX for Lesson Notes"
 featuredImage = "20250105_orgmode-banner.webp"
 date = 2025-01-06
-lastmod = 2025-01-06T13:10:04+11:00
+lastmod = 2025-01-23T14:43:46+11:00
 tags = ["Emacs", "OrgMode", "LaTeX", "Teaching"]
 categories = ["Blog"]
 draft = false

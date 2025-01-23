@@ -1,8 +1,8 @@
 +++
 title = "34 Key Layout for Corne Keyboard"
 date = 2024-07-15
-lastmod = 2024-12-30T13:56:16+11:00
-tags = ["Computers", "Keyboards", "Corne", "AltKeyboardLayouts"]
+lastmod = 2025-01-23T14:43:47+11:00
+tags = ["Computers", "Keyboards", "Corne", "AltKeyboardLayouts", "Colemak", "MechKeyboard", "SplitKeyboard"]
 categories = ["Blog"]
 draft = false
 weight = 3001

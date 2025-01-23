@@ -12,7 +12,7 @@
 
 * Content
 ** Graphite Layout on Corne Keyboard
-*** DONE Graphite Layout on Corne Keyboard :Computers:Keyboards:Corne:AltKeyboardLayouts:
+*** DONE Graphite Layout on Corne Keyboard :Computers:Keyboards:Corne:AltKeyboardLayouts:Gallium:Graphite:MechKeyboard:SplitKeyboard:
 :PROPERTIES:
 :CUSTOM_ID: graphite-layout-corne
 :EXPORT_FILE_NAME: index
@@ -361,7 +361,7 @@ I didn't show any examples of tables. Org Mode has a powerful table editor which
 One thing I would like to explore further is the embedding of code to generate content -- for example, to produce tables of $z$-values programatically.
 
 ** Graphite Keyboard Layout
-*** DONE Graphite Keyboard Layout :Computers:Keyboards:AltKeyboardLayouts:
+*** DONE Graphite Keyboard Layout :Computers:Keyboards:AltKeyboardLayouts:MechKeyboard:SplitKeyboard:Gallium:Graphite:
 :PROPERTIES:
 :CUSTOM_ID: graphite-keyboard-layout
 :EXPORT_FILE_NAME: index
@@ -487,7 +487,7 @@ Se vi volas ion por ridetigi vin, spektu la suban videon pri la ĉiel utila Emac
 #+hugo: {{< youtube urcL86UpqZc >}}
 
 ** Updates to Gallium Keyboard Layout
-*** DONE Updates to Gallium Keyboard Layout :Computers:Keyboards:AltKeyboardLayouts:
+*** DONE Updates to Gallium Keyboard Layout :Computers:Keyboards:AltKeyboardLayouts:MechKeyboard:SplitKeyboard:Gallium:Graphite:ISRT:
 :PROPERTIES:
 :CUSTOM_ID: update-gallium-keyboard-layout
 :EXPORT_FILE_NAME: index
@@ -516,7 +516,7 @@ Some other discoveries I made recently from Ben’s new video and from other sou
 - The Gallium layout has just been released in DreymaR’s [[https://github.com/DreymaR/BigBagKbdTrixPKL/tree/master/Layouts/Gallium][EPKL key mapping tool]]. This tool is Windows-based, which means that I have very little use for it myself. One of the cool features it has though is the Extend layer which converts the mostly useless CAPSLOCK key into a layer-switching key. This is such a useful feature, which I have implemented on my macbook using [[https://karabiner-elements.pqrs.org/][Karabiner Elements]]. The config file I use is available in [[https://github.com/matt-maguire/kbd_firmware/blob/custom/keyboards/crkbd/vial-kb/karabiner.json][my github]].
 
 ** Gallium Keyboard Layout
-*** DONE Gallium Keyboard Layout :Computers:Keyboards:AltKeyboardLayouts:
+*** DONE Gallium Keyboard Layout :Computers:Keyboards:AltKeyboardLayouts:MechKeyboard:SplitKeyboard:Gallium:Graphite:ISRT:
 :PROPERTIES:
 :CUSTOM_ID: gallium-keyboard-layout
 :EXPORT_FILE_NAME: index
@@ -564,7 +564,7 @@ Before I had the “Shift” modifier on a left thumb key and the “Control” 
 I’m going to spend a little time building some fluency with this new layout to see if it is really worthwhile compared to ISRT, and will keep you updated here on what I discover.
 
 ** New Choc Switches Have Arrived!
-*** DONE New Choc Switches Have Arrived! :Computers:Keyboards:
+*** DONE New Choc Switches Have Arrived! :Computers:Keyboards:Corne:MechKeyboard:
 :PROPERTIES:
 :CUSTOM_ID: new-choc-switches-have-arrived
 :EXPORT_HUGO_BUNDLE: 20240914_new-choc-switches-have-arrived
@@ -626,7 +626,7 @@ I think I’ll eventually swap them out for some spare Choc Red switches that I 
 𐑲 𐑔𐑦𐑙𐑒 𐑲𐑤 𐑩𐑝𐑧𐑯𐑗𐑩𐑤𐑦 𐑕𐑢𐑪𐑐 𐑞𐑧𐑥 𐑬𐑑 𐑓 𐑕𐑳𐑥 𐑕𐑐𐑺 ·𐑗𐑪𐑒 𐑮𐑧𐑛 𐑕𐑢𐑦𐑗𐑩𐑟 𐑞𐑨𐑑 𐑲 𐑹𐑛𐑼𐑛, 𐑚𐑳𐑑 𐑓 𐑯𐑬 𐑲𐑤 𐑤𐑰𐑝 𐑞 ·𐑗𐑪𐑒 𐑚𐑮𐑬𐑯𐑟 𐑦𐑯 𐑐𐑤𐑱𐑕 𐑕𐑴 𐑲 𐑣𐑨𐑝 𐑩 𐑚𐑱𐑕𐑤𐑲𐑯 𐑐𐑶𐑯𐑑 𐑝 𐑒𐑩𐑥𐑐𐑨𐑮𐑦𐑕𐑩𐑯.
 
 ** ZSA Voyager has arrived!
-*** DONE ZSA Voyager has arrived! :Computers:Keyboards:
+*** DONE ZSA Voyager has arrived! :Computers:Keyboards:AltKeyboardLayouts:ISRT:Miryoku:MechKeyboard:SplitKeyboard:
 :PROPERTIES:
 :CUSTOM_ID: zsa-voyager-has-arrived
 :EXPORT_FILE_NAME: index
@@ -666,7 +666,7 @@ I have to say, I am loving these Choc Red switches! They are so buttery-smooth c
 In the meantime, I will keep working on building typing speed on my ISRT layout. It is slow progress, but I am getting more and more comfortable with it as I use it for my daily work.
 
 ** Home Row Layer Keys
-*** DONE Home Row Layer Keys :Computers:Keyboards:AltKeyboardLayouts:
+*** DONE Home Row Layer Keys :Computers:Keyboards:AltKeyboardLayouts:MechKeyboard:SplitKeyboard:ISRT:Miryoku:
 :PROPERTIES:
 :CUSTOM_ID: home-row-layer-keys
 :EXPORT_FILE_NAME: index
@@ -773,7 +773,7 @@ The layout works for both 6×3 standard and 5×3 mini keyboards. There are some 
 As usual, the Vial layout is on my [[https://github.com/matt-maguire/kbd_firmware/tree/custom/keyboards/crkbd/vial-kb][github repo]].
 
 ** ISRT Keyboard Layout
-*** DONE ISRT Keyboard Layout :Computers:Keyboards:Corne:AltKeyboardLayouts:
+*** DONE ISRT Keyboard Layout :Computers:Keyboards:Corne:AltKeyboardLayouts:MechKeyboard:SplitKeyboard:Colemak:ISRT:
 :PROPERTIES:
 :CUSTOM_ID: isrt-keyboard-layout
 :EXPORT_FILE_NAME: index
@@ -866,7 +866,7 @@ I am currently using two websites to help with this:
 - https://monkeytype.com: this website DOES support ISRT! I was quite surprised. It is possible to set up a custom wordset, where one of the english language corpuses is filtered to include only letters from the ISRT home row. As my typing improves, I can gradually move letters from the excluded list to the list of allowed letters, and then the site behaves in a similar way to keybr.com (albeit without the per-letter statistics and adaptive letter focus).
 
 ** Corne V4.1 Mini
-*** DONE Corne V4.1 Mini :keyboards:corne:
+*** DONE Corne V4.1 Mini :Keyboards:Corne:Miryoku:Colemak:MechKeyboard:SplitKeyboard:AltKeyboardLayouts:
 :PROPERTIES:
 :CUSTOM_ID: corne-v4-mini
 :EXPORT_FILE_NAME: index
@@ -894,7 +894,7 @@ I have loaded the full miryoku layout into the left-hand side of both keyboards,
 You can find the firmware tweaks and keyboard layouts I am using in my [[https://github.com/matt-maguire/kbd_firmware/tree/custom/keyboards/crkbd/vial-kb][GitHub repository]] (“custom” branch has my changes; “main” branch tracks the vanilla upstream code).
 
 ** Corne V4 Update
-*** DONE Corne V4 Update :keyboards:corne:
+*** DONE Corne V4 Update :Keyboards:Corne:AltKeyboardLayouts:MechKeyboard:SplitKeyboard:Colemak:Miryoku:
 :PROPERTIES:
 :CUSTOM_ID: corne-v4-update
 :EXPORT_FILE_NAME: index
@@ -923,7 +923,7 @@ I've since learned that one important difference between rev 4.0 and 4.1 is that
 #+end_admonition
 
 ** 34 Key Layout for Corne Keyboard
-*** DONE 34 Key Layout for Corne Keyboard :Computers:Keyboards:Corne:AltKeyboardLayouts:
+*** DONE 34 Key Layout for Corne Keyboard :Computers:Keyboards:Corne:AltKeyboardLayouts:Colemak:MechKeyboard:SplitKeyboard:
 :PROPERTIES:
 :CUSTOM_ID: 34-key-layout-for-corne-keyboard
 :EXPORT_FILE_NAME: index
@@ -959,7 +959,7 @@ I put some backspace and delete shortcuts on the outer thumb keys for convenienc
 As I use the keyboard more, I’ll get a better idea what else I will need to add as well as what I can strip away. I’ll post more updates here as I learn more.
 
 ** Corne v4 Keyboard Keymap
-*** DONE Corne v4 Keyboard Keymap :Computers:Keyboards:Corne:AltKeyboardLayouts:
+*** DONE Corne v4 Keyboard Keymap :Computers:Keyboards:Corne:AltKeyboardLayouts:Colemak:Miryoku:MechKeyboard:SplitKeyboard:
 :PROPERTIES:
 :CUSTOM_ID: corne-v4
 :EXPORT_FILE_NAME: index
@@ -1022,7 +1022,7 @@ This is just an initial proposal, which may well change over time as a get more 
 
 I’ll post updates here as I gain more experience and have something to report.
 ** Learn Japanese with Song Lyrics (Houki Boshi from Bleach)
-*** DONE Learn Japanese with Song Lyrics (Houki Boshi from Bleach) :music:languages:japanese:
+*** DONE Learn Japanese with Song Lyrics (Houki Boshi from Bleach) :Music:Languages:Japanese:
 :PROPERTIES:
 :CUSTOM_ID: houki-boshi
 :EXPORT_FILE_NAME: index
@@ -1051,7 +1051,7 @@ You may notice that the live performance above leaves out the first two lines of
 Studying song lyrics is a great way to gain more exposure to a language, and is lots of fun!
 
 ** How to calculate the series resistor for an LED
-*** DONE How to calculate the series resistor for an LED :electronics:
+*** DONE How to calculate the series resistor for an LED :Electronics:
 :PROPERTIES:
 :CUSTOM_ID: led-series-resistor
 :EXPORT_FILE_NAME: index
@@ -1129,11 +1129,15 @@ This is still acceptable. So, we have now completed our circuit design:
 :EXPORT_DESCRIPTION: 20220130-IMG_4547_01-999x1024.jpg
 :END:
 
-On the Australian TV Series Doctor Doctor, there’s a recurring piece of music that is playing using fingerpicking on the ukulele based on Bonnie Tyler’s hit song It’s a Heartache. A quick search on YouTube discovered that it comes from the lead-in of a music video by the Wellington International Ukulele Orchestra:
+On the Australian TV Series Doctor Doctor, there’s a recurring piece of music that is playing using fingerpicking on the ukulele based on Bonnie Tyler’s hit song /It’s a Heartache/. A quick search on YouTube discovered that it comes from the lead-in of a music video by the Wellington International Ukulele Orchestra:
 
 #+hugo: {{< youtube GqynAAYdLW8 >}}
 
-I was keen to learn how to play something like it on my own ukulele, and a further search turned up a [[https://youtu.be/pCswBsuddrc][tutorial by Helmut Bickel]], where he has some hand-written tablature in the background of the video. To have the tab in a more convenient format, I wrote it up using the [[http://lilypond.org/][lilypond]] music typesetting software, and the resulting PDF is reproduced below:
+I was keen to learn how to play something like it on my own ukulele, and a further search turned up a https://youtu.be/tutorial by Helmut Bickel where he has some hand-written tablature in the background of the video:
+
+#+hugo: {{< youtube pCswBsuddrc >}}
+
+To have the tab in a more convenient format, I wrote it up using the [[http://lilypond.org/][lilypond]] music typesetting software, and the resulting PDF is reproduced below:
 
 #+hugo: {{< embed-pdf url="20220130-heartache-tab.pdf" >}}
 

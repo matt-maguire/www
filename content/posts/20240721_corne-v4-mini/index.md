@@ -2,8 +2,8 @@
 title = "Corne V4.1 Mini"
 featuredImage = "20240721-corne_v4_mini-1024x365.jpg"
 date = 2024-07-21
-lastmod = 2024-12-30T13:56:16+11:00
-tags = ["keyboards", "corne"]
+lastmod = 2025-01-23T14:43:46+11:00
+tags = ["Keyboards", "Corne", "Miryoku", "Colemak", "MechKeyboard", "SplitKeyboard", "AltKeyboardLayouts"]
 categories = ["Blog"]
 draft = false
 weight = 3001

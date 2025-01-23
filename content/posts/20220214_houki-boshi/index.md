@@ -1,8 +1,8 @@
 +++
 title = "Learn Japanese with Song Lyrics (Houki Boshi from Bleach)"
 date = 2022-02-14
-lastmod = 2024-12-30T20:39:12+11:00
-tags = ["music", "languages", "japanese"]
+lastmod = 2025-01-23T14:43:47+11:00
+tags = ["Music", "Languages", "Japanese"]
 categories = ["Blog"]
 draft = false
 weight = 3001

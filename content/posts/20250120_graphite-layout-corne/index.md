@@ -2,8 +2,8 @@
 title = "Graphite Layout on Corne Keyboard"
 featuredImage = "20250120_vial-graphite.png"
 date = 2025-01-20
-lastmod = 2025-01-20T16:31:55+11:00
-tags = ["Computers", "Keyboards", "Corne", "AltKeyboardLayouts"]
+lastmod = 2025-01-23T14:43:46+11:00
+tags = ["Computers", "Keyboards", "Corne", "AltKeyboardLayouts", "Gallium", "Graphite", "MechKeyboard", "SplitKeyboard"]
 categories = ["Blog"]
 draft = false
 weight = 3001

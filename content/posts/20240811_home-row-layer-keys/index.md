@@ -2,8 +2,8 @@
 title = "Home Row Layer Keys"
 featuredImage = "20240811-IMG_0418sm-1536x733.jpg"
 date = 2024-08-11
-lastmod = 2024-12-30T13:56:16+11:00
-tags = ["Computers", "Keyboards", "AltKeyboardLayouts"]
+lastmod = 2025-01-23T14:43:46+11:00
+tags = ["Computers", "Keyboards", "AltKeyboardLayouts", "MechKeyboard", "SplitKeyboard", "ISRT", "Miryoku"]
 categories = ["Blog"]
 draft = false
 weight = 3001

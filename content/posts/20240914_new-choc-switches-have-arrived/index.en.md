@@ -2,7 +2,7 @@
 title = "New Choc Switches Have Arrived!"
 featuredImage = "20240914-IMG_0442-1152x1536.jpg"
 date = 2024-09-14
-lastmod = 2025-01-23T14:43:46+11:00
+lastmod = 2025-01-23T18:19:59+11:00
 tags = ["Computers", "Keyboards", "Corne", "MechKeyboard"]
 categories = ["Blog"]
 draft = false

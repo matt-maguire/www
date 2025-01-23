@@ -2,8 +2,8 @@
 title = "ISRT Keyboard Layout"
 featuredImage = "20240803-isrt-anglemod.en_.ansi_-1024x312.jpg"
 date = 2024-08-03
-lastmod = 2025-01-23T14:43:46+11:00
-tags = ["Computers", "Keyboards", "Corne", "AltKeyboardLayouts", "MechKeyboard", "SplitKeyboard", "Colemak", "ISRT"]
+lastmod = 2025-01-23T18:19:59+11:00
+tags = ["Computers", "Keyboards", "Corne", "AltKeyboardLayouts", "MechKeyboard", "SplitKeyboard", "Colemak", "ISRT", "Vial"]
 categories = ["Blog"]
 draft = false
 weight = 3001

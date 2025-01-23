@@ -2,7 +2,7 @@
 title = "ZSA Voyager has arrived!"
 featuredImage = "20240831-voyager-1536x1033.jpg"
 date = 2024-08-31
-lastmod = 2025-01-23T14:43:46+11:00
+lastmod = 2025-01-23T18:19:59+11:00
 tags = ["Computers", "Keyboards", "AltKeyboardLayouts", "ISRT", "Miryoku", "MechKeyboard", "SplitKeyboard"]
 categories = ["Blog"]
 draft = false

@@ -1316,7 +1316,7 @@ So, that’s the way I’ve set up the camera for now — normally in AF-C mode 
 Feel free to comment if you have other suggestions to allow for easy transition between auto-focus, BBF, selfie and third-party/untrained user workflows.
 
 ** Elecraft K2 Amplifier Keying Circuit
-*** DONE [#B] Elecraft K2 Amplifier Keying Circuit :HamRadio:Electronics:
+*** DONE [#B] Elecraft K2 Amplifier Keying Circuit :HamRadio:Electronics:Elecraft:K2:KXPA100:
 :PROPERTIES:
 :CUSTOM_ID: elecraft-k2-amplifier-keying-circuit
 :EXPORT_FILE_NAME: index

@@ -74,7 +74,7 @@ This is of course a good one to learn if you use the Emacs editor. Since it is a
 - it has powerful tools such as Edebug, profilers, regression testing, benchmarkers, ...
 - it is single-threaded, so may not be suitable for some applications.
 
-*** DONE 𐑐𐑮𐑴𐑜𐑮𐑨𐑥𐑦𐑙 𐑤𐑨𐑙𐑜𐑢𐑦𐑡𐑩𐑟  :𐑐𐑮𐑴𐑜𐑮𐑨𐑥𐑦𐑙:𐑮𐑦𐑕𐑐:
+*** DONE 𐑐𐑮𐑴𐑜𐑮𐑨𐑥𐑦𐑙 𐑤𐑨𐑙𐑜𐑢𐑦𐑡𐑩𐑟  :𐑐𐑮𐑴𐑜𐑮𐑨𐑥𐑦𐑙:𐑤𐑦𐑕𐑐:
 :PROPERTIES:
 :EXPORT_FILE_NAME: index.en-shaw.md
 :EXPORT_HUGO_BUNDLE: docs-programming-languages

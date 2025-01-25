@@ -1,7 +1,7 @@
 +++
-title = "Packet Radio"
+title = "Packet Radio Resources"
 date = 2012-10-18
-lastmod = 2025-01-25T15:46:14+11:00
+lastmod = 2025-01-26T01:11:55+11:00
 tags = ["HamRadio", "PacketRadio", "AX25"]
 categories = ["Blog"]
 draft = false

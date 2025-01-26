@@ -1465,6 +1465,7 @@ I have collected here some useful links in my search to learn about packet radio
 - Linux [[http://www.linux-ax25.org/wiki/CVS][AX25 SW Suite]] and [[http://linkt.de/ax25spyd/][AX25SPY Page]]
 - The [[https://qsl.net/vk2rq/digipeaters.html][Problem with Digipeaters]] by Tom Clark W3IWI, 1986
 - Installing [[https://dl.dropbox.com/u/31910649/InstallingLINBPQ.htm][LinBPQ]] BPQ Node/Mail/Chat on Linux
+- Archive of the [[https://www.qsl.net/vk2rq/aapra/][AAPRA Website]] (now defunct, but various useful historic documents)
 
 **** Packet Activity in the Local Area
 |--------------+----------------------------------------------+----------------------------------------------------------------------------------|

@@ -1398,6 +1398,22 @@ The lecture was recorded and can be found on the club’s YouTube channel:
 
 The [[https://www.slideshare.net/VK2MB/april-2014-lecture-beverage-antennas][slidepack]] is available on slideshare.
 
+** Packet Radio Talk
+*** Packet Radio Talk :HamRadio:PacketRadio:AX25:
+:PROPERTIES:
+:CUSTOM_ID: packet_radio_talk
+:EXPORT_FILE_NAME: index
+:EXPORT_HUGO_BUNDLE: 20140219_packet_radio_talk
+:EXPORT_DATE: 2014-02-19
+:EXPORT_DESCRIPTION: 20140219_packet-radio-chat.png
+:END:
+
+At my local amateur radio club I gave a talk about packet radio, covering topics such as AX25 frames, digipeaters, netrom nodes, and applications that run over packet radio such as APRS and BBS. On YouTube you can find a [[http://www.youtube.com/watch?v=Ar0dEiwu6KE][recording of the talk]].
+
+The slides from the talk can be found here:
+
+#+hugo: {{< embed-pdf url="20140219_packet-radio-talk.pdf" >}}
+
 ** Packet Radio Resources
 *** DONE Packet Radio Resources :HamRadio:PacketRadio:AX25:
 :PROPERTIES:

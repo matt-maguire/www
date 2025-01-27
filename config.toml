@@ -29,7 +29,7 @@ copyright = ""
 # whether to use robots.txt
 enableRobotsTXT = true
 # whether to use git commit log
-enableGitInfo = true
+enableGitInfo = false
 # whether to use emoji code
 enableEmoji = true
 #workaround for Sydney being ahead of UTC
@@ -299,7 +299,7 @@ buildFuture=true
     # whether to enable the fontawesome extended syntax
     fontawesome = true
     # whether to show link to Raw Markdown content of the content
-    linkToMarkdown = true
+    linkToMarkdown = false
     # whether to show the full text content in RSS
     rssFullText = false
     # Table of the contents config

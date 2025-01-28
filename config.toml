@@ -658,7 +658,7 @@ buildFuture=true
           disclaimer = "To see posts in Esperanto or Shavian (𐑖𐑱𐑝𐑾𐑯), use the language selector at the top of the screen."
       [languages.en.params.social]
         GitHub = "matt-maguire"
-        Twitter = "MattEducator"
+        #Twitter = "MattEducator"
         Linkedin = "maguire-matt"
         Facebook = "matt.maguire.507"
         Flickr = "184821753@N07"
@@ -751,7 +751,7 @@ buildFuture=true
           disclaimer = "𐑑 𐑕𐑰 𐑐𐑴𐑕𐑑𐑕 𐑦𐑯 ·𐑧𐑕𐑐𐑼𐑭𐑯𐑑𐑴 𐑹 𐑦𐑯 𐑞 𐑤𐑨𐑑𐑩𐑯 𐑨𐑤𐑓𐑩𐑚𐑧𐑑, 𐑿𐑟 𐑞 𐑤𐑨𐑙𐑜𐑢𐑦𐑡 𐑕𐑩𐑤𐑧𐑒𐑑𐑼 𐑨𐑑 𐑞 𐑑𐑪𐑐 𐑝 𐑞 𐑕𐑒𐑮𐑰𐑯."
       [languages.en-shaw.params.social]
         GitHub = "matt-maguire"
-        Twitter = "MattEducator"
+        #Twitter = "MattEducator"
         Linkedin = "maguire-matt"
         Facebook = "matt.maguire.507"
         Flickr = "184821753@N07"
@@ -844,7 +844,7 @@ buildFuture=true
           disclaimer = "Por legi afiŝojn anglajn aŭ ŝavajn (𐑖𐑱𐑝𐑾𐑯), uzu la lingva elektilo ĉe la supro de la ekrano."
       [languages.eo.params.social]
         GitHub = "matt-maguire"
-        Twitter = "MattEducator"
+        #Twitter = "MattEducator"
         Linkedin = "maguire-matt"
         Facebook = "matt.maguire.507"
         Flickr = "184821753@N07"

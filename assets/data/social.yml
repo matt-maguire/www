@@ -512,9 +512,9 @@ rss:
 
 # 065: Bluesky
 bluesky:
- Weight: 57
- Prefix: https://bsky.app/profile/
- Title: Bluesky
- Icon:
-   Simpleicons: bsky
+  Weight: 57
+  Prefix: https://bsky.app/profile/
+  Title: Bluesky
+  Icon:
+    Simpleicons: bsky
 

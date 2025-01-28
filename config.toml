@@ -281,6 +281,7 @@ buildFuture=true
     Bilibili = ""
     Email = ""
     RSS = ""
+    Bluesky = ""
 
   # Page global config
   [params.page]
@@ -371,6 +372,7 @@ buildFuture=true
       Skype = false
       Trello = false
       Mix = false
+      Bluesky = true
     # Comment config
     [params.page.comment]
       enable = true

@@ -1,0 +1,89 @@
+This document lists some of the changes in paKet 6 over paKet 5.
+The items are not listed in any particular order.
+
+It has been difficult to prepare this list because there has been
+continual change, development and refinement over the past two or more
+years since paKet 5 was released. However a quick review of the paKet 5
+Manual has helped me to produce the following brief summary of some of the
+changes.
+
+
+The paKet Manual is now 350 pages.  The entire Manual has been revised.
+While a few sections remain intact, most of the Manual has been revised
+to cover the new version.  The Introductory section has been expanded too,
+and the Scripts Section has been fully rewritten in a Tutorial format.
+
+The PMS (Personal Message System) has been completely rewritten.  It now
+includes Auto Forwarding to/from the BBS using the standard MBL/RLI
+conventions.
+
+There are now 10 TNC Help Files included (for the following TNCs):
+     DSP-12, KAM, KPC-3,  MFJ-1278, PTC (PacComm PacTOR Controller),
+     PK-232, PK-88, TNC-1, TNC-2, TNC-231 (release 2.31 firmware).
+
+A new Online Configuration Help facility provides some additional
+information for the paKet operator while using paKet's Online
+Configuration.  For each item in the configuration, a small window will
+pop up offering some help and suggestions for that item.  This feature can
+be turned off if desired.
+
+In addition to the Word Wrap that proved popular  with paKet 5 and is now
+considered an essential feature  of any communications software,  paKet 6
+now supports Justified Text as well.  This provides an aligned right hand
+margin such as you see here in this paragraph. This style is popular with
+some people and may be toggled on or off during a paKet session.
+
+The Online Manual and TNC Help Files now load significantly faster,
+especially on an older, slower machine.
+
+There is a Morse Code option in paKet 6 to uniquely identify different
+Alerts strings.  So if you are using the Alerts facility to alert you to
+the presence of a particular string of text and one of the specified
+strings is detected, paKet can make a unique sound to identify not only
+the fact that an Alert has occurred, but now it can identify WHICH alert
+string was detected!   (Very useful if paKet is running as a background
+task under Windows or OS/2).
+
+There has been a lot of attention to Scripts in paKet 6.  There are
+several new Commands and the Scripts section of the manual has been
+comnpletely rewritten in a tutorial format.
+
+A new Quiet Mode is available at the touch of a key to silence all paKet
+sounds, including incoming beeps and warning bells.
+
+paKet 6 includes a Serial Number Registration scheme so registered users
+can be readily identified.  However I am pleased to advise that there is
+no form of copy protection at all and unregistered users will still have
+access to the full paKet facilities while evaluating the software.
+
+The Flashback Dump facility of paKet 5 has been further enhanced and now
+allows selective, partial dump of the Flashback Buffer.
+
+There is improved support for Kantronics TNCs including dual port
+operation.
+
+There is a user programmable KISS OFF sequence to reset TNC for normal
+operations after some other software has left the TNC in KISS Mode.
+
+A new "Pass Control Codes" facility has been introduced especially to
+provide for more convenient transmission of Control Chars (eg: <Ctrl-T>)
+which are often used in TCP/IP operations.
+
+Keyboard Macros and Script texts now support substitution parameters
+(eg $T for current time or $D for today's date)
+
+Message duration is now user configurable as some paKet users asked for
+longer display times and some asked for shorter times!
+
+New keyboard commands:
+   <Alt-F3> to manually initiate a Forwarding session with our BBS.
+   <Alt-G> to get and redisplay the previous message that was displayed.
+   <Alt-Y> (yawn) to add a half second delay to various command texts such
+           as Keyboard macros or Script command strings.
+
+New Remote command that allows a Remote user to Perform selected Scripts
+on your paKet system.
+
+Contest Mode has been removed in paKet 6.  It appears very few people were
+using this Mode and I finally decided the overheads in memory and support
+effort were too much!

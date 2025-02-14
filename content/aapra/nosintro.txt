@@ -1,0 +1,215 @@
+
+                  * * * * * * * * * * * * * * * *
+                  *         ----------          *
+                  *         "NOSintro"          *
+                  *         ----------          *
+                  *                             *
+                  *    An Introduction to the   *
+                  *            KA9Q             *
+                  *   Network Operating System  *
+                  *                             *
+                  *      by Ian Wade, G3NRW     *
+                  *                             *
+                  *                             *
+                  *  A "DOWERMAIN" PUBLICATION  *
+                  *                             *
+                  *      ISBN 1-897649-00-2     *
+                  *                             *
+                  * * * * * * * * * * * * * * * *
+
+
+                    356 pages, fully illustrated.
+
+          GB Pounds sterling:  11.50 + packing and postage
+
+
+
+"NOSintro", the definitive guide to the KA9Q Network Operating
+System (NOS), is now available.
+
+In "NOSintro" you'll find a wealth of practical information,
+hints and tips for setting up and using the KA9Q NOS.
+
+Ideal for beginners and more advanced users alike.
+
+-----------------------------------------------------------------
+The emphasis is on hands-on practicalities.  You'll see exactly:
+
+**   how to install NOS on a PC.
+
+**   how to set up the control files.
+
+**   how to check out basic operations before going live.
+
+**   how to use NOS commands for transferring files, logging in
+     to remote systems, sending mail and so on.
+
+-----------------------------------------------------------------
+
+
+=============
+What's Inside
+=============
+
+1    Intro to NOSintro
+2    NOSview
+3    The Ground Rules
+4    NOS in a Nutshell
+5    Let's Meet the Locals
+6    The TNC Revisited
+7    A Peek at Protocols
+8    Names, Domains and Addresses
+9    Client/Server
+10   Hands On - Hardware Checkout
+11   Hands On - Software Installation
+12   NOS File Compendium
+13   Hands On - Session Manager
+14   The NOS Command Set
+15   Hands On - autoexec.nos
+16   The ftpusers File
+17   Hands On - FTP
+18   NOS BBS - The Big Picture
+19   Setting up the NOS BBS
+20   The NOS BBS Command Set
+21   Hands On - BBS File Server
+22   Hands On - Remote Sysop
+23   Forwarding SMTP Mail
+24   Pop Mail Collection
+25   PBBS Mail Forwarding
+26   AX.25 Routing
+27   Address Resolution Protocol
+28   IP Routing
+29   NET/ROM Routing
+30   Going Live: Preparing the Files
+31   Hands On - AX.25
+32   Hands On - NET/ROM
+33   Hands On - Ping and Hop
+34   Hands On - DNS System
+35   Trailing Flag
+
+==========
+Appendices
+==========
+1    Where to get the Software
+2    NOS Command Set Reference
+3    NOS Control Files
+4    Character Codes
+5    IP Address Coordinators
+6    References
+
+
+**   356 pages, copiously illustrated with over 80 detailed
+     diagrams, plus countless examples of commands and screen
+     displays.
+
+**   Extensive and detailed appendices.
+
+**   Full listings of all the control files needed for NOS.
+
+**   Although specifically written for a DOS environment, most
+     of the text is equally applicable to Amiga, Atari, MAC,
+     UNIX, VMS and Archimedes implementations of NOS.
+_________________________________________________________________
+
+
+
+=================
+MAIL ORDER PRICES
+=================
+
+All prices are in  (GB pounds sterling).
+
+Mail to UK addresses:           12.85  GB pounds
+Airmail to rest of Europe:      14.42  GB pounds
+Airmail to Americas, Africa:    16.73  GB pounds
+Airmail to rest of the world:   17.34  GB pounds
+
+Payment either:
+
+1.  By cheque, in GB pounds sterling, DRAWN ON A UK BANK ONLY.
+    Cheque to be made payable to "DOWERMAIN LTD" and crossed
+    "A/C PAYEE ONLY".  No other banks or currencies please; it's
+    too expensive to convert to sterling.
+
+    or
+
+2.  By credit card.  You will be charged the appropriate price
+    listed above in GB pounds sterling.  Your credit card company
+    will add a nominal currency conversion charge if applicable.
+
+
+To obtain your copy, please print out and fill in the order form
+below:
+
+
+--------------------------- cut here ----------------------------
+
+                      NOSINTRO ORDER FORM
+
+
+Name:      ..........................................
+
+
+Address:   ..........................................
+
+
+           ..........................................
+
+
+           ..........................................
+
+
+           ..........................................
+
+
+Please send me a copy of "NOSintro" and bill my credit card:
+
+       12.85 / 14.42 / 16.73 / 17.34 GB pounds
+       (delete where not applicable)
+
+
+
+Credit Card No (VISA/Mastercard/Eurocard):  .....................
+
+
+Expiry Date:  ...........................
+
+
+
+Signature:    ...........................
+
+
+--------------------------- cut here ----------------------------
+
+then mail to:
+
+               DOWERMAIN LTD
+               Maxlet House
+               Liverpool Road
+               Luton
+               Bedfordshire
+               LU1 1RF
+               United Kingdom
+
+
+(Please note: your order must be in written/printed form.
+We cannot accept orders by phone or electronic mail).
+
+
+P.S.  The book "NOSintro" makes several references to the
+      "NOSview" software package.  This package contains a
+      full working set of KA9Q NOS software, complete with
+      all the control files listed in the book.
+
+      The "NOSview" software is available free of charge.
+      If you would like a copy, enclose a DOS-formatted
+      diskette (any size EXCEPT 360KB) with your order for
+      the book.  N.B.  I can only supply the software in
+      DOS format.
+
+      (Please make sure the diskette is adequately protected.
+      I've received a few diskettes recently in very flimsy
+      airmail envelopes, and of course they were damaged).
+
+
+NOTE: NOSintro is available through the W.I.A bookshops

@@ -1,0 +1,76 @@
+===========================
+KA9Q: NOSview RELEASE [304]
+===========================
+by Ian Wade, G3NRW
+
+NOSview, first introduced in September 1991, is an on-line
+documentation and runtime package for the KA9Q Network
+Operating System (NOS).  It contains:
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+***  probably the only complete reference work anywhere
+     that describes all of the commands to be found in the
+     major NOS releases.
+
+***  a TSR file viewer that lets you read the NOSview
+     documentation on-line, without breaking out of NOS.
+
+***  NOSgas: the "NOS Get-Away Special"  --  a complete set
+     of working NOS runtime software, based on the PA0GRI
+     2.0m release.
+
+***  a complete set of templates for the NOS control files.
+
+***  full details on how to get the book "NOSintro", which
+     describes in detail how TCP/IP works and how to use
+     KA9Q NOS.  Ideal for beginners to TCP/IP (and more
+     advanced users will find many gems of helpful
+     information there as well).
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+NOSview [304] contains many new documentation files, and
+the template NOS control files match the listings in the
+book "NOSintro".
+
+Extras include ....
+
+    UUENCODE/UUDECODE file conversion utilities
+    AX.25 Baycom Packet Driver
+    KISS protocol documentation
+    HOSTS <> DOMAIN conversion programs
+    PCElm and ELM Mailers
+    The Clockwork VIEW TSR file viewer
+
+As NOSVW304.ZIP is quite large (around 700 KB), you may
+prefer instead to get your copy by mailing a DOS-formatted
+diskette (any size EXCEPT 360 KB) and return mailer to:
+
+     Ian Wade, G3NRW
+     7 Daubeney Close
+     Harlington
+     DUNSTABLE
+     Bedfordshire
+     LU5 6NF
+     United Kingdom
+
+Please enclose return postage as follows:
+
+     United Kingdom:               UK postage stamps
+     Rest of Europe:               3 IRCs
+     The Americas, Africa:         7 IRCs
+     Rest of the World:            9 IRCs
+
+(Any unused IRCs will of course be returned).
+
+There is no charge for NOSview, so please do NOT enclose
+any form of payment.
+
+
+73 de Ian Wade, G3NRW
+
+February 1993
+
+NOTE: NOSview [304] is available through the AAPRA shareware library

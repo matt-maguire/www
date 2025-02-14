@@ -1,0 +1,143 @@
+<HTML>
+<HEAD>
+<TITLE>YAM Multi-speed Modem</TITLE>
+</HEAD>
+<BODY background="aapra_bg.gif" bgcolor="white" text="black">
+<table align="center" width="80%" cellspacing="2" cellpadding="2">
+<tr><td>
+<A HREF="index.html" TARGET=""><IMG ALIGN="RIGHT" SRC="aapra-small.gif" border="0" ALT="AAPRA home page"></A>
+<H3>Australian<BR>Amateur<BR>Packet<BR>Radio<BR>Association</H3>
+<HR>
+<center>
+<H3>YAM Multi-speed Modem</H3>
+</center>
+<TABLE CELLSPACING=0 CELLPADDING=5 BORDER=0 ALIGN="CENTER" VALIGN="MIDDLE" WIDTH="100%">
+<TR>
+<TD>
+<A HREF="yam-aapra.jpg" TARGET=""><IMG SRC="yam-aapra-lo.jpg" border="0"></A><BR>
+<A HREF="yam-aapra.jpg" TARGET="">View of the AAPRA YAM modem</A>
+</TD>
+<TD align="left">
+AAPRA has introduced a new multi-speed modem to augment the existing
+very popular <A HREF="blakpak.html">BlakPak</A> 1200 baud FSK modem.
+The YAM "Yet Another Modem" was designed by Nico Palermo, IV3NWV originally
+for use at 9600 baud. It wasn't long before it was realised that the design was
+just as useful for 1200 baud FSK, not to mention 2400 baud FSK.
+Perhaps 4800 baud is next...
+<P>
+<I>How is this possible?</I><BR>
+The modem uses hardware that is reconfigurable to allow the different speeds to
+be chosen. What's more, this is all done under software control - there are
+no switches to flick or components to change. The secret is the programmable
+gate array - that big square chip on the picture below. The chip contains a
+huge number of gates that are hooked together when the chip is programmed.
+The program defines what the chip does - whether it's a modem or a LED flasher
+and what speed it operates at.
+<P>
+Nico, YAM's designer has put together an excellent web site which includes information on
+how the chip is programmed with an amazing amount of detail. It also has the circuit diagram and
+files for downloading including all the drivers and configuration files.
+Check it out at:
+<A HREF="http://www.microlet.com/yam">http://www.microlet.com/yam</A>
+</TD>
+</TABLE>
+<HR>
+The YAM modem is housed in a small black "remote control" case measuring 138mm by
+70mm by 28mm. At one end is the DB25 socket for connection to the computer
+COM port. On one side of the case there is a 5 pin DIN socket for connection
+to the radio. There are also three LEDs to indicate the state of the modem.
+There is no power supply input as the YAM is completely powered from the COM
+port of the computer just like the BlakPak modem.
+<P>
+<IMG ALIGN="LEFT" SRC="yam-logo.gif" ALT="YAM logo">
+The AAPRA version of the YAM modem contains a number of modifications that
+improve the original design. The main one is the inclusion of a watchdog
+timer on the PTT signal allowing the modem to meet regulatory requirements
+for use unattended in Australia. The PTT circuit has also been changed to
+boost it's current sinking ability. Some changes have also been made to
+reduce the current consumption. These improvements are exclusive to AAPRA.
+<P>
+The YAM modem is assembled and fully tested "on air" by AAPRA and is supplied,
+together with WinPack software and drivers, an excellent manual which includes a full
+circuit description and cable connections for several popular radios for just $120.
+The modem is not available in kit form from AAPRA. We want to make it as easy
+to get going with the YAM as possible.<P>
+<center>
+<A HREF="yam-aapra-pcb.jpg" TARGET=""><IMG SRC="yam-aapra-pcb-lo.jpg" border="0"></A><BR>
+<A HREF="yam-aapra-pcb.jpg" TARGET="">View of the AAPRA YAM circuit board</A>
+</center>
+<center>
+<HR>
+<H3>Specifications for the AAPRA YAM modem</H3>
+</center>
+<P>
+<TABLE CELLSPACING=0 CELLPADDING=5 BORDER=5 ALIGN="CENTER" VALIGN="MIDDLE" WIDTH="80%">
+<TR>
+	<TD>Interface</TD>
+	<TD align="left">Serial asynchronous - DB25 socket</TD>
+<TR>
+	<TD>Operating modes:</TD>
+	<TD align="left">1200 bps FSK</TD>
+<TR>
+	<TD>&nbsp;</TD>
+	<TD align="left">2400 bps FSK</TD>
+<TR>
+	<TD>&nbsp;</TD>
+	<TD align="left">9600 bps DFM</TD>
+<TR>
+	<TD>Radio interface</TD>
+	<TD align="left">5 pin DIN (TNC2 compatible)</TD>
+<TR>
+	<TD>Power source</TD>
+	<TD align="left">Serial interface (DTR and RTS signals)</TD>
+<TR>
+	<TD>Current consumption</TD>
+	<TD align="left">Positive rail: &lt; 8 mA, Negative rail: &lt; 2 mA</TD>
+<TR>
+	<TD>Status indicators</TD>
+	<TD align="left">Power LED, Transmit data LED, Receive data LED</TD>
+<TR>
+	<TD>Transmit level</TD>
+	<TD align="left">Adjustable from 0 to 3.6 Volts p-p</TD>
+<TR>
+	<TD>Receive level</TD>
+	<TD align="left">200 mVolts p-p minimum</TD>
+<TR>
+	<TD>Receive input impedance</TD>
+	<TD align="left">&gt; 27 kohm</TD>
+<TR>
+	<TD>PTT current sink</TD>
+	<TD align="left">300 mA maximum</TD>
+<TR>
+	<TD>PTT timer</TD>
+	<TD align="left">10 second timeout in hardware</TD>
+<TR>
+	<TD>Physical dimensions</TD>
+	<TD align="left">138 mm x 70 mm x 28 mm</TD>
+<TR>
+	<TD>Application software supplied</TD>
+	<TD align="left">WinPack 6.4</TD>
+<TR>
+	<TD>Driver software supplied</TD>
+	<TD align="left">SV2AGW PacketEngine v.2000</TD>
+<TR>
+	<TD>FPGA configuration time</TD>
+	<TD align="left">&lt; 2 seconds at 115.2 kbps</TD>
+</TABLE>
+<center>
+Note: Specifications are indicative only and are subject to change without notice.
+</center>
+<HR>
+<center>
+There have been:
+<img src="/cgi-bin/wwwcount.cgi?dd=D|pad=0|ft=0|frgb=0;0;127|trgb=00ff00|df=YAM.dat" ALT="YAM count">
+accesses since 22/2/00<BR>
+<HR>
+<FONT SIZE="-1">
+Last update to this page: 29/2/00<BR>
+</center>
+</td>
+</tr>
+</table>
+</BODY>
+</HTML>

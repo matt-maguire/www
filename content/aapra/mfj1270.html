@@ -1,0 +1,186 @@
+<HTML>
+<HEAD>
+<TITLE>MFJ1270B TNC</TITLE>
+</HEAD>
+<BODY background="aapra_bg.gif" bgcolor="white" text="black">
+<table align="center" width="80%" cellspacing="2" cellpadding="2">
+<tr><td>
+<A HREF="index.html" TARGET=""><IMG ALIGN="RIGHT" SRC="aapra-small.gif" border="0" ALT="AAPRA home page"></A>
+<H3>Australian<BR>Amateur<BR>Packet<BR>Radio<BR>Association</H3>
+<HR>
+<center>
+<H3>MFJ1270B TNC</H3>
+<TABLE align="center">
+<TR>
+  <TD><FONT SIZE="-1" FACE="Helvetica">
+    <A HREF="#Models">Models</A> | 
+    <A HREF="#Specifications">Specifications</A> | 
+    <A HREF="#Interfacing">Interfacing</A> | 
+    <A HREF="#Technical">Technical</A>
+  </FONT>
+</TABLE>
+</center>
+<A HREF="mfj1270-turbo.jpg" TARGET=""><IMG ALIGN="RIGHT" SRC="mfj1270-turbo-small.gif" WIDTH="200" ALT="MFJ1270 TNC" border="0"></A><BR>
+In order to expand the choice and lower the cost of entry into packet radio, AAPRA has obtained
+a quantity of first-rate, secondhand TNCs manufactured by MFJ Enterprises and 
+dubbed the MFJ1270B. They are fully tested, come complete with circuit diagrams and
+installation instructions and are being offered at a very attractive price. This page is especially
+for those wanting more information on the MFJs.
+<HR>
+<A NAME="Models"></A>
+<H3>Models</H3>
+There are two models of the MFJ1270B:<P>
+<UL>
+  <LI><B>Standard</B> - 1200 bps only (Sold out!)
+  <LI><B>Turbo</B> - 300, 1200 and 2400 bps
+</UL>
+The speed is selected using DIP switches on the back of the TNC in conjunction with the HF/VHF switch.
+The 2400 bps model contains an extra modem plugged into a header internal to the TNC.
+It is possible to replace this with a 9600 bps modem (available from MFJ), a HAPN 4800 bps modem (available from
+AAPRA) or use an external modem.
+<HR>
+<A NAME="Specifications"></A>
+<H3>Specifications</H3>
+<UL>
+  <LI>CMOS Z80A CPU clocked at 2.4576 MHz (option of 4.9152 MHz)
+  <LI>32K CMOS Static RAM (27C256) plus battery backup circuitry
+  <LI>32K ROM containing AX.25 protocol packet firmware
+  <LI>Z80SIO/0 provides one asynchronous RS-232 port and one synchronous modem port
+  <LI>Modem demodulator uses XR2211 PLL for 300 and 1200 bps (calibration software included)
+  <LI>Modem modulator uses XR2206 to generate phase coherent FSK for 300 and 1200 bps
+  <LI>Modem uses 1200/2200 Hz tones for 1200 bps and 1600/1800 Hz tones for 300 bps
+  <LI>Transmit watchdog timer is included with 30 second timeout
+  <LI>AX.25 version 2.0 protocol supported
+  <LI>Operating modes include Converse, Transparent and KISS
+  <LI>Personal Message System (mailbox) is included in firmware
+  <LI>Fully compatible with a wide variety of TNC2 firmware (ROSE, NET/ROM, TheNet, 6Pack, JKISS, etc.)
+  <LI>Accepts TNC2 compatible external modems via the internal 20 pin header
+  <LI>Requires 12 volts at 400-500 mA (nominal)
+</UL>
+<HR>
+<A NAME="Interfacing"></A>
+<H3>Interfacing</H3>
+<center>
+<A HREF="mfj1270-back.jpg" TARGET=""><IMG SRC="mfj1270-back-small.gif" WIDTH="300" border="0"></A><BR>
+</center>
+<BR>
+<center>
+<TABLE CELLSPACING=0 CELLPADDING=5 BORDER=5 ALIGN="CENTER" VALIGN="MIDDLE">
+<TR>
+<TH colspan="2">DIN SOCKET (RADIO)</TH>
+</TR>
+<TR>
+	<TH align="center">Pin</TH><TH>Signal</TH>
+</TR>
+<TR>
+	<TD align="center">1</TD>
+	<TD>Mic Audio</TD>
+</TR>
+<TR>
+	<TD align="center">2</TD>
+	<TD>Earth</TD>
+</TR>
+<TR>
+	<TD align="center">3</TD>
+	<TD>PTT</TD>
+</TR>
+<TR>
+	<TD align="center">4</TD>
+	<TD>RX Audio</TD>
+</TR>
+<TR>
+	<TD align="center">5</TD>
+	<TD>Squelch Input (Optional)</TD>
+</TR>
+</TABLE>
+</center>
+<BR>
+<TABLE CELLSPACING=0 CELLPADDING=5 BORDER=5 ALIGN="CENTER" VALIGN="MIDDLE">
+<TR>
+<TH colspan="2">DIP switch settings at rear of TNC</TH>
+</TR>
+<TR>
+	<TH align="center">Switch</TH><TH>Function</TH>
+</TR>
+<TR>
+	<TD align="center">1</TD>
+	<TD>300 bps to RS232 port</TD>
+</TR>
+<TR>
+	<TD align="center">2</TD>
+	<TD>1200 bps to RS232 port</TD>
+</TR>
+<TR>
+	<TD align="center">3</TD>
+	<TD>2400 bps to RS232 port</TD>
+</TR>
+<TR>
+	<TD align="center">4</TD>
+	<TD>4800 bps to RS232 port</TD>
+</TR>
+<TR>
+	<TD align="center">5</TD>
+	<TD>9600 bps to RS232 port</TD>
+</TR>
+<TR>
+	<TD align="center">6</TD>
+	<TD>300 bps radio modem enabled</TD>
+</TR>
+<TR>
+	<TD align="center">7</TD>
+	<TD>1200 bps radio modem enabled</TD>
+</TR>
+<TR>
+	<TD align="center">8</TD>
+	<TD>2400 bps radio modem enabled</TD>
+</TR>
+<TR>
+<TD colspan="2">Note: Only one of the switches 1 to 5 must be on at any one time.<BR>
+Only one of the switches 6 to 8 must be on at any one time.<BR>
+Example: For 1200 bps packet with 9600 bps to computer port,<BR> 
+switch 5 and 7 would be switched on.</TD>
+</TR>
+</TABLE>
+</center>
+<HR>
+<A NAME="Technical"></A>
+<H3>Technical Talk</H3>
+<B>Power</B><BR>
+12 Volts is required for power up (13.8v nominal). The centre pin of the 2.1 mm coaxial plug is positive and the outside sleeve is ground.<BR>
+<BR>
+<B>RS232</B><BR>
+The TNC has the same RS-232 interface as a conventional voiceband telephone modem and requires a similar comms port connection cable (available from AAPRA).<BR>
+<BR>
+<B>Jumpers</B><BR>
+JMP5 is a link for the internal battery - this product has JMP5 disconnected<BR>
+JMP4 is a link to disable the watchdog timer - link out is normal<BR>
+<BR>
+<B>Output Levels</B><BR>
+R76 is a 20 turn pot to set the output audio level to the radio - min level when fully counter clockwise<BR>
+R38 is a pot to set the output level of the 2400 bps modem (top of cct board)<BR>
+<BR>
+<B>Receive Level</B><BR>
+Input audio level from millivolts to a couple of volts is acceptable.  No adjustment for input level is usually necessary.<BR>
+<BR>
+<B>Startup</B><BR>
+At power on the unit will display the start up text. CTRL C is the command to initiate the cmd: prompt.  Type DISP whilst in command mode to display the parameters.  These can be easily changed, however this is usually performed by the packet program on start up.<BR>
+<BR>
+<B>Deviation</B><BR>
+To test deviation, power up the TNC and connect it to the radio. At the cmd: prompt type CALIBRA and Enter. Then press the K key to hear the transmit tone and tap the spacebar until the higher of the two tones is heard. It will unkey after a short time so press the K key twice whenever this happens, or link JMP4 to disable the watchdog timer. Adjust pot R76 (20 turn pot) for the correct deviation from the transmitter. Press the K key once to return to receive mode and the Q key to quit the calibrate mode. Be sure to remove JMP4 so as to enable the timer again.<BR>
+<BR>
+<B>Mailbox</B><BR>
+To access the internal mailbox, at the command prompt (cmd:) type SYSOP. This allows you to retrieve messages, kill messages, etc.  The mailbox must be ON to allow access (PMS ON) and it must have a callsign set with the MYPCALL command.
+<HR>
+<center>
+There have been:
+<img src="/cgi-bin/wwwcount.cgi?dd=D|pad=0|ft=0|frgb=0;0;127|trgb=00ff00|df=mfj1270.dat" ALT="MFJ1270 count">
+accesses since 17/3/99<BR>
+<HR>
+<FONT SIZE="-1">
+Last update to this page: 22/2/00<BR>
+</center>
+</td>
+</tr>
+</table>
+</BODY>
+</HTML>

@@ -1129,7 +1129,7 @@ This is still acceptable. So, we have now completed our circuit design:
 :EXPORT_DESCRIPTION: 20220130-IMG_4547_01-999x1024.jpg
 :END:
 
-On the Australian TV Series Doctor Doctor, there’s a recurring piece of music that is playing using fingerpicking on the ukulele based on Bonnie Tyler’s hit song /It’s a Heartache/. A quick search on YouTube discovered that it comes from the lead-in of a music video by the Wellington International Ukulele Orchestra:
+On the Australian TV Series Doctor Doctor, there’s a recurring piece of music that is playing using fingerpicking on the ukulele, based on Bonnie Tyler’s hit song /It’s a Heartache/. A quick search on YouTube discovered that it comes from the lead-in of a music video by the Wellington International Ukulele Orchestra:
 
 #+hugo: {{< youtube GqynAAYdLW8 >}}
 
@@ -1151,7 +1151,7 @@ To have the tab in a more convenient format, I wrote it up using the [[http://li
 :EXPORT_DESCRIPTION: 20200120-Screenshot_2022-02-02_21-07-23-1024x550.png
 :END:
 
-Last night I spoke about Digital Photography at the [[https://www.mwrs.org.au/][Manly Warringah Radio Society]], a club for ham radio operators. I decided to structure the talk in such a way that it drew parallels between digital photography and ham radio.
+Last night I spoke about Digital Photography at the [[https://www.mwrs.org.au/][Manly Warringah Radio Society]], a club for ham radio operators. I structured the talk in such a way that it drew parallels between digital photography and ham radio.
 
 First I compare a digital camera to a ham radio station based on a /software defined radio (SDR)/. Just like we use radio antennas to collect ravio waves, a camera lens collects light waves. Both digital cameras and SDRs contain an analogue-to-digital converter to convert waves into a digital signal. They also have digital processors to convert the received signals into a form perceivable by human ears and eyes
 

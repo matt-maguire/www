@@ -1,7 +1,7 @@
 +++
 title = "Org Mode Beamer Presentations"
 date = 2025-02-20
-lastmod = 2025-02-20T13:28:38+11:00
+lastmod = 2025-02-20T13:52:59+11:00
 tags = ["Emacs", "OrgMode", "LaTeX", "Teaching", "Beamer"]
 categories = ["Blog"]
 draft = false
@@ -9,7 +9,7 @@ weight = 3001
 author = "Matt Maguire"
 +++
 
-Earlier I talked about [using Org Mode to produce lesson worksheets]({{< relref "20250105_orgmode-lesson-notes" >}}) for my students. This year I am thinking about using powerpoint-style presewntation slides instead of worksheets to encourage students to write more in their books. This naturally led me to look into how to do this with Org Mode.
+Earlier I talked about [using Org Mode to produce lesson worksheets]({{< relref "20250105_orgmode-lesson-notes" >}}) for my students. This year I am thinking about using powerpoint-style presentation slides instead of worksheets to encourage students to write more in their books. This naturally led me to look into how to do this with Org Mode.
 
 
 ## A Simple Lesson {#a-simple-lesson}

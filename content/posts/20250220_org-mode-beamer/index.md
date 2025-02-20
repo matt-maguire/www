@@ -1,7 +1,7 @@
 +++
 title = "Org Mode Beamer Presentations"
 date = 2025-02-20
-lastmod = 2025-02-20T13:52:59+11:00
+lastmod = 2025-02-20T13:54:53+11:00
 tags = ["Emacs", "OrgMode", "LaTeX", "Teaching", "Beamer"]
 categories = ["Blog"]
 draft = false
@@ -14,7 +14,7 @@ Earlier I talked about [using Org Mode to produce lesson worksheets]({{< relref 
 
 ## A Simple Lesson {#a-simple-lesson}
 
-Making presentations in \\(\LaTeX\\) is normally done using the `beamer` package. It turns out that Org Mode has good support for beamer. An example of a simple lesson presentation iorg-mode file might look like this:
+Making presentations in \\(\LaTeX\\) is normally done using the `beamer` package. It turns out that Org Mode has good support for beamer. An example of a simple lesson presentation org-mode file might look like this:
 
 ```org
 #+title: Adding Terms

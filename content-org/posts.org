@@ -22,7 +22,7 @@
 Earlier I talked about [[#orgmode-lesson-notes][using Org Mode to produce lesson worksheets]] for my students. This year I am thinking about using powerpoint-style presentation slides instead of worksheets to encourage students to write more in their books. This naturally led me to look into how to do this with Org Mode.
 
 **** A Simple Lesson
-Making presentations in $\LaTeX$ is normally done using the =beamer= package. It turns out that Org Mode has good support for beamer. An example of a simple lesson presentation iorg-mode file might look like this:
+Making presentations in $\LaTeX$ is normally done using the =beamer= package. It turns out that Org Mode has good support for beamer. An example of a simple lesson presentation org-mode file might look like this:
 
 #+begin_src org
 ,#+title: Adding Terms

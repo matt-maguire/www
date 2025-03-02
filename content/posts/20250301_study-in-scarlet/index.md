@@ -1,9 +1,9 @@
 +++
 title = "A Study in Scarlet"
-featuredImage = "20250301-study_in_scarlet.jpg"
+featuredImage = "20250301_study-in-scarlet.jpg"
 date = 2025-03-01
-lastmod = 2025-03-01T16:00:06+11:00
-tags = ["Shavian", "𐑖𐑱𐑝𐑾𐑯"]
+lastmod = 2025-03-02T17:22:05+11:00
+tags = ["Shavian"]
 categories = ["Blog"]
 draft = false
 weight = 3001

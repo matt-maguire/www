@@ -193,7 +193,7 @@ I think it starts out ok, but later in the piece the timing seems a bit off and 
 
 
 ** A Study in Scarlet
-*** DONE A Study in Scarlet :Shavian:𐑖𐑱𐑝𐑾𐑯:
+*** DONE A Study in Scarlet :Shavian:
 :PROPERTIES:
 :EXPORT_FILE_NAME: index.md
 :EXPORT_HUGO_BUNDLE: 20250301_study-in-scarlet
@@ -657,7 +657,7 @@ This was very easy to implement using the Oryx tool, and doesn't require the use
 I'm going to perservere with this new layout for a while, and I'll report back here how it goes!
 
 ** Migrating my Blog from Wordpress to Org Mode
-*** DONE Migrating my Blog from Wordpress to Org Mode :Emacs:OrgMode:Esperanto:Shavian:𐑖𐑱𐑝𐑾𐑯:
+*** DONE Migrating my Blog from Wordpress to Org Mode :Emacs:OrgMode:Esperanto:Shavian:
 :PROPERTIES:
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20241226_org-mode-blog
@@ -704,7 +704,7 @@ If you feel like a bit of a chuckle, check out this video on the ubiquitousness 
 
 #+hugo: {{< youtube urcL86UpqZc >}}
 
-*** DONE Migrating Blog from Wordpress to Org Mode :Emacs:OrgMode:Esperanto:Shavian:𐑖𐑱𐑝𐑾𐑯:
+*** DONE Migrating Blog from Wordpress to Org Mode :Emacs:OrgMode:Esperanto:Shavian:
 :PROPERTIES:
 :EXPORT_FILE_NAME: index.eo.md
 :EXPORT_HUGO_BUNDLE: 20241226_org-mode-blog
@@ -1107,7 +1107,7 @@ I am currently using two websites to help with this:
 - https://monkeytype.com: this website DOES support ISRT! I was quite surprised. It is possible to set up a custom wordset, where one of the english language corpuses is filtered to include only letters from the ISRT home row. As my typing improves, I can gradually move letters from the excluded list to the list of allowed letters, and then the site behaves in a similar way to keybr.com (albeit without the per-letter statistics and adaptive letter focus).
 
 ** Corne V4.1 Mini
-*** DONE Corne V4.1 Mini :keyboards:corne:
+*** DONE Corne V4.1 Mini :Keyboards:Corne:
 :PROPERTIES:
 :CUSTOM_ID: corne-v4-mini
 :EXPORT_FILE_NAME: index
@@ -1135,7 +1135,7 @@ I have loaded the full miryoku layout into the left-hand side of both keyboards,
 You can find the firmware tweaks and keyboard layouts I am using in my [[https://github.com/matt-maguire/kbd_firmware/tree/custom/keyboards/crkbd/vial-kb][GitHub repository]] (“custom” branch has my changes; “main” branch tracks the vanilla upstream code).
 
 ** Corne V4 Update
-*** DONE Corne V4 Update :keyboards:corne:
+*** DONE Corne V4 Update :Keyboards:Corne:
 :PROPERTIES:
 :CUSTOM_ID: corne-v4-update
 :EXPORT_FILE_NAME: index
@@ -1263,7 +1263,7 @@ This is just an initial proposal, which may well change over time as a get more 
 
 I’ll post updates here as I gain more experience and have something to report.
 ** Learn Japanese with Song Lyrics (Houki Boshi from Bleach)
-*** DONE Learn Japanese with Song Lyrics (Houki Boshi from Bleach) :music:languages:japanese:
+*** DONE Learn Japanese with Song Lyrics (Houki Boshi from Bleach) :Music:Languages:Japanese:
 :PROPERTIES:
 :CUSTOM_ID: houki-boshi
 :EXPORT_FILE_NAME: index
@@ -1292,7 +1292,7 @@ You may notice that the live performance above leaves out the first two lines of
 Studying song lyrics is a great way to gain more exposure to a language, and is lots of fun!
 
 ** How to calculate the series resistor for an LED
-*** DONE How to calculate the series resistor for an LED :electronics:
+*** DONE How to calculate the series resistor for an LED :HamRadio:
 :PROPERTIES:
 :CUSTOM_ID: led-series-resistor
 :EXPORT_FILE_NAME: index
@@ -1361,7 +1361,7 @@ This is still acceptable. So, we have now completed our circuit design:
 [[file:20220202-quicklatex.com-fecf716ddc8012b94614dba19222cab7_l3.svg]]
 
 ** It's a Heartache
-*** DONE It's a Heartache :music:
+*** DONE It's a Heartache :Music:
 :PROPERTIES:
 :CUSTOM_ID: its-a-heartache
 :EXPORT_FILE_NAME: index
@@ -1379,7 +1379,7 @@ I was keen to learn how to play something like it on my own ukulele, and a furth
 #+hugo: {{< embed-pdf url="20220130-heartache-tab.pdf" >}}
 
 ** Digital Photography for Hams
-*** DONE Digital Photography for Hams :photography:hamradio:
+*** DONE Digital Photography for Hams :Photography:HamRadio:
 :PROPERTIES:
 :CUSTOM_ID: photography-for-hams
 :EXPORT_FILE_NAME: index
@@ -1401,7 +1401,7 @@ A recording of the talk will be available on the [[https://www.youtube.com/user/
 #+hugo: {{< embed-pdf url="20220120-photography_for_hams.pdf" >}}
 
 ** 〜て-Form Song
-*** DONE 〜て-Form Song :languages:japanese:
+*** DONE 〜て-Form Song :Languages:Japanese:
 :PROPERTIES:
 :CUSTOM_ID: te-form-song
 :EXPORT_FILE_NAME: index
@@ -1486,7 +1486,7 @@ To find out more about the 〜て form of Japanese verbs, you can refer to [[htt
 𐑑 𐑓𐑲𐑯𐑛 𐑬𐑑 𐑥𐑹 𐑩𐑚𐑬𐑑 𐑞 〜て 𐑓𐑹𐑥 𐑝 ·𐑡𐑨𐑐𐑩𐑯𐑰𐑟 𐑝𐑻𐑚𐑟, 𐑿 𐑒𐑨𐑯 𐑮𐑦𐑓𐑻 𐑑 [[http://guidetojapanese.org/learn/complete/progressive_tense][·𐑑𐑱 𐑒𐑦𐑥𐑟 𐑡𐑨𐑐𐑩𐑯𐑰𐑟 𐑜𐑮𐑨𐑥𐑼 𐑜𐑲𐑛]].
 
 ** Sony A7R4 Selfie Solution
-*** DONE Sony A7R4 Selfie Solution :photography:
+*** DONE Sony A7R4 Selfie Solution :Photography:
 :PROPERTIES:
 :CUSTOM_ID: a7r4-selfie-solution
 :EXPORT_FILE_NAME: index
@@ -1513,7 +1513,7 @@ In this way, the camera can be placed on the Joby gorillapod which acts as a “
 If I want to use this setup for video vlogging, there is nowhere to mount a shotgun mic, so likely I would use a lavalier mic plugged into the camera itself, or perhaps into a second smartphone acting as a voice recorder.
 
 ** Should I use Back Button Focus on Sony A7R4?
-*** DONE Should I use Back Button Focus on Sony A7R4? :photography:
+*** DONE Should I use Back Button Focus on Sony A7R4? :Photography:
 :PROPERTIES:
 :CUSTOM_ID: back-button-focus
 :EXPORT_FILE_NAME: index
@@ -1553,7 +1553,7 @@ So, that’s the way I’ve set up the camera for now — normally in AF-C mode 
 Feel free to comment if you have other suggestions to allow for easy transition between auto-focus, BBF, selfie and third-party/untrained user workflows.
 
 ** Elecraft K2 Amplifier Keying Circuit
-*** DONE Elecraft K2 Amplifier Keying Circuit :hamradio:
+*** DONE Elecraft K2 Amplifier Keying Circuit :HamRadio:
 :PROPERTIES:
 :CUSTOM_ID: elecraft-k2-amplifier-keying-circuit
 :EXPORT_FILE_NAME: index
@@ -1615,7 +1615,7 @@ Here are some pics of the completed circuit, from above and from beneath.
 [[file:20140420-IMG_0118-Version-2-768x1024-1.jpg]]
 
 ** Beverage Antennas
-*** DONE Beverage Antennas :hamradio:
+*** DONE Beverage Antennas :HamRadio:
 :PROPERTIES:
 :CUSTOM_ID: beverage-antennas
 :EXPORT_FILE_NAME: index

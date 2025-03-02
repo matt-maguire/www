@@ -2,7 +2,7 @@
 title = "Digital Photography for Hams"
 featuredImage = "20200120-Screenshot_2022-02-02_21-07-23-1024x550.png"
 date = 2022-01-20
-lastmod = 2025-02-15T10:46:47+11:00
+lastmod = 2025-03-02T17:25:44+11:00
 tags = ["Photography", "HamRadio"]
 categories = ["Blog"]
 draft = false
@@ -10,7 +10,7 @@ weight = 3001
 author = "Matt Maguire"
 +++
 
-Last night I spoke about Digital Photography at the [Manly Warringah Radio Society](https://www.mwrs.org.au/), a club for ham radio operators. I structured the talk in such a way that it drew parallels between digital photography and ham radio.
+Last night I spoke about Digital Photography at the [Manly Warringah Radio Society](https://www.mwrs.org.au/), a club for ham radio operators. I decided to structure the talk in such a way that it drew parallels between digital photography and ham radio.
 
 First I compare a digital camera to a ham radio station based on a _software defined radio (SDR)_. Just like we use radio antennas to collect ravio waves, a camera lens collects light waves. Both digital cameras and SDRs contain an analogue-to-digital converter to convert waves into a digital signal. They also have digital processors to convert the received signals into a form perceivable by human ears and eyes
 

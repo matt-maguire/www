@@ -199,7 +199,7 @@ I think it starts out ok, but later in the piece the timing seems a bit off and 
 :EXPORT_HUGO_BUNDLE: 20250301_study-in-scarlet
 :EXPORT_DATE: 2025-03-01
 :EXPORT_HUGO_MENU:
-:EXPORT_DESCRIPTION: 20250301_study-in-scarlet.jpg
+:EXPORT_DESCRIPTION: 20250301-study_in_scarlet.jpg
 :END:
 
 With my interest in languages, one YouTuber I like to follow is the "Rob Words" channel. He has posted a number of videos treating alternative ways of writing the English language. He talked about how runes might be better suited for writing modern English than the Latin alphabet we use today, and cited examples where J.R.R. Tolkein used the runic alphabet in his books to represent languages like Dwarvish from his Middle Earth fantasy world. One video that particularly stood out for me was his description of the George Bernard Shaw "Shavian" alphabet:

@@ -2,7 +2,7 @@
 title = "It's a Heartache"
 featuredImage = "20220130-IMG_4547_01-999x1024.jpg"
 date = 2022-01-30
-lastmod = 2025-03-02T17:25:25+11:00
+lastmod = 2025-03-02T17:32:41+11:00
 tags = ["Music"]
 categories = ["Blog"]
 draft = false

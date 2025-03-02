@@ -1,7 +1,7 @@
 +++
 title = "Exporting Org Mode Tables to LaTeX"
 date = 2025-01-17
-lastmod = 2025-01-23T18:19:58+11:00
+lastmod = 2025-03-02T17:32:40+11:00
 tags = ["Emacs", "OrgMode", "LaTeX", "Teaching"]
 categories = ["Blog"]
 draft = false

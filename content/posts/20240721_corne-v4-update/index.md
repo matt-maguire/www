@@ -2,8 +2,8 @@
 title = "Corne V4 Update"
 featuredImage = "20240721-connector-1024x751.jpg"
 date = 2024-07-20
-lastmod = 2025-01-23T18:19:59+11:00
-tags = ["Keyboards", "Corne", "AltKeyboardLayouts", "MechKeyboard", "SplitKeyboard", "Colemak", "Miryoku"]
+lastmod = 2025-03-02T17:32:41+11:00
+tags = ["Keyboards", "Corne"]
 categories = ["Blog"]
 draft = false
 weight = 3001

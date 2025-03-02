@@ -2,8 +2,8 @@
 title = "Gallium Keyboard Layout"
 featuredImage = "20241002-gallium-1536x678.png"
 date = 2024-10-02
-lastmod = 2025-01-23T18:19:59+11:00
-tags = ["Computers", "Keyboards", "AltKeyboardLayouts", "MechKeyboard", "SplitKeyboard", "Gallium", "Graphite", "ISRT"]
+lastmod = 2025-03-02T17:32:41+11:00
+tags = ["Computers", "Keyboards", "AltKeyboardLayouts"]
 categories = ["Blog"]
 draft = false
 weight = 3001

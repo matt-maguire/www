@@ -2,7 +2,7 @@
 title = "How to calculate the series resistor for an LED"
 featuredImage = "20220202-Screen-Shot-2022-02-02-at-6.32.54-pm.png"
 date = 2022-02-02
-lastmod = 2025-03-02T17:32:41+11:00
+lastmod = 2025-03-02T17:39:39+11:00
 tags = ["HamRadio"]
 categories = ["Blog"]
 draft = false

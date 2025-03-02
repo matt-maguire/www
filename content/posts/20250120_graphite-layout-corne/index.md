@@ -2,7 +2,7 @@
 title = "Graphite Layout on Corne Keyboard"
 featuredImage = "20250120_vial-graphite.png"
 date = 2025-01-20
-lastmod = 2025-03-02T17:32:40+11:00
+lastmod = 2025-03-02T17:39:38+11:00
 tags = ["Computers", "Keyboards", "Corne", "AltKeyboardLayouts"]
 categories = ["Blog"]
 draft = false

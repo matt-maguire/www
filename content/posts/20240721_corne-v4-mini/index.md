@@ -2,7 +2,7 @@
 title = "Corne V4.1 Mini"
 featuredImage = "20240721-corne_v4_mini-1024x365.jpg"
 date = 2024-07-21
-lastmod = 2025-03-02T17:32:41+11:00
+lastmod = 2025-03-02T17:39:38+11:00
 tags = ["Keyboards", "Corne"]
 categories = ["Blog"]
 draft = false

@@ -193,7 +193,7 @@ I think it starts out ok, but later in the piece the timing seems a bit off and 
 
 
 ** A Study in Scarlet
-*** DONE A Study in Scarlet :Shavian:
+*** DONE A Study in Scarlet :Languages:Shavian:
 :PROPERTIES:
 :EXPORT_FILE_NAME: index.md
 :EXPORT_HUGO_BUNDLE: 20250301_study-in-scarlet
@@ -657,7 +657,7 @@ This was very easy to implement using the Oryx tool, and doesn't require the use
 I'm going to perservere with this new layout for a while, and I'll report back here how it goes!
 
 ** Migrating my Blog from Wordpress to Org Mode
-*** DONE Migrating my Blog from Wordpress to Org Mode :Emacs:OrgMode:Esperanto:Shavian:
+*** DONE Migrating my Blog from Wordpress to Org Mode :Emacs:OrgMode:Languages:Esperanto:Shavian:
 :PROPERTIES:
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20241226_org-mode-blog
@@ -704,7 +704,7 @@ If you feel like a bit of a chuckle, check out this video on the ubiquitousness 
 
 #+hugo: {{< youtube urcL86UpqZc >}}
 
-*** DONE Migrating Blog from Wordpress to Org Mode :Emacs:OrgMode:Esperanto:Shavian:
+*** DONE Migrating Blog from Wordpress to Org Mode :Emacs:OrgMode:Lingvoj:Esperanto:Ŝava:
 :PROPERTIES:
 :EXPORT_FILE_NAME: index.eo.md
 :EXPORT_HUGO_BUNDLE: 20241226_org-mode-blog

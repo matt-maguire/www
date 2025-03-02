@@ -2,7 +2,7 @@
 title = "Digital Photography for Hams"
 featuredImage = "20200120-Screenshot_2022-02-02_21-07-23-1024x550.png"
 date = 2022-01-20
-lastmod = 2025-03-02T17:32:41+11:00
+lastmod = 2025-03-02T17:39:39+11:00
 tags = ["Photography", "HamRadio"]
 categories = ["Blog"]
 draft = false

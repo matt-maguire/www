@@ -2,7 +2,7 @@
 title = "ISRT Keyboard Layout"
 featuredImage = "20240803-isrt-anglemod.en_.ansi_-1024x312.jpg"
 date = 2024-08-03
-lastmod = 2025-03-02T17:32:41+11:00
+lastmod = 2025-03-02T17:39:38+11:00
 tags = ["Computers", "Keyboards", "Corne", "AltKeyboardLayouts"]
 categories = ["Blog"]
 draft = false

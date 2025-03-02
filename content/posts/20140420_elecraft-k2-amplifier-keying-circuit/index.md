@@ -2,8 +2,8 @@
 title = "Elecraft K2 Amplifier Keying Circuit"
 featuredImage = "20141420-IMG_0118-Version-2-768x1024-1.jpg"
 date = 2014-04-20
-lastmod = 2025-01-24T14:28:19+11:00
-tags = ["HamRadio", "Electronics", "Elecraft", "K2", "KXPA100"]
+lastmod = 2025-03-02T12:15:44+11:00
+tags = ["hamradio"]
 categories = ["Blog"]
 draft = false
 weight = 3001

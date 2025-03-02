@@ -2,7 +2,7 @@
 title = "Packet Radio Resources"
 date = 2013-03-21
 lastmod = 2025-01-26T14:39:52+11:00
-tags = ["HamRadio", "PacketRadio", "AX25"]
+tags = ["HamRadio", "PacketRadio"]
 categories = ["Blog"]
 draft = false
 weight = 3001

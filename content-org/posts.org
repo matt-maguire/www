@@ -11,99 +11,249 @@
 #+filetags: @Blog
 
 * Content
-** Org Mode Beamer Presentations
-*** DONE Org Mode Beamer Presentations :Emacs:OrgMode:LaTeX:Teaching:Beamer:
+** Island Song
+*** DONE Island Song :Music:
 :PROPERTIES:
-:CUSTOM_ID: org-mode-beamer
-:EXPORT_FILE_NAME: index
-:EXPORT_HUGO_BUNDLE: 20250220_org-mode-beamer
-:EXPORT_DATE: 2025-02-20
+:EXPORT_FILE_NAME: index.md
+:EXPORT_HUGO_BUNDLE: 20250302-island_song
+:EXPORT_DATE: 2025-03-02
+:EXPORT_HUGO_MENU:
+:EXPORT_DESCRIPTION: 20250302-island_song_still.png
 :END:
-Earlier I talked about [[#orgmode-lesson-notes][using Org Mode to produce lesson worksheets]] for my students. This year I am thinking about using powerpoint-style presentation slides instead of worksheets to encourage students to write more in their books. This naturally led me to look into how to do this with Org Mode.
 
-**** A Simple Lesson
-Making presentations in $\LaTeX$ is normally done using the =beamer= package. It turns out that Org Mode has good support for beamer. An example of a simple lesson presentation org-mode file might look like this:
+When I was in primary school, I learned the recorder. The teacher librarian taught us, even though she did not have any musical training herself. We were then told that we would be performing at the Sydney Opera House together with a number of other schools. It was very exciting, and our little group worked hard to try and play together as an ensemble. As we got closer to the time, a specialist music teacher was brought in to try and get us in better shape. I learned so much from those couple of lessons, and we got to perform in the Opera House.
 
-#+begin_src org
-,#+title: Adding Terms
-,#+subtitle: Algebraic Techniques
-,#+author: Mr Maguire
-,#+startup: beamer
-,#+options: H:1 toc:nil
-,#+latex_class: beamer
-,#+latex_class_options: [bigger]
-,#+columns: %45ITEM %10BEAMER_env(Env) %10BEAMER_act(Act) %4BEAMER_col(Col) %8BEAMER_opt(Opt)
-,#+beamer_theme: SimplePlus
-,#+LATEX_HEADER: \usepackage{tasks}
+One of the pieces we played was /Island Song/, written by Michael Hannan in 1983. There were 5 parts, with the melody being played by the "Descant 1" (soprano) group -- that was my group. The "Descant 2" and "Descant 3" groups played the harmony, and there was a Treble (Alto) part and a Tenor part. The treble recorder had the "wrong notes" on the hand-written score we were given -- I now know that this was because the treble recorder is in the key of F, whereas the others were all in the key of C. Our treble player somehow managed to play the right notes in the end.
 
-,* DO NOW
-1. Identify the like terms:
-   \[ 4ab^2, 4ab, 2a^2b^2, 3b^2a \]
-   \vskip+5ex
-2. Which is the constant term?
-   | 3x | 4x^2 | 5x^0 | x |
+During the COVID lockdown, I came across the yellowed hand-written pieces of paper, and decided to revisit that part of my childhood. The first thing was to typeset the score in order to preserve it and make it easier to read. I used a program called [[https://lilypond.org][LilyPond]], in which you describe the notes in a plain text format, and it converts the notes to a pdf file.
 
-,* Adding Terms
-To add terms:
-- make sure the two terms are *like* terms
-- add the coefficients
+The lilypond source file first defines some general parameters such as the title, composer, tempo, etc. and then describes the notes that make up each part. At the end, the parts are combined together to produce a single score. Below I have posted the source in a single monolithic file, although lilypond does allow you to split out each part into its own separate file. LilyPond can also generate a MIDI file that can be played on the computer using a suitable MIDI player.
 
-,** Careful! :B_block:
-Don't forget to take any minus signs into account!
+#+begin_example
 
-,* Practice
-Simplify the following espressions
-\begin{tasks}[after-item-skip=8ex](2)
-\task $2x+3x$
-\task $3a+5b+6a$
-\task $a+b+2b+a$
-\task $a^{2}+2ab-2ba+b^{2}$
-\task* $a+2a-3a+4a-5a+6a-7a+8a-9a+10a$
-\end{tasks}
+\version "2.20.0"
 
-,* :B_ignoreheading:
-,#+begin_center
-*What's $2n$ plus $2n$?*
-\vskip+2ex
-I don't know, it sounds $4n$ to me...
-,#+end_center
+\header {
+  title = "Island Song"
+  composer = "Michael Hannan (1983)"
+}
 
-#+end_src
+global= {
+  \time 4/4
+  \key c \major
+  \tempo "Preciso" 4 = 54
+}
 
-To export the org mode code to a PDF, we need to use a special export command to let org-mode know to make a beamer presentation rather than a normal $\LaTeX$ document. On my system, the export process is bound to =C-c C-e l O= which will:
-- translate the org mode to a $\LaTeX$ =*.tex= file
-- produce a PDF file from the $\LaTeX$ file
-- open the PDF file in Emacs (I have pdftools installed in my Emacs config)
+descantOne = \new Voice \relative c'' {
+% Page 1
+  r1 | r1 | r1 |
+  r1 | r4 g8\mf ( b8) r4 a8( f8) | r4 g8( b8) r4 f8( d8) |
+  r4 g16( a16 b8) r4 a8( f8) | r4 g16( f16 g8) r4 f16( c16 d8) | r8^"espressivo"\mf d'8-- d8-- [d8--] r8 d8( c4) |
 
-If I want to generate the PDF file without opening it (for example, if I already have the PDF file open in another window) then I use the key sequence =C-c C-e l P=.
+% Page 2
+  r8 d8-- d8-- [d8--] d16( e16 f8~ f4) | r8 d8( c8 [b8]) r8 d8( c4) | r8 d8-- d8-- [d8--] d16( f16 g8) r4 |
+  r8 g8-- g8-- [g8--] g8( a16 f16~ f4) | r8 g8-- g8-- [g8--] g16( a16 bes8~ bes4) | r8 g8( f8 [e8]) r8 g8( f4) |
+  r8 d16( e16 f16 e16 d8) c8( f8-.) f4 | r4 g2( f4) | r4 g4(~ g8 a8 f4) |
 
-This will then produce a PDF file that looks like this:
+% Page 3
+  r8 g8-- g8-- [g8--] g8( a16 f16~ f4) | r8 g8-- g8-- [g8--] g16( f16 d8) r4 | r4 d2( c4) |
+  r4 d4(~ d8 e8 c4) | r8 d8-- d8-- [d8--] d8( e16 c16~ c4) | r8 d16( e16 f16 e16 d8) c8( f8-.) f4 |
+  r1 | r1 | r1 |
 
-#+hugo: {{< embed-pdf url="20250220_beamer-lesson.pdf" >}}
+% Page 4
+  r1 | g,16-.\pp  g16-. r8 e'16-. e16-. r8 a,16-. a16-. r8 d16-. d16-. r8 | f,16-. f16-. r8 f'16-. f16-. r8 f,16-. f16-. r8 f'16-. f16-. r8 |
+  g,16-. g16-. r8 e'16-. e16-. r8 a,16-. a16-. r8 d16-. d16-. r8 | f,16-. f16-. r8 f'16-. f16-. r8 g,16-. g16-. r8 d'16-. d16-. r8 | r8^"espressivo"\mf d8-- d8-- [d8--] r8 d8( c4) |
+  r8 d8-- d8-- [d8--] d16-.(e16 f8~ f4) | r8 d8( c8 [b8]) r8 d8( c4) | r8 d8( e8 [f8]) g16( f16 g8-.) r4 |
 
-**** Preamble
-So, let's break down the contents of the preamble in the org mode file:
-- The =#+title:=, =#+subtitle:=, =#+author:= and optionally =#+date:= are self-explanatory and are used to generate the title slide.
-- The =#+startup: beamer= line tells Emacs that this is a beamer org-mode file and that it should enable the special org mode beamer minor mode for syntax highlighting, etc.
-- The =#+options: H:1 toc:nil= line tells org mode that I don't want a table of contents slide, and that each level 1 heading in the org file should represent a new slide. If I put =H:2= instead, then level 1 headings would represent sections with a section heading slide, and the level 2 headings would be the actual content slides. I want to minimise that extra fluff for my students so that we can focus purely on content, and this is why I use =H:1=
-- The =#+latex_class: beamer= line uses the predefined Org Mode beamer class, and the =#+latex_class_options: [bigger]= sets a larger font size to help students make out the slides more clearly. Font size can be overridden for a particular slide using the =\fontsize{}{}= command at the start of that slide's content.
-- The =#+columns:= line enables a cool "column mode feature" in Emacs Org Mode. I don't want to discuss it here, but you can read mode about this in the [[https://orgmode.org/manual/Column-View.html][Org Mode manual]].
-- The =#+beamer_theme:= line sets the "look and feel" of the slides. I use a fairly simple theme to minimise cognitive load for the students. You can find other themes on the internet, such as at [[https://latex-beamer.com/tutorials/beamer-themes/][this site]].
-- You can then include any packages you might want to use with lines like =#+latex_header: \usepackage{}=. You can see I use the =tasks= package, which lets you easily format multi-column lists of problems like I did with the =exesheets= package in the [[#orgmode-lesson-notes][org mode lesson notes]] post.
-**** Content
-Now that we have set up the environment, we can start making some slides!
-1. The first slide I have is a "DO NOW" starter activity. The text in the level 1 heading becomes the title at the top of the slide. In the example, I have a simple enumerated list. You can see we can include maths notiation using the normal ="$ ... $"= and ="\[ ... \]"= markers. Sometimes it is better to use ="\( ... \)"= delimiters for inline maths expressions, as the dollar signs can be confused with currency symbols. If you want to write dollar signs in an expression, you can use a =\dollar= or =\USD= command.
-2. The second slide shows a bullet list. You can also use standard org-mode markup for *bold text*, /italics/, etc.. It also includes a highlighted text box, which you can create using a subheading marked with a =:B_block:= tag.
-3. The third slide makes use of the =tasks= package. The org mode beamer export filter doesn't work well with that package, so I find the easiest thing is to simply use $\LaTeX$ code. You can then easily specify separation between the items with =after-item-skip= and how many columns of questions we want. Each question is introduced with a =\task= command, and if you want a longer question to span all the columns we can use =\task*= with an asterisk.
-4. The last slide shows how we can create a slide with no title. You can also use a $\LaTeX$ environment such as =\begin{center} ... \end{center}= using the =#+begin_center ... #+end_center= directives. If we want to create some white space where we can write answers or annotate a solution, we can use a command like =\vskip+2ex= to create that vertical space.
+  \bar "|."
+}
 
-**** Further Reading
-This is a very quick introduction. If you want to learn more, I suggest you look at:
-- A org mode beamer [[https://orgmode.org/worg/exporters/beamer/tutorial.html][tutorial]] which was the main basis of the simple example I provided here.
-- The org mode beamer [[https://orgmode.org/manual/Beamer-Export.html][user manual]]
+descantTwo = \new Voice \relative c'' {
+% Page 1
+  r1 | r1 | r1 |
+  r1 | r1 | r1 |
+  r1 | r1 | r8_\markup {\italic "sempre" \dynamic p} b16-. b16-. r8 b16-. b16-. r8 a16-. a16-. r8 a16-. a16-. |
+
+% Page 2
+%  \set countPercentRepeats = ##t
+  \repeat percent 9 { r8 b16-. b16-. r8 b16-. b16-. r8 a16-. a16-. r8 a16-. a16-. | }
+
+% Page 3
+  \repeat percent 6 { r8 b16-. b16-. r8 b16-. b16-. r8 a16-. a16-. r8 a16-. a16-. | }
+  r8_\p c16-. c16-. r8 c16-. c16-. r8 c16-. c16-. r8 c16-. c16-. | r8 c16-. c16-. r8 c16-. c16-. r8 b16-. b16-. r8 b16-. b16-. | r8 c16-. c16-. r8 c16-. c16-. r8 c16-. c16-. r8 c16-. c16-. |
+
+% Page 4
+  r8 c16-. c16-. r8 c16-. c16-. r8 b16-. b16-. r8 b16-. b16-. | r8_\p c16-. c16-. r8 c16-. c16-. r8 c16-. c16-. r8 c16-. c16-. | r8 c16-. c16-. r8 c16-. c16-. r8 b16-. b16-. r8 b16-. b16-. |
+  r8 c16-. c16-. r8 c16-. c16-. r8 c16-. c16-. r8 c16-. c16-. | r8 c16-. c16-. r8 c16-. c16-. r8 b16-. b16-. r8 a16-. a16-. |
+  \repeat percent 3 {r8 b16-. b16-. r8 b16-. b16-. r8 a16-. a16-. r8 a16-. a16-. |}
+  r8 b16-. b16-. r8 b16-. b16-. a8( b8-.) r4 |
+
+  \bar "|."
+}
+
+descantThree = \new Voice \relative c'' {
+% Page 1
+  r1 | r1 | r1 |
+  r1 | r1 | r1 |
+  r1 | r1 | r8_\markup { \italic "sempre" \dynamic p} g16-. g16-. r8 g16-. g16-. r8 f16-. f16-. r8 f16-. f16-. |
+
+% Page 2
+  \repeat percent 9 { r8 g16-. g16-. r8 g16-. g16-. r8 f16-. f16-. r8 f16-. f16-. | }
+
+% Page 3
+  \repeat percent 6 { r8 g16-. g16-. r8 g16-. g16-. r8 f16-. f16-. r8 f16-. f16-. | }
+  r8_\markup {\dynamic p} e16-. e16-. r8 e16-. e16-. r8 fis16-. fis16-. r8 fis16-. fis16-. | r8 a16-. a16-. r8 a16-. a16-. r8 g16-. g16-. r8 g16-. g16-. | r8 e16-. e16-. r8 e16-. e16-. r8 fis16-. fis16-. r8 fis16-. fis16-. |
+
+% Page 4
+  r8 a16-. a16-. r8 a16-. a16-. r8 g16-. g16-. r8 g16-. g16-. | r8_\markup {\dynamic p} e16-. e16-. r8 e16-. e16-. r8 fis16-. fis16-. r8 fis16-. fis16-. | r8 a16-. a16-. r8 a16-. a16-. r8 g16-. g16-. r8 g16-. g16-. |
+  r8 e16-. e16-. r8 e16-. e16-. r8 fis16-. fis16-. r8 fis16-. fis16-. | r8 a16-. a16-. r8 a16-. a16-. r8 g16-. g16-. r8 fis16-. fis16-. |
+  \repeat percent 3 {r8 g16-. g16-. r8 g16-. g16-. r8 f16-. f16-. r8 f16-. f16-. |}
+  r8 g16-. g16-. r8 g16-. g16-. f8( g8-.) r4 |
+
+  \bar "|."
+}
+
+treble = \new Voice \relative c'' {
+% Page 1
+  r1 | r1 | r1 |
+  r1 | r4 b8\mf( e8) r4 c8( a8) | r4 b8( e8) r4 c8( a8) |
+  r4 b16( c16 d8) r4 c8( a8) | r4 b16( a16 b8) r4 c16( g16 a8) | r4 b8( d8) r4 e8( c8) |
+
+% Page 2
+  r4 b8( d8) r4 f8( c8) | r4 b8( d8) r4 e8( c8) | r4 b8( d8) r4 a8( c8) |
+  r4 b8( d8) r4 e8 (c8) | r4 b8( d8) r4 f8( c8) | r4 b8( d8) r4 e8( c8) |
+  r4 b8( d8) r4 b8( c8) | r4 b8( d8) r4 e8( c8) | r4 b8( d8) r4 f8( c8) |
+
+% Page 3
+  r4 b8( d8) r4 e8( c8) | r4 b8( d8) r4 a8( c8) | r4 b8( d8) r4 e8( c8) |
+  r4 b8 ( d8) r4 f8 (c8) | r4 b8( d8) r4 e8( c8) | r4 b8( d8) r4 b8( c8) |
+  r8^"espressivo"\mf e16( f16 g16 f16 e8) a,8( d8-.) d4 | r8 f16( g16 a16 g16 f16 e16) d8( b8-.) g4 | r8 e'16( f16 g16 f16 e8) a,8( d8-.) d4 |
+
+% Page 4
+  r8 f16( g16 a16 b16 c8) g16( a16 b16 c16 d8) r8 | r8\mf e,16( f16 g16 f16 e8) a,8( d8-.) d4 | r8 f16 g16 a16 g16 f16 e16 d8( b8) g4 |
+  r8 e'16( f16 g16 f16 e8) a,8(d8-.) d4 | r8 f16( g16 a16 b16 c8) g16( a16 b16 c16 d4) | r8 b,16( c16 d16 c16 b8) c8( f8-.) f4 |
+  r8 b,16( c16 d16 c16 b8) a8( f8-.) f4 | r8 d'16( e16 f16 e16 d8) c8( f8-.) f4 | r8 b,16( c16 d16 c16 b8) a8( b8-.) r4 |
+
+  \bar "|."
+}
+
+tenor = \new Voice \relative c'' {
+% Page 1
+  g8-._\markup {\italic "sempre" \dynamic mf} g8 r4 f16-. a16-. c8 r4 | g8-. g8 r4 d16( c16 d8) r4 | g8-. g8 r4 f16-. a16-. c8 r4 |
+  g8-. g8 r4 f8( d8) r4 | g8-. g8 r4 f16-. a16-. c8 r4 | g8-. g8 r4 d16( c16 d8) r4 |
+  g8-. g8 r4 f16-. a16-. c8 r4 | g8-. g8 r4 f8( d8) r4 | g8-. g8 r4 f16-. a16-. c8 r4 |
+
+% Page 2
+  g8-. g8 r4 d16( c16 d8) r4 | g8-. g8 r4 f16-.( a16-. c8) r4 | g8-. g8 r4 f8 (d8) r4 |
+  g8-. g8 r4 f16-. a16-. c8 r4 | g8-. g8 r4 d16( c16 d8) r4 | g8-. g8 r4 f16-. a16-. c8 r4 |
+  g8-. g8 r4 f8( d8) r4 | g8-. g8 r4 f16-. a16-. c8 r4 | g8-. g8 r4 d16( c16 d8) r4 |
+
+% Page 3
+  g8-. g8 r4 f16-. a16-. c8 r4 | g8-. g8 r4 f8( d8) r4 | g8-. g8 r4 f16-. a16-. c8 r4 |
+  g8-. g8 r4 d16( c16 d8) r4 | g8-. g8 r4 f16-. a16-. c8 r4 | g8-. g8 r4 f8( d8) r4 |
+  c8-. [c8-.] e8( g8) d16-.( fis16-. a8) r4 | f8-. [f8-.] a8( c8) g16-.( b16-. d8) r4 | c,8-. [c8-.] e8( g8) d16-.( fis16-. a8) r4 |
+
+% Page 4
+  f8-. [f8-.] a8( c8) d16( b16 g8) b16( g16 f16 d16) | c8-.\mf [c8-.] e8( g8) d16-.( fis16-. a8) r4 | f8-. [f8] a8( c8) g16-.( b16-. d8) r4 |
+  c,8-. [c8-.] e8( g8) d16-.(fis16-. a8) r4 | f8-. [f8-.] a8( c8) d16( b16 g8) a16( fis16 d8) | g8-. g8 r4 f16-. a16-. c8 r4 |
+  g8-. g8 r4 d16( c16 d8) r4 | g8-. g8 r4 f16-. a16-. c8 r4 g8-. g8 r4 f8( g8-.) r4 |
+
+  \bar "|."
+}
+
+\score {
+  \new StaffGroup <<
+    \new Staff \with { instrumentName = "D1" }
+    << \global \descantOne >>
+    \new Staff \with { instrumentName = "D2" }
+    << \global \descantTwo >>
+    \new Staff \with { instrumentName = "D3" }
+    << \global \descantThree >>
+    \new Staff \with { instrumentName = "Tr" }
+    << \global \treble >>
+    \new Staff \with { instrumentName = "Te" }
+    << \global \tenor >>
+  >>
+  \layout { }
+  \midi { }
+}
+#+end_example
+
+The resulting pdf file containing the full score looks like this:
+
+#+hugo: {{< embed-pdf url="20250302-island_song.pdf" >}}
+
+You can also use lilypond to generate each part separately, so that each musician has a more compact set of sheets with only their part, meaning they need to turn the page less often.
+
+The next step was to record each part. I used a metronome in my earbuds to try to keep each part in time. I used either a Canon M50 or a Sony A7R4 camera (I forget which) with a shotgun microphone to make the recordings. I then combined the footage of the separate parts into a single video using the [[https://kdenlive.org/][Kdenlive]] non-linear editor (NLE) on my Linux laptop. The result came out as follows:
+
+#+hugo: {{< youtube 4Wa4eRCoskg>}}
+
+I think it starts out ok, but later in the piece the timing seems a bit off and it starts to fall apart a bit. Even though the result was not great, it was my first attempt at making such a video and I had a lot of fun reliving my days of playing the recorder in the Sydney Opera House :-)
+
+
+** A Study in Scarlet
+*** DONE A Study in Scarlet :Shavian:𐑖𐑱𐑝𐑾𐑯:
+:PROPERTIES:
+:EXPORT_FILE_NAME: index.md
+:EXPORT_HUGO_BUNDLE: 20250301_study-in-scarlet
+:EXPORT_DATE: 2025-03-01
+:EXPORT_HUGO_MENU:
+:EXPORT_DESCRIPTION: 20250301_study-in-scarlet.jpg
+:END:
+
+With my interest in languages, one YouTuber I like to follow is the "Rob Words" channel. He has posted a number of videos treating alternative ways of writing the English language. He talked about how runes might be better suited for writing modern English than the Latin alphabet we use today, and cited examples where J.R.R. Tolkein used the runic alphabet in his books to represent languages like Dwarvish from his Middle Earth fantasy world. One video that particularly stood out for me was his description of the George Bernard Shaw "Shavian" alphabet:
+
+#+hugo: {{< youtube D66LrlotvCA >}}
+
+This alphabet looked vaguely familiar. I had encountered it many years ago when I was at an Esperanto conference and someone gave me a little booklet about a "new improved alphabet". I put it on my bookshelf, fully intending to investigate it when I had some spare time, but somehow I never got around to it. I went to my bookshelf and dug out the dusty booklet -- sure enough it was all about how to write Esperanto in the Shavian alphabet!
+
+[[file:20250301-IMG_0560.jpg]]
+
+Esperanto already has phonetic spelling, using accent marks to ensure all sounds are represented, so the Shavian alphabet only brings limited benefits to that language. However, for English the benefits are much more significant, as described in Rob's video. So, I decided to try and learn it.
+
+To that end, I bought a copy of Sir Arthur Conan Doyle's Sherlock Homes story, /A Study in Scarlet/, Shavian Alphabet edition. The publication of this edition was organised by Evan who runs the website [[https://shavian.info/][shavian.info]], and who also features in Rob's video. Since I enjoy the character of Sherlock Homes, I thought this would provide extra motivation to learn Shavian.
+
+The alphabet is designed in such a way that is logical and which facilitates the newcomer to remember the different shapes. After I had a passing familiarity with the alphabet design, I started reading the book. My progress was extremely slow at first, sounding out the words letter by letter like I was back in Kindergarten learning to read again. Some letters were easy to confuse with each other, such as P (𐑐), B (𐑚), F (𐑓) and V (𐑝). Others like L (𐑤) look like Latin letters which, due to habit, were sometimes misleading. It was nevertheless a lot of fun trying to decode the stange script before me.
+
+Because the story was written in England during the 1800s, some of the words and turns of phrase are a little unusual to the modern day reader, adding a little more fun challenge to recognising the words. I haven't read much classical literature since my school days, so it is refreshing to revisit some works of fiction from around those times. The slow pace at which I am reading the story is a nice contrast to the usual hustle and bustle of everyday life, and so I am really enjoying the story as the mystery unfolds. I am becoming a little faster as I get more practice, but I still have a long way to go before I feel anywhere near as fluent as I am in the Latin alphabet.
+
+The other side from reading is learning to write in the Shavian alphabet. I will rewrite this post in Shavian and upload it to my blog -- if you want to see some Shavian, you can use the language selector at the top of this website.
+
+There are other books published in Shavian, such as Alice in Wonderland and Jane Austen's Pride and Prejudice, which I look forward reading once I finish the Sherlock Homes story. I'll keep you posted how I go!
+
+*** DONE 𐑩 𐑕𐑑𐑳𐑛𐑦 𐑦𐑯 𐑕𐑒𐑸𐑤𐑩𐑑 :𐑖𐑱𐑝𐑾𐑯:
+:PROPERTIES:
+:EXPORT_FILE_NAME: index.en-shaw.md
+:EXPORT_HUGO_BUNDLE: 20250301_study-in-scarlet
+:EXPORT_DATE: 2025-03-01
+:EXPORT_HUGO_MENU:
+:EXPORT_DESCRIPTION: 20250301-study_in_scarlet.jpg
+:END:
+
+𐑢𐑦𐑞 𐑥𐑲 𐑦𐑯𐑑𐑮𐑩𐑕𐑑 𐑦𐑯 𐑤𐑨𐑙𐑜𐑢𐑦𐑡𐑩𐑟, 𐑢𐑳𐑯 𐑿𐑗𐑵𐑚𐑼 𐑲 𐑤𐑲𐑒 𐑑 𐑓𐑪𐑤o 𐑦𐑟 𐑞 "·𐑮𐑪𐑚 𐑢𐑻𐑛𐑟" 𐑗𐑨𐑯𐑩𐑤. 𐑣𐑰 𐑣𐑨𐑟 𐑚o𐑕𐑑𐑩𐑛 𐑩 𐑯𐑳𐑥𐑚𐑼 𐑝 𐑝𐑦𐑛𐑦o𐑟 𐑑𐑮𐑰𐑑𐑦𐑙 𐑷𐑤𐑑𐑻𐑯𐑩𐑑𐑦𐑝 𐑢𐑱𐑟 𐑝 𐑮𐑲𐑑𐑦𐑙 𐑞 𐑦𐑙𐑜𐑤𐑦𐑖 𐑤𐑨𐑙𐑜𐑢𐑦𐑡. 𐑣𐑰 𐑑𐑷𐑒𐑑 𐑩𐑚𐑬𐑑 𐑣𐑬 𐑮𐑵𐑯𐑟 𐑥𐑲𐑑 𐑚𐑰 𐑚𐑧𐑑𐑼 𐑕𐑵𐑑𐑩𐑛 𐑓 𐑮𐑲𐑑𐑦𐑙 𐑥𐑪𐑛𐑼𐑯 𐑦𐑙𐑜𐑤𐑦𐑖 𐑞𐑨𐑯 𐑞 𐑤𐑨𐑛𐑦𐑯 𐑨𐑤𐑓𐑩𐑚𐑧𐑑 𐑢𐑰 𐑿𐑟 𐑑𐑩𐑛𐑲, 𐑯 𐑕𐑲𐑑𐑩𐑛 𐑦𐑜𐑟𐑭𐑥𐑐𐑩𐑤𐑟 𐑢𐑺 ·𐑡.𐑮.𐑮. 𐑑𐑪𐑤𐑒𐑰𐑯 𐑿𐑟𐑛 𐑞 𐑮𐑵𐑯𐑦𐑒 𐑨𐑤𐑓𐑩𐑚𐑧𐑑 𐑦𐑯 𐑣𐑦𐑟 𐑚𐑫𐑒𐑕 𐑑 𐑮𐑧𐑐𐑮𐑦𐑟𐑧𐑯𐑑 𐑤𐑨𐑙𐑜𐑢𐑦𐑡𐑩𐑟 𐑤𐑲𐑒 ·𐑛𐑢𐑹𐑝𐑦𐑖 𐑓𐑮𐑪𐑥 𐑣𐑦𐑟 ·𐑥𐑦𐑛𐑩𐑤 𐑻𐑞 𐑓𐑨𐑯𐑑𐑩𐑕𐑦 𐑢𐑻𐑤𐑛. 𐑢𐑳𐑯 𐑝𐑦𐑛𐑦o 𐑞𐑨𐑑 𐑐𐑼𐑑𐑦𐑒𐑘𐑩𐑤𐑼𐑩𐑦 𐑕𐑑𐑫𐑛 𐑬𐑑 𐑓 𐑥𐑰 𐑢𐑪𐑟 𐑣𐑦𐑟 𐑛𐑦𐑕𐑒𐑮𐑦𐑐𐑖𐑩𐑯 𐑝 𐑞 ·𐑡𐑹𐑡 𐑚𐑻𐑯𐑩𐑛 𐑖𐑷 "·𐑖𐑲𐑝𐑾𐑯" 𐑨𐑤𐑓𐑩𐑚𐑧𐑑:
+
+#+hugo: {{< youtube D66LrlotvCA >}}
+
+𐑞𐑦𐑕 𐑨𐑤𐑓𐑩𐑚𐑧𐑑 𐑤𐑫𐑒𐑑 𐑝𐑲𐑜𐑤𐑦 𐑓𐑩𐑥𐑦𐑤𐑽. 𐑲 𐑣𐑨𐑛 𐑦𐑯𐑒𐑬𐑯𐑑𐑼𐑛 𐑦𐑑 𐑥𐑧𐑯𐑦 𐑘𐑽𐑟 𐑩𐑜o 𐑢𐑧𐑯 𐑲 𐑢𐑪𐑟 𐑨𐑑 𐑩𐑯 ·𐑧𐑕𐑐𐑼𐑭𐑯𐑑𐑴 𐑒𐑪𐑯𐑓𐑼𐑩𐑯𐑕 𐑯 𐑕𐑳𐑥𐑢𐑳𐑯 𐑜𐑱𐑝 𐑥𐑰 𐑩 𐑤𐑦𐑑𐑩𐑤 𐑚𐑫𐑒𐑤𐑩𐑑 𐑩𐑚𐑬𐑑 𐑩 "𐑯𐑿 𐑦𐑥𐑐𐑮𐑵𐑝𐑛 𐑨𐑤𐑓𐑩𐑚𐑧𐑑". 𐑲 𐑐𐑫𐑑 𐑦𐑑 𐑪𐑯 𐑥𐑲 𐑚𐑫𐑒𐑖𐑧𐑤𐑓, 𐑓𐑫𐑤𐑦 𐑦𐑯𐑑𐑧𐑯𐑛𐑦𐑙 𐑑 𐑦𐑯𐑝𐑧𐑕𐑑𐑦𐑜𐑱𐑑 𐑦𐑑 𐑢𐑧𐑯 𐑲 𐑣𐑨𐑛 𐑕𐑳𐑥 𐑕𐑐𐑺 𐑑𐑲𐑥, 𐑚𐑳𐑑 𐑕𐑳𐑥𐑣𐑬 𐑲 𐑯𐑧𐑝𐑼 𐑜𐑪𐑑 𐑼𐑬𐑯𐑛 𐑑 𐑦𐑑. 𐑲 𐑢𐑧𐑯𐑑 𐑑 𐑥𐑲 𐑚𐑫𐑒𐑖𐑧𐑤𐑓 𐑯 𐑛𐑳𐑜 𐑬𐑑 𐑞 𐑛𐑳𐑕𐑑𐑦 𐑚𐑫𐑒𐑤𐑩𐑑 -- 𐑖𐑫𐑼 𐑦𐑯𐑳𐑓 𐑦𐑑 𐑢𐑪𐑟 𐑷𐑤 𐑩𐑚𐑬𐑑 𐑣𐑬 𐑑 𐑮𐑲𐑑 ·𐑧𐑕𐑐𐑼𐑭𐑯𐑑𐑴 𐑦𐑯 𐑞 ·𐑖𐑱𐑝𐑾𐑯 𐑨𐑤𐑓𐑩𐑚𐑧𐑑:
+
+[[file:20250301-IMG_0560.jpg]]
+
+·𐑧𐑕𐑐𐑼𐑭𐑯𐑑𐑴 𐑷𐑤𐑮𐑧𐑛𐑦 𐑣𐑨𐑟 𐑓𐑩𐑯𐑧𐑑𐑦𐑒 𐑕𐑐𐑧𐑤𐑦𐑙, 𐑿𐑟𐑦𐑙 𐑨𐑒𐑕𐑧𐑯𐑑 𐑥𐑸𐑒𐑕 𐑑 𐑦𐑯𐑖𐑫𐑼 𐑭𐑤 𐑕𐑬𐑯𐑛𐑟 𐑸 𐑮𐑧𐑐𐑮𐑦𐑟𐑧𐑯𐑑𐑩𐑛, 𐑕o 𐑞 ·𐑖𐑱𐑝𐑾𐑯 𐑨𐑤𐑓𐑩𐑚𐑧𐑑 o𐑯𐑤𐑦 𐑚𐑮𐑦𐑙𐑟 𐑤𐑦𐑥𐑦𐑑𐑩𐑛 𐑚𐑧𐑯𐑦𐑓𐑦𐑑𐑕 𐑑 𐑞𐑨𐑑 𐑤𐑨𐑙𐑜𐑢𐑦𐑡. 𐑣𐑬𐑧𐑝𐑼, 𐑓 𐑦𐑙𐑜𐑤𐑦𐑖 𐑞 𐑚𐑧𐑯𐑦𐑓𐑦𐑑𐑕 𐑸 𐑥𐑳𐑗 𐑥𐑹 𐑕𐑦𐑜𐑯𐑦𐑓𐑦𐑒𐑩𐑯𐑑, 𐑨𐑟 𐑛𐑦𐑕𐑒𐑮𐑲𐑚𐑛 𐑦𐑯 ·𐑮𐑪𐑚𐑟 𐑝𐑦𐑛𐑦o. 𐑕o, 𐑲 𐑛𐑦𐑕𐑲𐑛𐑩𐑛 𐑑 𐑑𐑮𐑲 𐑯 𐑤𐑻𐑯 𐑦𐑑.
+
+𐑑 𐑞𐑨𐑑 𐑧𐑯𐑛, 𐑲 𐑚𐑷𐑑 𐑩 𐑒𐑪𐑐𐑦 𐑝 ·𐑕𐑻 𐑸𐑔𐑼 𐑒o𐑯𐑩𐑯 𐑛𐑶𐑤𐑟 ·𐑖𐑻𐑤𐑪𐑒 𐑣o𐑥𐑟 𐑕𐑑𐑹𐑦, /·𐑩 𐑕𐑑𐑳𐑛𐑦 𐑦𐑯 𐑕𐑒𐑸𐑤𐑩𐑑/, ·𐑖𐑱𐑝𐑾𐑯 𐑨𐑤𐑓𐑩𐑚𐑧𐑑 𐑧𐑛𐑦𐑖𐑩𐑯. 𐑞 𐑐𐑳𐑚𐑤𐑦𐑒𐑱𐑖𐑩𐑯 𐑝 𐑞𐑦𐑕 𐑧𐑛𐑦𐑖𐑩𐑯 𐑢𐑪𐑟 𐑹𐑜𐑩𐑯𐑲𐑟𐑛 𐑚𐑲 ·𐑧𐑝𐑩𐑯 𐑣𐑵 𐑮𐑳𐑯𐑟 𐑞 𐑢𐑧𐑚𐑕𐑲𐑑 [[https://shavian.info/][shavian.info]], 𐑯 𐑣𐑵 𐑷𐑤𐑕o 𐑓𐑰𐑗𐑩𐑟 𐑦𐑯 ·𐑮𐑪𐑚𐑟 𐑝𐑦𐑛𐑦o. 𐑕𐑦𐑯𐑕 𐑲 𐑧𐑯𐑡𐑶 𐑞 𐑒𐑨𐑮𐑩𐑒𐑑𐑼 𐑝 ·𐑖𐑻𐑤𐑪𐑒 𐑣o𐑥𐑟, 𐑲 𐑔𐑷𐑑 𐑞𐑦𐑕 𐑢𐑫𐑛 𐑐𐑮𐑩𐑝𐑲𐑛 𐑧𐑒𐑕𐑑𐑮𐑩 𐑥o𐑑𐑦𐑝𐑱𐑖𐑩𐑯 𐑑 𐑤𐑻𐑯 ·𐑖𐑱𐑝𐑾𐑯.
+
+𐑞 𐑨𐑤𐑓𐑩𐑚𐑧𐑑 𐑦𐑟 𐑛𐑦𐑟𐑲𐑯𐑛 𐑦𐑯 𐑕𐑳𐑗 𐑩 𐑢𐑱 𐑞𐑨𐑑 𐑦𐑟 𐑤𐑪𐑡𐑦𐑒𐑩𐑤 𐑯 𐑢𐑦𐑗 𐑓𐑩𐑕𐑦𐑤𐑦𐑑𐑱𐑑𐑕 𐑞 𐑯𐑿𐑒𐑳𐑥𐑼 𐑑 𐑮𐑦𐑥𐑧𐑥𐑚𐑼 𐑞 𐑞𐑦𐑓𐑼𐑩𐑯𐑑 𐑖𐑱𐑐𐑕. 𐑭𐑓𐑑𐑼 𐑲 𐑣𐑨𐑛 𐑩 𐑐𐑭𐑕𐑦𐑙 𐑓𐑩𐑥𐑦𐑤𐑦𐑨𐑮𐑦𐑑𐑦 𐑢𐑦𐑞 𐑞 𐑨𐑤𐑓𐑩𐑚𐑧𐑑 𐑛𐑦𐑟𐑲𐑯, 𐑲 𐑕𐑑𐑸𐑑𐑩𐑛 𐑮𐑰𐑛𐑦𐑙 𐑞 𐑚𐑫𐑒. 𐑥𐑲 𐑐𐑤o𐑜𐑮𐑧𐑕 𐑢𐑪𐑟 𐑦𐑒𐑕𐑑𐑮𐑰𐑥𐑤𐑦 𐑕𐑤o 𐑨𐑑 𐑓𐑻𐑕𐑑, 𐑕𐑬𐑯𐑛𐑦𐑙 𐑬𐑑 𐑞 𐑢𐑻𐑛𐑟 𐑤𐑧𐑑𐑼 𐑚𐑲 𐑤𐑧𐑑𐑼 𐑤𐑲𐑒 𐑲 𐑢𐑪𐑟 𐑚𐑨𐑒 𐑦𐑯 𐑒𐑦𐑯𐑛𐑼𐑜𐑸𐑑𐑩𐑯 𐑤𐑻𐑯𐑦𐑙 𐑑 𐑮𐑰𐑛 𐑩𐑜𐑧𐑯. 𐑕𐑳𐑥 𐑤𐑧𐑑𐑼𐑟 𐑢𐑻 𐑰𐑟𐑦 𐑑 𐑒𐑩𐑯𐑓𐑿𐑟 𐑢𐑦𐑞 𐑰𐑗 𐑳𐑞𐑼, 𐑕𐑳𐑗 𐑨𐑟 "𐑐", "𐑚", "𐑓" 𐑯 "𐑝". 𐑳𐑞𐑼𐑟 𐑤𐑲𐑒 "𐑤" 𐑤𐑫𐑒 𐑤𐑲𐑒 𐑤𐑨𐑑𐑦𐑯 𐑤𐑧𐑑𐑼𐑟 𐑢𐑦𐑗, 𐑛𐑿 𐑑 𐑣𐑨𐑚𐑦𐑑, 𐑢𐑻 𐑕𐑳𐑥𐑑𐑲𐑥𐑟 𐑥𐑦𐑕𐑤𐑰𐑛𐑦𐑙. 𐑦𐑑 𐑢𐑪𐑟 𐑯𐑧𐑝𐑼𐑞𐑩𐑤𐑧𐑕 𐑩 𐑤𐑪𐑑 𐑝 𐑓𐑳𐑯 𐑑𐑮𐑲𐑦𐑙 𐑑 𐑛𐑰𐑒o𐑛 𐑞 𐑕𐑑𐑮𐑱𐑯𐑗 𐑕𐑒𐑮𐑦𐑐𐑑 𐑚𐑦𐑓𐑹 𐑥𐑰.
+
+𐑚𐑰𐑒𐑷𐑟 𐑞 𐑕𐑑𐑹𐑦 𐑢𐑪𐑟 𐑮𐑦𐑑𐑩𐑯 𐑦𐑯 ·𐑦𐑙𐑜𐑤𐑩𐑯𐑛 𐑛𐑘𐑫𐑼𐑦𐑙 𐑞 1800𐑟, 𐑕𐑳𐑥 𐑝 𐑞 𐑢𐑻𐑛𐑟 𐑯 𐑑𐑻𐑯𐑟 𐑝 𐑓𐑮𐑱𐑟 𐑸 𐑩 𐑤𐑦𐑑𐑩𐑤 𐑳𐑯𐑿𐑠𐑫𐑩𐑤 𐑑 𐑞 𐑥𐑪𐑛𐑼𐑯 𐑛𐑱 𐑮𐑰𐑛𐑼, 𐑨𐑛𐑦𐑙 𐑩 𐑤𐑦𐑑𐑩𐑤 𐑥𐑹 𐑓𐑳𐑯 𐑗𐑨𐑤𐑩𐑯𐑡 𐑑 𐑮𐑧𐑒𐑩𐑜𐑯𐑲𐑟𐑦𐑙 𐑞 𐑢𐑻𐑛𐑟. 𐑲 𐑣𐑨𐑝𐑯𐑑 𐑮𐑧𐑛 𐑥𐑳𐑗 𐑒𐑤𐑨𐑕𐑦𐑒𐑩𐑤 𐑤𐑦𐑑𐑼𐑩𐑗𐑼 𐑕𐑦𐑯𐑕 𐑥𐑲 𐑕𐑒𐑵𐑤 𐑛𐑱𐑟, 𐑕o 𐑦𐑑 𐑦𐑟 𐑮𐑦𐑓𐑮𐑧𐑖𐑦𐑙 𐑑 𐑮𐑰𐑝𐑦𐑟𐑦𐑑 𐑕𐑳𐑥 𐑢𐑻𐑒𐑕 𐑝 𐑓𐑦𐑒𐑖𐑩𐑯 𐑓𐑮𐑪𐑥 𐑼𐑬𐑯𐑛 𐑞o𐑟 𐑑𐑲𐑥𐑟. 𐑞 𐑕𐑤o 𐑐𐑱𐑕 𐑨𐑑 𐑢𐑦𐑗 𐑲 𐑨𐑥 𐑮𐑰𐑛𐑦𐑙 𐑞 𐑕𐑑𐑹𐑦 𐑦𐑟 𐑩 𐑯𐑲𐑕 𐑒𐑪𐑯𐑑𐑮𐑭𐑕𐑑 𐑑 𐑞 𐑿𐑠𐑫𐑩𐑤 𐑣𐑳𐑕𐑩𐑤 𐑯 𐑚𐑳𐑕𐑩𐑤 𐑝 𐑧𐑝𐑮𐑦𐑛𐑱 𐑤𐑲𐑓, 𐑯 𐑕o 𐑲 𐑨𐑥 𐑮𐑰𐑤𐑦 𐑦𐑯𐑡𐑶𐑦𐑙 𐑞 𐑕𐑑𐑹𐑦 𐑨𐑟 𐑞 𐑥𐑦𐑕𐑑𐑮𐑦 𐑳𐑯𐑓o𐑤𐑛𐑟. 𐑲 𐑨𐑥 𐑚𐑦𐑒𐑳𐑥𐑦𐑙 𐑩 𐑤𐑦𐑑𐑩𐑤 𐑓𐑭𐑕𐑑𐑼 𐑨𐑟 𐑲 𐑜𐑧𐑑 𐑥𐑹 𐑐𐑮𐑨𐑒𐑑𐑦𐑕, 𐑚𐑳𐑑 𐑲 𐑕𐑑𐑦𐑤 𐑣𐑨𐑝 𐑩 𐑤𐑪𐑙 𐑢𐑱 𐑑 𐑜o 𐑚𐑦𐑓𐑹 𐑲 𐑓𐑰𐑤 𐑧𐑯𐑦𐑢𐑺 𐑯𐑽 𐑨𐑟 𐑓𐑤𐑵𐑩𐑯𐑑 𐑨𐑟 𐑲 𐑨𐑥 𐑦𐑯 𐑞 𐑤𐑨𐑑𐑦𐑯 𐑨𐑤𐑓𐑩𐑚𐑧𐑑.
+
+𐑔 𐑳𐑞𐑼 𐑕𐑲𐑛 𐑓𐑮𐑪𐑥 𐑮𐑰𐑛𐑦𐑙 𐑦𐑟 𐑤𐑻𐑯𐑦𐑙 𐑑 𐑮𐑲𐑑 𐑦𐑯 𐑞 ·𐑖𐑱𐑝𐑾𐑯 𐑨𐑤𐑓𐑩𐑚𐑧𐑑. 𐑲 𐑢𐑦𐑤 𐑮𐑰𐑮𐑲𐑑 𐑞𐑦𐑕 𐑐o𐑕𐑑 𐑦𐑯 ·𐑖𐑱𐑝𐑾𐑯 𐑯 𐑳𐑐𐑤o𐑛 𐑦𐑑 𐑑 𐑥𐑲 𐑚𐑤𐑪𐑜 -- 𐑦𐑓 𐑿 𐑢𐑪𐑯𐑑 𐑑 𐑕𐑰 𐑕𐑳𐑥 ·𐑖𐑱𐑝𐑾𐑯 𐑿 𐑒𐑨𐑯 𐑿𐑟 𐑞 𐑤𐑨𐑙𐑜𐑢𐑦𐑡 𐑕𐑦𐑤𐑧𐑒𐑑𐑼 𐑨𐑑 𐑞 𐑑𐑪𐑐 𐑝 𐑞𐑦𐑕 𐑢𐑧𐑚𐑕𐑲𐑑.
+
+𐑞𐑺 𐑸 𐑳𐑞𐑼 𐑚𐑫𐑒𐑕 𐑐𐑳𐑚𐑤𐑦𐑖𐑑 𐑦𐑯 ·𐑖𐑱𐑝𐑾𐑯, 𐑕𐑳𐑗 𐑨𐑟 ·𐑨𐑤𐑦𐑕 𐑦𐑯 𐑢𐑳𐑯𐑛𐑼𐑤𐑨𐑯𐑛 𐑯 ·𐑡𐑱𐑯 𐑪𐑕𐑑𐑩𐑯𐑟 ·𐑐𐑮𐑲𐑛 𐑯 𐑐𐑮𐑧𐑡𐑩𐑛𐑦𐑕, 𐑢𐑦𐑗 𐑲 𐑤𐑫𐑒 𐑓𐑹𐑢𐑼𐑛 𐑑 𐑮𐑰𐑛𐑦𐑙 𐑢𐑳𐑯𐑕 𐑲 𐑓𐑦𐑯𐑦𐑖 𐑞 ·𐑖𐑻𐑤𐑪𐑒 𐑣o𐑥𐑟 𐑕𐑑𐑹𐑦. 𐑲𐑤 𐑒𐑰𐑐 𐑿 𐑐o𐑕𐑑𐑩𐑛 𐑣𐑬 𐑲 𐑜o!
+
 
 ** Graphite Layout on Corne Keyboard
-*** DONE Graphite Layout on Corne Keyboard :Computers:Keyboards:Corne:AltKeyboardLayouts:Gallium:Graphite:MechKeyboard:SplitKeyboard:Vial:
+*** DONE Graphite Layout on Corne Keyboard :Computers:Keyboards:Corne:AltKeyboardLayouts:
 :PROPERTIES:
 :CUSTOM_ID: graphite-layout-corne
 :EXPORT_FILE_NAME: index
@@ -452,7 +602,7 @@ I didn't show any examples of tables. Org Mode has a powerful table editor which
 One thing I would like to explore further is the embedding of code to generate content -- for example, to produce tables of $z$-values programatically.
 
 ** Graphite Keyboard Layout
-*** DONE Graphite Keyboard Layout :Computers:Keyboards:AltKeyboardLayouts:MechKeyboard:SplitKeyboard:Gallium:Graphite:
+*** DONE Graphite Keyboard Layout :Computers:Keyboards:AltKeyboardLayouts:
 :PROPERTIES:
 :CUSTOM_ID: graphite-keyboard-layout
 :EXPORT_FILE_NAME: index
@@ -578,7 +728,7 @@ Se vi volas ion por ridetigi vin, spektu la suban videon pri la ĉiel utila Emac
 #+hugo: {{< youtube urcL86UpqZc >}}
 
 ** Updates to Gallium Keyboard Layout
-*** DONE Updates to Gallium Keyboard Layout :Computers:Keyboards:AltKeyboardLayouts:MechKeyboard:SplitKeyboard:Gallium:Graphite:ISRT:Vial:
+*** DONE Updates to Gallium Keyboard Layout :Computers:Keyboards:AltKeyboardLayouts:
 :PROPERTIES:
 :CUSTOM_ID: update-gallium-keyboard-layout
 :EXPORT_FILE_NAME: index
@@ -607,7 +757,7 @@ Some other discoveries I made recently from Ben’s new video and from other sou
 - The Gallium layout has just been released in DreymaR’s [[https://github.com/DreymaR/BigBagKbdTrixPKL/tree/master/Layouts/Gallium][EPKL key mapping tool]]. This tool is Windows-based, which means that I have very little use for it myself. One of the cool features it has though is the Extend layer which converts the mostly useless CAPSLOCK key into a layer-switching key. This is such a useful feature, which I have implemented on my macbook using [[https://karabiner-elements.pqrs.org/][Karabiner Elements]]. The config file I use is available in [[https://github.com/matt-maguire/kbd_firmware/blob/custom/keyboards/crkbd/vial-kb/karabiner.json][my github]].
 
 ** Gallium Keyboard Layout
-*** DONE Gallium Keyboard Layout :Computers:Keyboards:AltKeyboardLayouts:MechKeyboard:SplitKeyboard:Gallium:Graphite:ISRT:
+*** DONE Gallium Keyboard Layout :Computers:Keyboards:AltKeyboardLayouts:
 :PROPERTIES:
 :CUSTOM_ID: gallium-keyboard-layout
 :EXPORT_FILE_NAME: index
@@ -655,7 +805,7 @@ Before I had the “Shift” modifier on a left thumb key and the “Control” 
 I’m going to spend a little time building some fluency with this new layout to see if it is really worthwhile compared to ISRT, and will keep you updated here on what I discover.
 
 ** New Choc Switches Have Arrived!
-*** DONE New Choc Switches Have Arrived! :Computers:Keyboards:Corne:MechKeyboard:
+*** DONE New Choc Switches Have Arrived! :Computers:Keyboards:
 :PROPERTIES:
 :CUSTOM_ID: new-choc-switches-have-arrived
 :EXPORT_HUGO_BUNDLE: 20240914_new-choc-switches-have-arrived
@@ -717,7 +867,7 @@ I think I’ll eventually swap them out for some spare Choc Red switches that I 
 𐑲 𐑔𐑦𐑙𐑒 𐑲𐑤 𐑩𐑝𐑧𐑯𐑗𐑩𐑤𐑦 𐑕𐑢𐑪𐑐 𐑞𐑧𐑥 𐑬𐑑 𐑓 𐑕𐑳𐑥 𐑕𐑐𐑺 ·𐑗𐑪𐑒 𐑮𐑧𐑛 𐑕𐑢𐑦𐑗𐑩𐑟 𐑞𐑨𐑑 𐑲 𐑹𐑛𐑼𐑛, 𐑚𐑳𐑑 𐑓 𐑯𐑬 𐑲𐑤 𐑤𐑰𐑝 𐑞 ·𐑗𐑪𐑒 𐑚𐑮𐑬𐑯𐑟 𐑦𐑯 𐑐𐑤𐑱𐑕 𐑕𐑴 𐑲 𐑣𐑨𐑝 𐑩 𐑚𐑱𐑕𐑤𐑲𐑯 𐑐𐑶𐑯𐑑 𐑝 𐑒𐑩𐑥𐑐𐑨𐑮𐑦𐑕𐑩𐑯.
 
 ** ZSA Voyager has arrived!
-*** DONE ZSA Voyager has arrived! :Computers:Keyboards:AltKeyboardLayouts:ISRT:Miryoku:MechKeyboard:SplitKeyboard:
+*** DONE ZSA Voyager has arrived! :Computers:Keyboards:
 :PROPERTIES:
 :CUSTOM_ID: zsa-voyager-has-arrived
 :EXPORT_FILE_NAME: index
@@ -757,7 +907,7 @@ I have to say, I am loving these Choc Red switches! They are so buttery-smooth c
 In the meantime, I will keep working on building typing speed on my ISRT layout. It is slow progress, but I am getting more and more comfortable with it as I use it for my daily work.
 
 ** Home Row Layer Keys
-*** DONE Home Row Layer Keys :Computers:Keyboards:AltKeyboardLayouts:MechKeyboard:SplitKeyboard:ISRT:Miryoku:Vial:
+*** DONE Home Row Layer Keys :Computers:Keyboards:AltKeyboardLayouts:
 :PROPERTIES:
 :CUSTOM_ID: home-row-layer-keys
 :EXPORT_FILE_NAME: index
@@ -864,7 +1014,7 @@ The layout works for both 6×3 standard and 5×3 mini keyboards. There are some 
 As usual, the Vial layout is on my [[https://github.com/matt-maguire/kbd_firmware/tree/custom/keyboards/crkbd/vial-kb][github repo]].
 
 ** ISRT Keyboard Layout
-*** DONE ISRT Keyboard Layout :Computers:Keyboards:Corne:AltKeyboardLayouts:MechKeyboard:SplitKeyboard:Colemak:ISRT:Vial:
+*** DONE ISRT Keyboard Layout :Computers:Keyboards:Corne:AltKeyboardLayouts:
 :PROPERTIES:
 :CUSTOM_ID: isrt-keyboard-layout
 :EXPORT_FILE_NAME: index
@@ -957,7 +1107,7 @@ I am currently using two websites to help with this:
 - https://monkeytype.com: this website DOES support ISRT! I was quite surprised. It is possible to set up a custom wordset, where one of the english language corpuses is filtered to include only letters from the ISRT home row. As my typing improves, I can gradually move letters from the excluded list to the list of allowed letters, and then the site behaves in a similar way to keybr.com (albeit without the per-letter statistics and adaptive letter focus).
 
 ** Corne V4.1 Mini
-*** DONE Corne V4.1 Mini :Keyboards:Corne:Miryoku:Colemak:MechKeyboard:SplitKeyboard:AltKeyboardLayouts:Vial:
+*** DONE Corne V4.1 Mini :keyboards:corne:
 :PROPERTIES:
 :CUSTOM_ID: corne-v4-mini
 :EXPORT_FILE_NAME: index
@@ -985,7 +1135,7 @@ I have loaded the full miryoku layout into the left-hand side of both keyboards,
 You can find the firmware tweaks and keyboard layouts I am using in my [[https://github.com/matt-maguire/kbd_firmware/tree/custom/keyboards/crkbd/vial-kb][GitHub repository]] (“custom” branch has my changes; “main” branch tracks the vanilla upstream code).
 
 ** Corne V4 Update
-*** DONE Corne V4 Update :Keyboards:Corne:AltKeyboardLayouts:MechKeyboard:SplitKeyboard:Colemak:Miryoku:
+*** DONE Corne V4 Update :keyboards:corne:
 :PROPERTIES:
 :CUSTOM_ID: corne-v4-update
 :EXPORT_FILE_NAME: index
@@ -1014,7 +1164,7 @@ I've since learned that one important difference between rev 4.0 and 4.1 is that
 #+end_admonition
 
 ** 34 Key Layout for Corne Keyboard
-*** DONE 34 Key Layout for Corne Keyboard :Computers:Keyboards:Corne:AltKeyboardLayouts:Colemak:MechKeyboard:SplitKeyboard:Vial:
+*** DONE 34 Key Layout for Corne Keyboard :Computers:Keyboards:Corne:AltKeyboardLayouts:
 :PROPERTIES:
 :CUSTOM_ID: 34-key-layout-for-corne-keyboard
 :EXPORT_FILE_NAME: index
@@ -1050,7 +1200,7 @@ I put some backspace and delete shortcuts on the outer thumb keys for convenienc
 As I use the keyboard more, I’ll get a better idea what else I will need to add as well as what I can strip away. I’ll post more updates here as I learn more.
 
 ** Corne v4 Keyboard Keymap
-*** DONE Corne v4 Keyboard Keymap :Computers:Keyboards:Corne:AltKeyboardLayouts:Colemak:Miryoku:MechKeyboard:SplitKeyboard:
+*** DONE Corne v4 Keyboard Keymap :Computers:Keyboards:Corne:AltKeyboardLayouts:
 :PROPERTIES:
 :CUSTOM_ID: corne-v4
 :EXPORT_FILE_NAME: index
@@ -1113,7 +1263,7 @@ This is just an initial proposal, which may well change over time as a get more 
 
 I’ll post updates here as I gain more experience and have something to report.
 ** Learn Japanese with Song Lyrics (Houki Boshi from Bleach)
-*** DONE Learn Japanese with Song Lyrics (Houki Boshi from Bleach) :Music:Languages:Japanese:
+*** DONE Learn Japanese with Song Lyrics (Houki Boshi from Bleach) :music:languages:japanese:
 :PROPERTIES:
 :CUSTOM_ID: houki-boshi
 :EXPORT_FILE_NAME: index
@@ -1142,7 +1292,7 @@ You may notice that the live performance above leaves out the first two lines of
 Studying song lyrics is a great way to gain more exposure to a language, and is lots of fun!
 
 ** How to calculate the series resistor for an LED
-*** DONE How to calculate the series resistor for an LED :Electronics:
+*** DONE How to calculate the series resistor for an LED :electronics:
 :PROPERTIES:
 :CUSTOM_ID: led-series-resistor
 :EXPORT_FILE_NAME: index
@@ -1220,20 +1370,16 @@ This is still acceptable. So, we have now completed our circuit design:
 :EXPORT_DESCRIPTION: 20220130-IMG_4547_01-999x1024.jpg
 :END:
 
-On the Australian TV Series Doctor Doctor, there’s a recurring piece of music that is playing using fingerpicking on the ukulele, based on Bonnie Tyler’s hit song /It’s a Heartache/. A quick search on YouTube discovered that it comes from the lead-in of a music video by the Wellington International Ukulele Orchestra:
+On the Australian TV Series Doctor Doctor, there’s a recurring piece of music that is playing using fingerpicking on the ukulele based on Bonnie Tyler’s hit song It’s a Heartache. A quick search on YouTube discovered that it comes from the lead-in of a music video by the Wellington International Ukulele Orchestra:
 
 #+hugo: {{< youtube GqynAAYdLW8 >}}
 
-I was keen to learn how to play something like it on my own ukulele, and a further search turned up a https://youtu.be/tutorial by Helmut Bickel where he has some hand-written tablature in the background of the video:
-
-#+hugo: {{< youtube pCswBsuddrc >}}
-
-To have the tab in a more convenient format, I wrote it up using the [[http://lilypond.org/][lilypond]] music typesetting software, and the resulting PDF is reproduced below:
+I was keen to learn how to play something like it on my own ukulele, and a further search turned up a [[https://youtu.be/pCswBsuddrc][tutorial by Helmut Bickel]], where he has some hand-written tablature in the background of the video. To have the tab in a more convenient format, I wrote it up using the [[http://lilypond.org/][lilypond]] music typesetting software, and the resulting PDF is reproduced below:
 
 #+hugo: {{< embed-pdf url="20220130-heartache-tab.pdf" >}}
 
 ** Digital Photography for Hams
-*** DONE Digital Photography for Hams :Photography:HamRadio:
+*** DONE Digital Photography for Hams :photography:hamradio:
 :PROPERTIES:
 :CUSTOM_ID: photography-for-hams
 :EXPORT_FILE_NAME: index
@@ -1242,7 +1388,7 @@ To have the tab in a more convenient format, I wrote it up using the [[http://li
 :EXPORT_DESCRIPTION: 20200120-Screenshot_2022-02-02_21-07-23-1024x550.png
 :END:
 
-Last night I spoke about Digital Photography at the [[https://www.mwrs.org.au/][Manly Warringah Radio Society]], a club for ham radio operators. I structured the talk in such a way that it drew parallels between digital photography and ham radio.
+Last night I spoke about Digital Photography at the [[https://www.mwrs.org.au/][Manly Warringah Radio Society]], a club for ham radio operators. I decided to structure the talk in such a way that it drew parallels between digital photography and ham radio.
 
 First I compare a digital camera to a ham radio station based on a /software defined radio (SDR)/. Just like we use radio antennas to collect ravio waves, a camera lens collects light waves. Both digital cameras and SDRs contain an analogue-to-digital converter to convert waves into a digital signal. They also have digital processors to convert the received signals into a form perceivable by human ears and eyes
 
@@ -1255,7 +1401,7 @@ A recording of the talk will be available on the [[https://www.youtube.com/user/
 #+hugo: {{< embed-pdf url="20220120-photography_for_hams.pdf" >}}
 
 ** 〜て-Form Song
-*** DONE 〜て-Form Song :Languages:Japanese:
+*** DONE 〜て-Form Song :languages:japanese:
 :PROPERTIES:
 :CUSTOM_ID: te-form-song
 :EXPORT_FILE_NAME: index
@@ -1340,7 +1486,7 @@ To find out more about the 〜て form of Japanese verbs, you can refer to [[htt
 𐑑 𐑓𐑲𐑯𐑛 𐑬𐑑 𐑥𐑹 𐑩𐑚𐑬𐑑 𐑞 〜て 𐑓𐑹𐑥 𐑝 ·𐑡𐑨𐑐𐑩𐑯𐑰𐑟 𐑝𐑻𐑚𐑟, 𐑿 𐑒𐑨𐑯 𐑮𐑦𐑓𐑻 𐑑 [[http://guidetojapanese.org/learn/complete/progressive_tense][·𐑑𐑱 𐑒𐑦𐑥𐑟 𐑡𐑨𐑐𐑩𐑯𐑰𐑟 𐑜𐑮𐑨𐑥𐑼 𐑜𐑲𐑛]].
 
 ** Sony A7R4 Selfie Solution
-*** DONE Sony A7R4 Selfie Solution :Photography:
+*** DONE Sony A7R4 Selfie Solution :photography:
 :PROPERTIES:
 :CUSTOM_ID: a7r4-selfie-solution
 :EXPORT_FILE_NAME: index
@@ -1367,7 +1513,7 @@ In this way, the camera can be placed on the Joby gorillapod which acts as a “
 If I want to use this setup for video vlogging, there is nowhere to mount a shotgun mic, so likely I would use a lavalier mic plugged into the camera itself, or perhaps into a second smartphone acting as a voice recorder.
 
 ** Should I use Back Button Focus on Sony A7R4?
-*** DONE Should I use Back Button Focus on Sony A7R4? :Photography:
+*** DONE Should I use Back Button Focus on Sony A7R4? :photography:
 :PROPERTIES:
 :CUSTOM_ID: back-button-focus
 :EXPORT_FILE_NAME: index
@@ -1407,7 +1553,7 @@ So, that’s the way I’ve set up the camera for now — normally in AF-C mode 
 Feel free to comment if you have other suggestions to allow for easy transition between auto-focus, BBF, selfie and third-party/untrained user workflows.
 
 ** Elecraft K2 Amplifier Keying Circuit
-*** DONE [#B] Elecraft K2 Amplifier Keying Circuit :HamRadio:Electronics:Elecraft:K2:KXPA100:
+*** DONE Elecraft K2 Amplifier Keying Circuit :hamradio:
 :PROPERTIES:
 :CUSTOM_ID: elecraft-k2-amplifier-keying-circuit
 :EXPORT_FILE_NAME: index
@@ -1469,7 +1615,7 @@ Here are some pics of the completed circuit, from above and from beneath.
 [[file:20140420-IMG_0118-Version-2-768x1024-1.jpg]]
 
 ** Beverage Antennas
-*** DONE Beverage Antennas :HamRadio:
+*** DONE Beverage Antennas :hamradio:
 :PROPERTIES:
 :CUSTOM_ID: beverage-antennas
 :EXPORT_FILE_NAME: index
@@ -1488,264 +1634,3 @@ The lecture was recorded and can be found on the club’s YouTube channel:
 #+hugo: {{< youtube xnVgbdkK_Iw >}}
 
 The [[https://www.slideshare.net/VK2MB/april-2014-lecture-beverage-antennas][slidepack]] is available on slideshare.
-
-** Packet Radio Talk
-*** Packet Radio Talk :HamRadio:PacketRadio:AX25:
-:PROPERTIES:
-:CUSTOM_ID: packet_radio_talk
-:EXPORT_FILE_NAME: index
-:EXPORT_HUGO_BUNDLE: 20140219_packet_radio_talk
-:EXPORT_DATE: 2014-02-19
-:EXPORT_DESCRIPTION: 20140219_packet-radio-chat.png
-:END:
-
-At my local amateur radio club I gave a talk about packet radio, covering topics such as AX25 frames, digipeaters, netrom nodes, and applications that run over packet radio such as APRS and BBS. On YouTube you can find a [[http://www.youtube.com/watch?v=Ar0dEiwu6KE][recording of the talk]].
-
-The slides from the talk can be found here:
-
-#+hugo: {{< embed-pdf url="20140219_packet-radio-talk.pdf" >}}
-
-** Packet Radio Resources
-*** DONE Packet Radio Resources :HamRadio:PacketRadio:AX25:
-:PROPERTIES:
-:CUSTOM_ID: packet-radio
-:EXPORT_FILE_NAME: index
-:EXPORT_HUGO_BUNDLE: 20121018_packet-radio
-:EXPORT_DATE: 2013-03-21
-:END:
-
-**** AX.25 Packet on Linux
-
-Recently I have been experimenting with setting up packet radio on an ASUS netbook running Debian Linux. There have been a few challenges with this, which I describe below.
-
-- Installation of AX25 Lib/Tools/Apps: the problem here is that the packages supplied with debian are a little old, and assume that the kernel has support for legacy BSD-style pseudo-terminals. However, in the standard kernel distributed with debian linux, support for the legacy ptys has not been compiled in. So, I had a choice of recompiling the kernel to support the legacy ptys, or else compile up newer versions of the ax25libs/tools/apps that support the new Unix98-style ptys. I chose the latter.
-- The AX.25 "call" program supplied in the ax25apps package was crashing when I resized the window, and didn't have support for any scrollback buffer. I found a [[https://marc.info/?l=linux-hams&m=126174094113550][patch]] on the web that addresses these issues, but it was built against ax25-apps-0.0.8-rc2, and wouldn't apply cleanly to the more recent version of call.c in CVS that supports the Unix98 PTYs. So, I updated the patch to make it compatible with the newer release, and you can [[file:call_patch.txt][download the updated patch here]].
-- I had an issue with getting [[http://www.baycom.org/~tom/ham/soundmodem/][linux soundmodem]] to work at 300 baud. I found the fix was to use modem tones less than 4*300=1200 Hz. However, I wanted to cover the national APRS freqnency on 40 m and the frequency used by our local packet group around 1 kHz higher together at the same time with the same radio. I found a [[file:soundmodem_300baud_patch.txt][testing patch]] against soundmodem-0.16 that removes this restriction on the modem tones.
-- The aprsd packaged with debian doesn't support multiple TNCs, and you can only run one instance of it on the system. So, I looked to the APRX daemon instead. This does support multiple TNCs, but unfortunately kept dumping core on my system. I made a [[file:aprx_telemetry_patch.txt][small patch]] to prevent this from happening.
-- I found a patch to provide Internode Protocol (INP3) Support for Linux on [[http://sharon.pi8zaa.ampr.org/users/pe1rxq/inp3.html][this page]]. However, the patch was written against linux kernel 2.6.4, and does not apply cleanly to the latest 2.6.32 kernel. So, I [[file:2.6.32-inp3_007_patch.txt][updated the patch]]. However, I found that the patch causes a soft lockup when taking an AX25 interface out of service, due to a deadlock with the =spin_locks=, so some additional work is needed to address this. Investigations so far indicate a problem with =nr_del_node_found()=, which removes neighbours and nodes that are no longer valid. When it is called, sometimes there is already a lock on the global neighbour list, and sometimes there is also a lock on the global node list. When removing a neighbours or node, an attempt will be made to acquire a lock on the global neighbour or node list, and if such a lock is already existing, there is a deadlock, and the CPU will just spin. Will need to think about the best way to clean up the code.
-
-**** Packet Radio Resources
-
-I have collected here some useful links in my search to learn about packet radio.
-
-- [[https://portal.ampr.org/index.php][AMPRNet Portal]] to manage 44.0.0.0/8 IP allocations and ampr.org DNS resource records.
-- [[http://wiki.complete.org/PacketRadio][Packet Radio Overview]] at Complete.Org
-- [[http://www.choisser.com/hamradio/packet.html][Larry Kenney WB9LOZ]] packet radio information page, including his [[http://www.choisser.com/packet/][Introduction to Packet Radio]] series of articles
-- [[http://vk2dot.dyndns.org/][VK2DOT Packet Site]], including his [[http://vk2dot.dyndns.org/XR32/VK2DOT-IP-Setup.htm][Packet Setup page]].
-- [[http://www.linux-ax25.org/wiki/Main_Page][Linux AX.25 Page]]
-- [[http://www.db0anf.de/app/bbs][DB0ANF BBS page]], can view packet BBS via web
-- [[http://www.langelaar.net/projects/jnos2/downloads/linux/][JNOS]] developer page (and [[http://www.kf8kk.com/packet/jnos-linux/linux-jnos-setup-ftpusers-txt.htm][KF8KK's JNOS Setup Guide]])
-- [[http://www.soundcardpacket.org/][Soundcard Packet page]] by Ralph Miles NM5RM
-- [[http://www.langelaar.net/projects/jnos2/documents/ipudp.txt][IP-in-UDP encapsulation]] with JNOS
-- [[http://www.ampr-gates.net/frame_e.htm][AMPR Gates]] covering packet radio gateways and AXIP encapsulation
-- [[ftp://hamradio.ucsd.edu/pub/][Hosts and DNS Zone files]] for ampr.org domain and 44.0.0.0/8 net
-- [[http://www.vdazone.org/lantzdocs/packet.html][N5VDA Packet page]], with list of packet software
-- [[http://www.ampr-gates.net/frame_e.htm][AMPR Gateways page]]
-- [[http://www.dxcluster.info/dxcsoft.htm][DX Cluster]] information page
-- [[http://www.a00.de/tcpgroup/1988/msg00006.php][Net/Rom Manual]] and [[http://www.ir3ip.net/iw3fqg/doc/ipax25.htm][Original NET/ROM Paper]]
-- Running [[http://www.qbjnet.com/packet.html][Packet radio on Linux]]
-- Linux [[http://www.tldp.org/HOWTO/AX25-HOWTO/][AX25 HOWTO]]
-- [[http://groups.yahoo.com/group/SV2AGW/][AGWPE Yahoo Group]]
-- [[http://www.tapr.org/pdf/AX25.2.2.pdf][AX.25 Protocol standard]]
-- [[http://www.timewave.com/download.html][Timewave]] manufacturer of PK232 TNC
-- [[http://ftp.f6fbb.org/][FBB Main Page]] and [[http://www.qsl.net/ok2pen/LinuXFBB.htm][FBB Setup for Dummies]]
-- [[http://mirror.switch.ch/ftp/pool/3/mirror/hamradio-ucsd/packet/misc/README.ax25ip][AX25IP README]]
-- [[http://rose.fpac.free.fr/][FPAC Mini-HOWTP]]
-- [[http://www.febo.com/packet/index.html][N8UR Packet pages]]
-- [[ftp://ftp.tapr.org/software_lib/Linux/ax25/][TAPR SW Library]]
-- Linux [[http://www.linux-ax25.org/wiki/CVS][AX25 SW Suite]] and [[http://linkt.de/ax25spyd/][AX25SPY Page]]
-- The [[https://qsl.net/vk2rq/digipeaters.html][Problem with Digipeaters]] by Tom Clark W3IWI, 1986
-- Installing [[https://dl.dropbox.com/u/31910649/InstallingLINBPQ.htm][LinBPQ]] BPQ Node/Mail/Chat on Linux
-- Archive of the [[https://www.qsl.net/vk2rq/aapra/][AAPRA Website]] (now defunct, but various useful historic documents)
-
-**** Packet Activity in the Local Area
-|--------------+----------------------------------------------+----------------------------------------------------------------------------------|
-|     Freq/MHz | Callsigns                                    | Comments                                                                         |
-|--------------+----------------------------------------------+----------------------------------------------------------------------------------|
-|      7.03717 | VK2IO BBS, VK2WL, VK2SX, VK2TT, VK4ALN et al | LSB w 1600/1800 Hz tones: The VK2IO HF BBS is stand-alone,                       |
-|              |                                              | but VK2IO-1 node has connectivity via Internet                                   |
-|--------------+----------------------------------------------+----------------------------------------------------------------------------------|
-|      145.175 | VK2MB-1, VK2BEN-1 et al                      | National APRS Frequency, lots of activity                                        |
-|--------------+----------------------------------------------+----------------------------------------------------------------------------------|
-|      144.875 | VK2TGB                                       | VK2TGB BBS in the Blue Mountains (part-time only)                                |
-|--------------+----------------------------------------------+----------------------------------------------------------------------------------|
-|      147.575 | VK2IO-1, VK2AMW-7, VK2DOT-1                  | VK2IO BBS/VK2IO-1 node is separate instance from VK2IO on HF;                    |
-|              |                                              | links to wider packet network with message forwarding (via RF only, no internet) |
-|              |                                              | I can connect from my QTH via VK2AMW-7 node/digipeater                           |
-|--------------+----------------------------------------------+----------------------------------------------------------------------------------|
-| 439.150(out) | VK2RAG data regenerator                      | Reception is too marginal from my QTH, need a better antenna :-)                 |
-|  434.150(in) |                                              | Would then be able to access VK2IO, VK2DOT.                                      |
-|--------------+----------------------------------------------+----------------------------------------------------------------------------------|
-
-There are some others I will check out listed on [[http://www.qsl.net/vk2kfj/pacradio.html][Steve VK2KFJ's Packet page]], (the info is dated, so some of these systems may not be running anymore)
-Channels on the VK2MB Packet Digipeater
-
-On the radio used for packet digipeating at the MWRS club house, the following channels have been programmed:
-|---------+----------+---------------------------------------------------------------------------|
-| Channel | Freq/MHz | Comments                                                                  |
-|---------+----------+---------------------------------------------------------------------------|
-|       1 |  147.575 | Main Channel (default), access VK2IO-1, VK2DOT-1, VK2RQ-7, VK2AMW-7 nodes |
-|       2 |  144.425 | VK2RSY beacon (for diagnostics/testing)                                   |
-|       3 |  144.700 | Backup port to VK2DOT-1 XRouter                                           |
-|       4 |  144.875 | Backup port to VK2IO & VK2TGB BBS systems                                 |
-|       5 |  145.175 | Primary APRS frequency in VK                                              |
-|       6 |  145.200 | Alternate local packet frequency                                          |
-|       7 |  147.600 | Alternate local packet frequency                                          |
-|---------+----------+---------------------------------------------------------------------------|
-
-** CSQ Summary
-*** DONE CSQ Summary :HamRadio:
-:PROPERTIES:
-:CUSTOM_ID: csq-summary
-:EXPORT_FILE_NAME: index
-:EXPORT_HUGO_BUNDLE: 20130312_csq-summary
-:EXPORT_DATE: 2013-03-12
-:END:
-
-**** CSQ Summary
-The following is a proposal from Bruce Prior N7RR for a signal reporting system based on [[http://antrak.org.tr/index.php?option=com_content&task=view&id=378&Itemid=83][Copyability-Strength-Quality (CSQ)]], and as an alternative to the traditional Readability-Strength-Tone (RST) system.
-
-***** C or Copyability
-
-| Copyability | Description                                       |
-| N           | no recoverable signal $^{*}$                      |
-| 0           | discernable but not copyable $^{*}$               |
-| 1-9         | 10% to 90% copy                                   |
-| G           | Good 100% copy, but short of perfect              |
-| P           | Perfect armchair 100% copy or full quieting on FM |
-
-$^{*}$ For Copyability reports of N and 0, no Signal Strength or Quality reports are needed.
-
-***** S-Meter or Signal Strength
-
-| Strength | Description             |
-| 0        | no S-meter reading      |
-| 1-9      | S-1 to S-9              |
-| A        | 1 dB to 10 dB over S-9  |
-| B        | 11 dB to 20 dB over S-9 |
-| C        | 21 dB to 30 dB over S-9 |
-| D        | 31 dB to 40 dB over S-9 |
-| E        | 41 dB to 50 dB over S-9 |
-| F        | 51 dB or more over S-9  |
-
-***** Quality
-
-| Quality | Description                                                              |
-| X       | characteristic steadiness of crystal (Xtal) control or eXcellent quality |
-| R       | AC Ripple or buzz in transmission                                        |
-| C       | Chirp or tail on make and/or break                                       |
-| K       | key clicKs or other Keying transients                                    |
-| O       | Overmodulation or Overdeviation in phone or digital modes                |
-
-***** Examples
-
-| Report | Description                                                                        |
-| P6O    | for a PSK-31 signal: perfect 100 % copy at S-6, but overdeviated                   |
-| 93X    | for a CW signal: 90 % copy at S-3 with excellent quality                           |
-| G7O    | for an SSB signal: Good but less than perfect 100 % copy at S-7, but overmodulated |
-| PAX    | for an RTTY signal: perfect 100 % copy about 10 dB over S-9 with excellent quality |
-| P6X    | for an FM signal: full-quieting 100 % copy at S-6 with excellent quality           |
-
-**** RST Summary
-
-For comparison with the proposed CSQ system, here are the definitions for the traditional RST system.o
-
-***** R or Readability
-
-| Readability | Description                                       |
-|           1 | Unreadable                                        |
-|           2 | Barely readable, occasional words distinguishable |
-|           3 | Readable with considerable difficulty             |
-|           4 | Readable with practically no difficulty           |
-|           5 | Perfectly readable                                |
-
-***** Strength
-
-| Strength | Description                      | HF Signal | V/UHF Signal |
-|        1 | Faint signal, barely perceptible | -121 dBm  | -141 dBm     |
-|        2 | Very weak                        | -115 dBm  | -135 dBm     |
-|        3 | Weak                             | -109 dBm  | -129 dBm     |
-|        4 | Fair                             | -103 dBm  | -123 dBm     |
-|        5 | Fairly good                      | -97 dBm   | -117 dBm     |
-|        6 | Good                             | -91 dBm   | -111 dBm     |
-|        7 | Moderately strong                | -85 dBm   | -105 dBm     |
-|        8 | Strong                           | -79 dBm   | -99 dBm      |
-|        9 | Very strong signals              | -73 dBm   | -93 dBm      |
-
-***** Tone
-
-| Tone | Description                                                |
-|    1 | Fifty cycle a.c or less, very rough and broad              |
-|    2 | Very rough a.c., very harsh and broad                      |
-|    3 | Rough a.c. tone, rectified but not filtered                |
-|    4 | Rough note, some trace of filtering                        |
-|    5 | Filtered rectified a.c. but strongly ripple-modulated      |
-|    6 | Filtered tone, definite trace of ripple modulation         |
-|    7 | Near pure tone, trace of ripple modulation                 |
-|    8 | Near perfect tone, slight trace of modulation              |
-|    9 | Perfect tone, no trace of ripple or modulation of any kind |
-
-The following letters can be optionally suffixed:
-
-| Suffix | Description                           |
-| X      | stable frequency (crystal control)    |
-| C      | "chirp" (frequency shift when keying) |
-| K      | key clicks                            |
-
-**** RSQ Summary
-
-For digital work, the Readability-Strength-Quality signal reporting system is sometimes used.
-
-***** R or Readability
-
-| Readability | Description                                                  |
-|           1 | 0 % copy - undecipherable                                    |
-|           2 | 20 % copy -occasional words distinguishable                  |
-|           3 | 40 % copy - readable with difficulty, many missed characters |
-|           4 | 80 % copy - Readable with no difficulty                      |
-|           5 | 95 % + copy - Perfectly readable                             |
-
-***** Strength
-
-| Strength | Description              |
-|        1 | barely perceptible trace |
-|        3 | Weak trace               |
-|        5 | Moderate trace           |
-|        7 | Strong trace             |
-|        9 | Very strong trace        |
-
-***** Quality
-
-| Quality | Description                                 |
-|       1 | splatter over much of the spectrum          |
-|       3 | multiple visible pairs                      |
-|       5 | One easily visible pair                     |
-|       7 | One barely visible pair                     |
-|       9 | Clean signal - no visible unwanted sidebars |
-
-
-** Operating Portable from Long Reef
-*** DONE Operating Portable from Long Reef :HamRadio:Elecraft:KX3:
-:PROPERTIES:
-:CUSTOM_ID: kx3-portable-long-reef
-:EXPORT_FILE_NAME: index
-:EXPORT_HUGO_BUNDLE: 20121002_kx3-portable-long-reef
-:EXPORT_DATE: 2012-10-02
-:EXPORT_DESCRIPTION: 20121002_IMG_02522-1024x768.jpg
-:END:
-
-Having had my Elecraft KX3 ultra-portable radio for a few months now, I felt it was high time to take it out into the field. In particular I was curious to see how it would perform with my Alexloop magnetic loop antenna. This antenna covers 40m-10m, and while it clearly isn’t going to compete against a dipole, it is very quick and easy to set up, and should normally give reasonable performance on the higher bands at least.
-
-It was a beautiful sunny Saturday afternoon, and the first order of business was to decide on an operating location. For this, I met up with club members Dom VK2JNA, Chris VK2HX and Roger VK2GHB at the local coffee shop to strategise over a cup of coffee, and with some further input from Greg Vk2XE via the 2m repeater, we finally settled on the headland at Long Reef.
-
-[[file:20121002_IMG_02483-1024x768.jpg]]
-
-My equipment consisted of the Alexloop, the KX3 with built-in CW paddle, a set of headphones with a boom mike, and an external 7Ah gel-cell battery. While the KX3 can run off 8 internal AA-size cells, this limits the power output to 3-5W, and so I decided to take the external gel-cell in order to run the full 10-12W.
-
-My first contact was to ZL2MS on 20m CW, who had just finished working F5TZN in France. The French station was quite strong, but there were quite a few other stations calling, and unfortunately I didn’t manage a contact. Tuning around the bands, I heard a number of other DX stations, including TG9AJR in Guatemala, HP1RCP club station in Panama, and LA8SGA in Norway.
-
-I thought I’d then try a bit a SSB, but the wind noise in the microphone was quite bad, so in the end I decided to stick with CW. I put out a number of CQ calls, but didn’t get any takers. Later when I checked the reverse beacon net on the Internet, I did find that I had been heard by a station in Finland.
-
-As I was tuning around the bands, a number of people at Long Reef walked up to me and asked me what I was doing, so I explained what ham radio was all about. It turned out that the father of one of the onlookers used to be a ham over in the Netherlands, and so we had a nice long chat about his dad.
-
-It was a beautiful spot, and a really nice atmosphere. Even though I didn’t make so many contacts this time, it was a very enjoyable way to spend a lazy Saturday afternoon, and I’m looking forward to finding an opportunity to do it again.

@@ -183,7 +183,7 @@ buildFuture=true
     # HTML tag name of the highlight part in results
     highlightTag = "em"
     # whether to use the absolute URL based on the baseURL in search index
-    absoluteURL = false
+    absoluteURL = true
     [params.search.algolia]
       index = "www_teachmaths_org_sozzoxll0x_pages"
       appID = "SOZZOXLL0X"
@@ -642,7 +642,7 @@ buildFuture=true
         maxResultLength = 10
         snippetLength = 30
         highlightTag = "em"
-        absoluteURL = false
+        absoluteURL = true
         [languages.en.params.search.algolia]
           index = "www_teachmaths_org_sozzoxll0x_pages"
           appID = "SOZZOXLL0X"
@@ -735,7 +735,7 @@ buildFuture=true
         maxResultLength = 10
         snippetLength = 50
         highlightTag = "em"
-        absoluteURL = false
+        absoluteURL = true
         [languages.en-shaw.params.search.algolia]
           index = "www_teachmaths_org_sozzoxll0x_pages"
           appID = "SOZZOXLL0X"
@@ -828,7 +828,7 @@ buildFuture=true
         maxResultLength = 10
         snippetLength = 50
         highlightTag = "em"
-        absoluteURL = false
+        absoluteURL = true
         [languages.eo.params.search.algolia]
           index = "www_teachmaths_org_sozzoxll0x_pages"
           appID = "SOZZOXLL0X"

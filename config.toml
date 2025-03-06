@@ -49,7 +49,7 @@ buildFuture=true
     # you can add extra information before the name (HTML format is supported), such as icons
     pre = ""
     # you can add extra information after the name (HTML format is supported), such as icons
-    post = "<a rel=\"me\" href=\"https://mastodon.radio/@vk2rq\"></a><meta name="algolia-site-verification"  content="2A52D0F89DBD85C4" />"
+    post = "<a rel=\"me\" href=\"https://mastodon.radio/@vk2rq\"></a>"
     name = "Blog"
     url = "/posts/"
     # title will be shown when you hover on this menu link
@@ -185,9 +185,9 @@ buildFuture=true
     # whether to use the absolute URL based on the baseURL in search index
     absoluteURL = false
     [params.search.algolia]
-      index = ""
-      appID = ""
-      searchKey = ""
+      index = "www_teachmaths_org_sozzoxll0x_pages"
+      appID = "SOZZOXLL0X"
+      searchKey = "a4d86a61c38a84a6480340741bdd1275"
 
   # Home page config
   [params.home]

@@ -635,7 +635,7 @@ buildFuture=true
         title = ""
     [languages.en.params]
       [languages.en.params.search]
-        enable = false
+        enable = true
         type = "algolia"
         contentLength = 4000
         placeholder = ""
@@ -644,9 +644,9 @@ buildFuture=true
         highlightTag = "em"
         absoluteURL = false
         [languages.en.params.search.algolia]
-          index = "index.en"
-          appID = "PASDMWALPK"
-          searchKey = "b42948e51daaa93df92381c8e2ac0f93"
+          index = "www_teachmaths_org_sozzoxll0x_pages"
+          appID = "SOZZOXLL0X"
+          searchKey = "a4d86a61c38a84a6480340741bdd1275"
       [languages.en.params.home]
         rss = 10
         [languages.en.params.home.profile]
@@ -728,7 +728,7 @@ buildFuture=true
       # whether to use typeit animation for title name
       typeit = false
       [languages.en-shaw.params.search]
-        enable = false
+        enable = true
         type = "algolia"
         contentLength = 4000
         placeholder = ""
@@ -737,9 +737,9 @@ buildFuture=true
         highlightTag = "em"
         absoluteURL = false
         [languages.en-shaw.params.search.algolia]
-          index = "index.en-shaw"
-          appID = "PASDMWALPK"
-          searchKey = "b42948e51daaa93df92381c8e2ac0f93"
+          index = "www_teachmaths_org_sozzoxll0x_pages"
+          appID = "SOZZOXLL0X"
+          searchKey = "a4d86a61c38a84a6480340741bdd1275"
       [languages.en-shaw.params.home]
         rss = 10
         [languages.en-shaw.params.home.profile]
@@ -821,7 +821,7 @@ buildFuture=true
       # whether to use typeit animation for title name
       typeit = false
       [languages.eo.params.search]
-        enable = false
+        enable = true
         type = "algolia"
         contentLength = 4000
         placeholder = ""
@@ -830,9 +830,9 @@ buildFuture=true
         highlightTag = "em"
         absoluteURL = false
         [languages.eo.params.search.algolia]
-          index = "index.eo"
-          appID = "PASDMWALPK"
-          searchKey = "b42948e51daaa93df92381c8e2ac0f93"
+          index = "www_teachmaths_org_sozzoxll0x_pages"
+          appID = "SOZZOXLL0X"
+          searchKey = "a4d86a61c38a84a6480340741bdd1275"
       [languages.eo.params.home]
         rss = 10
         [languages.eo.params.home.profile]

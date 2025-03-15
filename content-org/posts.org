@@ -12,7 +12,7 @@
 
 * Content
 ** Japoanese Electronic Dictonary
-*** DONE Japanese Electronic Dictionary (XD-G9850) :Languages:Japanese:
+*** DONE Japanese Electronic Dictionary (Casio XD-G9850) :Languages:Japanese:
 :PROPERTIES:
 :EXPORT_FILE_NAME: index.md
 :EXPORT_HUGO_BUNDLE: 20250315-denshijisho_xd-g9850

@@ -1,8 +1,8 @@
 +++
-title = "Japanese Electronic Dictionary (XD-G9850)"
+title = "Japanese Electronic Dictionary (Casio XD-G9850)"
 featuredImage = "20250315-xd_g9850.jpg"
 date = 2025-03-15
-lastmod = 2025-03-15T14:47:14+11:00
+lastmod = 2025-03-15T14:57:12+11:00
 tags = ["Languages", "Japanese"]
 categories = ["Blog"]
 draft = false

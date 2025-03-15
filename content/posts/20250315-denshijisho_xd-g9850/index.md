@@ -2,7 +2,7 @@
 title = "Japanese Electronic Dictionary (Casio XD-G9850)"
 featuredImage = "20250315-xd_g9850.jpg"
 date = 2025-03-15
-lastmod = 2025-03-15T14:57:12+11:00
+lastmod = 2025-03-16T08:26:35+11:00
 tags = ["Languages", "Japanese"]
 categories = ["Blog"]
 draft = false
@@ -26,6 +26,7 @@ Why use a dedicated japanese dictionary instead of an app on a smart phone?
 -   Can handwrite kanji, and the recognition is quite forgiving.
 
     You can get the dictionary to automatically recognise what you have written when you stop writing, or if you are hesitant when writing Kanji, you can set the recognition so you trigger it manually once you have finished writing the kanji.
+-   By handwriting kanji instead of using a camera to scan and recognise them, it helps you to get a better "feel" for the structure of the kanji, making it easier to commit them to memory.
 -   Can study Japanese without distractions from other smart phone apps/social media.
 -   is optimised to allow fast lookup of words, and can easily look up unknown words in a definition using the "jump" (ジャンプ) and "back" (戻る) buttons.
 -   has lots of example sentences in both Japanese and English to show how words are used.

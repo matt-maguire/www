@@ -12,7 +12,7 @@
 
 * Content
 ** Japanese Electronic Dictionary XD-Z20000
-*** DONE Japanese Electronic Dictionary XD-Z20000
+*** DONE Japanese Electronic Dictionary XD-Z20000 :Languages:Japanese:
 :PROPERTIES:
 :CUSTOM_ID: xd-z20000
 :EXPORT_FILE_NAME: index.md

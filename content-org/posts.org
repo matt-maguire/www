@@ -11,6 +11,25 @@
 #+filetags: @Blog
 
 * Content
+** ZSA Pro Reds
+*** DONE ZSA Voyager with Pro Red Switches :Keyboards:AltKeyboardLayouts:
+:PROPERTIES:
+:CUSTOM_ID: zsa-pro-red
+:EXPORT_FILE_NAME: index.md
+:EXPORT_HUGO_BUNDLE: 20250322-zsa_pro_reds
+:EXPORT_DATE: 2025-03-22
+:EXPORT_HUGO_MENU:
+:EXPORT_DESCRIPTION: 20250322-zsa_pro_reds.jpg
+:END:
+
+I have been so impressed with my [[#zsa-voyager-has-arrived][ZSA Voyager keyboard]] that I decided to buy a second one that I could leave set up at work. That meant I needed to think about what configuration to order.
+
+On my previous Voyager, I ordered it with the Choc Red 50g linear switches, which felt very smooth, but possibly a little on the heavy side for me. So, I decided to try swapping them out with some [[#new-choc-switches-have-arrived][Ambient Twilight]] 35g silent linear switches. I love those switches with their light touch and soft padding at the bottom of their travel.
+
+However, ZSA don't offer the Ambient switches as an option. I decided to order the new keyboard with the Choc Pro Red 35g linear switches, which have the same weight as the Ambient Twilights but without the sound damping/cushioning. I figured if I didn't like them, then I'd order another set of Twilights from a local supplier.
+
+When the new keyboard arrived, it only took a minute to update the firmware with my Graphite-like layout using ZSA's [[https://configure.zsa.io/voyager/layouts/34PvY/latest/0][Oryx web configuration tool]]. I was a little worried because I had read an online comment that the Pro Reds might feel a little "sloppy" or "mushy" compared to the Twilights. However, I didn't find that at all. The feeling is very similar to the Twilights except for the nice "clacking" sound and firmer feel at the end of the travel. If I was to order another Voyager I would definitely choose the Pro Reds again. I might at some stage get some more Twilights, but for now I'm quite happy sticking with the Pro Reds.
+
 ** Japanese Electronic Dictionary XD-Z20000
 *** DONE Japanese Electronic Dictionary XD-Z20000 :Languages:Japanese:
 :PROPERTIES:

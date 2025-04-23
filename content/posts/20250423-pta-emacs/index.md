@@ -2,7 +2,7 @@
 title = "Plain Text Accounting with Emacs"
 featuredImage = "20250423-hledger_report.png"
 date = 2025-04-23
-lastmod = 2025-04-23T21:05:03+10:00
+lastmod = 2025-04-24T07:19:54+10:00
 tags = ["PlainTextAccounting", "Emacs"]
 categories = ["Blog"]
 draft = false
@@ -106,6 +106,6 @@ Having grasped the basics of how the accounting tracks the flow of money through
 I'll talk a bit more in a future article how to download market price data and how one can trace the capital gains of various share lots that one may have purchased at different times, and perhaps look at some of the reports that can be used to help understand where one stands financially.
 
 
-## Conclusion and Next Steps {#conclusion-and-next-steps}
+## Conclusion {#conclusion}
 
-This has been a fun exercise where I have learned a lot about accounting, and also made some surprising discoveres such as how much I spend on coffee each month! I feel I am in a much better position to make better financial decisions, and it is nice to know that at tax time I will already have the key information available at my fingertips without having to trudge through pages and pages of obscure bank statements. Entering a little bit each day is certainly preferable to letting everything pile up to be dealt with in a flurry of activity at Year End. If you want to become better organised, I suggest looking into these types of tools. You can make it as simple or as complicated as you like, and you will definitely learn something about managing money.
+This has been a fun exercise where I have learned a lot about accounting, and also made some surprising discoveres such as how much I spend on coffee each month! I feel I am in a much better position to make better financial decisions, and it is nice to know that at tax time I will already have the key information available at my fingertips without having to trawl through mountains of paper. Entering a little bit each day is certainly preferable to letting everything pile up to be dealt with in a flurry of activity at Year End. If you want to become better organised, I suggest looking into these types of tools. You can make it as simple or as complicated as you like, and you will definitely learn something about managing money.

@@ -2,7 +2,7 @@
 title = "Plain Text Accounting with Emacs – Part 2"
 featuredImage = "20250424-share_trading.png"
 date = 2025-04-24
-lastmod = 2025-04-24T14:54:53+10:00
+lastmod = 2025-04-25T20:22:15+10:00
 tags = ["PlainTextAccounting", "Emacs"]
 categories = ["Blog"]
 draft = false
@@ -210,10 +210,10 @@ Let's see if I can make any more money by selling some shares
 
 ## Selling Shares {#selling-shares}
 
-The other way to make money off shares is through capital gains, which means you sell the shares for more than you paid for them. So, let's say that at the end of may, the market price for my shares is \\(\\$29\\). I can let hledger know this using a `P` directive:
+The other way to make money off shares is through capital gains, which means you sell the shares for more than you paid for them. So, let's say that at the end of may, the market price for my shares is \\(\\$32\\). I can let hledger know this using a `P` directive:
 
 ```ledger
-P 2025-05-31 WOW $29.00
+P 2025-05-31 WOW $32.00
 ```
 
 So, what is my portfolio now worth? To find out, we apply the `-V` option to my balance sheet. If I'm only interested in the value of my shares and not my bank account, I can add a filter "shares" so that only assets containing that word are shown in the balance sheet.
@@ -226,17 +226,17 @@ Balance Sheet 2025-05-31, valued at period ends
 ==============================++============
  Assets                       ||
 ------------------------------++------------
- assets:shares:WOW:20250402#1 ||  $2,900.00
- assets:shares:WOW:20250402#2 ||  $1,450.00
+ assets:shares:WOW:20250402#1 ||  $3,200.00
+ assets:shares:WOW:20250402#2 ||  $1,600.00
 ------------------------------++------------
-                              ||  $4,350.00
+                              ||  $4,800.00
 ==============================++============
  Liabilities                  ||
 ------------------------------++------------
 ------------------------------++------------
                               ||
 ==============================++============
- Net:                         ||  $4,350.00
+ Net:                         ||  $4,800.00
 ```
 
 Great, I paid \\(\\$4,380\\) for my shares, but now they are worth \\(\\$4,800\\)! Using the `--gain` option on my balance sheet, I can see how much the shares have gone up or down in value:
@@ -265,7 +265,7 @@ Balance Sheet 2025-05-31 (Historical Gain), valued at period ends
 You can also make reports that show the change in value over time, but for now I just want to make a quick profit. Unfortunately with hledger, the handling of capital gain is a bit manual. This is one way to do it:
 
 ```ledger
-2025-05-31 Sell all WOW shares
+2025-06-01 Sell all WOW shares
     assets:shares:WOW:20250402#1                -100 WOW @ $29.55
     assets:shares:WOW:20250402#2                 -50 WOW @ $28.50
     revenues:shares:capital_gain               -$420
@@ -277,9 +277,9 @@ So here, I reduce my share holdings back down to zero, and I declare the capital
 
 ```text
 $ hledger bs
-Balance Sheet 2025-05-31
+Balance Sheet 2025-06-01
 
-                               || 2025-05-31
+                               || 2025-06-01
 ===============================++============
  Assets                        ||
 -------------------------------++------------
@@ -296,7 +296,7 @@ Balance Sheet 2025-05-31
  Net:                          || $10,425.15
 ```
 
-You can see I no longer own any shares, but I do have \\(\\$4,790.05\\) owing to me from the broker (\\()$4,800\\) from the sale of shares less the \\(\\$9.95\\) brokerage fee). In two day's time, the broker will settle the account:
+You can see I no longer own any shares, but I do have \\(\\$4,790.05\\) owing to me from the broker \\(\\$4,800\\) from the sale of shares less the \\(\\$9.95\\) brokerage fee). In two day's time, the broker will settle the account:
 
 ```ledger
 2025-06-02 Receive payment from broker
@@ -310,9 +310,9 @@ The final balance sheet now looks like this:
 
 ```text
 $ hledger bs
-Balance Sheet 2025-06-02
+Balance Sheet 2025-06-03
 
-                     || 2025-06-02
+                     || 2025-06-03
 =====================++============
  Assets              ||
 ---------------------++------------
@@ -332,9 +332,9 @@ So, I started with \\(\\$10,000\\) in by bank account, and now I have \\(\\$10,4
 
 ```text
 $ hledger is
-Income Statement 2025-04-01..2025-06-02
+Income Statement 2025-04-01..2025-06-03
 
-                              || 2025-04-01..2025-06-02
+                              || 2025-04-01..2025-06-03
 ==============================++========================
  Revenues                     ||
 ------------------------------++------------------------
@@ -360,7 +360,7 @@ If I wanted to do a breakdown of all the brokerage fees I paid over the year, I 
 $ hledger reg brokerage
 2025-04-02 Buy 100 WOW @ $29.55                     expenses:brokerage             $9.95         $9.95
 2025-04-02 Buy 50 WOW @ $28.50                      expenses:brokerage             $9.95        $19.90
-2025-05-31 Sell all WOW shares                      expenses:brokerage             $9.95        $29.85
+2025-06-01 Sell all WOW shares                      expenses:brokerage             $9.95        $29.85
 ```
 
 It shows the date, transaction description, transaction amount and running total for the records shown. I can check that the transactions on my savings bank account match the statement from my bank:
@@ -370,7 +370,7 @@ $ hledger reg savings
 2025-04-01 Opening Balances                       assets:bank:savings         $10,000.00    $10,000.00
 2025-04-04 Settlement for WOW share purchase      assets:bank:savings         $-4,399.90     $5,600.10
 2025-05-01 WOW dividend                           assets:bank:savings             $35.00     $5,635.10
-2025-06-02 Receive payment from broker            assets:bank:savings          $4,790.05    $10,425.15
+2025-06-03 Receive payment from broker            assets:bank:savings          $4,790.05    $10,425.15
 ```
 
 
@@ -381,7 +381,7 @@ So, this has been a quick walk-through of how you can use plain text accounting 
 
 ## Complete Ledger File {#complete-ledger-file}
 
-If you want the complete ledger file I used for this example, you can find it below. There is a bit at the start that I didn't talk about:
+If you want the complete ledger file I used for this example (so you can play around with it), you can find it below. There is a bit at the start that I didn't talk about:
 
 -   the `commodity` directive tells HLedger how to format the currency. If you use commas as a decimal separator and periods as thousands separators, you can simply change that line.
 -   The initial transaction sets up an initial balance in my savings account of \\(\\$10,000\\). Because money can't come from nowhere, and the transaction has to balance, I am pulling the \\(\\$10,000\\) out of an equity account, showing how much I invested at the start. If I close the books, the assets are all converted back to equity, and you can then see how much I will pocket in the end.
@@ -415,14 +415,14 @@ commodity $1,000.00
 
 P 2025-05-31 WOW $32.00
 
-2025-05-31 Sell all WOW shares
+2025-06-01 Sell all WOW shares
     assets:shares:WOW:20250402#1                -100 WOW @ $29.55
     assets:shares:WOW:20250402#2                 -50 WOW @ $28.50
     revenues:shares:capital_gain               -$420
     expenses:brokerage                         $9.95
     assets:receivable:sharetrades
 
-2025-06-02 Receive payment from broker
+2025-06-03 Receive payment from broker
     assets:receivable:sharetrades          -$4790.05
     assets:bank:savings
 ```

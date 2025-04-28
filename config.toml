@@ -185,7 +185,7 @@ buildFuture=true
     # whether to use the absolute URL based on the baseURL in search index
     absoluteURL = true
     [params.search.algolia]
-      index = "www_teachmaths_org_sozzoxll0x_articles"
+      index = "www_teachmaths_org_sozzoxll0x_pages"
       appID = "SOZZOXLL0X"
       searchKey = "a4d86a61c38a84a6480340741bdd1275"
 
@@ -644,7 +644,7 @@ buildFuture=true
         highlightTag = "em"
         absoluteURL = true
         [languages.en.params.search.algolia]
-          index = "www_teachmaths_org_sozzoxll0x_articles"
+          index = "www_teachmaths_org_sozzoxll0x_pages"
           appID = "SOZZOXLL0X"
           searchKey = "a4d86a61c38a84a6480340741bdd1275"
       [languages.en.params.home]
@@ -737,7 +737,7 @@ buildFuture=true
         highlightTag = "em"
         absoluteURL = true
         [languages.en-shaw.params.search.algolia]
-          index = "www_teachmaths_org_sozzoxll0x_articles"
+          index = "www_teachmaths_org_sozzoxll0x_pages"
           appID = "SOZZOXLL0X"
           searchKey = "a4d86a61c38a84a6480340741bdd1275"
       [languages.en-shaw.params.home]
@@ -830,7 +830,7 @@ buildFuture=true
         highlightTag = "em"
         absoluteURL = true
         [languages.eo.params.search.algolia]
-          index = "www_teachmaths_org_sozzoxll0x_articles"
+          index = "www_teachmaths_org_sozzoxll0x_pages"
           appID = "SOZZOXLL0X"
           searchKey = "a4d86a61c38a84a6480340741bdd1275"
       [languages.eo.params.home]

@@ -169,7 +169,7 @@ buildFuture=true
 
   # Search config
   [params.search]
-    enable = false
+    enable = true
     # type of search engine ["lunr", "algolia"]
     type = "algolia"
     # max index length of the chunked content
@@ -635,7 +635,7 @@ buildFuture=true
         title = ""
     [languages.en.params]
       [languages.en.params.search]
-        enable = false
+        enable = true
         type = "algolia"
         contentLength = 4000
         placeholder = ""
@@ -728,7 +728,7 @@ buildFuture=true
       # whether to use typeit animation for title name
       typeit = false
       [languages.en-shaw.params.search]
-        enable = false
+        enable = true
         type = "algolia"
         contentLength = 4000
         placeholder = ""
@@ -821,7 +821,7 @@ buildFuture=true
       # whether to use typeit animation for title name
       typeit = false
       [languages.eo.params.search]
-        enable = false
+        enable = true
         type = "algolia"
         contentLength = 4000
         placeholder = ""

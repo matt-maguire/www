@@ -12,7 +12,7 @@
 
 * Content
 ** AI Agents Take Over Lesson Prep
-*** TODO AI Agents Take Over Lesson Prep :AI:LaTeX:Teaching:Emacs:
+*** DONE AI Agents Take Over Lesson Prep :AI:LaTeX:Teaching:Emacs:
 :PROPERTIES:
 :CUSTOM_ID: claude-code
 :EXPORT_FILE_NAME: index.md

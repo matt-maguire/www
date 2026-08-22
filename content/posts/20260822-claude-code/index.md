@@ -2,10 +2,10 @@
 title = "AI Agents Take Over Lesson Prep"
 featuredImage = "20260822-claude-code.png"
 date = 2026-08-22
-lastmod = 2026-08-22T13:21:55+10:00
+lastmod = 2026-08-22T13:28:17+10:00
 tags = ["AI", "LaTeX", "Teaching", "Emacs"]
 categories = ["Blog"]
-draft = true
+draft = false
 weight = 3001
 author = "Matt Maguire"
 +++

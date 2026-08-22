@@ -12,7 +12,7 @@
 
 * Content
 ** AI Agents and Local LLMs
-*** TODO AI Agents and Local LLMs :AI:LaTeX:Teaching:Emacs:
+*** DONE AI Agents and Local LLMs :AI:LaTeX:Teaching:Emacs:
 :PROPERTIES:
 :CUSTOM_ID: gemma-goose
 :EXPORT_FILE_NAME: index.md

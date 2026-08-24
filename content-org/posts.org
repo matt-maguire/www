@@ -11,8 +11,79 @@
 #+filetags: @Blog
 
 * Content
+** AI Agents: From Lessons to Unit Planning
+*** TODO From Lessons to Unit Planning
+:PROPERTIES:
+:CUSTOM_ID: unit-planning
+:EXPORT_FILE_NAME: index.md
+:EXPORT_HUGO_BUNDLE: 20260824-unit-planning
+:EXPORT_DATE: 2026-08-24
+:EXPORT_HUGO_MENU:
+:EXPORT_DESCRIPTION: 20260824-unit-planning.png
+:END:
+
+**** Introduction: Moving from Micro to Macro
+***** The Limitation of Isolated Lesson Prep
+- Single-lesson generation solves daily grunt work, but teaching requires long-term coherence across a 4–6 week unit.
+- Cognitive overhead: Balancing scope & sequence, textbook exercises, syllabus outcomes, and calendar constraints.
+***** Objective for Part 3
+- Elevating the local Goose / Gemma (and Claude) agent workflow from drafting single lessons to architecting entire units.
+- Leveraging agentic workflows for top-down sequencing, syllabus compliance auditing, differentiated material creation, and assessment design.
+
+**** Ingesting the Foundation: Syllabus, Program, and Textbook
+***** Feeding Multi-Modal Reference Material
+- Staging syllabus outcomes, stage statements, and school scope-and-sequence documents.
+- Ingesting full textbook chapters using the ~pdftopbm~ OCR/image pipeline from Part 2.
+***** Generating the Unit Roadmap
+- Structuring an $N$-lesson unit trajectory:
+  - Concept introduction & diagnostic checks.
+  - Explicit instruction & modeled examples.
+  - Guided practice and consolidation.
+  - Revision, application, and summative review.
+- Structuring the agent output: A clear, sequential unit timeline matrix.
+
+**** Automated Syllabus Gap Analysis
+***** The Cross-Referencing Audit Loop
+- Prompting the agent to audit the draft unit against exact syllabus dot points:
+  #+BEGIN_QUOTE
+  "Compare our 12 proposed lesson plans against Syllabus Outcome [X]. Identify any omitted sub-topics, unaddressed terminology, or missing question archetypes."
+  #+END_QUOTE
+***** Uncovering Common Blind Spots
+- Catching subtle omissions: Edge-case problem types, specific reasoning/proof requirements, or prerequisite skills.
+***** Producing the Coverage Report
+- Generating a Markdown/Org table showing each syllabus requirement mapped to specific lessons and activities before writing the LaTeX notes.
+
+**** Differentiated Resource Generation
+***** The Three-Tier Scaffolding Model
+- Transforming a single core mathematical concept into three leveled variations:
+  - *Foundation / Support:* Step-by-step scaffolds, simplified arithmetic, worked templates, and visual hints.
+  - *Core / Standard:* Standard syllabus problems, application questions, and routine multi-step calculations.
+  - *Extension:* Unscaffolded multi-step proofs, non-routine modeling, and challenging unfamiliar contexts.
+***** Diagrammatic Differentiation with TikZ
+- Maintaining visual consistency: Modifying TikZ geometric/statistical figures across tiers (e.g., adding angle hints/auxiliary lines for support vs. stripped diagrams for extension).
+
+**** Assessment Task & Marking Guide Development
+***** Designing Balanced Assessment Tasks
+- Constructing diagnostic quizzes and end-of-unit summative tasks mapped to taxonomy levels (Fluency, Understanding, Reasoning, and Problem Solving).
+***** Automated Solution Keys and Rubrics
+- Emitting complete, fully worked LaTeX solutions alongside question papers.
+- Generating explicit marking schemes: Allocating method marks ($M$), answer marks ($A$), notation criteria, and notes on common student misconceptions.
+
+**** Automated Math Verification & Tool Integration
+***** Sanity-Checking Solutions via Python / SymPy
+- Utilizing the agent's tool execution to pipe generated questions through SymPy/Python.
+- Ensuring arithmetic, integration/differentiation, and algebraic simplifications are algebraically verified prior to ~latexmk~ compilation.
+***** Batch LaTeX Pipeline
+- Automating the compilation of teacher notes, student handouts, differentiated worksheets, and assessment files in one agentic loop.
+
+**** Conclusion and What's Next
+***** The Shift in Teaching Workflow
+- Moving from administrative content assembly to high-level instructional design, freeing up energy for active classroom pedagogy.
+***** Next Steps / Teaser
+- Future explorations: Developing custom Model Context Protocol (MCP) servers, interactive classroom visualizers, or student feedback loops.
+  
 ** AI Agents and Local LLMs
-*** DONE AI Agents and Local LLMs :AI:LaTeX:Teaching:Emacs:
+**** DONE AI Agents and Local LLMs :AI:LaTeX:Teaching:Emacs:
 :PROPERTIES:
 :CUSTOM_ID: gemma-goose
 :EXPORT_FILE_NAME: index.md
@@ -35,7 +106,7 @@ Of course, there are some drawbacks:
 - you need pretty beefy hardware specs to get good performance.
 - the models you can run are not quite as capable as the cloud-based models, and VRAM limitations may limit the size of the context window you can realistically use.
 
-**** Choosing a model 
+***** Choosing a model 
 Based on my experience with using Claude, I found that I would typically use around 100k tokens to produce a set of lesson notes. My computer is a gaming PC equipped with a NVIDIA RTX 5900 that has 32GB of VRAM. The amount of VRAM determines the size of the model you can use and well as the length of the context window. I look for models that would give me a 128k+ context window and fit within the VRAM I had available. Of course, I asked an AI chat bot for some recommendations.
 
 The first recommendation that came back was to use Ollama to run the models. By running a local Ollama server, it is simple to download different types of models and switch between them. The types of models that were recommended fell in two main categories:
@@ -78,14 +149,14 @@ To make sure these are exactly what you need, just let me know a few details for
 
 As you can see, by default this LLM makes its internal thinking explicit. This is yet another parameter that can be adjusted.
 
-**** Choosing an AI Agent client
+***** Choosing an AI Agent client
 Once I had an Ollama server up and running, I wanted to set up an AI Agent like I did with Claude. On inspecting the Emacs /agent-shell/ package, I noticed it supports an AI Agent called /Goose/ by /Block Open Source/. This agent supports orchestration of complex multi-step tasks through the use of to-do lists. It can be run through Emacs agent-shell, or there is a desktop application that provides a user-friendly way of configuring and using the AI agent.
 
 I tried making some lessons using the Goose agent. It worked quite well, very similar to Claude Code. I trained it on how to format lessons the way I like, just like I did with Claude. Like Claude Code, Goose has a skills extension that can be enabled.
 
 One thing that didn't work so well was when I fed Goose/Gemma a source document containing maths notation and diagrams. It would try to extract the text, but formulas would become garbled, and content existing as images such as tables and diagrams would not be extracted at all. All this worked seemlessly with Claude, but I wasn't ready to give up yet.
 
-**** Importing Source/Reference Documents
+***** Importing Source/Reference Documents
 We now come back to the point that the Gemma model supports image processing. Rather than using an unreliable text extraction tool, I looked for ways to leverage the image processing capabilities of Gemma to inspect the source document and visually recognise the maths notation, tables and diagrams. I installed a program called =pdftopbm=, which coverts each page of a PDF document into a Portable Bitmap file that Gemma can recognise.
 
 Of course, I don't want to have to convert all the pages of a PDF file manully, especially if I am only interested in a small selection of pages. How to automate that process? If only there way some sort of AI tool that could automate that sort of grunt work... oh wait, isn't that what Goose/Gemma is for?
@@ -96,7 +167,7 @@ I later found out that this is what tools like Claude do behind the scenes --- c
 
 I now had a quite powerful AI Agent setup running completely locally on my gaming PC. As long as I was at home, I could ssh into my gaming PC and run emacs in text mode. But, what if I wanted to view PDF output, or access the LLM when away from home? Surely there must be a way to make this work over the internet...
 
-**** Connecting the LLM to the Internet
+***** Connecting the LLM to the Internet
 When using the Goose desktop app, you need to point it towards an API endpoint through which it can access an LLM. The Ollama server running on my gaming PC listens on a TCP port for incoming HTTP requests. Normally it binds to the local loopback device, so that you can only connect to this API locally from the gaming PC itself. The question is, how can I expose this API on the internet in a safe and secure way.
 
 The Ollama server provides an OpenAI-compatible API endpoint, with a couple of limitations.
@@ -107,14 +178,14 @@ The solution to this is of course to implement a reverse proxy. The reverse prox
 
 The final step is to point Goose to the HTTPS API endpoint, and configure an API key that the reverse proxy will accept. 
 
-**** Next Steps
+***** Next Steps
 Having set up my home infrastructure to be readily accessible from anywhere, I now have a "free" alternative to using the paid AI services (I say free, but of course I still pay electricity and hardware depreciation costs). The home setup produces high quality lesson notes documents. For cases where the home setup struggles, I still have the option of using the more powerful Claude or Gemini paid models.
 
 So, what else can I do with this setup? That of course will be the subject of the next article. 
 
 
-** AI Agents Take Over Lesson Prep
-*** DONE AI Agents Take Over Lesson Prep :AI:LaTeX:Teaching:Emacs:
+**** AI Agents Take Over Lesson Prep
+***** DONE AI Agents Take Over Lesson Prep :AI:LaTeX:Teaching:Emacs:
 :PROPERTIES:
 :CUSTOM_ID: claude-code
 :EXPORT_FILE_NAME: index.md
@@ -126,14 +197,14 @@ So, what else can I do with this setup? That of course will be the subject of th
 
 It has been a while since I have written about how I use Emacs/LaTeX to generate lesson notes for my students. Quite a lot has happened during that time. One of the main game changers has been the advancements in "AI" technology. Over the next few articles I intend to describe my journey as I navigate this technology and apply it to my teaching practice.
 
-**** Chat Bots
+****** Chat Bots
 Having decided to dip my toe in the water, I signed up to two of the prevalent players in this space, being Google Gemini and Anthropic Claude. My early experiments with ChatGPT had led to some disappointing results, where it emphatically tried to convince me that the value of Euler's constant is 1.5. Since then, the technology has advanced significantly, and I thought it worthwhile to try again.
 
 My process to this point had been to generate lesson notes in LaTeX by hand. Where I got stuck trying to work out how to draw TiKZ diagrams, I would refer to the Stack Exchange website and the TiKZ reference manual to get ideas. I was happy with the results, but it was quite time-consuming. So, this was the first place I would try to make use of AI.
 
 I would go to the chatbot website and prompt AI with a description of the type of diagram I wanted, and it would generate the TiKZ code. I would copy-paste it into my document, compile to see what it looked like, and ask the AI to make refinments. I then found out that AI can actually take in an image of an existing diagram and do a decent job of generating TiKZ code to approximate the diagram. This saved me some time, but was a bit tedious with all that copy-paste activity. Surely there had to be a better way...
 
-**** Enter the AI Agents
+****** Enter the AI Agents
 I had heard of people using AI for coding tasks. Since LaTeX is just another programming language, perhaps I could use those development tools to generate my lesson notes. This led me down the rabbit hole of /AI Agents/.
 
 When you have a chat bot window, it is like an isolated sandbox. It has no access to the files on your system. If the want the chatbot to know about a document, you need to attach it to the chat box. The chat bot can generate code, but you need to copy-paste it into your editor window so you can save it to a file and compile the code.
@@ -144,10 +215,10 @@ While this is immensely convenient, giving the LLM free range to make changes to
 
 Keen to give this a try, I needed to find an some AI Agent client software that would be compatible with the LLM I decided to use.
 
-**** Claude Code
+****** Claude Code
 In order to maximise my chances of success, I decided to start with Anthropic's Claude LLM, which has a reputation as being state-of-the-art for code development. Anthropic provides an AI Agent harness called "Claude Code" which is designed to work with the Claude models, so this seemed a good place to start.
 
-***** Claude Code in Emacs
+******* Claude Code in Emacs
 As an Emacs enthusiast, of course I wanted to see if I could get everything running in Emacs, including the AI Agent, the LaTeX source, and the PDF output. Of course, I could run the Claude Code  CLI in a vterm buffer, but I discovered that there is an Emacs package called /agent-shell/ which invokes AI Agents such as Claude Code in an Emacs buffer. After having installed Claude Code on my system, I told Doom Emacs in my =packages.el= file that I want to use the /agent-shell/ package:
 #+begin_src elisp
 (package! agent-shell)
@@ -195,10 +266,10 @@ Claude> Create a skill for generating lesson notes, based on the feedback given 
 #+end_example
 
 Skills are a set of notes, typically in Markdown format, that Claude can read at the start of a session. These notes can include instructions such as always check that files compile, cross-check the lesson content against the syllabus, etc.. This information then becomes persistent across sessions so that next time your prompt can be briefer.
-***** Claude Code desktop app
+******* Claude Code desktop app
 After running claude in the manner, I came up with a workflow that had the LaTeX source, Claude shell and PDF file in separate Emacs windows. This was working well, until I realised that it was more convenient to have just LaTeX source and PDF windows in my Emacs frame, and use the Claude Code desktop app on a second monitor. The desktop app can still create the files, run the compiler, check things into git, etc., and in Emacs I have more space to view the document and its source.
 
-**** So, about the cost...
+****** So, about the cost...
 With Claude Pro, there is an affordable monthly subscription for around $30/month. This is a subsidised cost that allows you to use Claude up to a certain point, beyond which you are either blocked until your usage window resets, or you can pay extra to continue if you don't want to wait.
 
 During my initial experiments, I found it very easy to run out of usage quota, and so I investigated some strategies to reduce my token usage:
@@ -211,8 +282,8 @@ With these optimisations, Claude becomes an affordable and very effective assist
 
 Next time I will talk about an alternative workflow that I set up to address this concern.
 
-** Plain Text Accounting with Emacs -- Part 3
-*** DONE Plain Text Accounting with Emacs -- Part 3 :PlainTextAccounting:Emacs:
+**** Plain Text Accounting with Emacs -- Part 3
+***** DONE Plain Text Accounting with Emacs -- Part 3 :PlainTextAccounting:Emacs:
 :PROPERTIES:
 :CUSTOM_ID: pta-emacs3
 :EXPORT_FILE_NAME: index.md
@@ -227,7 +298,7 @@ My journey into using Hledger with Emacs to track my share investments continues
 - naming conventions that support multiple stock brokers
 - booking brokerage fees in a better way to support the Australian tax system.
 
-**** Naming convention
+****** Naming convention
 Over the past month I was not overly impressed with my existing stock broker, which led me to explore other stock brokers that may offer a more reliable service at a cheaper rate. It is expensive to transfer stocks over to a new broker, so I decided to cap further investment at my current broker and instead make any new purchases at a different broker. This meant that I would need an account structure that lets me easily identify which share lots were purchased through which broker.
 
 The scheme I came up with to record my share inventory looks like this:
@@ -252,7 +323,7 @@ So, for example, if I purchase some more Telstra (TLS) shares through my new Che
 - On the third line I record the brokerage fee. Why do I have an "equity" account here? I'll explain in the next section.
 - On the last line, I record the total amount I owe the broker as an Accounts-Payable Liability, which will be settled in two days' time. I include the sub-account name "bank" so that I can easily see my bank balances and upcoming settlement amounts by querying for the term "bank". I then include the stock broker code so I can see how much I owe to which broker.
 
-**** Tax reporting
+****** Tax reporting
 When I looked a bit further to the taxation rules here in Australia, I discovered that I can't claim brokerage fees as a tax-deductable expense at the time of share purchase. I can however claim it against any capital gain I make when I sell the shares at some point in the future, as it is . This could be a long way down the track, and I may have migrated my ledger across several files in the meantime. So, how can I report this brikerage fee?
 
 My idea is that I don't want to book it as an expense at the time I purchase the shares, but I DO want to expense it when I sell the shares. So, I need to store the value in a longer-term account such as an Asset, Liability or Equity.
@@ -288,7 +359,7 @@ So, let's say I sell my Telstra shares a year later for \(\$5\) per share. I wou
 
 So, in this way, I have all the information needed for my accountant without having to trawl back through historical files from previous financial years. My closing the books at end of financial year and migrating to a new file for the next financial year, the cost base of the shares and the brokerage fees for the purchases are preserved in the opening balance for the new year.
 
-**** Settlements
+****** Settlements
 Just for completeness, I should mention the settlements that go with those three share trades. Each of them is two days after the trade and have the confirmation number issues by my broker for the trade. They will look something like this:
 
 #+begin_src ledger
@@ -304,12 +375,12 @@ Just for completeness, I should mention the settlements that go with those three
     assets:bank:abc:savings         $7488
 #+end_src
 
-**** Final Thoughts
+****** Final Thoughts
 I think this new setup provides a bit more flexibility and convenience in understanding capital gains/losses and expenses (cost of ownership) for my share portfolio. You may have noticed that in these entries I use "income" as a top level account name rather than "revenue". This change was because I wanted to better align with the ledger format used by [[https://beancount.github.io/][Beancount]], an alternative to =hledger=. After playing with =Beancount= for a bit, I decided that I would stick with =hledger= due its greater flexibility and the nice reports it produces. After I go through my next tax return with my accountant, I may find other tweaks to this setup (eg. perhaps I need to apportion the selling brokerage fee across share lots that fall under different capital gains tax rules?). I'll post here any new things I learn along the way.
 
 
-** Plain Text Accounting with Emacs -- Part 2
-*** DONE Plain Text Accounting with Emacs -- Part 2 :PlainTextAccounting:Emacs:
+**** Plain Text Accounting with Emacs -- Part 2
+***** DONE Plain Text Accounting with Emacs -- Part 2 :PlainTextAccounting:Emacs:
 :PROPERTIES:
 :CUSTOM_ID: pta-emacs2
 :EXPORT_FILE_NAME: index.md
@@ -323,7 +394,7 @@ Following up from my [[#pta-emacs][previous article]] on using Emacs to maintain
 
 I mentioned last time that I would talk a bit more about doing share trades, so I'll cover that in this article.
 
-**** Buying shares
+****** Buying shares
 
 When you buy shares, it is important to record the price at which you purchased that lot of shares so that you can correctly calculate capital gains (or losses) at the time you sell them. With HLedger, this is most easily achieved by specifying a subaccount when you purchase a group of shares. For example, lets say I purchased 100 Woolworths shares for $29.55 each on 2 April, 2025. I would create a transaction in my journal like this:
 
@@ -476,7 +547,7 @@ So now my savings account has gone down, but I don't have any debt to my broker 
 
 The reason I wanted to buy the shares was to make some money, so let's see how to do that.
 
-**** Booking Dividends
+****** Booking Dividends
 
 One way to make money from shares is to receive dividends. This is very easy to record in my ledger:
 
@@ -514,7 +585,7 @@ Now I'm in the black! The dividend payment has covered the brokerage fees, and I
 
 Let's see if I can make any more money by selling some shares
 
-**** Selling Shares
+****** Selling Shares
 
 The other way to make money off shares is through capital gains, which means you sell the shares for more than you paid for them. So, let's say that at the end of may, the market price for my shares is \(\$32\). I can let hledger know this using a =P= directive:
 
@@ -679,11 +750,11 @@ $ hledger reg savings
 2025-06-03 Receive payment from broker            assets:bank:savings          $4,790.05    $10,425.15
 #+end_example
 
-**** Conclusion
+****** Conclusion
 
 So, this has been a quick walk-through of how you can use plain text accounting to manage your share trading, and make sure you stay on the right side of both the tax man and your broker. Perhaps next time I'll show what happens if you buy a big ticket item for work, such as a laptop, and you need to depreciate the cost over a few years for tax purposes.
 
-**** Complete Ledger File
+****** Complete Ledger File
 
 If you want the complete ledger file I used for this example (so you can play around with it), you can find it below. There is a bit at the start that I didn't talk about:
 - the =commodity= directive tells HLedger how to format the currency. If you use commas as a decimal separator and periods as thousands separators, you can simply change that line.
@@ -727,8 +798,8 @@ P 2025-05-31 WOW $32.00
     assets:receivable:sharetrades          -$4790.05
     assets:bank:savings
 #+end_src
-** Plain Text Accounting with Emacs
-*** DONE Plain Text Accounting with Emacs  :PlainTextAccounting:Emacs:
+**** Plain Text Accounting with Emacs
+***** DONE Plain Text Accounting with Emacs :PlainTextAccounting:Emacs:
 :PROPERTIES:
 :CUSTOM_ID: pta-emacs
 :EXPORT_FILE_NAME: index.md
@@ -742,7 +813,7 @@ For a while I have been concerned that I haven't really been on top of my financ
 
 Since I have been having lots of fun recently diving into Emacs Org, I did some research on whether it may be helpful in getting a better handle on my finances. After a bit of research, I started to realise that Org mode may not be the best tool for what I was looking to do, but I saw a number of people talking about using a program called Ledger, which takes as input plain text files describing your finances, and then crunches the data to produce various reports. Since the data is managed using human readable text files ("accounting journals"), Emacs can be used as the text editor of choice, and there is even a "Ledger mode" in Emacs to handle all the usual syntax highlighting and auto-completion you would expect in any text-based specification language.
 
-**** Choosing a Plain Text Accounting Tool
+****** Choosing a Plain Text Accounting Tool
 It seems there is an enthusiastic community using a variety of tools such as Ledger to track their finances using plain text files. One of the main hubs is the website https://plaintextaccounting.org/. This website talks about some of the basic concepts behind accounting, and mentions the various tools that are available. So, my first task was to work out which tool I should use.
 1. [[https://ledger-cli.org/][Ledger]] is the oldest cli-based tool, and has the most features. The journal format is fairly forgiving and widely used, and Emacs has a /Ledger/ mode..
 2. [[https://hledger.org/][HLedger]] is a more modern rewrite of Ledger, written in Haskell. The developer has tried to "clean up" some of the idiosyncrasies of Ledger and streamline the tool. It is missing some of the features of Ledger, but the developer explains how to handle some common use cases using the simpler feature set. It appears to be more actively developed that the other plain text accounting (PTA) tools. Emacs also has an /HLedger/ mode.
@@ -755,14 +826,14 @@ After looking into these 4 tools, I decided that I really did want a plain text 
 - it is written in Haskell, which sounds like an interesting language that I might learn more about if I want to write any customisations.
 - if I want to look further into Beancount, then there are conversion tools that can help to migrate to the different format.
 
-**** Basic Accounting Terms
+****** Basic Accounting Terms
 Having selected a tool, the next thing was to look into how accounting works. These PTA tools are all based on the idea of /double-entry book keeping/. I don't want to go into detail here about double-entry bookkeeping, as others have done it better than I could. I recommend you read the [[https://plaintextaccounting.org/What-is-Plain-Text-Accounting][introductory article]] on the plaintextaccounting.org website. In a nutshell though:
 - Money is tracked by putting it into and taking it out of /accounts/.
 - There are 3 types of accounts that store value: *Assets* (things you own), *Liabilities* (things you owe to other people) and *Equity* (this is complicated, but at a simple level it is a measure of money you have invested in the vanture).
 - There are 2 more types of accounts that represent money entering or leaving the venture: *Revenue* (money coming in from an outside source) and *Expenses* (money you pay to out to someone else).
 - If you take money *out* of one or more accounts, you need to put that same amount of money *into* one or more accounts. From a physics perspective, this is something like the law of conservation energy -- money cannot be created out of thin air, it can only be transferred from one place to another.
 
-**** Setting up HLedger and HLedger-mode/Ledger-mode
+****** Setting up HLedger and HLedger-mode/Ledger-mode
 There is no magic here, I just installed /hledger/ using my package manager, in my case:
 
 =pacman -Sy hledger hledger-ui hledger-web=
@@ -777,7 +848,7 @@ To install hledger mode on Emacs, you can follow the instructions on the [[https
 
 I will need to explore this further.
 
-**** Creating Journal Entries
+****** Creating Journal Entries
 
 Ledger is quite flexible in the way you use it. You need to give some thought as to what sorts of things you want to track. There are [[https://plaintextaccounting.org/Cookbook][cookbooks]] available that suggest different ways to structure your entries. As an example, I wanted to track my salary income. At a very simple level, you can record when you see your salary credited to your bank account:
 
@@ -815,18 +886,18 @@ I then decided that I wanted to track how much tax the employer had removed from
 
 Here, I can track in the =expenses:taxes:withholding= account how much money the employer sent to the tax office. Whatever is left over temporarily goes into an account called =assets:receivable:salary=. This is an asset, because the employer owes me money. However, I don't want to record it as going into my savings account until the employer actually transfers the money there. Once they do that, I then create a second transaction where the money is transferred out of that holding "Receivables" account and into my savings account on the date that the transfer actually happens. If for some reason the transfer doesn't go through, then I can run a report to show that I have some money sitting in "Receivables" that hasn't found its way to my account yet, and I then know I need to follow up with my employer. Similarly, I can track the compulsory contributions that my employer must by law make to my superannuation account, and I can reconcile at the end of the year when I receive the end-of year report.
 
-**** Entering in more data
+****** Entering in more data
 
 Having grasped the basics of how the accounting tracks the flow of money through different accounts that can then be reported on, I went through and entered all the transactions I have made for this past financial year. There was a lot of data to enter, which was quite time-consuming, but it was a useful exercise because it made me examine my finances in detail. It was particularly helpful for share trades, where I needed to trace what had happened with mergers and takeovers and investigate the tax office rulings that I would need to follow should I decide to sell any of those shares.
 
 I'll talk a bit more in a future article how to download market price data and how one can trace the capital gains of various share lots that one may have purchased at different times, and perhaps look at some of the reports that can be used to help understand where one stands financially.
 
-**** Conclusion
+****** Conclusion
 
 This has been a fun exercise where I have learned a lot about accounting, and also made some surprising discoveres such as how much I spend on coffee each month! I feel I am in a much better position to make better financial decisions, and it is nice to know that at tax time I will already have the key information available at my fingertips without having to trawl through mountains of paper. Entering a little bit each day is certainly preferable to letting everything pile up to be dealt with in a flurry of activity at Year End. If you want to become better organised, I suggest looking into these types of tools. You can make it as simple or as complicated as you like, and you will definitely learn something about managing money.
 
-** Ergonomic Emacs
-*** DONE Ergonomic Emacs :Keyboards:AltKeyboardLayouts:Emacs:
+**** Ergonomic Emacs
+***** DONE Ergonomic Emacs :Keyboards:AltKeyboardLayouts:Emacs:
 :PROPERTIES:
 :CUSTOM_ID: hyper-meh-keys
 :EXPORT_FILE_NAME: index.md
@@ -853,8 +924,8 @@ So, I made some tap-and-hold tweaks to my config, enabled the Chordal Hold and P
 
 As I am a little time-poor at the moment, I will stick with Doom Emacs for the moment and dump out my brain into this blog post so I can pick up the exploration a bit later when I have more time.
 
-** ZSA Pro Reds
-*** DONE ZSA Voyager with Pro Red Switches :Keyboards:AltKeyboardLayouts:
+**** ZSA Pro Reds
+***** DONE ZSA Voyager with Pro Red Switches :Keyboards:AltKeyboardLayouts:
 :PROPERTIES:
 :CUSTOM_ID: zsa-pro-red
 :EXPORT_FILE_NAME: index.md
@@ -866,19 +937,19 @@ As I am a little time-poor at the moment, I will stick with Doom Emacs for the m
 
 I have been so impressed with my [[#zsa-voyager-has-arrived][ZSA Voyager keyboard]] that I decided to buy a second one that I could leave set up at work. That meant I needed to think about what configuration to order.
 
-**** Switches
+****** Switches
 On my previous Voyager, I ordered it with the Choc Red 50g linear switches, which felt very smooth, but possibly a little on the heavy side for me. So, I decided to try swapping them out with some [[#new-choc-switches-have-arrived][Ambient Twilight]] 35g silent linear switches. I love those switches with their light touch and soft padding at the bottom of their travel.
 
 However, ZSA don't offer the Ambient switches as an option. I decided to order the new keyboard with the Choc Pro Red 35g linear switches, which have the same weight as the Ambient Twilights but without the sound damping/cushioning. I figured if I didn't like them, then I'd order another set of Twilights from a local supplier.
 
 When the new keyboard arrived, it only took a minute to update the firmware with my Graphite-like layout using ZSA's [[https://configure.zsa.io/voyager/layouts/34PvY/latest/0][Oryx web configuration tool]]. I was a little worried because I had read an online comment that the Pro Reds might feel a little "sloppy" or "mushy" compared to the Twilights. However, I didn't find that at all. The feeling is very similar to the Twilights except for the nice "clacking" sound and firmer feel at the end of the travel. If I was to order another Voyager I would definitely choose the Pro Reds again. I might at some stage get some more Twilights, but for now I'm quite happy sticking with the Pro Reds.
 
-**** Keycaps
+****** Keycaps
 The next decision was the type of key caps to order. On my other keyboard I ordered the blank keycaps because I wasn't sure which layout I would land on, and I wanted to encourage myself to touch-type. I have now pretty much settled on the [[#graphite-keyboard-layout][Graphite keyboard layout]], which drove me to order another set of blank keycaps. Why? Well, I really like the bumps on the keycaps of the homerow index fingers. If I ordered keycaps with letters on them, then the only keycaps with bumps are QWERTY (/F/ and /J/), COLEMAK (/T/ and /N/) and DVORAK (/U/ and /H/). So, it was a bit of a no-brainer to go for blank keycaps again. Having decided that, I also went for the same colour keyboard as my first one so that I could interchange keycaps between the two keyboards should that be necessary.
 
 Notice in the photo of the new keyboard I have replaced some of the blank caps with "special" keycaps provided as part of the blank keycap set. These aren't really needed at all, but may be helpful when trying to remember what functions I allocated to the outside row, and also on those occasions I try to use the keyboard when not in a proper touch-typing posture. The led lights also provide some hints, such as the location of the arrow keys on the navigation layer.
 
-**** Layout
+****** Layout
 As I just mentioned, I am pretty happy with my current Graphite layout, so I simply loaded that onto the new keyboard. However, one of the problems with that layout is that the modifiers and layer switching keys become a problem when playing games. Not that I play a lot of games, but I thought it was worth addressing the problem anyway. The solution was to come up with two "sticy" gaming layers that don't have any modifiers or layer switchers on the letter keys -- ond Graphite and the other QWERTY. Then the problem becomes, "how to enter and leave these new layers?".
 
 The solution I came up with was to use Combo keys on the number row at the top.
@@ -888,8 +959,8 @@ The solution I came up with was to use Combo keys on the number row at the top.
 
 So far I haven't noticed any false triggering, so I think this setup should be ok. For more detail on how I have set up my layers and combo keys, check out my [[https://configure.zsa.io/voyager/layouts/34PvY/latest/0][Oryx configuration page]], and feel free to clone it if you think it may be useful to you.
 
-** Japanese Electronic Dictionary XD-Z20000
-*** DONE Japanese Electronic Dictionary XD-Z20000 :Languages:Japanese:
+**** Japanese Electronic Dictionary XD-Z20000
+***** DONE Japanese Electronic Dictionary XD-Z20000 :Languages:Japanese:
 :PROPERTIES:
 :CUSTOM_ID: xd-z20000
 :EXPORT_FILE_NAME: index.md
@@ -901,7 +972,7 @@ So far I haven't noticed any false triggering, so I think this setup should be o
 
 Last time I talked about a [[#xd-g9850][science-related electronic dictionary]] that I bought in Japan. When I was there, I did a bit more research and discovered that I had rushed in too quickly and that there were other models that include more business and literature-related content that could be useful when studying Japanese. So, I purchased a second dictionary, the Casio XD-Z20000. So, how much of an upgrade was this compared to the scientific model XD-G9850? To answer this question, I listed out all the dictionaries, glossaries and encyclopedias from both models and put them in a table for comparison, which you can find below. It shows under which category each dictionary is found on the two devices. I didn 't bother looking at the English Training Gym sections, as English is already my native tongue, and hence I think it would be of little benefit to analyse it.
 
-**** Comparing Japanese Dictionaries
+****** Comparing Japanese Dictionaries
 So, what are the main differences between the two devices? Some observations I made were:
 - The Z20000 has almost all the content that the G9850 has, except for a couple of minor content that is likely already covered by other collections in the Z20000.
 - The Z20000 has more extensive English language dictionaries from Oxford.
@@ -911,10 +982,10 @@ So, what are the main differences between the two devices? Some observations I m
 
 So, what do I conclude? Well, I could have saved my money by going straight for the Z20000, and I wouldn't have missed anything of consequence. Having said that, realistically the G9850 has way more content than I could possibly need at my beginner level of Japanese, and everything would have been fine if I had just stuck with the G9850. Not to worry, it can serve as a back-up to the Z20000.
 
-**** What about Chinese?
+****** What about Chinese?
 When I was in Japan, I actually bought a third electronic dictionary, this one covering Chinese and Japanese. My Chinese level is even lower than my Japanese, but I thought that I could use such a dictionary to support the learning of both languages using the [[https://ai.glossika.com/blog/language-laddering][laddering technique]]. Chinese is probably a more useful language to me than Japanese, but somehow I find Japanese much more fun, which means I have trouble deciding which to focus on. As the girl says in a taco ad where her family argues between soft or hard taco shells, "Por qué no los dos?".
 
-**** Comparison Table
+****** Comparison Table
 
 |-----------------------------------+---------------------------+-----------------+-----------------|
 | 辞書                              | Description               | XD-G9850        | XD-Z20000       |
@@ -1087,8 +1158,8 @@ When I was in Japan, I actually bought a third electronic dictionary, this one c
 | 日経 TEST 公式練習問題集             | Nikkei Test Practice Qs   | ======          | 学習２           |
 |-----------------------------------+---------------------------+-----------------+-----------------|
 
-** Japanese Electronic Dictonary XD-G9850
-*** DONE Japanese Electronic Dictionary (Casio XD-G9850) :Languages:Japanese:
+**** Japanese Electronic Dictonary XD-G9850
+***** DONE Japanese Electronic Dictionary (Casio XD-G9850) :Languages:Japanese:
 :PROPERTIES:
 :CUSTOM_ID: xd-g9850
 :EXPORT_FILE_NAME: index.md
@@ -1099,9 +1170,9 @@ When I was in Japan, I actually bought a third electronic dictionary, this one c
 :END:
 When I was working in Japan, I took the opportunity to buy a Japanese Electronic dictionary (電子辞書, or denshi jisho). I went to the BIC Camera store in Akihabara, and bought a Casio EX-word dataplus 10 model XD-G9850 denshi jisho, which includes specialised dictionaries for Maths and Science.
 
-**** Why Use a Dedicated Dictionary?
+****** Why Use a Dedicated Dictionary?
 Why use a dedicated japanese dictionary instead of an app on a smart phone?
-***** Pros
+******* Pros
 - Has a long battery life (>120 hours), whereas a smart phone app will quickly drain your phone's battery
 - AA cells are readily available, and no need to wait for them to be recharged.
 - Can also power the dictionary via USB, and can use Eneloop rechargable batteries.
@@ -1112,12 +1183,12 @@ Why use a dedicated japanese dictionary instead of an app on a smart phone?
 - Can study Japanese without distractions from other smart phone apps/social media.
 - is optimised to allow fast lookup of words, and can easily look up unknown words in a definition using the "jump" (ジャンプ) and "back" (戻る) buttons.
 - has lots of example sentences in both Japanese and English to show how words are used.
-***** Cons
+******* Cons
 - Need to carry around an extra device
 - it doesn't have a cemera to analyse written kanji -- you need to handwrite the kanji yourself (which is actually good practice for you)
 - it doesn't have natural language processing, which means you need to be able to break a sentence up into individual words yourself.
 - The user interface is all in Japanese, and the device is optimised for Japanese people trying to learn English rather than English speakers trying to learn Japanese.
-**** Key Kanji
+****** Key Kanji
 Since user interface is all in Japanese, you need to be able to at least read /hiragana/ and /katakana/ to be able to use the dictionary. Some basic knowledge of /kanji/ is also helpful, but once you understand the basic lookup function, you can look up any kanji you don't know. Some kanji that are particularly important are:
 
 |-------+-------------------+-----------------------------------------------------------------------------|
@@ -1132,7 +1203,7 @@ Since user interface is all in Japanese, you need to be able to at least read /h
 
 So, looking at the first two kanji, if a dictionary has 「英和」 in its name, it is an English-to-Japanese dictionary, and 「和英」 would be a Japanese-to-English dictionary.
 
-**** Available Dictionaries/Modes
+****** Available Dictionaries/Modes
 Along the top row of the keyboard are some shortcut keys that give you quick access to various dictionaries and modes. Every button has two modes, so that is you press the button once you get the button's primary mode, and if you press it again you'll get its secomdary mode.
 
 By default, these shortcut buttons take you to the following dictionaries:
@@ -1171,7 +1242,7 @@ There are a number of other dictionaries that may be interesting, such as:
 
 It may be useful to use the google translate camera feature on your smartphone to explore the full list disctionaries available via the "menu" button.
 
-**** Further Info
+****** Further Info
 For more info on using this device, there is available an English-language quick reference sheet, which I attach below:
 
 #+hugo: {{< embed-pdf url="20250315-qrg-xd_g9850.pdf" >}}
@@ -1180,8 +1251,8 @@ The main userguide is available in Japanese only from the [[https://www.casio.co
 
 Hopefully though between the english quick reference guide and the info here, you are in a good position to start making use of this useful device with your study of the Japanese language.
 
-** Island Song
-*** DONE Island Song :Music:
+**** Island Song
+***** DONE Island Song :Music:
 :PROPERTIES:
 :EXPORT_FILE_NAME: index.md
 :EXPORT_HUGO_BUNDLE: 20250302-island_song
@@ -1361,8 +1432,8 @@ The next step was to record each part. I used a metronome in my earbuds to try t
 I think it starts out ok, but later in the piece the timing seems a bit off and it starts to fall apart a bit. Even though the result was not great, it was my first attempt at making such a video and I had a lot of fun reliving my days of playing the recorder in the Sydney Opera House :-)
 
 
-** A Study in Scarlet
-*** DONE A Study in Scarlet :Languages:Shavian:
+**** A Study in Scarlet
+***** DONE A Study in Scarlet :Languages:Shavian:
 :PROPERTIES:
 :EXPORT_FILE_NAME: index.md
 :EXPORT_HUGO_BUNDLE: 20250301_study-in-scarlet
@@ -1391,7 +1462,7 @@ The other side from reading is learning to write in the Shavian alphabet. I will
 
 There are other books published in Shavian, such as Alice in Wonderland and Jane Austen's Pride and Prejudice, which I look forward reading once I finish the Sherlock Homes story. I'll keep you posted how I go!
 
-*** DONE 𐑩 𐑕𐑑𐑳𐑛𐑦 𐑦𐑯 𐑕𐑒𐑸𐑤𐑩𐑑 :𐑖𐑱𐑝𐑾𐑯:
+***** DONE 𐑩 𐑕𐑑𐑳𐑛𐑦 𐑦𐑯 𐑕𐑒𐑸𐑤𐑩𐑑 :𐑖𐑱𐑝𐑾𐑯:
 :PROPERTIES:
 :EXPORT_FILE_NAME: index.en-shaw.md
 :EXPORT_HUGO_BUNDLE: 20250301_study-in-scarlet
@@ -1421,8 +1492,8 @@ There are other books published in Shavian, such as Alice in Wonderland and Jane
 𐑞𐑺 𐑸 𐑳𐑞𐑼 𐑚𐑫𐑒𐑕 𐑐𐑳𐑚𐑤𐑦𐑖𐑑 𐑦𐑯 ·𐑖𐑱𐑝𐑾𐑯, 𐑕𐑳𐑗 𐑨𐑟 ·𐑨𐑤𐑦𐑕 𐑦𐑯 𐑢𐑳𐑯𐑛𐑼𐑤𐑨𐑯𐑛 𐑯 ·𐑡𐑱𐑯 𐑪𐑕𐑑𐑩𐑯𐑟 ·𐑐𐑮𐑲𐑛 𐑯 𐑐𐑮𐑧𐑡𐑩𐑛𐑦𐑕, 𐑢𐑦𐑗 𐑲 𐑤𐑫𐑒 𐑓𐑹𐑢𐑼𐑛 𐑑 𐑮𐑰𐑛𐑦𐑙 𐑢𐑳𐑯𐑕 𐑲 𐑓𐑦𐑯𐑦𐑖 𐑞 ·𐑖𐑻𐑤𐑪𐑒 𐑣o𐑥𐑟 𐑕𐑑𐑹𐑦. 𐑲𐑤 𐑒𐑰𐑐 𐑿 𐑐o𐑕𐑑𐑩𐑛 𐑣𐑬 𐑲 𐑜o!
 
 
-** Graphite Layout on Corne Keyboard
-*** DONE Graphite Layout on Corne Keyboard :Computers:Keyboards:Corne:AltKeyboardLayouts:
+**** Graphite Layout on Corne Keyboard
+***** DONE Graphite Layout on Corne Keyboard :Computers:Keyboards:Corne:AltKeyboardLayouts:
 :PROPERTIES:
 :CUSTOM_ID: graphite-layout-corne
 :EXPORT_FILE_NAME: index
@@ -1454,8 +1525,8 @@ Some remarks:
 
 On my [[https://github.com/matt-maguire/kbd_firmware/tree/custom/keyboards/crkbd/vial-kb][GitHub]] you can find a link to the corresponding Vial Layout file [[https://github.com/matt-maguire/kbd_firmware/blob/custom/keyboards/crkbd/vial-kb/graphite_homerow_layer.vil][=graphite_homerow_layer.vil=]].
 
-** Exporting Org Mode Tables to LaTeX
-*** DONE Exporting Org Mode Tables to LaTeX :Emacs:OrgMode:LaTeX:Teaching:
+**** Exporting Org Mode Tables to LaTeX
+***** DONE Exporting Org Mode Tables to LaTeX :Emacs:OrgMode:LaTeX:Teaching:
 :PROPERTIES:
 :CUSTOM_ID: orgmode-tables
 :EXPORT_FILE_NAME: index
@@ -1507,8 +1578,8 @@ If we then export to PDF, the table will look like this:
 
 As I said before, /tblr/ is a convenient modern way to specify $\LaTeX$ tables, and it is a very powerful package. For more information about what it can do, check out the /tabularray/ [[https://mirror.aarnet.edu.au/pub/CTAN/macros/latex/contrib/tabularray/tabularray.pdf][documentation]].
 
-** Using Org Mode for Lesson Notes
-*** DONE Using Org Mode / LaTeX for Lesson Notes :Emacs:OrgMode:LaTeX:Teaching:
+**** Using Org Mode for Lesson Notes
+***** DONE Using Org Mode / LaTeX for Lesson Notes :Emacs:OrgMode:LaTeX:Teaching:
 :PROPERTIES:
 :CUSTOM_ID: orgmode-lesson-notes
 :EXPORT_FILE_NAME: index
@@ -1521,12 +1592,12 @@ Over the past year, I have been using $\LaTeX$ together with Emacs to produce le
 
 The other thing I was experimenting with last year was Emacs' Org Mode. This is a text "markdown" language that lets you structure your documents with headings that can be expanded and collapsed, so that you can quickly navigate documents, hide unneeded detail and focus on what's important in the here-and-now. The articles in this blog website are all written in Org Mode, and are then exported and pushed to the web. I was wondering whether Org Mode might allow me to more easily navigate the $\LaTeX$ lesson notes that I have been producing and generate PDF documents for printing.
 
-**** The Case for Org Mode
+****** The Case for Org Mode
 A bit of research revealed that Org Mode text files can indeed be exported to $\LaTeX$ that can then be used to generate nice PDF documents. Org Mode is $\LaTeX$-aware, so that if you need to fall back on $\LaTeX$ features that go beyond what the simple Org Mode document format can handle, you can easily include necessary snippets of $\LaTeX$ code. The Babel feature of Org Mode also allows you to embed code and content produced by other programming languages such as Gnuplot, Python and Lisp. The simplicity of Org Mode's markdown language, its ability to manage complexity through its outlining mode and the flexibility in integrating other programming languages makes for a compelling case in producing maths-based content.
 
 Another option I looked at was [[https://typst.app/][Typst]], a newer markdown-based solution for writing technical documnents. The basic markdown compiler is open-source and can be installed for free on your computer, but the full web-based service is a commercial offering. While the markdown language looks nice, the tool is not as mature as $\LaTeX$/TiKZ, and there would be something of a learning curve to get across [[https://github.com/johannes-wolf/cetz][CetZ]], which is Typst's answer to $\LaTeX$'s [[https://tikz.net/][TiKZ]] graphics package. Given that I am already using $\LaTeX$ and Org Mode in spearate spheres of my work, I decided that it makes sense to combine these two tools.
 
-**** Setting Up Org Mode to Use $\LaTeX$'s /exesheet/ class
+****** Setting Up Org Mode to Use $\LaTeX$'s /exesheet/ class
 
 The $\LaTeX$ documents I have been using are based on the $\LaTeX$ [[https://ctan.org/pkg/exesheet][exesheet]] package. This allows me to easily typeset groups of problems either in single or multi-column mode. By default Org Mode uses the $\LaTeX$ /article/ document class, so the first step was to see if I could get Org Mode to use the /exesheet/ class and its associated features. The approach I used is described in the following useful video:
 
@@ -1592,14 +1663,14 @@ After the packages, I then have some macro definitions:
 -   The ~cloze~ macro (line 3) lets me easily create an underlined blank space for students to fill in during the lesson.
 -   The ~notes~ macro (lines 5-14) allows me to create a set of lines for students to write their working out. I tend not to use this much, preferring to just leave some blank space for students to draw and write in as they wish.
 
-**** Let's Make a Lesson!
+****** Let's Make a Lesson!
 Now that we've done the set-up, let's put together some lesson notes. The first thing is to create a file ending in ~.org~ and refer to the setup file we just made:
 
 #+begin_src
 ,#+SETUPFILE: lesson-preamble.org
 #+end_src
 
-***** Title and Lesson Intentions
+******* Title and Lesson Intentions
 We will now create a Org section to display the lesson title and learning intentions:
 
 #+begin_src org
@@ -1628,7 +1699,7 @@ Students will:
 
 - On line 12 I give a textbook reference that I normally highlight using italics, which in Org Mode is achieve by bracketing the text with ~/~ symbols (much nicer than writing ~\emph{italic text}~, isn't it?).
 
-***** Warm up/Do Now
+******* Warm up/Do Now
 Most teachers understand the benefit of giving students something to get started on as soon as they sit down, the so-called "Do Now" activity. It not only helps students transition into the lesson; it also allows for some "formative assessment" to determine how well the students understand the previously-covered material.
 
 I like to put the "Do Now" activity on the front page in a box. So, let's write a heading and give the student some warm-up exercises to do.
@@ -1680,7 +1751,7 @@ I like to put the "Do Now" activity on the front page in a box. So, let's write 
 
   One problem with ~after-skip~ is that if you don't continue with a normal paragraph, the space at the end gets "swallowed up" by $\LaTeX$. A hack you can use is to put an invisible white space at the end using the ~#+latex: ~~ like I did in line 21.
 
-***** Lesson Body
+******* Lesson Body
 Now we can get to the meat of the lesson.
 
 #+begin_src org
@@ -1745,7 +1816,7 @@ Here you see the Org Mode headings being translated to the different sections an
 
 - I've included a TikZ diagram, just to show how you can freely insert $\LaTeX$ code as needed.
 
-***** Set Some Classwork/Homework
+******* Set Some Classwork/Homework
 
 Finally, you might want to set the students some exercises from the textbook.
 
@@ -1757,21 +1828,21 @@ Year 12 Awesome Maths Textbook
 ,#+end_tcolorbox
 #+end_src
 
-**** Export to PDF
+****** Export to PDF
 
 Now that we have written up our lesson notes, we can export to LaTeX/PDF. To make a PDF file, I might type something like ~C-c C-e l p~, and I will get a PDF lookin something like this.
 
 #+hugo: {{< embed-pdf url="20250105_example-lesson.pdf" >}}
 
-**** Final Thoughts
+****** Final Thoughts
 The examples I gave were heavy in LaTeX code because I wanted to showcase the sorts of things that could be done when exporting from Org Mode. Overall, the collapsible headings in Org Mode make it easy to find your way around a complicated document, and it is possible to add even more Org Mode headings with the ~:ignore:~ tag if you want to make certain parts of the document collapsible.
 
 I didn't show any examples of tables. Org Mode has a powerful table editor which makes tables much easier to produce and manage, and if you want to customise the look of a table, you can use the ~#+attr_latex:~ directive to tell Org Mode to use the powerful ~tblr~ package that all $\LaTeX$ users should learn about if they haven't already.
 
 One thing I would like to explore further is the embedding of code to generate content -- for example, to produce tables of $z$-values programatically.
 
-** Graphite Keyboard Layout
-*** DONE Graphite Keyboard Layout :Computers:Keyboards:AltKeyboardLayouts:
+**** Graphite Keyboard Layout
+***** DONE Graphite Keyboard Layout :Computers:Keyboards:AltKeyboardLayouts:
 :PROPERTIES:
 :CUSTOM_ID: graphite-keyboard-layout
 :EXPORT_FILE_NAME: index
@@ -1782,7 +1853,7 @@ One thing I would like to explore further is the embedding of code to generate c
 I've been using the [[#update-gallium-keyboard-layout][Gallium keyboard layout]] for a couple of months now, and I'm pretty happy with it for typing letters. However, I've been curious whether I could do any better in terms of punctuation. This has led me to investigate the Graphite layout to see what I might be missing out on.
 #+hugo: more
 
-**** Why I Care
+****** Why I Care
 The Graphite layout is very similar to Gallium, but has some optimisations concerning punctuation. I've been keen to try it out, but something has been holding me back. To understand, let's take a look at Graphite mapped to a $6 \times 4$ split keyboard like the ZSA Voyager:
 
 #+begin_example
@@ -1811,22 +1882,22 @@ The issue was that keyboards don't send characters; they send scancodes. If for 
 
 So, if you want this logic to be handled by your keyboard so that when you press ~shift~ and ~/~ your application sees a ~<~ character, your keyboard needs to detect when you press ~shift~ and ~/~, and then 'lie' to your computer by sending the scancodes for the ~shift~ and ~,~ (comma) keys so that the OS sends your application a ~<~ character. The feature in QMK which allows your keyboard to lie in such a manner is called [[https://docs.qmk.fm/features/key_overrides][Key Overrides]]. This feature is easily configured on a keyboard running QMK Vial (like my Corne), but it is unfortunately not supported by ZSA's Oryx web configutation tool. I wanted to keep all my keyboard layouts as consistent as possible, and I wanted to continue using the Oryx configuration tool, so I was hesitant to move to Graphite. However, a small ray of hope soon arrived in my email inbox...
 
-**** A Glimmer of Hope from ZSA
+****** A Glimmer of Hope from ZSA
 As a ZSA customer, I receive from them a regular newsletter from them, which led me to an article with the title "[[https://blog.zsa.io/oryx-custom-qmk-features/][Using a DIY tool to add custom features to your Oryx layout]]". This sounded just like what I was waiting for!
 
 The concept is that you maintain the majority of your layout using the Oryx web configutator. However, if you want to enable an additional "unsupported" feature -- like, say, key overrides -- you take the QMK code generated by Oryx and merge in your desired changes into the keymap code. The author of the article provides instructions and scripts that help to automate this process. I had previously built custom QMK firmware for my Corne keyboards with no issues, so I was keen to give this a try.
 
 I followed the instructions in the article and soon had a customised build of my Oryx layout with the required key overrides enabled and configured. I flashed the new firmware to my Voyager, and it sprung back to life... until I pressed a key, that is. The keyboard froze! The firmware would initiase, but it would crash as soon as I tried to type something. I experimented, thinking I may have messed up the key override code, but it would crash even when I didn't make any changes to the base Oryx code. There could be an issue with the build scripts/tools supplied by the author of the article, but I didn't have time to try to debug it and instead decided to stick with the Gallium layout that was already serving me quite well.
 
-**** A New Way Forward (aka "Tap Dancing" around the problem)
+****** A New Way Forward (aka "Tap Dancing" around the problem)
 I continued to use my Gallium layout, writing lesson notes for my students in $\LaTeX$, and I wondered how the Graphite layout would perhaps make it easier to type all that $\LaTeX$ code. A new idea started to form: what if, instead of messing around with shifted punctuation, I used the "tap dance" feature to implement the required key mappings for my punctuation? This would be similar to the "Auto Caps" feature where you hold down a key to get its shifted version. Tap-dance has the flexibility to output whatever scancode(s) you like when you hold down a key. An added benefit is that I can still use the
 
 This was very easy to implement using the Oryx tool, and doesn't require the use of and unsupported/untested features that could mess with the stability of my keyboard. I applied the needed changes to my Oryx layout, and you can inspect it using the following [[https://configure.zsa.io/voyager/layouts/34PvY/latest/0][Oryx link]].
 
 I'm going to perservere with this new layout for a while, and I'll report back here how it goes!
 
-** Migrating my Blog from Wordpress to Org Mode
-*** DONE Migrating my Blog from Wordpress to Org Mode :Emacs:OrgMode:Languages:Esperanto:Shavian:
+**** Migrating my Blog from Wordpress to Org Mode
+***** DONE Migrating my Blog from Wordpress to Org Mode :Emacs:OrgMode:Languages:Esperanto:Shavian:
 :PROPERTIES:
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20241226_org-mode-blog
@@ -1850,7 +1921,7 @@ If you feel like a bit of a chuckle, check out this video on the ubiquitousness 
 
 #+hugo: {{< youtube urcL86UpqZc >}}
 
-*** DONE 𐑥𐑲𐑜𐑮𐑱𐑑𐑦𐑙 𐑥𐑲 𐑚𐑤𐑪𐑜 𐑓𐑮𐑪𐑥 ·𐑢𐑻𐑛𐑐𐑮𐑧𐑕 𐑑 ·𐑹𐑜 𐑥𐑴𐑛 :𐑰𐑥𐑨𐑒𐑕:𐑹𐑜𐑥𐑴𐑛:𐑧𐑕𐑐𐑼𐑭𐑯𐑑𐑴:𐑖𐑱𐑝𐑾𐑯:
+***** DONE 𐑥𐑲𐑜𐑮𐑱𐑑𐑦𐑙 𐑥𐑲 𐑚𐑤𐑪𐑜 𐑓𐑮𐑪𐑥 ·𐑢𐑻𐑛𐑐𐑮𐑧𐑕 𐑑 ·𐑹𐑜 𐑥𐑴𐑛 :𐑰𐑥𐑨𐑒𐑕:𐑹𐑜𐑥𐑴𐑛:𐑧𐑕𐑐𐑼𐑭𐑯𐑑𐑴:𐑖𐑱𐑝𐑾𐑯:
 :PROPERTIES:
 :EXPORT_FILE_NAME: index.en-shaw.md
 :EXPORT_HUGO_BUNDLE: 20241226_org-mode-blog
@@ -1873,7 +1944,7 @@ If you feel like a bit of a chuckle, check out this video on the ubiquitousness 
 
 #+hugo: {{< youtube urcL86UpqZc >}}
 
-*** DONE Migrating Blog from Wordpress to Org Mode :Emacs:OrgMode:Lingvoj:Esperanto:Ŝava:
+***** DONE Migrating Blog from Wordpress to Org Mode :Emacs:OrgMode:Lingvoj:Esperanto:Ŝava:
 :PROPERTIES:
 :EXPORT_FILE_NAME: index.eo.md
 :EXPORT_HUGO_BUNDLE: 20241226_org-mode-blog
@@ -1896,8 +1967,8 @@ Se vi volas ion por ridetigi vin, spektu la suban videon pri la ĉiel utila Emac
 
 #+hugo: {{< youtube urcL86UpqZc >}}
 
-** Updates to Gallium Keyboard Layout
-*** DONE Updates to Gallium Keyboard Layout :Computers:Keyboards:AltKeyboardLayouts:
+**** Updates to Gallium Keyboard Layout
+***** DONE Updates to Gallium Keyboard Layout :Computers:Keyboards:AltKeyboardLayouts:
 :PROPERTIES:
 :CUSTOM_ID: update-gallium-keyboard-layout
 :EXPORT_FILE_NAME: index
@@ -1925,8 +1996,8 @@ Some other discoveries I made recently from Ben’s new video and from other sou
 - If you want to get a “feel” for a new layout without going to the full effort of learning it, there is a web tool you can use to translate a target text into the equivalent letters you would need to press on your existing layout. The tool can be found at: https://keyboard-layout-try-out.pages.dev/
 - The Gallium layout has just been released in DreymaR’s [[https://github.com/DreymaR/BigBagKbdTrixPKL/tree/master/Layouts/Gallium][EPKL key mapping tool]]. This tool is Windows-based, which means that I have very little use for it myself. One of the cool features it has though is the Extend layer which converts the mostly useless CAPSLOCK key into a layer-switching key. This is such a useful feature, which I have implemented on my macbook using [[https://karabiner-elements.pqrs.org/][Karabiner Elements]]. The config file I use is available in [[https://github.com/matt-maguire/kbd_firmware/blob/custom/keyboards/crkbd/vial-kb/karabiner.json][my github]].
 
-** Gallium Keyboard Layout
-*** DONE Gallium Keyboard Layout :Computers:Keyboards:AltKeyboardLayouts:
+**** Gallium Keyboard Layout
+***** DONE Gallium Keyboard Layout :Computers:Keyboards:AltKeyboardLayouts:
 :PROPERTIES:
 :CUSTOM_ID: gallium-keyboard-layout
 :EXPORT_FILE_NAME: index
@@ -1973,8 +2044,8 @@ Before I had the “Shift” modifier on a left thumb key and the “Control” 
 
 I’m going to spend a little time building some fluency with this new layout to see if it is really worthwhile compared to ISRT, and will keep you updated here on what I discover.
 
-** New Choc Switches Have Arrived!
-*** DONE New Choc Switches Have Arrived! :Computers:Keyboards:
+**** New Choc Switches Have Arrived!
+***** DONE New Choc Switches Have Arrived! :Computers:Keyboards:
 :PROPERTIES:
 :CUSTOM_ID: new-choc-switches-have-arrived
 :EXPORT_HUGO_BUNDLE: 20240914_new-choc-switches-have-arrived
@@ -2004,7 +2075,7 @@ In my Corne 5×3 keyboard, I still have the Choc Brown switches that the keyboar
 
 I think I’ll eventually swap them out for some spare Choc Red switches that I ordered, but for now I’ll leave the Choc Browns in place so I have a baseline point of comparison.
 
-*** DONE 𐑯𐑿 ·𐑗𐑪𐑒 𐑕𐑢𐑦𐑗𐑩𐑟 𐑣𐑨𐑝 𐑼𐑲𐑝𐑛! :𐑒𐑩𐑥𐑐𐑿𐑑𐑼𐑟:𐑒𐑰𐑚𐑹𐑛𐑟:
+***** DONE 𐑯𐑿 ·𐑗𐑪𐑒 𐑕𐑢𐑦𐑗𐑩𐑟 𐑣𐑨𐑝 𐑼𐑲𐑝𐑛! :𐑒𐑩𐑥𐑐𐑿𐑑𐑼𐑟:𐑒𐑰𐑚𐑹𐑛𐑟:
 :PROPERTIES:
 :CUSTOM_ID: new-choc-switches-have-arrived.en-shaw
 :EXPORT_HUGO_BUNDLE: 20240914_new-choc-switches-have-arrived
@@ -2035,8 +2106,8 @@ I think I’ll eventually swap them out for some spare Choc Red switches that I 
 
 𐑲 𐑔𐑦𐑙𐑒 𐑲𐑤 𐑩𐑝𐑧𐑯𐑗𐑩𐑤𐑦 𐑕𐑢𐑪𐑐 𐑞𐑧𐑥 𐑬𐑑 𐑓 𐑕𐑳𐑥 𐑕𐑐𐑺 ·𐑗𐑪𐑒 𐑮𐑧𐑛 𐑕𐑢𐑦𐑗𐑩𐑟 𐑞𐑨𐑑 𐑲 𐑹𐑛𐑼𐑛, 𐑚𐑳𐑑 𐑓 𐑯𐑬 𐑲𐑤 𐑤𐑰𐑝 𐑞 ·𐑗𐑪𐑒 𐑚𐑮𐑬𐑯𐑟 𐑦𐑯 𐑐𐑤𐑱𐑕 𐑕𐑴 𐑲 𐑣𐑨𐑝 𐑩 𐑚𐑱𐑕𐑤𐑲𐑯 𐑐𐑶𐑯𐑑 𐑝 𐑒𐑩𐑥𐑐𐑨𐑮𐑦𐑕𐑩𐑯.
 
-** ZSA Voyager has arrived!
-*** DONE ZSA Voyager has arrived! :Computers:Keyboards:
+**** ZSA Voyager has arrived!
+***** DONE ZSA Voyager has arrived! :Computers:Keyboards:
 :PROPERTIES:
 :CUSTOM_ID: zsa-voyager-has-arrived
 :EXPORT_FILE_NAME: index
@@ -2075,8 +2146,8 @@ I have to say, I am loving these Choc Red switches! They are so buttery-smooth c
 
 In the meantime, I will keep working on building typing speed on my ISRT layout. It is slow progress, but I am getting more and more comfortable with it as I use it for my daily work.
 
-** Home Row Layer Keys
-*** DONE Home Row Layer Keys :Computers:Keyboards:AltKeyboardLayouts:
+**** Home Row Layer Keys
+***** DONE Home Row Layer Keys :Computers:Keyboards:AltKeyboardLayouts:
 :PROPERTIES:
 :CUSTOM_ID: home-row-layer-keys
 :EXPORT_FILE_NAME: index
@@ -2106,7 +2177,7 @@ I opted for a blend between the 34-key sticky layer and Miryoku layous.
 
 These considerations have led to the following layout:
 
-**** BASE (Layer 0)
+****** BASE (Layer 0)
 #+begin_example
 |-----+------+------+------+------+------+------+---+------+------+------+------+------+------+-----|
 |     |      | LCtl | LAlt | LCmd |      | ▒▒▒▒ | ▒ | ▒▒▒▒ |      | RCmd | RAlt | RCtl |      |     |
@@ -2122,7 +2193,7 @@ These considerations have led to the following layout:
 |-----+------+------+------+------+------+------+---+------+------+------+------+------+------+-----|
 #+end_example
 
-**** NUM (Layer 1)
+****** NUM (Layer 1)
 
 #+begin_example
 |-----+------+------+------+------+------+------+---+------+------+------+------+------+------+-----|
@@ -2136,7 +2207,7 @@ These considerations have led to the following layout:
 |-----+------+------+------+------+------+------+---+------+------+------+------+------+------+-----|
 #+end_example
 
-**** SYM (Layer 2)
+****** SYM (Layer 2)
 
 #+begin_example
 |-----+------+------+------+------+------+------+---+------+------+------+------+------+------+-----|
@@ -2150,7 +2221,7 @@ These considerations have led to the following layout:
 |-----+------+------+------+------+------+------+---+------+------+------+------+------+------+-----|
 #+end_example
 
-**** FUN (Layer 3)
+****** FUN (Layer 3)
 
 #+begin_example
 |-----+------+------+------+------+------+------+---+------+------+------+------+------+------+-----|
@@ -2164,7 +2235,7 @@ These considerations have led to the following layout:
 |-----+------+------+------+------+------+------+---+------+------+------+------+------+------+-----|
 #+end_example
 
-**** ADJ (Layer 4)
+****** ADJ (Layer 4)
 
 #+begin_example
 |-----+------+------+------+------+------+------+---+------+------+------+------+------+------+-----|
@@ -2182,8 +2253,8 @@ The layout works for both 6×3 standard and 5×3 mini keyboards. There are some 
 
 As usual, the Vial layout is on my [[https://github.com/matt-maguire/kbd_firmware/tree/custom/keyboards/crkbd/vial-kb][github repo]].
 
-** ISRT Keyboard Layout
-*** DONE ISRT Keyboard Layout :Computers:Keyboards:Corne:AltKeyboardLayouts:
+**** ISRT Keyboard Layout
+***** DONE ISRT Keyboard Layout :Computers:Keyboards:Corne:AltKeyboardLayouts:
 :PROPERTIES:
 :CUSTOM_ID: isrt-keyboard-layout
 :EXPORT_FILE_NAME: index
@@ -2196,7 +2267,7 @@ I have been training on the Colemak-DH layout with my Corne keyboards, and I am 
 
 I did notice that he is still using the ISRT layout even after so many iterations of his setup. Some of the Colemak-DH sequences involving my ring and pinkie fingers are not feeling so great, so I thought I’d look a bit into this ISRT setup before Colemak-DH becomes too ingrained.
 
-**** ISRT Layout
+****** ISRT Layout
 
 The original creator of the ISRT layout is no longer promoting it, and has taken down his web page. However, thanks to the magic of Wayback Machine, a copy has been archived [[https://web.archive.org/web/20230203194545/https://notgate.github.io/layout/][here]].
 
@@ -2239,7 +2310,7 @@ ANSI Keyboard (wide angle mod):
 
 I set up the wide and regular angle mod layouts in Karabiner on my Mac. In the end, I didn’t like the wide angle mod, as you have to move both the X as well as the Q to the centre of the bottom row. If I use ISRT on my Macbook’s keyboard, I’ll just use the regular angle mod version. I imagine though that mostly I’ll be using the Corne keyboard instead.
 
-**** Pros and Cons of the Layout
+****** Pros and Cons of the Layout
 
 So, are there any benefits to the ISRT layout compared to Colemak-DH? A bit of a search on the Internet turned up an interesting [[https://bit.ly/layout-doc-v2][Keyboard Layouts]] document (that one is second edition; the [[https://docs.google.com/document/d/1_a5Nzbkwyk1o0bvTctZrtgsee9jSP-6I0q3A0_9Mzm0/edit?usp=sharing][first edition]] is more graphics-heavy). Some other information I found was from a Reddit post and some analysis on https://keyboard-design.com.
 
@@ -2257,7 +2328,7 @@ To summarise, the key points about ISRT are:
 
 So, what was it actually like to type on?
 
-**** Trying it out
+****** Trying it out
 
 Because I wasn’t sure if I would want to commit to a layout that has effectively been abondoned by its creator, I decided to write the keymap to the right hand side fontrollers of my Corne keyboards. This means that if I plug the left half of the keyboard to my computer’s USB port, I get Colemak-DH, and if I connect the right half to the computer I get ISRT. Because I am using 10 layer Miryoku setup with both layouts, I needed to reflash the Vial firmware on the right hand controller so it could support all 10 layers. I then took my [[https://github.com/matt-maguire/kbd_firmware/tree/custom/keyboards/crkbd/vial-kb][Vial layout file]] for my Colemak-DH setup, copied it to the right hand controller, and used the Vial GUI to remap the letters. I created Vial layouts for both my full size and mini Corne v4 keyboards.
 
@@ -2265,7 +2336,7 @@ I found it a bit confusing that the A and I keys were swapped, as were the R and
 
 I have to say though, I do like the feel of this ISRT layout better than Colemak-DH. I don’t feel so much tension in my ring and little finger typing the ION and YOU trigrams. I think this is the layout I am going to move forward with.
 
-**** Getting up to speed on ISRT
+****** Getting up to speed on ISRT
 
 So, how can I get better at typing on the ISRT layout?
 
@@ -2275,8 +2346,8 @@ I am currently using two websites to help with this:
 
 - https://monkeytype.com: this website DOES support ISRT! I was quite surprised. It is possible to set up a custom wordset, where one of the english language corpuses is filtered to include only letters from the ISRT home row. As my typing improves, I can gradually move letters from the excluded list to the list of allowed letters, and then the site behaves in a similar way to keybr.com (albeit without the per-letter statistics and adaptive letter focus).
 
-** Corne V4.1 Mini
-*** DONE Corne V4.1 Mini :Keyboards:Corne:
+**** Corne V4.1 Mini
+***** DONE Corne V4.1 Mini :Keyboards:Corne:
 :PROPERTIES:
 :CUSTOM_ID: corne-v4-mini
 :EXPORT_FILE_NAME: index
@@ -2303,8 +2374,8 @@ I have loaded the full miryoku layout into the left-hand side of both keyboards,
 
 You can find the firmware tweaks and keyboard layouts I am using in my [[https://github.com/matt-maguire/kbd_firmware/tree/custom/keyboards/crkbd/vial-kb][GitHub repository]] (“custom” branch has my changes; “main” branch tracks the vanilla upstream code).
 
-** Corne V4 Update
-*** DONE Corne V4 Update :Keyboards:Corne:
+**** Corne V4 Update
+***** DONE Corne V4 Update :Keyboards:Corne:
 :PROPERTIES:
 :CUSTOM_ID: corne-v4-update
 :EXPORT_FILE_NAME: index
@@ -2332,8 +2403,8 @@ I went through the Miryoku source code to understand all the features used for t
 I've since learned that one important difference between rev 4.0 and 4.1 is that r4.0 uses a ''TRRS'' (tip-ring-ring-sleeve) full duplex interconnecting cable, whereas r4.1 uses a ''TRS'' half-duplex interconnecting cable. I believe this change was made due to a shortage of TRRS sockets on the market, and it explains why my 4.1 TRS board couldn't communicate properly when flashed with 4.0 TRRS firmware.
 #+end_admonition
 
-** 34 Key Layout for Corne Keyboard
-*** DONE 34 Key Layout for Corne Keyboard :Computers:Keyboards:Corne:AltKeyboardLayouts:
+**** 34 Key Layout for Corne Keyboard
+***** DONE 34 Key Layout for Corne Keyboard :Computers:Keyboards:Corne:AltKeyboardLayouts:
 :PROPERTIES:
 :CUSTOM_ID: 34-key-layout-for-corne-keyboard
 :EXPORT_FILE_NAME: index
@@ -2368,8 +2439,8 @@ I put some backspace and delete shortcuts on the outer thumb keys for convenienc
 
 As I use the keyboard more, I’ll get a better idea what else I will need to add as well as what I can strip away. I’ll post more updates here as I learn more.
 
-** Corne v4 Keyboard Keymap
-*** DONE Corne v4 Keyboard Keymap :Computers:Keyboards:Corne:AltKeyboardLayouts:
+**** Corne v4 Keyboard Keymap
+***** DONE Corne v4 Keyboard Keymap :Computers:Keyboards:Corne:AltKeyboardLayouts:
 :PROPERTIES:
 :CUSTOM_ID: corne-v4
 :EXPORT_FILE_NAME: index
@@ -2394,31 +2465,31 @@ The firmware in this keyboard only supports 5 extra layers on top of the BASE la
 
 The layers can be programmed with a user-friendly open-source app. The screenshots below show the various layers I initially set up on the keyboard:
 
-**** BASE Layer (LT0):
+****** BASE Layer (LT0):
 
 [[file:20240711-LT0.png]]
 
-**** NAV Layer (LT1):
+****** NAV Layer (LT1):
 
 [[file:20240711-LT1.png]]
 
-**** MEDIA Layer (LT2):
+****** MEDIA Layer (LT2):
 
 [[file:20240711-LT2.png]]
 
-**** NUM Layer (LT3):
+****** NUM Layer (LT3):
 
 [[file:20240711-LT3.png]]
 
-**** SYM Layer (LT4):
+****** SYM Layer (LT4):
 
 [[file:20240711-LT4.png]]
 
-**** FUN Layer (LT5):
+****** FUN Layer (LT5):
 
 [[file:20240711-LT5.png]]
 
-**** Next Steps:
+****** Next Steps:
 
 This is just an initial proposal, which may well change over time as a get more experience. Things I will be working on going forward:
 
@@ -2431,8 +2502,8 @@ This is just an initial proposal, which may well change over time as a get more 
 - Build a smaller keyboard from parts so I can leave the Corne at home and carry a travel-friendly version. When using other PCs, it may not be convenient or even possible to play with keymaps, whereas a physical keyboard just needs to be plugged in and the PC will be none the wiser about your customised key mapping.
 
 I’ll post updates here as I gain more experience and have something to report.
-** Learn Japanese with Song Lyrics (Houki Boshi from Bleach)
-*** DONE Learn Japanese with Song Lyrics (Houki Boshi from Bleach) :Music:Languages:Japanese:
+**** Learn Japanese with Song Lyrics (Houki Boshi from Bleach)
+***** DONE Learn Japanese with Song Lyrics (Houki Boshi from Bleach) :Music:Languages:Japanese:
 :PROPERTIES:
 :CUSTOM_ID: houki-boshi
 :EXPORT_FILE_NAME: index
@@ -2460,8 +2531,8 @@ You may notice that the live performance above leaves out the first two lines of
 
 Studying song lyrics is a great way to gain more exposure to a language, and is lots of fun!
 
-** How to calculate the series resistor for an LED
-*** DONE How to calculate the series resistor for an LED :HamRadio:
+**** How to calculate the series resistor for an LED
+***** DONE How to calculate the series resistor for an LED :HamRadio:
 :PROPERTIES:
 :CUSTOM_ID: led-series-resistor
 :EXPORT_FILE_NAME: index
@@ -2529,8 +2600,8 @@ This is still acceptable. So, we have now completed our circuit design:
 
 [[file:20220202-quicklatex.com-fecf716ddc8012b94614dba19222cab7_l3.svg]]
 
-** It's a Heartache
-*** DONE It's a Heartache :Music:
+**** It's a Heartache
+***** DONE It's a Heartache :Music:
 :PROPERTIES:
 :CUSTOM_ID: its-a-heartache
 :EXPORT_FILE_NAME: index
@@ -2547,8 +2618,8 @@ I was keen to learn how to play something like it on my own ukulele, and a furth
 
 #+hugo: {{< embed-pdf url="20220130-heartache-tab.pdf" >}}
 
-** Digital Photography for Hams
-*** DONE Digital Photography for Hams :Photography:HamRadio:
+**** Digital Photography for Hams
+***** DONE Digital Photography for Hams :Photography:HamRadio:
 :PROPERTIES:
 :CUSTOM_ID: photography-for-hams
 :EXPORT_FILE_NAME: index
@@ -2569,8 +2640,8 @@ A recording of the talk will be available on the [[https://www.youtube.com/user/
 
 #+hugo: {{< embed-pdf url="20220120-photography_for_hams.pdf" >}}
 
-** 〜て-Form Song
-*** DONE 〜て-Form Song :Languages:Japanese:
+**** 〜て-Form Song
+***** DONE 〜て-Form Song :Languages:Japanese:
 :PROPERTIES:
 :CUSTOM_ID: te-form-song
 :EXPORT_FILE_NAME: index
@@ -2612,7 +2683,7 @@ For group 2 verbs, you can easily convert, just taking off ‘ます’ from ま
 
 To find out more about the 〜て form of Japanese verbs, you can refer to [[http://guidetojapanese.org/learn/complete/progressive_tense][Tae Kim’s Japanese Grammar Guide]].
 
-*** DONE 〜て-𐑓𐑹𐑥 𐑕𐑪𐑙 :𐑤𐑨𐑙𐑜𐑢𐑦𐑡𐑩𐑟:𐑡𐑨𐑐𐑩𐑯𐑰𐑟:
+***** DONE 〜て-𐑓𐑹𐑥 𐑕𐑪𐑙 :𐑤𐑨𐑙𐑜𐑢𐑦𐑡𐑩𐑟:𐑡𐑨𐑐𐑩𐑯𐑰𐑟:
 :PROPERTIES:
 :CUSTOM_ID: te-form-song.en-shaw
 :EXPORT_FILE_NAME: index.en-shaw.md
@@ -2654,8 +2725,8 @@ To find out more about the 〜て form of Japanese verbs, you can refer to [[htt
 
 𐑑 𐑓𐑲𐑯𐑛 𐑬𐑑 𐑥𐑹 𐑩𐑚𐑬𐑑 𐑞 〜て 𐑓𐑹𐑥 𐑝 ·𐑡𐑨𐑐𐑩𐑯𐑰𐑟 𐑝𐑻𐑚𐑟, 𐑿 𐑒𐑨𐑯 𐑮𐑦𐑓𐑻 𐑑 [[http://guidetojapanese.org/learn/complete/progressive_tense][·𐑑𐑱 𐑒𐑦𐑥𐑟 𐑡𐑨𐑐𐑩𐑯𐑰𐑟 𐑜𐑮𐑨𐑥𐑼 𐑜𐑲𐑛]].
 
-** Sony A7R4 Selfie Solution
-*** DONE Sony A7R4 Selfie Solution :Photography:
+**** Sony A7R4 Selfie Solution
+***** DONE Sony A7R4 Selfie Solution :Photography:
 :PROPERTIES:
 :CUSTOM_ID: a7r4-selfie-solution
 :EXPORT_FILE_NAME: index
@@ -2681,8 +2752,8 @@ In this way, the camera can be placed on the Joby gorillapod which acts as a “
 
 If I want to use this setup for video vlogging, there is nowhere to mount a shotgun mic, so likely I would use a lavalier mic plugged into the camera itself, or perhaps into a second smartphone acting as a voice recorder.
 
-** Should I use Back Button Focus on Sony A7R4?
-*** DONE Should I use Back Button Focus on Sony A7R4? :Photography:
+**** Should I use Back Button Focus on Sony A7R4?
+***** DONE Should I use Back Button Focus on Sony A7R4? :Photography:
 :PROPERTIES:
 :CUSTOM_ID: back-button-focus
 :EXPORT_FILE_NAME: index
@@ -2721,8 +2792,8 @@ So, that’s the way I’ve set up the camera for now — normally in AF-C mode 
 
 Feel free to comment if you have other suggestions to allow for easy transition between auto-focus, BBF, selfie and third-party/untrained user workflows.
 
-** Elecraft K2 Amplifier Keying Circuit
-*** DONE Elecraft K2 Amplifier Keying Circuit :HamRadio:
+**** Elecraft K2 Amplifier Keying Circuit
+***** DONE Elecraft K2 Amplifier Keying Circuit :HamRadio:
 :PROPERTIES:
 :CUSTOM_ID: elecraft-k2-amplifier-keying-circuit
 :EXPORT_FILE_NAME: index
@@ -2783,8 +2854,8 @@ Here are some pics of the completed circuit, from above and from beneath.
 
 [[file:20140420-IMG_0118-Version-2-768x1024-1.jpg]]
 
-** Beverage Antennas
-*** DONE Beverage Antennas :HamRadio:
+**** Beverage Antennas
+***** DONE Beverage Antennas :HamRadio:
 :PROPERTIES:
 :CUSTOM_ID: beverage-antennas
 :EXPORT_FILE_NAME: index

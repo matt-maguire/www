@@ -63,8 +63,9 @@ Common LISP implementations tend to be much larger than Scheme, which makes it p
 - Differences between Scheme and Lisp are descibed at https://wiki.c2.com/?LispSchemeDifferences.
 - SBCL (Steel Bank Common Lisp) is a good choice, particularly when combined with Emacs and SLIME. Instructions for setting it up are available at https://github.com/rabbibotton/clog/blob/main/LEARN.md.
 - Document on [[https://courses.cs.northwestern.edu/325/readings/luv-slides.pdf][Good Lisp Programming Style]]
-- Online version of Peter Norvig's [[https://courses.cs.northwestern.edu/325/readings/luv-slides.pdf][PAIP]] [Paradigms of AI Programming]
-- [[https://paulgraham.com/onlisptext.html]["On Lisp" by Paul Graham]] is now available for free.
+- [[https://gigamonkeys.com/book/][Practical Common Lisp]] -- A good text to introduce Common Lisp to the reader 
+- Online version of Peter Norvig's [[https://courses.cs.northwestern.edu/325/readings/luv-slides.pdf][PAIP]] [Paradigms of AI Programming] -- an intermediate level text focused on classical AI algorithms
+- [[https://paulgraham.com/onlisptext.html]["On Lisp" by Paul Graham]] is now available for free, and is an advanced programming reference for LISP.
 
 ***** Emacs Lisp
 This is of course a good one to learn if you use the Emacs editor. Since it is already well integrated into the editor, no need to waste time setting up external compilers and connectors such as SLIME.

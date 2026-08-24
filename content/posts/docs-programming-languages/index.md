@@ -1,7 +1,7 @@
 +++
 title = "Programming Languages"
 date = 2024-12-28
-lastmod = 2025-01-02T09:59:36+11:00
+lastmod = 2026-08-24T18:10:48+10:00
 tags = ["Programming", "LISP"]
 categories = ["Docs"]
 draft = false
@@ -31,8 +31,9 @@ Common LISP implementations tend to be much larger than Scheme, which makes it p
 -   Differences between Scheme and Lisp are descibed at <https://wiki.c2.com/?LispSchemeDifferences>.
 -   SBCL (Steel Bank Common Lisp) is a good choice, particularly when combined with Emacs and SLIME. Instructions for setting it up are available at <https://github.com/rabbibotton/clog/blob/main/LEARN.md>.
 -   Document on [Good Lisp Programming Style](https://courses.cs.northwestern.edu/325/readings/luv-slides.pdf)
--   Online version of Peter Norvig's [PAIP](https://courses.cs.northwestern.edu/325/readings/luv-slides.pdf) [Paradigms of AI Programming]
--   ["On Lisp" by Paul Graham](https://paulgraham.com/onlisptext.html) is now available for free.
+-   [Practical Common Lisp](https://gigamonkeys.com/book/) -- A good text to introduce Common Lisp to the reader
+-   Online version of Peter Norvig's [PAIP](https://courses.cs.northwestern.edu/325/readings/luv-slides.pdf) [Paradigms of AI Programming] -- an intermediate level text focused on classical AI algorithms
+-   ["On Lisp" by Paul Graham](https://paulgraham.com/onlisptext.html) is now available for free, and is an advanced programming reference for LISP.
 
 
 ### Emacs Lisp {#emacs-lisp}

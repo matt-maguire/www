@@ -2,8 +2,8 @@
 title = "Packet Radio Talk"
 featuredImage = "20140219_packet-radio-chat.png"
 date = 2014-02-19
-lastmod = 2025-01-26T14:25:39+11:00
-tags = ["HamRadio", "PacketRadio"]
+lastmod = 2026-11-16T10:54:04+11:00
+tags = ["HamRadio", "PacketRadio", "AX25"]
 categories = ["Blog"]
 draft = false
 weight = 4001

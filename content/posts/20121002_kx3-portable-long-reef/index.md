@@ -2,8 +2,8 @@
 title = "Operating Portable from Long Reef"
 featuredImage = "20121002_IMG_02522-1024x768.jpg"
 date = 2012-10-02
-lastmod = 2025-01-27T12:23:32+11:00
-tags = ["HamRadio"]
+lastmod = 2026-11-16T10:54:02+11:00
+tags = ["HamRadio", "Elecraft", "KX3"]
 categories = ["Blog"]
 draft = false
 weight = 4001

@@ -1,7 +1,7 @@
 +++
 title = "Org Mode Beamer Presentations"
 date = 2025-02-20
-lastmod = 2025-02-20T13:54:53+11:00
+lastmod = 2026-11-16T10:54:05+11:00
 tags = ["Emacs", "OrgMode", "LaTeX", "Teaching", "Beamer"]
 categories = ["Blog"]
 draft = false

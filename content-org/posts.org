@@ -3356,3 +3356,270 @@ La prelego estis registrita kaj troviĝas en la YouTube-kanalo de la klubo:
 #+hugo: {{< youtube xnVgbdkK_Iw >}}
 
 La [[https://www.slideshare.net/VK2MB/april-2014-lecture-beverage-antennas][glitaro]] haveblas ĉe Slideshare.
+
+** Operating Portable from Long Reef
+*** DONE Operating Portable from Long Reef :HamRadio:Elecraft:KX3:
+:PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
+:CUSTOM_ID: kx3-portable-long-reef
+:EXPORT_FILE_NAME: index
+:EXPORT_HUGO_BUNDLE: 20121002_kx3-portable-long-reef
+:EXPORT_DATE: 2012-10-02
+:EXPORT_DESCRIPTION: 20121002_IMG_02522-1024x768.jpg
+:END:
+
+Having had my Elecraft KX3 ultra-portable radio for a few months now, I felt it was high time to take it out into the field. In particular I was curious to see how it would perform with my Alexloop magnetic loop antenna. This antenna covers 40m-10m, and while it clearly isn’t going to compete against a dipole, it is very quick and easy to set up, and should normally give reasonable performance on the higher bands at least.
+
+It was a beautiful sunny Saturday afternoon, and the first order of business was to decide on an operating location. For this, I met up with club members Dom VK2JNA, Chris VK2HX and Roger VK2GHB at the local coffee shop to strategise over a cup of coffee, and with some further input from Greg Vk2XE via the 2m repeater, we finally settled on the headland at Long Reef.
+
+[[file:20121002_IMG_02483-1024x768.jpg]]
+
+My equipment consisted of the Alexloop, the KX3 with built-in CW paddle, a set of headphones with a boom mike, and an external 7Ah gel-cell battery. While the KX3 can run off 8 internal AA-size cells, this limits the power output to 3-5W, and so I decided to take the external gel-cell in order to run the full 10-12W.
+
+My first contact was to ZL2MS on 20m CW, who had just finished working F5TZN in France. The French station was quite strong, but there were quite a few other stations calling, and unfortunately I didn’t manage a contact. Tuning around the bands, I heard a number of other DX stations, including TG9AJR in Guatemala, HP1RCP club station in Panama, and LA8SGA in Norway.
+
+I thought I’d then try a bit a SSB, but the wind noise in the microphone was quite bad, so in the end I decided to stick with CW. I put out a number of CQ calls, but didn’t get any takers. Later when I checked the reverse beacon net on the Internet, I did find that I had been heard by a station in Finland.
+
+As I was tuning around the bands, a number of people at Long Reef walked up to me and asked me what I was doing, so I explained what ham radio was all about. It turned out that the father of one of the onlookers used to be a ham over in the Netherlands, and so we had a nice long chat about his dad.
+
+It was a beautiful spot, and a really nice atmosphere. Even though I didn’t make so many contacts this time, it was a very enjoyable way to spend a lazy Saturday afternoon, and I’m looking forward to finding an opportunity to do it again.
+
+** CSQ Summary
+*** DONE CSQ Summary :HamRadio:
+:PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
+:CUSTOM_ID: csq-summary
+:EXPORT_FILE_NAME: index
+:EXPORT_HUGO_BUNDLE: 20130312_csq-summary
+:EXPORT_DATE: 2013-03-12
+:END:
+
+**** CSQ Summary
+The following is a proposal from Bruce Prior N7RR for a signal reporting system based on [[http://antrak.org.tr/index.php?option=com_content&task=view&id=378&Itemid=83][Copyability-Strength-Quality (CSQ)]], and as an alternative to the traditional Readability-Strength-Tone (RST) system.
+
+***** C or Copyability
+
+| Copyability | Description                                       |
+| N           | no recoverable signal $^{*}$                      |
+| 0           | discernable but not copyable $^{*}$               |
+| 1-9         | 10% to 90% copy                                   |
+| G           | Good 100% copy, but short of perfect              |
+| P           | Perfect armchair 100% copy or full quieting on FM |
+
+$^{*}$ For Copyability reports of N and 0, no Signal Strength or Quality reports are needed.
+
+***** S-Meter or Signal Strength
+
+| Strength | Description             |
+| 0        | no S-meter reading      |
+| 1-9      | S-1 to S-9              |
+| A        | 1 dB to 10 dB over S-9  |
+| B        | 11 dB to 20 dB over S-9 |
+| C        | 21 dB to 30 dB over S-9 |
+| D        | 31 dB to 40 dB over S-9 |
+| E        | 41 dB to 50 dB over S-9 |
+| F        | 51 dB or more over S-9  |
+
+***** Quality
+
+| Quality | Description                                                              |
+| X       | characteristic steadiness of crystal (Xtal) control or eXcellent quality |
+| R       | AC Ripple or buzz in transmission                                        |
+| C       | Chirp or tail on make and/or break                                       |
+| K       | key clicKs or other Keying transients                                    |
+| O       | Overmodulation or Overdeviation in phone or digital modes                |
+
+***** Examples
+
+| Report | Description                                                                        |
+| P6O    | for a PSK-31 signal: perfect 100 % copy at S-6, but overdeviated                   |
+| 93X    | for a CW signal: 90 % copy at S-3 with excellent quality                           |
+| G7O    | for an SSB signal: Good but less than perfect 100 % copy at S-7, but overmodulated |
+| PAX    | for an RTTY signal: perfect 100 % copy about 10 dB over S-9 with excellent quality |
+| P6X    | for an FM signal: full-quieting 100 % copy at S-6 with excellent quality           |
+
+**** RST Summary
+
+For comparison with the proposed CSQ system, here are the definitions for the traditional RST system.o
+
+***** R or Readability
+
+| Readability | Description                                       |
+|           1 | Unreadable                                        |
+|           2 | Barely readable, occasional words distinguishable |
+|           3 | Readable with considerable difficulty             |
+|           4 | Readable with practically no difficulty           |
+|           5 | Perfectly readable                                |
+
+***** Strength
+
+| Strength | Description                      | HF Signal | V/UHF Signal |
+|        1 | Faint signal, barely perceptible | -121 dBm  | -141 dBm     |
+|        2 | Very weak                        | -115 dBm  | -135 dBm     |
+|        3 | Weak                             | -109 dBm  | -129 dBm     |
+|        4 | Fair                             | -103 dBm  | -123 dBm     |
+|        5 | Fairly good                      | -97 dBm   | -117 dBm     |
+|        6 | Good                             | -91 dBm   | -111 dBm     |
+|        7 | Moderately strong                | -85 dBm   | -105 dBm     |
+|        8 | Strong                           | -79 dBm   | -99 dBm      |
+|        9 | Very strong signals              | -73 dBm   | -93 dBm      |
+
+***** Tone
+
+| Tone | Description                                                |
+|    1 | Fifty cycle a.c or less, very rough and broad              |
+|    2 | Very rough a.c., very harsh and broad                      |
+|    3 | Rough a.c. tone, rectified but not filtered                |
+|    4 | Rough note, some trace of filtering                        |
+|    5 | Filtered rectified a.c. but strongly ripple-modulated      |
+|    6 | Filtered tone, definite trace of ripple modulation         |
+|    7 | Near pure tone, trace of ripple modulation                 |
+|    8 | Near perfect tone, slight trace of modulation              |
+|    9 | Perfect tone, no trace of ripple or modulation of any kind |
+
+The following letters can be optionally suffixed:
+
+| Suffix | Description                           |
+| X      | stable frequency (crystal control)    |
+| C      | "chirp" (frequency shift when keying) |
+| K      | key clicks                            |
+
+**** RSQ Summary
+
+For digital work, the Readability-Strength-Quality signal reporting system is sometimes used.
+
+***** R or Readability
+
+| Readability | Description                                                  |
+|           1 | 0 % copy - undecipherable                                    |
+|           2 | 20 % copy -occasional words distinguishable                  |
+|           3 | 40 % copy - readable with difficulty, many missed characters |
+|           4 | 80 % copy - Readable with no difficulty                      |
+|           5 | 95 % + copy - Perfectly readable                             |
+
+***** Strength
+
+| Strength | Description              |
+|        1 | barely perceptible trace |
+|        3 | Weak trace               |
+|        5 | Moderate trace           |
+|        7 | Strong trace             |
+|        9 | Very strong trace        |
+
+***** Quality
+
+| Quality | Description                                 |
+|       1 | splatter over much of the spectrum          |
+|       3 | multiple visible pairs                      |
+|       5 | One easily visible pair                     |
+|       7 | One barely visible pair                     |
+|       9 | Clean signal - no visible unwanted sidebars |
+
+** Packet Radio Talk
+*** Packet Radio Talk :HamRadio:PacketRadio:AX25:
+:PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
+:CUSTOM_ID: packet_radio_talk
+:EXPORT_FILE_NAME: index
+:EXPORT_HUGO_BUNDLE: 20140219_packet_radio_talk
+:EXPORT_DATE: 2014-02-19
+:EXPORT_DESCRIPTION: 20140219_packet-radio-chat.png
+:END:
+
+At my local amateur radio club I gave a talk about packet radio, covering topics such as AX25 frames, digipeaters, netrom nodes, and applications that run over packet radio such as APRS and BBS. On YouTube you can find a [[http://www.youtube.com/watch?v=Ar0dEiwu6KE][recording of the talk]].
+
+The slides from the talk can be found here:
+
+#+hugo: {{< embed-pdf url="20140219_packet-radio-talk.pdf" >}}
+
+** Org Mode Beamer Presentations
+*** DONE Org Mode Beamer Presentations :Emacs:OrgMode:LaTeX:Teaching:Beamer:
+:PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
+:CUSTOM_ID: org-mode-beamer
+:EXPORT_FILE_NAME: index
+:EXPORT_HUGO_BUNDLE: 20250220_org-mode-beamer
+:EXPORT_DATE: 2025-02-20
+:END:
+Earlier I talked about [[#orgmode-lesson-notes][using Org Mode to produce lesson worksheets]] for my students. This year I am thinking about using powerpoint-style presentation slides instead of worksheets to encourage students to write more in their books. This naturally led me to look into how to do this with Org Mode.
+
+**** A Simple Lesson
+Making presentations in $\LaTeX$ is normally done using the =beamer= package. It turns out that Org Mode has good support for beamer. An example of a simple lesson presentation org-mode file might look like this:
+
+#+begin_src org
+,#+title: Adding Terms
+,#+subtitle: Algebraic Techniques
+,#+author: Mr Maguire
+,#+startup: beamer
+,#+options: H:1 toc:nil
+,#+latex_class: beamer
+,#+latex_class_options: [bigger]
+,#+columns: %45ITEM %10BEAMER_env(Env) %10BEAMER_act(Act) %4BEAMER_col(Col) %8BEAMER_opt(Opt)
+,#+beamer_theme: SimplePlus
+,#+LATEX_HEADER: \usepackage{tasks}
+
+,* DO NOW
+1. Identify the like terms:
+   \[ 4ab^2, 4ab, 2a^2b^2, 3b^2a \]
+   \vskip+5ex
+2. Which is the constant term?
+   | 3x | 4x^2 | 5x^0 | x |
+
+,* Adding Terms
+To add terms:
+- make sure the two terms are *like* terms
+- add the coefficients
+
+,** Careful! :B_block:
+Don't forget to take any minus signs into account!
+
+,* Practice
+Simplify the following espressions
+\begin{tasks}[after-item-skip=8ex](2)
+\task $2x+3x$
+\task $3a+5b+6a$
+\task $a+b+2b+a$
+\task $a^{2}+2ab-2ba+b^{2}$
+\task* $a+2a-3a+4a-5a+6a-7a+8a-9a+10a$
+\end{tasks}
+
+,* :B_ignoreheading:
+,#+begin_center
+*What's $2n$ plus $2n$?*
+\vskip+2ex
+I don't know, it sounds $4n$ to me...
+,#+end_center
+
+#+end_src
+
+To export the org mode code to a PDF, we need to use a special export command to let org-mode know to make a beamer presentation rather than a normal $\LaTeX$ document. On my system, the export process is bound to =C-c C-e l O= which will:
+- translate the org mode to a $\LaTeX$ =*.tex= file
+- produce a PDF file from the $\LaTeX$ file
+- open the PDF file in Emacs (I have pdftools installed in my Emacs config)
+
+If I want to generate the PDF file without opening it (for example, if I already have the PDF file open in another window) then I use the key sequence =C-c C-e l P=.
+
+This will then produce a PDF file that looks like this:
+
+#+hugo: {{< embed-pdf url="20250220_beamer-lesson.pdf" >}}
+
+**** Preamble
+So, let's break down the contents of the preamble in the org mode file:
+- The =#+title:=, =#+subtitle:=, =#+author:= and optionally =#+date:= are self-explanatory and are used to generate the title slide.
+- The =#+startup: beamer= line tells Emacs that this is a beamer org-mode file and that it should enable the special org mode beamer minor mode for syntax highlighting, etc.
+- The =#+options: H:1 toc:nil= line tells org mode that I don't want a table of contents slide, and that each level 1 heading in the org file should represent a new slide. If I put =H:2= instead, then level 1 headings would represent sections with a section heading slide, and the level 2 headings would be the actual content slides. I want to minimise that extra fluff for my students so that we can focus purely on content, and this is why I use =H:1=
+- The =#+latex_class: beamer= line uses the predefined Org Mode beamer class, and the =#+latex_class_options: [bigger]= sets a larger font size to help students make out the slides more clearly. Font size can be overridden for a particular slide using the =\fontsize{}{}= command at the start of that slide's content.
+- The =#+columns:= line enables a cool "column mode feature" in Emacs Org Mode. I don't want to discuss it here, but you can read mode about this in the [[https://orgmode.org/manual/Column-View.html][Org Mode manual]].
+- The =#+beamer_theme:= line sets the "look and feel" of the slides. I use a fairly simple theme to minimise cognitive load for the students. You can find other themes on the internet, such as at [[https://latex-beamer.com/tutorials/beamer-themes/][this site]].
+- You can then include any packages you might want to use with lines like =#+latex_header: \usepackage{}=. You can see I use the =tasks= package, which lets you easily format multi-column lists of problems like I did with the =exesheets= package in the [[#orgmode-lesson-notes][org mode lesson notes]] post.
+**** Content
+Now that we have set up the environment, we can start making some slides!
+1. The first slide I have is a "DO NOW" starter activity. The text in the level 1 heading becomes the title at the top of the slide. In the example, I have a simple enumerated list. You can see we can include maths notiation using the normal ="$ ... $"= and ="\[ ... \]"= markers. Sometimes it is better to use ="\( ... \)"= delimiters for inline maths expressions, as the dollar signs can be confused with currency symbols. If you want to write dollar signs in an expression, you can use a =\dollar= or =\USD= command.
+2. The second slide shows a bullet list. You can also use standard org-mode markup for *bold text*, /italics/, etc.. It also includes a highlighted text box, which you can create using a subheading marked with a =:B_block:= tag.
+3. The third slide makes use of the =tasks= package. The org mode beamer export filter doesn't work well with that package, so I find the easiest thing is to simply use $\LaTeX$ code. You can then easily specify separation between the items with =after-item-skip= and how many columns of questions we want. Each question is introduced with a =\task= command, and if you want a longer question to span all the columns we can use =\task*= with an asterisk.
+4. The last slide shows how we can create a slide with no title. You can also use a $\LaTeX$ environment such as =\begin{center} ... \end{center}= using the =#+begin_center ... #+end_center= directives. If we want to create some white space where we can write answers or annotate a solution, we can use a command like =\vskip+2ex= to create that vertical space.
+
+**** Further Reading
+This is a very quick introduction. If you want to learn more, I suggest you look at:
+- A org mode beamer [[https://orgmode.org/worg/exporters/beamer/tutorial.html][tutorial]] which was the main basis of the simple example I provided here.
+- The org mode beamer [[https://orgmode.org/manual/Beamer-Export.html][user manual]]

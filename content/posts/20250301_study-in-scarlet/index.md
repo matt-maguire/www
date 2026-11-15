@@ -2,11 +2,11 @@
 title = "A Study in Scarlet"
 featuredImage = "20250301-study_in_scarlet.jpg"
 date = 2025-03-01
-lastmod = 2026-11-15T22:47:51+11:00
+lastmod = 2026-11-16T10:08:05+11:00
 tags = ["Languages", "Shavian"]
 categories = ["Blog"]
 draft = false
-weight = 3001
+weight = 4001
 author = "Matt Maguire"
 +++
 

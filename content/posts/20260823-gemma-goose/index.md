@@ -2,7 +2,7 @@
 title = "AI Agents and Local LLMs"
 featuredImage = "20260823-gemma-goose.png"
 date = 2026-08-23
-lastmod = 2026-11-15T22:47:47+11:00
+lastmod = 2026-11-16T10:08:02+11:00
 tags = ["AI", "LaTeX", "Teaching", "Emacs"]
 categories = ["Blog"]
 draft = false

@@ -2,11 +2,11 @@
 title = "𐑯𐑿 ·𐑗𐑪𐑒 𐑕𐑢𐑦𐑗𐑩𐑟 𐑣𐑨𐑝 𐑼𐑲𐑝𐑛!"
 featuredImage = "20240914-IMG_0442-1152x1536.jpg"
 date = 2024-09-14
-lastmod = 2026-11-15T22:47:59+11:00
+lastmod = 2026-11-16T10:08:09+11:00
 tags = ["𐑒𐑩𐑥𐑐𐑿𐑑𐑼𐑟", "𐑒𐑰𐑚𐑹𐑛𐑟"]
 categories = ["Blog"]
 draft = false
-weight = 3002
+weight = 4002
 author = "Matt Maguire"
 +++
 

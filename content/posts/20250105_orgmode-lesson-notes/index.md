@@ -2,11 +2,11 @@
 title = "Using Org Mode / LaTeX for Lesson Notes"
 featuredImage = "20250105_orgmode-banner.webp"
 date = 2025-01-06
-lastmod = 2026-11-15T22:47:56+11:00
+lastmod = 2026-11-16T10:08:07+11:00
 tags = ["Emacs", "OrgMode", "LaTeX", "Teaching"]
 categories = ["Blog"]
 draft = false
-weight = 3001
+weight = 4001
 author = "Matt Maguire"
 +++
 

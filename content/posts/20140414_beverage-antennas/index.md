@@ -1,11 +1,11 @@
 +++
 title = "Beverage Antennas"
 date = 2014-04-14
-lastmod = 2026-11-15T22:48:06+11:00
+lastmod = 2026-11-16T10:08:15+11:00
 tags = ["HamRadio"]
 categories = ["Blog"]
 draft = false
-weight = 3001
+weight = 4001
 author = "Matt Maguire"
 +++
 

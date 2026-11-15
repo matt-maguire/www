@@ -2,11 +2,11 @@
 title = "Ergonomic Emacs"
 featuredImage = "20250329-hyper-meh-keys.jpg"
 date = 2025-03-29
-lastmod = 2026-11-15T22:47:49+11:00
+lastmod = 2026-11-16T10:08:04+11:00
 tags = ["Keyboards", "AltKeyboardLayouts", "Emacs"]
 categories = ["Blog"]
 draft = false
-weight = 3001
+weight = 4001
 author = "Matt Maguire"
 +++
 

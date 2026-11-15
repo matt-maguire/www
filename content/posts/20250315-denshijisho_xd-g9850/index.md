@@ -2,11 +2,11 @@
 title = "Japanese Electronic Dictionary (Casio XD-G9850)"
 featuredImage = "20250315-xd_g9850.jpg"
 date = 2025-03-15
-lastmod = 2026-11-15T22:47:51+11:00
+lastmod = 2026-11-16T10:08:05+11:00
 tags = ["Languages", "Japanese"]
 categories = ["Blog"]
 draft = false
-weight = 3001
+weight = 4001
 author = "Matt Maguire"
 +++
 

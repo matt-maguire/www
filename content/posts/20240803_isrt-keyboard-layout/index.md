@@ -2,11 +2,11 @@
 title = "ISRT Keyboard Layout"
 featuredImage = "20240803-isrt-anglemod.en_.ansi_-1024x312.jpg"
 date = 2024-08-03
-lastmod = 2026-11-15T22:48:01+11:00
+lastmod = 2026-11-16T10:08:10+11:00
 tags = ["Computers", "Keyboards", "Corne", "AltKeyboardLayouts"]
 categories = ["Blog"]
 draft = false
-weight = 3001
+weight = 4001
 author = "Matt Maguire"
 +++
 

@@ -2,11 +2,11 @@
 title = "Should I use Back Button Focus on Sony A7R4?"
 featuredImage = "20191003-37FE80D9-053E-4D88-B858-B13645808C57.png"
 date = 2019-10-03
-lastmod = 2026-11-15T22:48:05+11:00
+lastmod = 2026-11-16T10:08:15+11:00
 tags = ["Photography"]
 categories = ["Blog"]
 draft = false
-weight = 3001
+weight = 4001
 author = "Matt Maguire"
 +++
 

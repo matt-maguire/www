@@ -2,11 +2,11 @@
 title = "Japanese Electronic Dictionary XD-Z20000"
 featuredImage = "20250320-xd_z20000.jpg"
 date = 2025-03-20
-lastmod = 2026-11-15T22:47:50+11:00
+lastmod = 2026-11-16T10:08:05+11:00
 tags = ["Languages", "Japanese"]
 categories = ["Blog"]
 draft = false
-weight = 3001
+weight = 4001
 author = "Matt Maguire"
 +++
 

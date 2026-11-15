@@ -1,7 +1,7 @@
 +++
 title = "My AI Teaching Setup, Part 3: The Organs"
 date = 2026-11-16
-lastmod = 2026-11-15T22:47:46+11:00
+lastmod = 2026-11-16T10:08:02+11:00
 tags = ["AI", "LaTeX", "Teaching", "Emacs"]
 categories = ["Blog"]
 draft = true
@@ -26,7 +26,7 @@ The decade of plain text paid for itself in an afternoon. No conversion project,
 The organs that matter most are the ones that catch the model lying — and models lie with total confidence, in fluent sentences, about things you can check.
 
 -   **SymPy does the maths.** No model computes an integral or solves an equation in this pipeline. Answers are verified symbolically by a computer-algebra system before anything reaches a student. A language model's idea of arithmetic is autocomplete with delusions of competence.
--   **LaTeX does the marks arithmetic.** Early drafts had the model adding up the marks per question, and it got them wrong often enough to be dangerous — an exam where the section header says 50 and the questions sum to 43. The fix was to stop asking the model to count at all: the document class now keeps a counter, every question registers its marks, and the total is _computed at compile time_. The model declares; LaTeX arithmetic. This single change eliminated a whole class of errors.
+-   **LaTeX does the marks arithmetic.** Early drafts had the model adding up the marks per question, and it got them wrong often enough to be dangerous — an exam where the section header says 50 and the questions sum to 43. The fix was to stop asking the model to count at all: the document class now keeps a counter, every question registers its marks, and the total is _computed at compile time_. The model declares; LaTeX does the arithmetic. This single change eliminated a whole class of errors.
 -   **The compiler is the proofreader.** Every generated document must compile, and the build is checked mechanically — question counts, mark totals, diagram presence — before I ever open the PDF.
 -   **Search we own.** A private SearXNG instance handles the agents' web research — no per-query API bill, no third party logging what my tools look up about my syllabus.
 

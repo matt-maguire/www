@@ -2,11 +2,11 @@
 title = "Plain Text Accounting with Emacs – Part 3"
 featuredImage = "20250530-share_trading.png"
 date = 2025-05-30
-lastmod = 2026-11-15T22:47:48+11:00
+lastmod = 2026-11-16T10:08:03+11:00
 tags = ["PlainTextAccounting", "Emacs"]
 categories = ["Blog"]
 draft = false
-weight = 3001
+weight = 4001
 author = "Matt Maguire"
 +++
 

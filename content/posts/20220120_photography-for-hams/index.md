@@ -2,11 +2,11 @@
 title = "Digital Photography for Hams"
 featuredImage = "20200120-Screenshot_2022-02-02_21-07-23-1024x550.png"
 date = 2022-01-20
-lastmod = 2026-11-15T22:48:03+11:00
+lastmod = 2026-11-16T10:08:13+11:00
 tags = ["Photography", "HamRadio"]
 categories = ["Blog"]
 draft = false
-weight = 3001
+weight = 4001
 author = "Matt Maguire"
 +++
 

@@ -15,7 +15,7 @@
 *** TODO From Lessons to Unit Planning
 :PROPERTIES:
 :CUSTOM_ID: unit-planning
-:EXPORT_FILE_NAME: index.md
+:EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20260824-unit-planning
 :EXPORT_DATE: 2026-08-24
 :EXPORT_HUGO_MENU:

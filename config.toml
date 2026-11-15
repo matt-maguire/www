@@ -333,7 +333,7 @@ buildFuture=true
     # Mapbox GL JS config (Mapbox GL JS https://docs.mapbox.com/mapbox-gl-js)
     [params.page.mapbox]
       # access token of Mapbox GL JS
-      accessToken = "pk.eyJ1IjoiZGlsbG9uenEiLCJhIjoiY2s2czd2M2x3MDA0NjNmcGxmcjVrZmc2cyJ9.aSjv2BNuZUfARvxRYjSVZQ"
+      accessToken = ""
       # style for the light theme
       lightStyle = "mapbox://styles/mapbox/light-v10?optimize=true"
       # style for the dark theme
@@ -631,7 +631,7 @@ buildFuture=true
         pre = ""
         post = ""
         name = "Docs"
-        url = "/categories/docs/"
+        url = "/docs/"
         title = ""
     [languages.en.params]
       [languages.en.params.search]
@@ -712,7 +712,7 @@ buildFuture=true
         pre = ""
         post = ""
         name = "𐑛𐑪𐑒𐑕"
-        url = "/categories/docs/"
+        url = "/docs/"
         title = ""
     [languages.en-shaw.params]
     [languages.en-shaw.params.header.title]
@@ -805,7 +805,7 @@ buildFuture=true
         pre = ""
         post = ""
         name = "Dokumentoj"
-        url = "/categories/docs/"
+        url = "/docs/"
         title = ""
     [languages.eo.params]
     [languages.eo.params.header.title]

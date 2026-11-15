@@ -5,7 +5,7 @@ lastmod = 2025-02-20T13:54:53+11:00
 tags = ["Emacs", "OrgMode", "LaTeX", "Teaching", "Beamer"]
 categories = ["Blog"]
 draft = false
-weight = 3001
+weight = 4001
 author = "Matt Maguire"
 +++
 

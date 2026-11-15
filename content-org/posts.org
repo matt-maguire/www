@@ -14,6 +14,7 @@
 ** AI Agents: From Lessons to Unit Planning
 *** TODO From Lessons to Unit Planning
 :PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
 :CUSTOM_ID: unit-planning
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20260824-unit-planning
@@ -85,6 +86,7 @@
 ** AI Agents and Local LLMs
 *** DONE My AI Teaching Setup, Part 0: A Life in Plain Text :AI:LaTeX:Teaching:Emacs:
 :PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
 :CUSTOM_ID: ai-setup-0
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20261116-ai-setup-0-plain-text
@@ -127,6 +129,7 @@ That is the lesson of Part 0, and I did not earn it deliberately: *build your wo
 
 *** TODO My AI Teaching Setup, Part 1: Rented Intelligence :AI:LaTeX:Teaching:
 :PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
 :CUSTOM_ID: ai-setup-1
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20261116-ai-setup-1-rented-intelligence
@@ -171,6 +174,7 @@ By mid-year the decision had formed: if I was going further into this, I needed 
 
 *** TODO My AI Teaching Setup, Part 2: The Fleet :AI:LaTeX:Teaching:Hardware:
 :PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
 :CUSTOM_ID: ai-setup-2
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20261116-ai-setup-2-the-fleet
@@ -211,6 +215,7 @@ And the relationship changed somewhere in there. I stopped asking AI questions a
 
 *** TODO My AI Teaching Setup, Part 3: The Organs :AI:LaTeX:Teaching:Emacs:
 :PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
 :CUSTOM_ID: ai-setup-3
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20261116-ai-setup-3-the-organs
@@ -265,6 +270,7 @@ The machine that was supposed to save me time first gave me a way of working I a
 
 *** DONE AI Agents and Local LLMs :AI:LaTeX:Teaching:Emacs:
 :PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
 :CUSTOM_ID: gemma-goose
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20260823-gemma-goose
@@ -367,6 +373,7 @@ So, what else can I do with this setup? That of course will be the subject of th
 *** AI Agents Take Over Lesson Prep
 **** DONE AI Agents Take Over Lesson Prep :AI:LaTeX:Teaching:Emacs:
 :PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
 :CUSTOM_ID: claude-code
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20260822-claude-code
@@ -465,6 +472,7 @@ Next time I will talk about an alternative workflow that I set up to address thi
 *** Plain Text Accounting with Emacs -- Part 3
 **** DONE Plain Text Accounting with Emacs -- Part 3 :PlainTextAccounting:Emacs:
 :PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
 :CUSTOM_ID: pta-emacs3
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20250530-pta-emacs3
@@ -562,6 +570,7 @@ I think this new setup provides a bit more flexibility and convenience in unders
 *** Plain Text Accounting with Emacs -- Part 2
 **** DONE Plain Text Accounting with Emacs -- Part 2 :PlainTextAccounting:Emacs:
 :PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
 :CUSTOM_ID: pta-emacs2
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20250424-pta-emacs2
@@ -981,6 +990,7 @@ P 2025-05-31 WOW $32.00
 *** Plain Text Accounting with Emacs
 **** DONE Plain Text Accounting with Emacs :PlainTextAccounting:Emacs:
 :PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
 :CUSTOM_ID: pta-emacs
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20250423-pta-emacs
@@ -1079,6 +1089,7 @@ This has been a fun exercise where I have learned a lot about accounting, and al
 *** Ergonomic Emacs
 **** DONE Ergonomic Emacs :Keyboards:AltKeyboardLayouts:Emacs:
 :PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
 :CUSTOM_ID: hyper-meh-keys
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20250329-hyper-meh-keys
@@ -1104,9 +1115,38 @@ So, I made some tap-and-hold tweaks to my config, enabled the Chordal Hold and P
 
 As I am a little time-poor at the moment, I will stick with Doom Emacs for the moment and dump out my brain into this blog post so I can pick up the exploration a bit later when I have more time.
 
+**** DONE Ergonomia Emacs :Keyboards:AltKeyboardLayouts:Emacs:Lingvoj:Esperanto:
+:PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
+:CUSTOM_ID: hyper-meh-keys-eo
+:EXPORT_FILE_NAME: index.eo.md
+:EXPORT_HUGO_BUNDLE: 20250329-hyper-meh-keys
+:EXPORT_DATE: 2025-03-29
+:EXPORT_HUGO_MENU:
+:EXPORT_DESCRIPTION: 20250329-hyper-meh-keys.jpg
+:END:
+
+Lastatempe mi demandis min, ĉu mi devus forlasi Doom Emacs/Evil Mode kaj provi malpli opinionatan agordon bazitan sur pli tradiciaj klavkombindoj. Mi serĉis ian "komenca ilaro", kiu provizas bazajn funkciojn, kiujn mi kutimis havi en Doom Emacs. Kelkaj el la opcioj, kiujn mi rigardis, estis:
+- La [[http://xahlee.info/emacs/emacs/emacs_sample_init.html][Ekzempla Agorda Dosiero]] de Xah Lee el lia reta lernilo. Tiu nomo aperis multfoje dum miaj esploroj pri Emacs, kaj mi kredas, ke li ankaŭ havas grandan kolekton de YouTube-videoj pri la temo. La agordo estas tre baza kaj ne enhavas pakojn. Mi bezonus iom da tempo por mem implementi funkciojn kiel sintaksa emfazo kaj kompletigo — tre instrue, sed pli granda tempoinvesto ol mi nun povas alordigi.
+
+  Interese, Xah havas multon da informoj pri la ergonomieco de klavkombindaj skemoj kaj pri tio, kial Vim-aj klavkombindoj ŝajnas tiom popularaj. Mi ankoraŭ ne legis ĉiujn la artikolojn tie, sed unu, kiun mi trovis interesa, estis [[http://xahlee.info/emacs/emacs/emacs_kb_shortcuts_pain.html][Kial Emacs-aj Klavoj estas Dolorigaj]]. Tiu artikolo priparolas normajn QWERTY-klavarojn, ne la ergonomiajn disigitajn klavarojn, kiujn mi uzas lastatempe. Tamen ĝi igis min ekpensi pri klavkombinda dezajnado kaj pri kiel optimumi mian Emacs-sperton.
+- La [[https://github.com/purcell/emacs.d][Racia Emacs-Agordo]] de Steve Purcell. Tiu estas pli orientita al retprogramado kaj Mac OS X (kiun mi plejparte forlasis). Ĝi ne uzas la makroon =use-package=, pri kiu mi ŝatus lerni pli. Tamen ĝi aspektas kiel reala kandidato -- mi nur konvertus ĝin al org-reĝima literatura-programada stilo.
+- La agordo [[https://github.com/SystemCrafters/crafted-emacs][crafted-emacs]] de SystemCrafter. David Wilson kaj lia komunumo [[https://systemcrafters.net/][System Crafters]] estas bonega rimedo pri ampleksa gamo da teknikaj temoj, inkluzive de Emacs. La tiea agordo emas antaŭrangigi enkonstruitajn Emacs-funkciojn super la pakoj, kiujn la komunumo vaste uzas. Tio signifas, ke vi lernas multe pri enkonstruitaj Emacs-funkcioj kaj Elisp, sed ankaŭ ke la transiro de io kiel Doom Emacs povus esti pli interromoplena.
+- La agordo [[https://github.com/jamescherti/minimal-emacs.d][minimal-emacs.d]] de James Cherti -- kiel Doom Emacs, ĝi estas optimumigita por rapida lanĉo kaj aspektas kiel fortika kandidato. Ĝi montras al vi, kiun kodon enmeti por ebligi diversajn funkciojn, kaj al mi plaĉas ĝia uzo de la makroo =use-package=. La ĉefa bariero ĉi tie estus eltrovi, kiel plej bone integri ĝin en mian org-reĝiman agordan aron. Mi volas esplori ĉi tiun pli profunde.
+- La "distro"-agordo [[https://prelude.emacsredux.com/en/latest/][Prelude Emacs]]. Ĝi estas glate prezentita kun bela uzanta manlibro, kaj ĝi kovras funkciojn gravajn por mi, kiel Org-reĝimo kaj \(\\LaTeX\) subteno. Alio tre interesa ĉe ĉi tiu agordo estas, ke aldone al la normaj =Ctrl=-bazitaj klavkombindoj, ĝi ankaŭ enkondukas pli mallongajn alternativajn kombindojn kun la =Super=-klavo. Tio povus faciligi la transiron de Doom Emacs kun ĝiaj "Spacemacs"-stilaj spacoklavaj ŝparvojoj. Unu zorgo povus esti konfliktoj kun la klavkombindoj de mia fenestra administranto Qtile -- mi povus pripensi uzi anstataŭe la Meh-klavon por Qtile. La alia zorgo estas, ĉu saltado al alia glata distro kiel ĉi tiu vere donus al mi iun avantaĝon super restado ĉe Doom Emacs. Tamen mi volas esplori la ergonomie flankon de la klavkombindoj.
+
+Do, estas kelkaj opcioj, kiujn mi povas esplori, precipe la lastajn du.
+
+Dum mi pripensis ergonomiecon kaj kiel ĝi povus rilati al miaj disigitaj klavaroj, mi ricevis bultenon de la klavaro-fabrikanto ZSA. Ĝi enhavis artikolon pri nova QMK-funkcio, kiun ili subtenas, nomata [[https://blog.zsa.io/chordal-hold/?mc_cid=c9a680e0af][Chordal Hold]]. Tiu optimumigo permesas pli fidindan funkciadon de hejmvicaj modifiloj kaj tavolŝanĝiloj, kiujn mi amplekse uzas. Mi konektis al la ZSA-reta agordilo por ebligi la novan funkcion, kaj mi rimarkis, ke mi jam estis agordinta modifilan klavon =Meh= sur mia spacoklavo. Mi estis forgesinta pri ĝin, ĉar mi ne vere uzas ĝin kun mia Linux-agordo. Ĵus leginte pri la Super-klavaj kombindoj de Prelude kaj la artikoloj de Xah Lee pri la historio de klavaroj kaj la klavo =Hyper=, mi ekpensis, ĉu mi devus pli uzi tiajn klavojn.
+
+Do, mi faris kelkajn ĝustigojn de frapi-kaj-teni al mia agordo, ebligis la funkciojn Chordal Hold kaj Permissive Hold priskribitajn en la ZSA-bloga artikolo, kaj agordis klavojn =Hyper= kaj kroman modifilon =Meh=, kiuj bone funkcias kun Chordal Hold, preparante iom da eksperimentado. Vi povas trovi mian nunan klavaran agordon kun tiuj ŝanĝoj [[https://configure.zsa.io/voyager/layouts/34PvY/latest/0][tie]].
+
+Ĉar mi iom malthavas tempon nun, mi restos ĉe Doom Emacs dummomenta kaj elsitos mian cerbon en ĉi tiun blogan afiŝon, por ke mi povu daŭrigi la esploron iom poste, kiam mi havos pli da tempo.
+
 *** ZSA Pro Reds
 **** DONE ZSA Voyager with Pro Red Switches :Keyboards:AltKeyboardLayouts:
 :PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
 :CUSTOM_ID: zsa-pro-red
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20250322-zsa_pro_reds
@@ -1142,6 +1182,7 @@ So far I haven't noticed any false triggering, so I think this setup should be o
 *** Japanese Electronic Dictionary XD-Z20000
 **** DONE Japanese Electronic Dictionary XD-Z20000 :Languages:Japanese:
 :PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
 :CUSTOM_ID: xd-z20000
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20250320-denshijisho_xd-z20000
@@ -1341,6 +1382,7 @@ When I was in Japan, I actually bought a third electronic dictionary, this one c
 *** Japanese Electronic Dictonary XD-G9850
 **** DONE Japanese Electronic Dictionary (Casio XD-G9850) :Languages:Japanese:
 :PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
 :CUSTOM_ID: xd-g9850
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20250315-denshijisho_xd-g9850
@@ -1434,6 +1476,7 @@ Hopefully though between the english quick reference guide and the info here, yo
 *** Island Song
 **** DONE Island Song :Music:
 :PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20250302-island_song
 :EXPORT_DATE: 2025-03-02
@@ -1615,6 +1658,7 @@ I think it starts out ok, but later in the piece the timing seems a bit off and 
 *** A Study in Scarlet
 **** DONE A Study in Scarlet :Languages:Shavian:
 :PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20250301_study-in-scarlet
 :EXPORT_DATE: 2025-03-01
@@ -1644,6 +1688,7 @@ There are other books published in Shavian, such as Alice in Wonderland and Jane
 
 **** DONE 𐑩 𐑕𐑑𐑳𐑛𐑦 𐑦𐑯 𐑕𐑒𐑸𐑤𐑩𐑑 :𐑖𐑱𐑝𐑾𐑯:
 :PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
 :EXPORT_FILE_NAME: index.en-shaw.md
 :EXPORT_HUGO_BUNDLE: 20250301_study-in-scarlet
 :EXPORT_DATE: 2025-03-01
@@ -1675,6 +1720,7 @@ There are other books published in Shavian, such as Alice in Wonderland and Jane
 *** Graphite Layout on Corne Keyboard
 **** DONE Graphite Layout on Corne Keyboard :Computers:Keyboards:Corne:AltKeyboardLayouts:
 :PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
 :CUSTOM_ID: graphite-layout-corne
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20250120_graphite-layout-corne
@@ -1708,6 +1754,7 @@ On my [[https://github.com/matt-maguire/kbd_firmware/tree/custom/keyboards/crkbd
 *** Exporting Org Mode Tables to LaTeX
 **** DONE Exporting Org Mode Tables to LaTeX :Emacs:OrgMode:LaTeX:Teaching:
 :PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
 :CUSTOM_ID: orgmode-tables
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20250117_orgmode-tables
@@ -1758,9 +1805,63 @@ If we then export to PDF, the table will look like this:
 
 As I said before, /tblr/ is a convenient modern way to specify $\LaTeX$ tables, and it is a very powerful package. For more information about what it can do, check out the /tabularray/ [[https://mirror.aarnet.edu.au/pub/CTAN/macros/latex/contrib/tabularray/tabularray.pdf][documentation]].
 
+**** DONE Eksportado de Org-reĝimaj tabeloj al LaTeX :Emacs:OrgMode:LaTeX:Teaching:Lingvoj:Esperanto:
+:PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
+:CUSTOM_ID: orgmode-tables-eo
+:EXPORT_FILE_NAME: index.eo.md
+:EXPORT_HUGO_BUNDLE: 20250117_orgmode-tables
+:EXPORT_DATE: 2025-01-17
+:END:
+
+En mia antaŭa afiŝo pri uzado de [[https://teachmaths.org/20250105_orgmode-lesson-notes/][Org-reĝimo por lecionaj notoj]], mi menciis, ke eblas eksporti Org-reĝimajn tabelojn al $\LaTeX$. Jen kelkaj avantaĝoj de Org-reĝimo kompare kun kruda $\LaTeX$ kiam oni faras tabelojn:
+- Org-reĝimo havas potencon [[https://orgmode.org/manual/Built_002din-Table-Editor.html][tabelredaktilon]], kiu faciligas desegni tabelon kaj movi vicojn kaj kolumnojn. Org-reĝimo aŭtomate ĝustigas ĉiujn kolumnojn.
+- Ĉar la ĉeloj de Org-reĝima tabelo estas bele alĝustigitaj, multo pli facile estas vidi la tabelon sen nombradi =&=-simbolojn en kruda $\LaTeX$-kodo.
+- Org-reĝimo permesas uzi formulojn en tabelo, iom kiel kalkultabelo -- tio estas pli malfacile atingite rekte per $\LaTeX$.
+
+La tabeloj produktitaj de Org-reĝimo estas sufiĉe bazaj defaŭlte. Tamen vi povas uzi la $\LaTeX$-pakon [[https://ctan.org/pkg/tabularray][tabularray]] por laŭvoli la aspekton de viaj tabeloj. Interali, se vi ankoraŭ ne uzas la modernan /tabularray/-on por krei viajn $\LaTeX$-tabelojn, vi definitive uzu ĝin -- ĝi estas multo pli potenca kaj facile uzebla kompare kun la pli tradiciaj tabelaj pako (vi povas danki min poste).
+
+Do, ni kreu simplan tabelon por desegni la funkcion $y=x^2$:
+
+#+begin_src org
+#+attr_latex: :environment tblr :align hlines,vlines,column{1}={gray9},column{2-Z}={r}
+| $\bm x$ | $-2$ | $-1$ | 0 | 1 | 2 |
+| $\bm y$ |    4 |    1 | 0 | 1 | 4 |
+#+end_src
+
+Kelkaj rimarkoj:
+- la linio =#+attr_latex:= tuj antaŭ la tabelo diras al Org-reĝimo laŭvoli la $\LaTeX$-kodon de la tabelo.
+  - La atributo =:environment= diras al Org-reĝimo uzi la tabelmedion /tblr/ de tabularray anstataŭ la defaŭlta $\LaTeX$-tabelmedio.
+  - La atributo =:align= permesas al ni specifi la parametrojn, kiujn la /tblr/-medio atendas. Vi vidas, ke mi petis horizontalajn kaj verticalajn liniojn; mi volas, ke la unua kolumno kun la nomoj de la variabloj $x$ kaj $y$ estu grize ombrumita, kaj ke la nombroj estu dekstre ĝustigitaj.
+- Mi uzis =$=-signojn ĉirkaŭ la nomoj de variabloj kaj la negativaj nombroj, por ke ili estu ĝuste rendrataj. Mi ankaŭ uzis =\bm= el la $\LaTeX$-[[https://ctan.org/pkg/bm][pako bm]] por ke la nomoj de variabloj estu dikaj.
+
+Tio produktos tabelon, kiu aspektas tiel:
+
+[[file:20250117_table1.png]]
+
+Iufoje vi volas lasi certajn ĉelojn de la tabelo malplenaj kaj lasi sufiĉe da spaco por ke lernantoj skribu siajn proprajn valorojn en la tabelon. Estas facile fari tion per la /tblr/-medio:
+
+#+begin_src org
+#+attr_latex: :environment tblr
+#+attr_latex: :align hlines,vlines,row{2}={15mm},column{1}={gray9},column{2-Z}={20mm,c}
+| $\bm x$ | $-2$ | $-1$ | 0 | 1 | 2 |
+| $\bm y$ |      |      |   |   |   |
+#+end_src
+
+- ĉi tie mi metis la atributojn =:environment= kaj =:align= sur apartaj linioj, nur por montri, ke tio estas eblo.
+- Mi specifis, ke la dua vico estu 15 mm alta
+- Mi specifis, ke la kolumnoj de $2$ ĝis $Z$ estu $20$\,mm larĝaj. La $Z$ havas specialan signifon dum specicado de vicoj kaj kolumnoj en /tblr/-medio -- ĝi referencas la lastan vicon aŭ kolumnon. Tio signifas, ke mi ne devas ĝustigi la intervalan specifon, se mi aldonas aŭ forigas kolumnojn.
+
+Se ni poste eksportas al PDF, la tabelo aspektos tiel:
+
+[[file:20250117_table2.png]]
+
+Kiel mi diris antaŭe, /tblr/ estas oportuna moderna maniero specifi $\LaTeX$-tabelojn, kaj ĝi estas tre potenca pako. Por pli da informoj pri tio, kion ĝi povas fari, rigardu la [[https://mirror.aarnet.edu.au/pub/CTAN/macros/latex/contrib/tabularray/tabularray.pdf][dokumentaron]] de /tabularray/.
+
 *** Using Org Mode for Lesson Notes
 **** DONE Using Org Mode / LaTeX for Lesson Notes :Emacs:OrgMode:LaTeX:Teaching:
 :PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
 :CUSTOM_ID: orgmode-lesson-notes
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20250105_orgmode-lesson-notes
@@ -2024,6 +2125,7 @@ One thing I would like to explore further is the embedding of code to generate c
 *** Graphite Keyboard Layout
 **** DONE Graphite Keyboard Layout :Computers:Keyboards:AltKeyboardLayouts:
 :PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
 :CUSTOM_ID: graphite-keyboard-layout
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20241229_graphite-keyboard-layout
@@ -2079,6 +2181,7 @@ I'm going to perservere with this new layout for a while, and I'll report back h
 *** Migrating my Blog from Wordpress to Org Mode
 **** DONE Migrating my Blog from Wordpress to Org Mode :Emacs:OrgMode:Languages:Esperanto:Shavian:
 :PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20241226_org-mode-blog
 :EXPORT_DATE: 2024-12-26
@@ -2103,6 +2206,7 @@ If you feel like a bit of a chuckle, check out this video on the ubiquitousness 
 
 **** DONE 𐑥𐑲𐑜𐑮𐑱𐑑𐑦𐑙 𐑥𐑲 𐑚𐑤𐑪𐑜 𐑓𐑮𐑪𐑥 ·𐑢𐑻𐑛𐑐𐑮𐑧𐑕 𐑑 ·𐑹𐑜 𐑥𐑴𐑛 :𐑰𐑥𐑨𐑒𐑕:𐑹𐑜𐑥𐑴𐑛:𐑧𐑕𐑐𐑼𐑭𐑯𐑑𐑴:𐑖𐑱𐑝𐑾𐑯:
 :PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
 :EXPORT_FILE_NAME: index.en-shaw.md
 :EXPORT_HUGO_BUNDLE: 20241226_org-mode-blog
 :EXPORT_DATE: 2024-12-26
@@ -2126,6 +2230,7 @@ If you feel like a bit of a chuckle, check out this video on the ubiquitousness 
 
 **** DONE Migrating Blog from Wordpress to Org Mode :Emacs:OrgMode:Lingvoj:Esperanto:Ŝava:
 :PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
 :EXPORT_FILE_NAME: index.eo.md
 :EXPORT_HUGO_BUNDLE: 20241226_org-mode-blog
 :EXPORT_DATE: 2024-12-26
@@ -2150,6 +2255,7 @@ Se vi volas ion por ridetigi vin, spektu la suban videon pri la ĉiel utila Emac
 *** Updates to Gallium Keyboard Layout
 **** DONE Updates to Gallium Keyboard Layout :Computers:Keyboards:AltKeyboardLayouts:
 :PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
 :CUSTOM_ID: update-gallium-keyboard-layout
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20241010_updates-to-gallium-keyboard-layout
@@ -2179,6 +2285,7 @@ Some other discoveries I made recently from Ben’s new video and from other sou
 *** Gallium Keyboard Layout
 **** DONE Gallium Keyboard Layout :Computers:Keyboards:AltKeyboardLayouts:
 :PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
 :CUSTOM_ID: gallium-keyboard-layout
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20241002_gallium-keyboard-layout
@@ -2227,6 +2334,7 @@ I’m going to spend a little time building some fluency with this new layout to
 *** New Choc Switches Have Arrived!
 **** DONE New Choc Switches Have Arrived! :Computers:Keyboards:
 :PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
 :CUSTOM_ID: new-choc-switches-have-arrived
 :EXPORT_HUGO_BUNDLE: 20240914_new-choc-switches-have-arrived
 :EXPORT_FILE_NAME: index.en.md
@@ -2257,6 +2365,7 @@ I think I’ll eventually swap them out for some spare Choc Red switches that I 
 
 **** DONE 𐑯𐑿 ·𐑗𐑪𐑒 𐑕𐑢𐑦𐑗𐑩𐑟 𐑣𐑨𐑝 𐑼𐑲𐑝𐑛! :𐑒𐑩𐑥𐑐𐑿𐑑𐑼𐑟:𐑒𐑰𐑚𐑹𐑛𐑟:
 :PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
 :CUSTOM_ID: new-choc-switches-have-arrived.en-shaw
 :EXPORT_HUGO_BUNDLE: 20240914_new-choc-switches-have-arrived
 :EXPORT_FILE_NAME: index.en-shaw.md
@@ -2289,6 +2398,7 @@ I think I’ll eventually swap them out for some spare Choc Red switches that I 
 *** ZSA Voyager has arrived!
 **** DONE ZSA Voyager has arrived! :Computers:Keyboards:
 :PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
 :CUSTOM_ID: zsa-voyager-has-arrived
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20240831_zsa-voyager-has-arrived
@@ -2329,6 +2439,7 @@ In the meantime, I will keep working on building typing speed on my ISRT layout.
 *** Home Row Layer Keys
 **** DONE Home Row Layer Keys :Computers:Keyboards:AltKeyboardLayouts:
 :PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
 :CUSTOM_ID: home-row-layer-keys
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20240811_home-row-layer-keys
@@ -2436,6 +2547,7 @@ As usual, the Vial layout is on my [[https://github.com/matt-maguire/kbd_firmwar
 *** ISRT Keyboard Layout
 **** DONE ISRT Keyboard Layout :Computers:Keyboards:Corne:AltKeyboardLayouts:
 :PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
 :CUSTOM_ID: isrt-keyboard-layout
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20240803_isrt-keyboard-layout
@@ -2529,6 +2641,7 @@ I am currently using two websites to help with this:
 *** Corne V4.1 Mini
 **** DONE Corne V4.1 Mini :Keyboards:Corne:
 :PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
 :CUSTOM_ID: corne-v4-mini
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20240721_corne-v4-mini
@@ -2557,6 +2670,7 @@ You can find the firmware tweaks and keyboard layouts I am using in my [[https:/
 *** Corne V4 Update
 **** DONE Corne V4 Update :Keyboards:Corne:
 :PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
 :CUSTOM_ID: corne-v4-update
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20240721_corne-v4-update
@@ -2586,6 +2700,7 @@ I've since learned that one important difference between rev 4.0 and 4.1 is that
 *** 34 Key Layout for Corne Keyboard
 **** DONE 34 Key Layout for Corne Keyboard :Computers:Keyboards:Corne:AltKeyboardLayouts:
 :PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
 :CUSTOM_ID: 34-key-layout-for-corne-keyboard
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20240715_34-key-layout-for-corne-keyboard
@@ -2622,6 +2737,7 @@ As I use the keyboard more, I’ll get a better idea what else I will need to ad
 *** Corne v4 Keyboard Keymap
 **** DONE Corne v4 Keyboard Keymap :Computers:Keyboards:Corne:AltKeyboardLayouts:
 :PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
 :CUSTOM_ID: corne-v4
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20240711_corne-v4-keymap
@@ -2685,6 +2801,7 @@ I’ll post updates here as I gain more experience and have something to report.
 *** Learn Japanese with Song Lyrics (Houki Boshi from Bleach)
 **** DONE Learn Japanese with Song Lyrics (Houki Boshi from Bleach) :Music:Languages:Japanese:
 :PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
 :CUSTOM_ID: houki-boshi
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20220214_houki-boshi
@@ -2714,6 +2831,7 @@ Studying song lyrics is a great way to gain more exposure to a language, and is 
 *** How to calculate the series resistor for an LED
 **** DONE How to calculate the series resistor for an LED :HamRadio:
 :PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
 :CUSTOM_ID: led-series-resistor
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20220202_led-series-resistor
@@ -2780,9 +2898,79 @@ This is still acceptable. So, we have now completed our circuit design:
 
 [[file:20220202-quicklatex.com-fecf716ddc8012b94614dba19222cab7_l3.svg]]
 
+**** DONE Kiel kalkuli serian rezistilon por LED :HamRadio:Lingvoj:Esperanto:
+:PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
+:CUSTOM_ID: led-series-resistor-eo
+:EXPORT_FILE_NAME: index.eo.md
+:EXPORT_HUGO_BUNDLE: 20220202_led-series-resistor
+:EXPORT_DATE: 2022-02-02
+:EXPORT_DESCRIPTION: 20220202-Screen-Shot-2022-02-02-at-6.32.54-pm.png
+:END:
+
+Kiam ni konektas LED-on al baterio, ni ofte bezonas rezistilon en serio por limigi la korrenton. Mi vidis tiun demandon aperigi en Facebook-grupo, kaj mi pensis, ke povus esti utile uzi ĝin kiel simplan ekzemplon pri cirkvitodezajnado.
+
+La baza cirkvito, kiun ni konsideros, estas montrita sube:
+
+[[file:20220202-quicklatex.com-06f3bedeaf7e311d9af11493d4616842_l3.svg]]
+
+Ni havas korenton $i$, kiu forlasas la baterion/fonton de tensio, pasas tra la rezistilo kaj kaŭzas tensiofalon $V_R$, poste pasas tra la LED kun tensiofalo $V_{f_{LED}}$ antaŭ ol reveni al la baterio. Do, kiel ni povas eltrovi la valoron de la rezistilo, kiun ni devus uzi?
+
+Por respondi tiun demandon, ni bezonas scii kelkajn aferojn pri la LED. Nome:
+
+    kiom da korento ni volas pasi tra la LED?
+    kia estos la tensio trans la LED ĉe tiu korento?
+
+Kiel ni trovu la respondojn al tiuj demandoj? Ni devas konsulti la specifikaĵon de la LED-komponento!
+
+Unue ni kontrolu la maksimuman toleratan valoron de la komponento. Rigardante la specifikaĵon, ni vidas la sekvantan tabelon:
+
+[[file:20220202-Screen-Shot-2022-02-02-at-5.23.35-pm-1024x420.png]]
+
+Ni povas vidi, ke la maksimuma kontinua kurento por ruĝa LED estas 30 mA. Ĝenerale ni ne volas funkcigi komponenton rekte ĉe ĝia maksimuma limo, do kio okazas, se ni iom reduktas la korenton? Serĉante plu en la specifikaĵo, ni trovas la sekvantajn grafikojn:
+
+[[file:20220202-Screen-Shot-2022-02-02-at-5.24.13-pm-1024x469.png]]
+
+La grafeo en figuro 3 montras al ni, kiom hela la LED estos ĉe diversaj korentoj. Ĉe 10 mA la intenso de la LED-lumo estas normigita al nivelo 1. Se ni pliigos la korenton ĝis 20 mA, la LED estos ĉirkaŭ 1,5-oble tiel hela kiel ĉe la nivelo de 10 mA. Se ni pliigos la korenton ĝis 30 mA (la maksimumo), la intenso estas nur ĉirkaŭ 1,8-oble tiel hela kiel ĉe 10 mA — do ĝi konsumas multe pli da potenco por malmulta gajno. Ĉe 20 mA ni ankoraŭ ricevas helan intencon kaj samtempe lasas konsiderindan rezervon sub la maksimumo, do ni desegnu nian cirkviton kun korento:
+
+Kia estos la tensio trans la LED ĉe tiu korento? Rigardante la grafikon en figuro 2, ni vidas, ke la tensio trans la LED estos proksimume:
+
+    \[V_{f_{LED}}=2\text{ V}\]
+
+Kia estos la tensio trans la rezistilo de R omoj? Ni scias, ke la korento tra la rezistilo devas esti 20 mA, do ni povas uzi la leĝon de Ohm por kalkuli la tensiofalon trans la rezistilo:
+
+        \[\begin{align*}
+        V_R & = i \times R \\
+        & = 20 \times 10^{-3} \times R
+        \end{align*}\]
+
+Ni povas nun uzi la tensian leĝon de Kirchhoff, laŭ kiu la sumo de tensioj en buklo ĉiam egalas al 0 V. Se ni iras horloĝdirekten ĉirkaŭ la cirkvito, la tensifonto helpas la korenton kaj do estas pozitiva, dum la rezistilo kaj la LED kontraŭas la korenton, do iliaj signo estas negativaj. La ekvacio fariĝas:
+
+        \[\begin{align*}
+        V - V_R - V_{f_{LED}} & = 0 \\
+        V - i \times R - V_{f_{LED}} & = 0 \\
+        i \times R &= V - V_{f_{LED}} \\
+        R & = \frac{V - V_{f_{LED}}}{i}
+        \end{align*}\]
+
+Se ni supozas, ke ni uzas 9 V baterion, do anstataŭigante la nombrojn ni ricevas:
+
+    \[\begin{split}R & = \frac{(9 - 2)}{20 \times 10^{-3}} \\ & = 350~\Omega\end{split}\]
+
+Por sekureco, ni povas suprenrondi ĝin al la plej proksima normalizita valoro, kio estus 390 Ω rezistilo kun la kolora kodo oranĝa-blanka-bruna. Denove kontrolante la korenton, ni ricevas:
+
+    \[\begin{split} i & = \frac{V - V_{f_{LED}}}{R} \\
+    & = \frac{(9 - 2)}{390} \\
+    & = 18\text{ mA}\end{split}\]
+
+Tio ankoraŭ estas akceptebla. Do, ni nun finis nian cirkvitodezajnon:
+
+[[file:20220202-quicklatex.com-fecf716ddc8012b94614dba19222cab7_l3.svg]]
+
 *** It's a Heartache
 **** DONE It's a Heartache :Music:
 :PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
 :CUSTOM_ID: its-a-heartache
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20220130_its-a-heartache
@@ -2801,6 +2989,7 @@ I was keen to learn how to play something like it on my own ukulele, and a furth
 *** Digital Photography for Hams
 **** DONE Digital Photography for Hams :Photography:HamRadio:
 :PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
 :CUSTOM_ID: photography-for-hams
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20220120_photography-for-hams
@@ -2820,9 +3009,34 @@ A recording of the talk will be available on the [[https://www.youtube.com/user/
 
 #+hugo: {{< embed-pdf url="20220120-photography_for_hams.pdf" >}}
 
+
+**** DONE Cifereca Fotado por Radioamatoroj :Photography:HamRadio:Lingvoj:Esperanto:
+:PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
+:CUSTOM_ID: photography-for-hams-eo
+:EXPORT_FILE_NAME: index.eo.md
+:EXPORT_HUGO_BUNDLE: 20220120_photography-for-hams
+:EXPORT_DATE: 2022-01-20
+:EXPORT_DESCRIPTION: 20200120-Screenshot_2022-02-02_21-07-23-1024x550.png
+:EXPORT_HUGO_MENU:
+:END:
+
+Hierau vespere mi prelegis pri cifereca fotado ĉe la [[https://www.mwrs.org.au/][Manly Warringah Radio Society]], klubo de radioamatoroj. Mi decidis strukturi la prelegon tiel, ke ĝi montru paralelojn inter cifereca fotado kaj amatorradio.
+
+Unue mi komparis ciferecan fotilon kun radioamatora stacio bazita sur /programdifinita radio (SDR)/. Kiel ni uzas radioantenojn por kapti radioondojn, la objektivo de fotilo kaptas lumondojn. Kaj ciferecaj fotiloj kaj SDR-oj enhavas analogo-ciferecan konvertilon, kiu transformas la ondojn en ciferecan signalon. Ili ankaŭ havas ciferecajn procesorojn, kiuj konvertas la ricevitajn signalojn en formon perceiveblan de la homaj oreloj kaj okuloj.
+
+Mi parolis pri la /ekspona triangulo/ de fotado kaj ligis ĝin al teknikoj, kiujn ni uzas en amatorradio dum laboro kun malfortaj signaloj. Ni traktis kutimajn fotilajn agordojn kiel fokusa distanco, diafragmo kaj ŝirmila rapido, kaj diskutis kelkajn el la kompromisoj kaj specialaj efektoj, kiujn ili povas produkti.
+
+Fine mi parolis pri uzado de redaktilo por krudaj (RAW) dosieroj, kiu donas al fotisto pli da libereco pri prilaborado de bildo, kaj enkondukis la malfermfontan [[https://www.darktable.org/][projekton darktable]] kiel ekzemplon de tia redaktilo.
+
+Registraĵo de la prelego baldaŭ estos disponebla en la [[https://www.youtube.com/user/VK2MB][JT de MWRS ĉe YouTube]]. Jen la prezentaj glitoj, kiujn mi uzis:
+
+#+hugo: {{< embed-pdf url="20220120-photography_for_hams.pdf" >}}
+
 *** 〜て-Form Song
 **** DONE 〜て-Form Song :Languages:Japanese:
 :PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
 :CUSTOM_ID: te-form-song
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20211224_te-form-song
@@ -2865,6 +3079,7 @@ To find out more about the 〜て form of Japanese verbs, you can refer to [[htt
 
 **** DONE 〜て-𐑓𐑹𐑥 𐑕𐑪𐑙 :𐑤𐑨𐑙𐑜𐑢𐑦𐑡𐑩𐑟:𐑡𐑨𐑐𐑩𐑯𐑰𐑟:
 :PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
 :CUSTOM_ID: te-form-song.en-shaw
 :EXPORT_FILE_NAME: index.en-shaw.md
 :EXPORT_HUGO_BUNDLE: 20211224_te-form-song
@@ -2908,6 +3123,7 @@ To find out more about the 〜て form of Japanese verbs, you can refer to [[htt
 *** Sony A7R4 Selfie Solution
 **** DONE Sony A7R4 Selfie Solution :Photography:
 :PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
 :CUSTOM_ID: a7r4-selfie-solution
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20191004_a7r4-selfie-solution
@@ -2935,6 +3151,7 @@ If I want to use this setup for video vlogging, there is nowhere to mount a shot
 *** Should I use Back Button Focus on Sony A7R4?
 **** DONE Should I use Back Button Focus on Sony A7R4? :Photography:
 :PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
 :CUSTOM_ID: back-button-focus
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20191003_back-button-focus
@@ -2975,6 +3192,7 @@ Feel free to comment if you have other suggestions to allow for easy transition 
 *** Elecraft K2 Amplifier Keying Circuit
 **** DONE Elecraft K2 Amplifier Keying Circuit :HamRadio:
 :PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
 :CUSTOM_ID: elecraft-k2-amplifier-keying-circuit
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20140420_elecraft-k2-amplifier-keying-circuit
@@ -3034,9 +3252,72 @@ Here are some pics of the completed circuit, from above and from beneath.
 
 [[file:20140420-IMG_0118-Version-2-768x1024-1.jpg]]
 
+**** DONE Ŝlosada cirkvito por la Elecraft K2 amplifilo :HamRadio:Lingvoj:Esperanto:
+:PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
+:CUSTOM_ID: elecraft-k2-amplifier-keying-circuit-eo
+:EXPORT_FILE_NAME: index.eo.md
+:EXPORT_HUGO_BUNDLE: 20140420_elecraft-k2-amplifier-keying-circuit
+:EXPORT_DATE: 2014-04-20
+:EXPORT_DESCRIPTION: 20141420-IMG_0118-Version-2-768x1024-1.jpg
+:END:
+
+Mi konstruis [[http://www.elecraft.com/k2_page.htm][radiokonstruilaron Elecraft K2]], kaj mi finis la konstruadon la pasintan Paskofinsemajnon.
+
+Kiam mi mendis la konstruilaron, mi nemendis la enan ATU nek la opcion de 100 W amplifilo, ĉar mi jam havas [[http://www.elecraft.com/KXPA100/kxpa100.htm][amplifilon Elecraft KXPA100 kun ATU KXAT100]]. Tamen tiu amplifilo estas dezajnita por funkcii kun la radio [[http://www.elecraft.com/KX3/kx3.htm][KX3]], kaj do por ke ĝi funkcias kun la K2, mi bezonus konstrui ŝlosadan cirkviton.
+
+Bonŝance, Elecraft publikigis en sia retejo [[http://www.elecraft.com/Apps/Amp_keying_ckt.htm][elegantan solvon]] por tio. Ĝi konsistas el kelkaj transistoroj montitaj sur prova panelo, kiu enŝoviĝas en PCB-soketon de pinlorango destinitan por la interfaca modulo de la transporter de la K2. Ĉar mi ne havas tiun opcion, mia radio ne havis la bezonatan kablansoketon, sed bonŝance la loka elektronika butiko vendas taŭgajn pinlorangojn kiel parton de ilia Arduino-a rango. Mi aĉetis unu el tiuj pinlorangoj, kune kun la aliaj bezonataj partoj.
+
+La artikolo en la retejo de Elecraft provizas skemon kaj kelkajn fotojn de la finita panelo, sed ili ne provizis detalan informon pri kiel konstrui la cirkviton sur la prova panelo. Bonŝance, la cirkvito estas sufiĉe simpla kaj ne tre malfacile eltrovebla, sed mi decidis desegni diagramon, kiu donas pli bonan vidon pri kiel la komponentoj estas aranĝitaj kaj kiel la fizikaj konektoj estas faritaj.
+
+[[file:20141420-key_cct1.png]]
+
+La punktitaj linioj montras konektojn irantajn sub la panelo (krom la pordo-kruro de la 2N7000 JFET — tiu iras sub la transistoro, sed laŭ la supro de la panelo).
+
+Mi konstruis la cirkviton laŭ la sekvanta ordo:
+
+1. Metu la 8-pingan virinan pinlorangon sub la panelon ĉe la maldekstra flanko, kaj litu unu kruron de la 2,2 kΩ rezistilo al la pinglo elstaranta supren el la panelo ĉe pozicio A8. Tio tenas la pinlorangon enplace. La alia kruro de la 2,2 kΩ rezistilo iras tra truon B5.
+
+2. Metu la 10 kΩ rezistilon starantan verticale en truon C5, fleksu la supran kruron kaj trapiku ĝin tra truon D4. Fleksu la krurojn sub la panelon por teni la rezistilon enplace.
+
+3. Enmetu pecon de konekta drato (ekz. fortranĉitan komponentan kruron el via konstruado de la K2) tra truon D3. Supre de la panelo fleksu la draton tiel, ke ĝi atingu la pinglon 2 de la pinlorango elstarantan tra truon A2, kaj litu ĝin al tiu pinglo.
+
+4. Montu la dekstra-angulan Molex-ingon supren sur la panelon tra truoj E1 kaj F1. Sub la panelo fleksu la konektan draton, kiun vi enmetis en la antaŭa paŝo, tiel ke ĝi atingu la pinglon de la ingo elstarantan tra truon F1, kaj litu ĝin al la inga pinglo kaj tondu. Tio tenos la ingon enplace.
+
+3. La pordo- kaj fontokruroj de la 2N7000 JFET estas la du maldekstraj kruroj, se vi tenas la transistoron kun la plata flanko al vi. Fleksu tiujn du krurojn malantaŭen, kaj metu la restan kruron (la drenon) en truon C1. Fleksu la drenan kruron sub la panelon malsupren al la rezistiloj por teni la transistoron enplace.
+
+4. Litu la fontokruron (la maldekstran, kiun vi fleksis malantaŭen) al la pinglo 2 de la pinlorango, kiu elstaras el truo A2, kaj tondu. Atentu, ke vi ne ŝovu la konektan draton, kiu ankaŭ estas lita al tiu pinglo. Tondu kaj la transistoran kruron kaj la konektan draton.
+
+5. Litu la pordokruron (la mezan, kiun vi fleksis malantaŭen) al la pinglo 1 de la pinlorango, kiu elstaras el truo A1, kaj tondu.
+
+6. La drenon de la JFET, kiu iras malsupren tra truon C1, kaj la rezistilkrurojn elstarantajn tra truoj B5 kaj C5, oni devas fleksi tiel, ke ili ĉiuj renkontiĝu. Litu la tri krurojn kune kaj tondu.
+
+7. La emiterkruro de la 2N2222 BJT estas la plej maldekstra kruro, se vi tenas la transistoron kun la plata flanko al vi. Fleksu tiun kruron malantaŭen, kaj metu la mezan kruron (la bazan) tra truon C4 kaj la plej dekstran kruron (la kolektoron) tra truon C3. Litu la emiteran kruron, kiun vi fleksis malantaŭen, al la pinglo 4 de la pinlorango elstaranta tra truon A4.
+
+8. Fleksu la kolektoran kruron elstarantan tra truon C3 tiel, ke ĝi atingu sub la panelon la pinglon de la Molex-ingo elstarantan tra truon E1, kaj litu la kruron al la inga pinglo.
+
+9. Fleksu la bazan kruron elstarantan tra truon C4 tiel, ke sub la panelo ĝi renkontu la kruron de la 10 kΩ rezistilo elstarantan tra truon D4, litu la du krurojn kune kaj tondu.
+
+10. Faru mallongan kablon (3" aŭ 4") kun la Molex-ŝtopilo sur unu fino. Litu la flankon de la kablo, kiu konektiĝas al la pinglo plej proksima al la flanko de la panelo, iranta tra truon F1, al la masa konektilo de la RCA-konektilo.
+
+11. Instalu la RCA-konektilon en la truon sur la malsupra ĉasio markita "XVTR IN". Litu la outran flankon de la Molex-ŝtopila kablo al la interna konduktilo de la RCA-konektilo.
+
+12. Enŝovu la ŝlosadan cirkvitpanelon en la soketon J13 sur la RF-panelo. Konektu la Molex-ŝtopilon al la Molex-ingo sur la ŝlosada cirkvitpanelo.
+
+Kaj jen. Enŝovu unu finon de la RCA-RCA kablo en la novan RCA-konektilon ĉe la malantaŭo de via K2, kaj enŝovu la alian finon de la kablo en la RCA-soketon "PA KEY" ĉe la malantaŭo de la KXPA100. Konektu konektan kablon inter la ANT OUT de la K2 kaj la RF IN de la KXPA100, kaj vi estas preta.
+
+Jen kelkaj fotoj de la finita cirkvito, de supre kaj de malsupre.
+
+[[file:20141420-IMG_0113-1024x768-1.jpg]]
+
+[[file:20140420-IMG_0114-1024x768-1.jpg]]
+
+[[file:20140420-IMG_0118-Version-2-768x1024-1.jpg]]
+
 *** Beverage Antennas
 **** DONE Beverage Antennas :HamRadio:
 :PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
 :CUSTOM_ID: beverage-antennas
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20140414_beverage-antennas
@@ -3054,3 +3335,24 @@ The lecture was recorded and can be found on the club’s YouTube channel:
 #+hugo: {{< youtube xnVgbdkK_Iw >}}
 
 The [[https://www.slideshare.net/VK2MB/april-2014-lecture-beverage-antennas][slidepack]] is available on slideshare.
+
+**** DONE Beverage-antenoj :HamRadio:Lingvoj:Esperanto:
+:PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
+:CUSTOM_ID: beverage-antennas-eo
+:EXPORT_FILE_NAME: index.eo.md
+:EXPORT_HUGO_BUNDLE: 20140414_beverage-antennas
+:EXPORT_DATE: 2014-04-14
+:END:
+
+[[file:20140414-Figure_D-11_Long-wire_antenna_FM_7-93_1995.gif]]
+
+En mia loka radio-klubo, unu el la membroj ŝatas iri sur la 80-metran bandon per sia Morse-klako. Ni diskutis pri bonaj temoj por venontaj prelegoj, kaj li menciis, ke lin kuriozas Beverage-antenoj.
+
+Mi nenion sciis pri tiu temo, do mi pensis, ke estus bonege foriri, fari iom da esploro kaj lerni pri ili, por ke mi povu prelegi pri ili. Ŝajnas, ke Beverage-antenoj ja estas bonega opcio por ricevi signalojn sur la malaltaj bandoj, sed ili postulas grandegan spacon kaj malpli taŭgas kiel senda anteno.
+
+La prelego estis registrita kaj troviĝas en la YouTube-kanalo de la klubo:
+
+#+hugo: {{< youtube xnVgbdkK_Iw >}}
+
+La [[https://www.slideshare.net/VK2MB/april-2014-lecture-beverage-antennas][glitaro]] haveblas ĉe Slideshare.

@@ -2,7 +2,7 @@
 title = "Sony A7R4 Selfie Solution"
 featuredImage = "20191004-961C3B92-E725-4065-9A38-54BE23EDC24B.jpeg"
 date = 2019-10-04
-lastmod = 2026-11-16T10:08:14+11:00
+lastmod = 2026-11-16T10:41:53+11:00
 tags = ["Photography"]
 categories = ["Blog"]
 draft = false

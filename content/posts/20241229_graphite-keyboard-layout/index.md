@@ -2,7 +2,7 @@
 title = "Graphite Keyboard Layout"
 featuredImage = "20241229-graphite_layout.png"
 date = 2024-12-29
-lastmod = 2026-11-16T10:08:07+11:00
+lastmod = 2026-11-16T10:37:42+11:00
 tags = ["Computers", "Keyboards", "AltKeyboardLayouts"]
 categories = ["Blog"]
 draft = false

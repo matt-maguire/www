@@ -1,12 +1,13 @@
 +++
 title = "Teaching Resources"
 date = 2024-10-10
-lastmod = 2024-12-30T12:38:33+11:00
+lastmod = 2026-11-16T10:46:53+11:00
 categories = ["Docs"]
 draft = false
-weight = 3001
+weight = 4001
 author = "Matt Maguire"
 hiddenFromHomePage = true
+aliases = ["/docs-teaching-resources/"]
 +++
 
 ## Miscellanous Teaching Resources {#miscellanous-teaching-resources}

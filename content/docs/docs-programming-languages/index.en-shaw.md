@@ -1,13 +1,14 @@
 +++
 title = "𐑐𐑮𐑴𐑜𐑮𐑨𐑥𐑦𐑙 𐑤𐑨𐑙𐑜𐑢𐑦𐑡𐑩𐑟"
 date = 2024-12-28
-lastmod = 2025-01-24T12:21:39+11:00
+lastmod = 2026-11-16T10:46:54+11:00
 tags = ["𐑐𐑮𐑴𐑜𐑮𐑨𐑥𐑦𐑙", "𐑤𐑦𐑕𐑐"]
 categories = ["Docs"]
 draft = false
-weight = 3002
+weight = 4001
 author = "Matt Maguire"
 hiddenFromHomePage = true
+aliases = ["/docs-programming-languages/"]
 +++
 
 ## ·𐑮𐑦𐑕𐑐𐑕 {#𐑮𐑦𐑕𐑐𐑕}

@@ -2,11 +2,11 @@
 title = "My AI Teaching Setup, Part 0: A Life in Plain Text"
 featuredImage = "20261116-ai-setup-0-plain-text.png"
 date = 2026-11-16
-lastmod = 2026-11-16T10:08:01+11:00
+lastmod = 2026-11-16T10:34:58+11:00
 tags = ["AI", "LaTeX", "Teaching", "Emacs"]
 categories = ["Blog"]
 draft = false
-weight = 3001
+weight = 4001
 author = "Matt Maguire"
 +++
 

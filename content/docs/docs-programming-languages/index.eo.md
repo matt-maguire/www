@@ -1,13 +1,14 @@
 +++
 title = "Programadaj Lingvoj"
 date = 2024-12-28
-lastmod = 2025-01-02T09:59:51+11:00
+lastmod = 2026-11-16T10:46:54+11:00
 tags = ["Programado", "LISP"]
 categories = ["Docs"]
 draft = false
-weight = 3003
+weight = 4001
 author = "Matt Maguire"
 hiddenFromHomePage = true
+aliases = ["/docs-programming-languages/"]
 +++
 
 ## LISPs {#lisps}

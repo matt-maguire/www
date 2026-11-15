@@ -2,10 +2,10 @@
 title = "From Lessons to Unit Planning"
 featuredImage = "20260824-unit-planning.png"
 date = 2026-08-24
-lastmod = 2026-11-16T10:08:01+11:00
+lastmod = 2026-11-16T10:34:51+11:00
 categories = ["Blog"]
 draft = true
-weight = 3001
+weight = 4001
 author = "Matt Maguire"
 +++
 

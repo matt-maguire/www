@@ -1,12 +1,14 @@
 +++
 title = "Packet Radio Resources"
 date = 2013-03-21
-lastmod = 2025-01-26T14:39:52+11:00
-tags = ["HamRadio", "PacketRadio"]
-categories = ["Blog"]
+lastmod = 2026-11-16T10:46:54+11:00
+tags = ["HamRadio", "PacketRadio", "AX25"]
+categories = ["Docs"]
 draft = false
-weight = 3001
+weight = 4001
 author = "Matt Maguire"
+hiddenFromHomePage = true
+aliases = ["/20121018_packet-radio/"]
 +++
 
 ## AX.25 Packet on Linux {#ax-dot-25-packet-on-linux}
@@ -53,9 +55,6 @@ I have collected here some useful links in my search to learn about packet radio
 -   The [Problem with Digipeaters](https://qsl.net/vk2rq/digipeaters.html) by Tom Clark W3IWI, 1986
 -   Installing [LinBPQ](https://dl.dropbox.com/u/31910649/InstallingLINBPQ.htm) BPQ Node/Mail/Chat on Linux
 -   Archive of the [AAPRA Website](https://www.qsl.net/vk2rq/aapra/) (now defunct, but various useful historic documents)
-
-
-## Packet Activity in the Local Area {#packet-activity-in-the-local-area}
 
 | Freq/MHz     | Callsigns                                    | Comments                                                                         |
 |--------------|----------------------------------------------|----------------------------------------------------------------------------------|

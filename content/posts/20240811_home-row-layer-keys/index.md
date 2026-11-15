@@ -2,7 +2,7 @@
 title = "Home Row Layer Keys"
 featuredImage = "20240811-IMG_0418sm-1536x733.jpg"
 date = 2024-08-11
-lastmod = 2026-11-16T10:08:10+11:00
+lastmod = 2026-11-16T10:39:11+11:00
 tags = ["Computers", "Keyboards", "AltKeyboardLayouts"]
 categories = ["Blog"]
 draft = false

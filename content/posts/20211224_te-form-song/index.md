@@ -1,7 +1,7 @@
 +++
 title = "〜て-Form Song"
 date = 2021-12-24
-lastmod = 2026-11-16T10:08:13+11:00
+lastmod = 2026-11-16T10:41:28+11:00
 tags = ["Languages", "Japanese"]
 categories = ["Blog"]
 draft = false

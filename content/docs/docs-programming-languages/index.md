@@ -1,13 +1,14 @@
 +++
-title = "Programming Languages"
+title = "Introduction to Programming Languages"
 date = 2024-12-28
-lastmod = 2026-08-24T18:10:48+10:00
+lastmod = 2026-11-16T10:46:53+11:00
 tags = ["Programming", "LISP"]
 categories = ["Docs"]
 draft = false
-weight = 3001
+weight = 4001
 author = "Matt Maguire"
 hiddenFromHomePage = true
+aliases = ["/docs-programming-languages/"]
 +++
 
 ## LISPs {#lisps}

@@ -5,7 +5,7 @@ lastmod = 2025-01-26T11:58:28+11:00
 tags = ["HamRadio"]
 categories = ["Blog"]
 draft = false
-weight = 3001
+weight = 4001
 author = "Matt Maguire"
 +++
 

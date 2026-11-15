@@ -2,7 +2,7 @@
 title = "Plain Text Accounting with Emacs – Part 3"
 featuredImage = "20250530-share_trading.png"
 date = 2025-05-30
-lastmod = 2025-05-30T18:12:00+10:00
+lastmod = 2026-11-15T22:47:48+11:00
 tags = ["PlainTextAccounting", "Emacs"]
 categories = ["Blog"]
 draft = false
@@ -10,7 +10,7 @@ weight = 3001
 author = "Matt Maguire"
 +++
 
-My journey into using Hledger with Emacs to track my share investments continues. [Last Time]({{< relref "index.md" >}}) I looked at a way to track shares using a plain text file. Since then I have made some tweaks to my workflow as I gain more experience:
+My journey into using Hledger with Emacs to track my share investments continues. [Last Time]({{< relref "20250424-pta-emacs2" >}}) I looked at a way to track shares using a plain text file. Since then I have made some tweaks to my workflow as I gain more experience:
 
 -   naming conventions that support multiple stock brokers
 -   booking brokerage fees in a better way to support the Australian tax system.

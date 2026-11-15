@@ -2,7 +2,7 @@
 title = "Japanese Electronic Dictionary (Casio XD-G9850)"
 featuredImage = "20250315-xd_g9850.jpg"
 date = 2025-03-15
-lastmod = 2025-03-16T08:26:35+11:00
+lastmod = 2026-11-15T22:47:51+11:00
 tags = ["Languages", "Japanese"]
 categories = ["Blog"]
 draft = false
@@ -73,8 +73,8 @@ By default, these shortcut buttons take you to the following dictionaries:
 | 和 英  | Genius J-E Kanji Dict          | 3rd edition                                                               |
 | 理化学 | J-E Physics and Chemictry Dict |                                                                           |
 | 理化学和英 | E-J Physics and Chemistry Dict |                                                                           |
-| 学習1  | TOEIC Practice Tests           | for learning English                                                      |
-| 学習2  | Royal English Grammar          | for learning Elglish                                                      |
+| 学習 1 | TOEIC Practice Tests           | for learning English                                                      |
+| 学習 2 | Royal English Grammar          | for learning Elglish                                                      |
 | メニュー | Menu                           | Full list of available dicts.                                             |
 | トレジム | Training Gym                   | for learning English                                                      |
 | ホーム | Home button                    | Useful for searching all the dictionaries in one go.                      |

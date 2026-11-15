@@ -1,7 +1,7 @@
 +++
 title = "Beverage Antennas"
 date = 2014-04-14
-lastmod = 2025-03-02T17:39:39+11:00
+lastmod = 2026-11-15T22:48:06+11:00
 tags = ["HamRadio"]
 categories = ["Blog"]
 draft = false

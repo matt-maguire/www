@@ -2,7 +2,7 @@
 title = "AI Agents Take Over Lesson Prep"
 featuredImage = "20260822-claude-code.png"
 date = 2026-08-22
-lastmod = 2026-08-22T13:28:17+10:00
+lastmod = 2026-11-15T22:47:47+11:00
 tags = ["AI", "LaTeX", "Teaching", "Emacs"]
 categories = ["Blog"]
 draft = false

@@ -2,7 +2,7 @@
 title = "𐑯𐑿 ·𐑗𐑪𐑒 𐑕𐑢𐑦𐑗𐑩𐑟 𐑣𐑨𐑝 𐑼𐑲𐑝𐑛!"
 featuredImage = "20240914-IMG_0442-1152x1536.jpg"
 date = 2024-09-14
-lastmod = 2025-03-02T17:39:38+11:00
+lastmod = 2026-11-15T22:47:59+11:00
 tags = ["𐑒𐑩𐑥𐑐𐑿𐑑𐑼𐑟", "𐑒𐑰𐑚𐑹𐑛𐑟"]
 categories = ["Blog"]
 draft = false

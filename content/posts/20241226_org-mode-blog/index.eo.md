@@ -1,7 +1,7 @@
 +++
 title = "Migrating Blog from Wordpress to Org Mode"
 date = 2024-12-26
-lastmod = 2025-03-02T17:39:38+11:00
+lastmod = 2026-11-15T22:47:58+11:00
 tags = ["Emacs", "OrgMode", "Lingvoj", "Esperanto", "Ŝava"]
 categories = ["Blog"]
 draft = false

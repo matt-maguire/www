@@ -83,10 +83,186 @@
 - Future explorations: Developing custom Model Context Protocol (MCP) servers, interactive classroom visualizers, or student feedback loops.
   
 ** AI Agents and Local LLMs
+*** TODO My AI Teaching Setup, Part 0: A Life in Plain Text :AI:LaTeX:Teaching:Emacs:
+:PROPERTIES:
+:CUSTOM_ID: ai-setup-0
+:EXPORT_FILE_NAME: index
+:EXPORT_HUGO_BUNDLE: 20261116-ai-setup-0-plain-text
+:EXPORT_DATE: 2026-11-16
+:EXPORT_HUGO_MENU:
+:EXPORT_DESCRIPTION:
+:END:
+
+This is the first of a few articles about the AI system I use for teaching maths. The honest summary: ten months ago I bought an AI subscription, and today I run a small fleet of machines and agents that draft my lessons, check my exams, index my syllabus, and argue with me about design at midnight. This first article is about the decade /before/ any of that, because it turns out to be the part that made everything else possible.
+
+**** Years of LaTeX
+
+I have written every teaching document of my career in LaTeX. It started with ~mteach~, a class designed for maths teachers, and grew into my own house style: lesson notes, worksheets, assessment tasks, all of it text files that compile to PDF. This choice is the least glamorous and most consequential decision in the story. My entire professional output — every lesson, every question, every mark allocation — has lived for years as plain text in folders.
+
+The cost of that choice was time. LaTeX is particular, and the diagrams are worse. Drawing one number line with labelled fractions, or a circle divided for fraction introduction, could take twenty minutes of TiKZ fiddling — coordinates, anchors, overlapping labels, the small talk of vector graphics. And the diagrams matter: I lean heavily on dual coding, getting the algebra and the picture to reinforce each other, so "skip the diagram" was never an option. The TiKZ tax was just a fact of life, paid every lesson-planning session.
+
+**** An Org-mode brain
+
+The other half of the plain-text life is [[https://orgmode.org][Org mode]]: my notes, tasks, calendar, knowledge base and lesson plans are all text files, cross-linked zettelkasten style. Teaching knowledge — NESA outcomes, syllabus quirks, which explanation worked for which topic — accumulated in thousands of small linked notes.
+
+At the time this was just me being a text obsessive with an Emacs-shaped habit. It did not occur to me that I was building anything.
+
+**** The background I should confess
+
+Before teaching I spent years as an electrical engineer, mostly software, and I have been a computer hobbyist for as long as I can remember. Networking, terminals, a bit of neural-network theory from when it was a niche subject — none of it was unusual then, and none of it prepared me specifically for what happened in 2026. I mention it only because it smoothed the early road, and because the road got smoother still, for reasons that become the point of this whole series: the technical parts turned out to be the parts you could delegate.
+
+**** The first hours back
+
+The first thing AI ever did for me was TiKZ. I described the diagram in a sentence and it produced the coordinates. Twenty minutes became two, and the two were usually better, because the AI remembered anchor tricks I had forgotten. Then it was the LaTeX prose, the question wording, the "make this part harder but keep the marks the same" requests that used to be an hour of careful surgery.
+
+And here is the quiet realisation that this series keeps circling back to: *I never had an integration project.* When AI tools arrived, they could already read my entire professional life. No PDF wrangling, no proprietary formats, no export step — the lessons, the notes, the brain itself were text files, and text is what these tools eat. People ask me how I got my knowledge into the AI. I didn't. I had been writing it in the AI's native language for years. I just had to point the AI at it.
+
+That is the lesson of Part 0, and I did not earn it deliberately: *build your working life in plain text.* Not because AI is coming — although it is — but because text compounds. It links, it diffs, it survives every vendor, and one day it turns out to be the foundation everything else gets built on.
+
+/Next: Part 1 — Rented Intelligence. The subscriptions that started it, the anxieties that followed, and the sacred first duty of an eight-gigabyte graphics card./
+
+*** TODO My AI Teaching Setup, Part 1: Rented Intelligence :AI:LaTeX:Teaching:
+:PROPERTIES:
+:CUSTOM_ID: ai-setup-1
+:EXPORT_FILE_NAME: index
+:EXPORT_HUGO_BUNDLE: 20261116-ai-setup-1-rented-intelligence
+:EXPORT_DATE: 2026-11-16
+:EXPORT_HUGO_MENU:
+:EXPORT_DESCRIPTION:
+:END:
+
+[[#ai-setup-0][Part 0]] was about the plain-text foundation. This is the part where the subscriptions arrived — and the part where I should confess that the whole edifice started, like most things worth doing, with fun.
+
+**** January: renting intelligence
+
+In January this year I bought two AI subscriptions: Claude, and Google's AI tier. The teaching use case was immediate and real. Claude drafted lesson structures, rewrote exam questions to shift difficulty without shifting marks, generated first-draft assessment tasks from a paragraph of requirements, and proofread things I had read too many times to see. A set of lesson notes that used to start from a blank page now started from a draft I argued with. Arguing with a draft is much faster than producing one.
+
+For a few months this was simply the arrangement: excellent tools, rented monthly. My lesson pipeline had a new first stage, and the price was fine.
+
+The itch started quietly: pricing pages moving, quota policies changing shape, models I had grown used to one rename or re-tier away from disappearing. My workflow was becoming load-bearing on someone else's commercial decisions. The subscription was not a tool any more; it was a landlord.
+
+I documented that pivot as it happened, in two articles I wrote in August without knowing I was writing a series: [[#claude-code][AI Agents Take Over Lesson Prep]] and [[#gemma-goose][AI Agents and Local LLMs]]. If you want the technical detail of that first move to local models — choosing between dense and Mixture-of-Experts, the VRAM-versus-context-window trade, serving the model over the network through a reverse proxy — they cover it, and I will not repeat myself here. What they do not cover is where the hardware obsession actually started, and that is the embarrassing part.
+
+**** The 2080's sacred first duty
+
+Here is the confession. When I finally put a model on my own hardware — an office PC with an i9 and an eight-gigabyte RTX 2080, which is /not/ a serious AI card — the first thing it served was not lesson notes. It was Mistral, doing roleplay.
+
+I had been experimenting with roleplay and AI companion systems for a while before that, and they taught me two things that ended up buried in the architecture of everything since.
+
+First, that an AI can be a form of communication I genuinely find comfortable. Text-first, patient, at my own pace, no social performance, no reading the room. Ideas arrive already in the format I think in. Plenty of people feel exactly this and I suspect it is more common than the polite conversation suggests. The interface matters as much as the capability — a fact that will become important when we meet my assistant, who has a personality on purpose.
+
+Second, the incidental remark. Models say sideways things — a passing "this also appears in…" — and I follow the thread, and an hour later I have fallen down a rabbit hole and come back with something better than what I went looking for. For a mind that runs on association, an engine that generates associations is not a distraction machine; it is a collaborator. The entire knowledge system in the later parts of this series is, functionally, industrialised rabbit holes.
+
+So the honest ordering is: *the GPU was bought for joy, and the lesson-prep empire was built on top of the joy.* Every teacher who secretly started with the fun stuff will recognise themselves. That is why I am saying it.
+
+**** What eight gigabytes buys you
+
+Running a small quantised model on 8 GB of VRAM in early 2026 is a humbling business. Short context, modest quality, slow answers to anything complicated. The 2080 could roleplay Mistral acceptably and could not draft a Year 10 assessment task to save its life. The cloud models were better by a wide margin, and I knew exactly how wide because I was now paying for both.
+
+What the experiments taught me was the shape of the problem: VRAM is the budget, quantisation is the currency, and the interesting frontier was models clever enough to be worth the hardware. That framing — which is really just "how much memory does the thing need" — is the whole of local AI. Once you see it, the rest is shopping.
+
+By mid-year the decision had formed: if I was going further into this, I needed a machine with real headroom. The next article is about that purchase, its honest justifications, and its embarrassing résumé.
+
+/Next: Part 2 — The Fleet. The gaming PC that never gamed, the models that failed honestly, and the month I learned that the harness matters more than the model./
+
+*** TODO My AI Teaching Setup, Part 2: The Fleet :AI:LaTeX:Teaching:Hardware:
+:PROPERTIES:
+:CUSTOM_ID: ai-setup-2
+:EXPORT_FILE_NAME: index
+:EXPORT_HUGO_BUNDLE: 20261116-ai-setup-2-the-fleet
+:EXPORT_DATE: 2026-11-16
+:EXPORT_HUGO_MENU:
+:EXPORT_DESCRIPTION:
+:END:
+
+[[#ai-setup-1][Part 1]] ended with the 8 GB ceiling and a decision. This is the hardware part, and the part where the system stopped being a computer and started being a staff.
+
+**** The gaming PC that never gamed
+
+In July I built hyperion: a proper gaming PC, RTX 5090, 32 GB of VRAM. The justifications were two, and I was honest about both at the time. The AI justification: if I was going further into this, I needed headroom — enough VRAM for a genuinely good open model with a long context window. The hobby justification: I have wanted a big gaming PC for roughly a decade, and AI was the first excuse strong enough to survive my own accounting.
+
+The embarrassing résumé, three months later: games installed and played: zero. hyperion's entire working life is teaching. It serves the model that drafts my lessons, hosts my family's backups, and hums under the house doing nothing else at all. The hobby excuse never got spent; the work excuse turned out to be the true one. Whether the ATO agrees with that framing is a conversation for my accountant, not this blog.
+
+**** Models: the honest failures
+
+When I wrote the August article, the daily driver was Gemma — a 31-billion-parameter dense model served by Ollama, with the Goose agent driving it. That setup genuinely worked, and then the ground moved under it, because this is the year the ground keeps moving. Gemma gave way to a 27-billion-parameter Qwen, and the keeper today is a large Mixture-of-Experts model — a big library of smaller specialists where each query only wakes the few experts it needs. That architecture is what makes a 32 GB card serve something genuinely clever: the /whole/ model doesn't need to fit, just the parts being consulted. It drafts my lesson notes and my assessment tasks to a standard I sign off on, and it runs on electricity, not on someone's pricing page.
+
+In between, I collected failures, and they are the useful part:
+
+- A much-hyped model arrived with a reputation for cleverness. It aced the pure maths verification and then, asked to draw a number line, confidently stacked every label at the same coordinate. *Maths brain, broken hands.* A model's benchmark reputation told me nothing about whether it could produce /my/ documents.
+- A benchmark run died mysteriously until I found the cause: a context-window limit set in the wrong place, silently compressing the model's memory of its own work mid-task. *Half of "the model failed" is really "the plumbing failed."*
+- A machine running two models at once started paging pieces of them to disk. The model got subtly worse, in no particular way, which is the worst way for software to fail. *A model that has been swapped out is a model with a headache.*
+
+The old office machine was not retired — it now runs a smaller, fast Qwen as the second-opinion engine, the 2080 finally earning a proper salary after its years of roleplay duty.
+
+**** The harness is the product
+
+The biggest lesson of the year, and the one I had no warning about: *the model matters less than the thing you wrap around it.* A mediocre model in a good harness beats a brilliant model in a bad one, consistently, on real work.
+
+The harness is everything between "chat with a model" and "get a document out": it reads and edits files, runs the LaTeX compiler, sees the errors, fixes them, runs the verification, keeps a plan, and knows your house style. Goose, the agent I was using back in August, has since been joined — and largely outperformed — by a whole generation of them: OpenCode, Hermes, Qwen's own agent, Google's Antigravity. I wired them all to whichever model fits each job. The current best artifact-maker is an /orchestrator/: one model plans and delegates, cheaper models execute the subtasks in clean contexts, and the planner verifies the results. A committee, in other words. It outperforms any single model I can run, at a fraction of the cost of the obvious approach.
+
+And the relationship changed somewhere in there. I stopped asking AI questions and started bouncing designs with it — asking the local model to help evaluate which model to install, having agents run the benchmarks while I slept, reading handover notes written by one agent to another. The system now includes its own staff. The human job became direction, taste, and refusing to trust anything unverified.
+
+/Next: Part 3 — The Organs. The knowledge base that was already ten years old, the tools that make verification automatic, and the honest cost sheet, gaming column: zero./
+
+*** TODO My AI Teaching Setup, Part 3: The Organs :AI:LaTeX:Teaching:Emacs:
+:PROPERTIES:
+:CUSTOM_ID: ai-setup-3
+:EXPORT_FILE_NAME: index
+:EXPORT_HUGO_BUNDLE: 20261116-ai-setup-3-the-organs
+:EXPORT_DATE: 2026-11-16
+:EXPORT_HUGO_MENU:
+:EXPORT_DESCRIPTION:
+:END:
+
+[[#ai-setup-2][Part 2]] was about models and harnesses. But a model in a harness is still just a clever voice. What turned the setup into a /system/ was the organs: the memory, the senses, and the reflexes bolted on around it. This is the final part, and it starts with a full circle.
+
+**** The knowledge base that was already ten years old
+
+People ask how I got my teaching knowledge into the AI. The answer is anticlimactic: I didn't. I had spent a decade writing it in plain text — Org-mode notes, syllabus annotations, lesson reflections, the whole zettelkasten from [[#ai-setup-0][Part 0]].
+
+What the system needed was a way to /search by meaning/ rather than by keyword, so the model can be asked "what have I written about students confusing gradient with rise-over-run?" and get my own past thinking back, cited. That is what a vector database does: it indexes text by what it means. Qdrant, running on the office box, holds the knowledge base — my notes, the NESA syllabus, the textbooks, the maths resources — and every agent in the house queries it the same way.
+
+The decade of plain text paid for itself in an afternoon. No conversion project, no vendor export, no PDF archaeology. Point the index at the folders. Done.
+
+**** The reflexes: never let the model do a human's job
+
+The organs that matter most are the ones that catch the model lying — and models lie with total confidence, in fluent sentences, about things you can check.
+
+- *SymPy does the maths.* No model computes an integral or solves an equation in this pipeline. Answers are verified symbolically by a computer-algebra system before anything reaches a student. A language model's idea of arithmetic is autocomplete with delusions of competence.
+- *LaTeX does the marks arithmetic.* Early drafts had the model adding up the marks per question, and it got them wrong often enough to be dangerous — an exam where the section header says 50 and the questions sum to 43. The fix was to stop asking the model to count at all: the document class now keeps a counter, every question registers its marks, and the total is /computed at compile time/. The model declares; LaTeX arithmetic. This single change eliminated a whole class of errors.
+- *The compiler is the proofreader.* Every generated document must compile, and the build is checked mechanically — question counts, mark totals, diagram presence — before I ever open the PDF.
+- *Search we own.* A private SearXNG instance handles the agents' web research — no per-query API bill, no third party logging what my tools look up about my syllabus.
+
+The pattern: give the model the parts that need judgement — wording, structure, pedagogy, the draft — and give everything with a /checkable/ answer to a tool that cannot be wrong. The skill that matters is not prompting. It is *verification*, and building verification into the pipeline so it happens whether or not anyone remembers to ask.
+
+**** The staff
+
+The last organ is the one that surprised me most: the system now has employees. Agents with persistent memory and named personalities run on the machines — one manages the office box, reads the monitoring reports each morning, writes handover notes to itself, and has genuinely caught problems before I did. A watchdog checks every backup /completed/, not merely that the disk has room, and messages a summary each morning; the week it went in, it found a machine that had never once finished a backup, four days into a failure nobody had noticed.
+
+This is where the persona stuff from Part 1 comes back around. An assistant with a personality is an interface, not a gimmick: it makes the interaction a conversation you /want/ to have, so you have it, daily, and the system stays tended rather than merely installed.
+
+**** The honest cost sheet
+
+- *Hardware:* hyperion (the 5090 gaming PC) plus the existing office machine. The gaming column of the ledger, three months in: zero games played. The AI got the machine at a discount, effectively, because the hobby paid most of the list price.
+- *Electricity:* a few cents an hour, humming under the house.
+- *Subscriptions:* I kept them. The January subscriptions — Claude and Google — still run, because the honest ending of a local-AI story is that the cloud never left. Back in August I wrote that for the hard cases "I still have the option of using the more powerful Claude or Gemini paid models." That turned out not to be a stopgap but the architecture: the rented tier is burst capacity and frontier reach, and the pipeline routes to whichever is right for the job. This was never ideology. It is engineering: own the core, rent the burst.
+- *Time:* the real cost, and the real return. Ten months of evenings, mostly spent /with/ the AIs who built most of it themselves.
+
+**** If you are not technical
+
+The question every teacher asks: /I couldn't build this./ The honest answer from someone who has watched the whole thing unfold: the technical parts turned out to be the parts you can delegate. What the system actually required — from a maths teacher, not an engineer — was the habits: insist on verification, keep everything in text, start from joy rather than productivity, timebox the rabbit holes instead of banning them, and refuse to ship anything unverified.
+
+The machine that was supposed to save me time first gave me a way of working I actually enjoy. The time-saving was downstream of the joy. That, more than any model or piece of hardware, is the thing I would tell you to buy.
+
+-----
+
+/Disclosure, because you deserve it: these four articles were drafted with the system they describe — the agents supplied research, structure and many of these sentences; the errors that survived are mine, and I checked the claims that mattered. If that bothers you, good: that instinct is exactly the skill this series is trying to teach./
+
 **** DONE AI Agents and Local LLMs :AI:LaTeX:Teaching:Emacs:
 :PROPERTIES:
 :CUSTOM_ID: gemma-goose
-:EXPORT_FILE_NAME: index.md
+:EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20260823-gemma-goose
 :EXPORT_DATE: 2026-08-23
 :EXPORT_HUGO_MENU:
@@ -107,7 +283,7 @@ Of course, there are some drawbacks:
 - the models you can run are not quite as capable as the cloud-based models, and VRAM limitations may limit the size of the context window you can realistically use.
 
 ***** Choosing a model 
-Based on my experience with using Claude, I found that I would typically use around 100k tokens to produce a set of lesson notes. My computer is a gaming PC equipped with a NVIDIA RTX 5900 that has 32GB of VRAM. The amount of VRAM determines the size of the model you can use and well as the length of the context window. I look for models that would give me a 128k+ context window and fit within the VRAM I had available. Of course, I asked an AI chat bot for some recommendations.
+Based on my experience with using Claude, I found that I would typically use around 100k tokens to produce a set of lesson notes. My computer is a gaming PC equipped with a NVIDIA RTX 5090 that has 32GB of VRAM. The amount of VRAM determines the size of the model you can use and well as the length of the context window. I look for models that would give me a 128k+ context window and fit within the VRAM I had available. Of course, I asked an AI chat bot for some recommendations.
 
 The first recommendation that came back was to use Ollama to run the models. By running a local Ollama server, it is simple to download different types of models and switch between them. The types of models that were recommended fell in two main categories:
 - *Dense models:* these models tend to be more powerful, but can also be slower
@@ -188,7 +364,7 @@ So, what else can I do with this setup? That of course will be the subject of th
 ***** DONE AI Agents Take Over Lesson Prep :AI:LaTeX:Teaching:Emacs:
 :PROPERTIES:
 :CUSTOM_ID: claude-code
-:EXPORT_FILE_NAME: index.md
+:EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20260822-claude-code
 :EXPORT_DATE: 2026-08-22
 :EXPORT_HUGO_MENU:
@@ -286,7 +462,7 @@ Next time I will talk about an alternative workflow that I set up to address thi
 ***** DONE Plain Text Accounting with Emacs -- Part 3 :PlainTextAccounting:Emacs:
 :PROPERTIES:
 :CUSTOM_ID: pta-emacs3
-:EXPORT_FILE_NAME: index.md
+:EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20250530-pta-emacs3
 :EXPORT_DATE: 2025-05-30
 :EXPORT_HUGO_MENU:
@@ -383,7 +559,7 @@ I think this new setup provides a bit more flexibility and convenience in unders
 ***** DONE Plain Text Accounting with Emacs -- Part 2 :PlainTextAccounting:Emacs:
 :PROPERTIES:
 :CUSTOM_ID: pta-emacs2
-:EXPORT_FILE_NAME: index.md
+:EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20250424-pta-emacs2
 :EXPORT_DATE: 2025-04-24
 :EXPORT_HUGO_MENU:
@@ -802,7 +978,7 @@ P 2025-05-31 WOW $32.00
 ***** DONE Plain Text Accounting with Emacs :PlainTextAccounting:Emacs:
 :PROPERTIES:
 :CUSTOM_ID: pta-emacs
-:EXPORT_FILE_NAME: index.md
+:EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20250423-pta-emacs
 :EXPORT_DATE: 2025-04-23
 :EXPORT_HUGO_MENU:
@@ -900,7 +1076,7 @@ This has been a fun exercise where I have learned a lot about accounting, and al
 ***** DONE Ergonomic Emacs :Keyboards:AltKeyboardLayouts:Emacs:
 :PROPERTIES:
 :CUSTOM_ID: hyper-meh-keys
-:EXPORT_FILE_NAME: index.md
+:EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20250329-hyper-meh-keys
 :EXPORT_DATE: 2025-03-29
 :EXPORT_HUGO_MENU:
@@ -928,7 +1104,7 @@ As I am a little time-poor at the moment, I will stick with Doom Emacs for the m
 ***** DONE ZSA Voyager with Pro Red Switches :Keyboards:AltKeyboardLayouts:
 :PROPERTIES:
 :CUSTOM_ID: zsa-pro-red
-:EXPORT_FILE_NAME: index.md
+:EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20250322-zsa_pro_reds
 :EXPORT_DATE: 2025-03-22
 :EXPORT_HUGO_MENU:
@@ -963,7 +1139,7 @@ So far I haven't noticed any false triggering, so I think this setup should be o
 ***** DONE Japanese Electronic Dictionary XD-Z20000 :Languages:Japanese:
 :PROPERTIES:
 :CUSTOM_ID: xd-z20000
-:EXPORT_FILE_NAME: index.md
+:EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20250320-denshijisho_xd-z20000
 :EXPORT_DATE: 2025-03-20
 :EXPORT_HUGO_MENU:
@@ -1162,7 +1338,7 @@ When I was in Japan, I actually bought a third electronic dictionary, this one c
 ***** DONE Japanese Electronic Dictionary (Casio XD-G9850) :Languages:Japanese:
 :PROPERTIES:
 :CUSTOM_ID: xd-g9850
-:EXPORT_FILE_NAME: index.md
+:EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20250315-denshijisho_xd-g9850
 :EXPORT_DATE: 2025-03-15
 :EXPORT_HUGO_MENU:
@@ -1254,7 +1430,7 @@ Hopefully though between the english quick reference guide and the info here, yo
 **** Island Song
 ***** DONE Island Song :Music:
 :PROPERTIES:
-:EXPORT_FILE_NAME: index.md
+:EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20250302-island_song
 :EXPORT_DATE: 2025-03-02
 :EXPORT_HUGO_MENU:
@@ -1435,7 +1611,7 @@ I think it starts out ok, but later in the piece the timing seems a bit off and 
 **** A Study in Scarlet
 ***** DONE A Study in Scarlet :Languages:Shavian:
 :PROPERTIES:
-:EXPORT_FILE_NAME: index.md
+:EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: 20250301_study-in-scarlet
 :EXPORT_DATE: 2025-03-01
 :EXPORT_HUGO_MENU:

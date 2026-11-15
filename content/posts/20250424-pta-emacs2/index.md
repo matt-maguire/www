@@ -2,7 +2,7 @@
 title = "Plain Text Accounting with Emacs – Part 2"
 featuredImage = "20250424-share_trading.png"
 date = 2025-04-24
-lastmod = 2025-04-25T20:22:15+10:00
+lastmod = 2026-11-15T22:47:48+11:00
 tags = ["PlainTextAccounting", "Emacs"]
 categories = ["Blog"]
 draft = false
@@ -10,7 +10,7 @@ weight = 3001
 author = "Matt Maguire"
 +++
 
-Following up from my [previous article]({{< relref "index.md" >}}) on using Emacs to maintain a plain-text ledger for use with plain text accounting software: I reconfigured my Doom Emacs to use the pre-packaged Ledger mode, and I can confirm that it is much nicer to use than the hledger mode I was using before. This could be because I hadn't set up the `hledger-mode` configuration properly, but with `ledger-mode` I find the autocompletion works much better, and the `M-q` keystroke can be used to nicely line up the amounts in a transaction.
+Following up from my [previous article]({{< relref "20250423-pta-emacs" >}}) on using Emacs to maintain a plain-text ledger for use with plain text accounting software: I reconfigured my Doom Emacs to use the pre-packaged Ledger mode, and I can confirm that it is much nicer to use than the hledger mode I was using before. This could be because I hadn't set up the `hledger-mode` configuration properly, but with `ledger-mode` I find the autocompletion works much better, and the `M-q` keystroke can be used to nicely line up the amounts in a transaction.
 
 I mentioned last time that I would talk a bit more about doing share trades, so I'll cover that in this article.
 

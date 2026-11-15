@@ -2,7 +2,7 @@
 title = "Japanese Electronic Dictionary XD-Z20000"
 featuredImage = "20250320-xd_z20000.jpg"
 date = 2025-03-20
-lastmod = 2025-03-20T19:57:26+11:00
+lastmod = 2026-11-15T22:47:50+11:00
 tags = ["Languages", "Japanese"]
 categories = ["Blog"]
 draft = false
@@ -10,7 +10,7 @@ weight = 3001
 author = "Matt Maguire"
 +++
 
-Last time I talked about a [science-related electronic dictionary]({{< relref "index.md" >}}) that I bought in Japan. When I was there, I did a bit more research and discovered that I had rushed in too quickly and that there were other models that include more business and literature-related content that could be useful when studying Japanese. So, I purchased a second dictionary, the Casio XD-Z20000. So, how much of an upgrade was this compared to the scientific model XD-G9850? To answer this question, I listed out all the dictionaries, glossaries and encyclopedias from both models and put them in a table for comparison, which you can find below. It shows under which category each dictionary is found on the two devices. I didn 't bother looking at the English Training Gym sections, as English is already my native tongue, and hence I think it would be of little benefit to analyse it.
+Last time I talked about a [science-related electronic dictionary]({{< relref "20250315-denshijisho_xd-g9850" >}}) that I bought in Japan. When I was there, I did a bit more research and discovered that I had rushed in too quickly and that there were other models that include more business and literature-related content that could be useful when studying Japanese. So, I purchased a second dictionary, the Casio XD-Z20000. So, how much of an upgrade was this compared to the scientific model XD-G9850? To answer this question, I listed out all the dictionaries, glossaries and encyclopedias from both models and put them in a table for comparison, which you can find below. It shows under which category each dictionary is found on the two devices. I didn 't bother looking at the English Training Gym sections, as English is already my native tongue, and hence I think it would be of little benefit to analyse it.
 
 
 ## Comparing Japanese Dictionaries {#comparing-japanese-dictionaries}

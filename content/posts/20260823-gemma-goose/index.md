@@ -2,15 +2,15 @@
 title = "AI Agents and Local LLMs"
 featuredImage = "20260823-gemma-goose.png"
 date = 2026-08-23
-lastmod = 2026-08-23T08:37:32+10:00
+lastmod = 2026-11-15T22:47:47+11:00
 tags = ["AI", "LaTeX", "Teaching", "Emacs"]
 categories = ["Blog"]
 draft = false
-weight = 3001
+weight = 3005
 author = "Matt Maguire"
 +++
 
-In my [last article]({{< relref "index.md" >}}) on AI agents I talked about using Claude Code AI agent. This is an easy-to-set-up commercial solution that gives excellent results. The risk is that the pricing may not remain as affordable as it is today, and as a result I wanted to find an alternative solution that insulates me from changing commercials.
+In my [last article]({{< relref "20260822-claude-code" >}}) on AI agents I talked about using Claude Code AI agent. This is an easy-to-set-up commercial solution that gives excellent results. The risk is that the pricing may not remain as affordable as it is today, and as a result I wanted to find an alternative solution that insulates me from changing commercials.
 
 There are a number of open-weight models that one may download and run locally on your home computer. Some of the benefits are:
 
@@ -28,7 +28,7 @@ Of course, there are some drawbacks:
 
 ## Choosing a model {#choosing-a-model}
 
-Based on my experience with using Claude, I found that I would typically use around 100k tokens to produce a set of lesson notes. My computer is a gaming PC equipped with a NVIDIA RTX 5900 that has 32GB of VRAM. The amount of VRAM determines the size of the model you can use and well as the length of the context window. I look for models that would give me a 128k+ context window and fit within the VRAM I had available. Of course, I asked an AI chat bot for some recommendations.
+Based on my experience with using Claude, I found that I would typically use around 100k tokens to produce a set of lesson notes. My computer is a gaming PC equipped with a NVIDIA RTX 5090 that has 32GB of VRAM. The amount of VRAM determines the size of the model you can use and well as the length of the context window. I look for models that would give me a 128k+ context window and fit within the VRAM I had available. Of course, I asked an AI chat bot for some recommendations.
 
 The first recommendation that came back was to use Ollama to run the models. By running a local Ollama server, it is simple to download different types of models and switch between them. The types of models that were recommended fell in two main categories:
 

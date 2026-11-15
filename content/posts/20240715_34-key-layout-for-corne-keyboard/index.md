@@ -1,7 +1,7 @@
 +++
 title = "34 Key Layout for Corne Keyboard"
 date = 2024-07-15
-lastmod = 2025-03-02T17:39:38+11:00
+lastmod = 2026-11-15T22:48:02+11:00
 tags = ["Computers", "Keyboards", "Corne", "AltKeyboardLayouts"]
 categories = ["Blog"]
 draft = false

@@ -2,7 +2,7 @@
 title = "Corne V4 Update"
 featuredImage = "20240721-connector-1024x751.jpg"
 date = 2024-07-20
-lastmod = 2025-03-02T17:39:38+11:00
+lastmod = 2026-11-15T22:48:01+11:00
 tags = ["Keyboards", "Corne"]
 categories = ["Blog"]
 draft = false

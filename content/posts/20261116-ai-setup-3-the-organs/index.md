@@ -1,10 +1,11 @@
 +++
 title = "My AI Teaching Setup, Part 3: The Organs"
+featuredImage = "20261116-ai-setup-3-the-organs.png"
 date = 2026-11-16
-lastmod = 2026-11-16T16:59:22+11:00
+lastmod = 2026-11-16T17:02:30+11:00
 tags = ["AI", "LaTeX", "Teaching", "Emacs"]
 categories = ["Blog"]
-draft = true
+draft = false
 weight = 4001
 author = "Matt Maguire"
 +++

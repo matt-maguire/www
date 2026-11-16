@@ -2,7 +2,7 @@
 title = "My AI Teaching Setup, Part 2: The Fleet"
 featuredImage = "20261116-ai-setup-2-the-fleet.png"
 date = 2026-11-16
-lastmod = 2026-11-16T16:31:24+11:00
+lastmod = 2026-11-16T17:02:27+11:00
 tags = ["AI", "LaTeX", "Teaching", "Hardware"]
 categories = ["Blog"]
 draft = false
@@ -63,7 +63,7 @@ I have never written Rust. So I asked the AI to help me patch Goose itself: read
 
 By autumn the harness scene had exploded. Goose, the agent I was using back in August, has been joined — and largely outperformed — by a whole generation: OpenCode, Qwen's own agent, Google's Antigravity. All of them brilliant coding assistants. I wired them all to whichever machine suits each job, and I kept the best of them.
 
-But what I have effectively landed on is different in kind. Hermes is not a coding assistant that waits for me to open a terminal. It is always on: it keeps memory between sessions, it lives in a WhatsApp thread so I can reach the house from anywhere, and it runs scheduled jobs — reminders, nightly backup checks, batches of model benchmarks that run while I sleep. It watches the fleet: watchdog agents that check disk space and backups every morning and escalate when something smells wrong. And it has colleagues: when one machine's agent finishes an experiment, it writes a handover note, and another agent picks the work up the next morning. They all read from the same shelf, too: a vector database — Qdrant — holding a decade of my plain-text notes, searchable by meaning rather than keyword, queried the same way by every agent in the house. But that shelf is the subject of Part 3.
+But what I have effectively landed on is different in kind. Hermes is not a coding assistant that waits for me to open a terminal. It is always on: it keeps memory between sessions, it lives in a WhatsApp thread so I can reach the house from anywhere, and it runs scheduled jobs — reminders, nightly backup checks, batches of model benchmarks that run while I sleep. It watches the fleet: watchdog agents that check disk space and backups every morning and escalate when something smells wrong. And it has colleagues: when one machine's agent finishes an experiment, it writes a handover note, and another agent picks the work up the next morning. They all read from the same shelf, too: a vector database — Qdrant — holding a decade of my plain-text notes, searchable by meaning rather than keyword, queried the same way by every agent in the house. But that shelf is the subject of [Part 3]({{< relref "20261116-ai-setup-3-the-organs" >}}).
 
 The scope quietly widened. AI stopped being something I use to produce documents and became something that helps run the little household of machines the teaching setup grew into. Which is where the promise from [Part 1]({{< relref "20261116-ai-setup-1-rented-intelligence" >}}) gets paid: the assistant with a personality on purpose has arrived, and it runs this house.
 

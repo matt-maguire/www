@@ -202,7 +202,7 @@ First, that an AI can be prompted to communicate in a way that I genuinely find 
 
 Second, the incidental remark. Models sometimes make tangential remarks, and it can be useful to pull on these threads, discovering new perspective and possibilities. Many a time I have fallen down a rabbit hole and an hour later I have come back with something better than what I originally went looking for. For a mind that runs on association and connections, an engine that highlights these links is not a distraction machine; rather, it is a collaborator. The entire knowledge system in the later parts of this series is, functionally, just industrialised rabbit holes.
 
-So the honest ordering is: *the GPU was bought for joy, and the lesson-prep empire was built on top of the joy.* Every teacher who secretly started with something fun that lead them to want to share what they learned with others will recognise themselves in this. And /that/ is why I am saying it.
+So the honest ordering is: *the GPU was bought for joy, and the lesson-prep empire was built on top of the joy.* Every teacher who secretly started with something fun that led them to want to share what they learned with others will recognise themselves in this. And /that/ is why I am saying it.
 
 **** What eight gigabytes buys you
 

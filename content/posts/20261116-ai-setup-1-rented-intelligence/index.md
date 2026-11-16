@@ -2,7 +2,7 @@
 title = "My AI Teaching Setup, Part 1: Rented Intelligence"
 featuredImage = "20261116-ai-setup-1-rented-intelligence.png"
 date = 2026-11-16
-lastmod = 2026-11-16T14:13:20+11:00
+lastmod = 2026-11-16T14:13:54+11:00
 tags = ["AI", "LaTeX", "Teaching"]
 categories = ["Blog"]
 draft = true
@@ -34,7 +34,7 @@ First, that an AI can be prompted to communicate in a way that I genuinely find 
 
 Second, the incidental remark. Models sometimes make tangential remarks, and it can be useful to pull on these threads, discovering new perspective and possibilities. Many a time I have fallen down a rabbit hole and an hour later I have come back with something better than what I originally went looking for. For a mind that runs on association and connections, an engine that highlights these links is not a distraction machine; rather, it is a collaborator. The entire knowledge system in the later parts of this series is, functionally, just industrialised rabbit holes.
 
-So the honest ordering is: **the GPU was bought for joy, and the lesson-prep empire was built on top of the joy.** Every teacher who secretly started with something fun that lead them to want to share what they learned with others will recognise themselves in this. And _that_ is why I am saying it.
+So the honest ordering is: **the GPU was bought for joy, and the lesson-prep empire was built on top of the joy.** Every teacher who secretly started with something fun that led them to want to share what they learned with others will recognise themselves in this. And _that_ is why I am saying it.
 
 
 ## What eight gigabytes buys you {#what-eight-gigabytes-buys-you}

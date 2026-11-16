@@ -2,7 +2,7 @@
 title = "My AI Teaching Setup, Part 3: The Organs"
 featuredImage = "20261116-ai-setup-3-the-organs.png"
 date = 2026-11-16
-lastmod = 2026-11-16T17:02:30+11:00
+lastmod = 2026-11-17T09:00:09+11:00
 tags = ["AI", "LaTeX", "Teaching", "Emacs"]
 categories = ["Blog"]
 draft = false
@@ -109,7 +109,7 @@ The pattern: give the model the parts that need judgement — wording, structure
 
 The last organ is the one that surprised me most: the system now has employees. Agents with persistent memory and named personalities run on the machines — one manages the office box, reads the monitoring reports each morning, writes handover notes to itself, and has genuinely caught problems before I did. A watchdog checks every backup _completed_, not merely that the disk has room, and messages a summary each morning; the week it went in, it found a machine that had never once finished a backup, four days into a failure nobody had noticed.
 
-This is where the persona stuff from Part 1 comes back around. An assistant with a personality is an interface, not a gimmick: it makes the interaction a conversation you _want_ to have, so you have it, daily, and the system stays tended rather than merely installed.
+This is where the persona stuff from [Part 1]({{< relref "20261116-ai-setup-1-rented-intelligence" >}}) comes back around. An assistant with a personality is an interface, not a gimmick: it makes the interaction a conversation you _want_ to have, so you have it, daily, and the system stays tended rather than merely installed.
 
 
 ## The honest cost sheet {#the-honest-cost-sheet}

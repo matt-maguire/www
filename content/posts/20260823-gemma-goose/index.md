@@ -2,7 +2,7 @@
 title = "AI Agents and Local LLMs"
 featuredImage = "20260823-gemma-goose.png"
 date = 2026-08-23
-lastmod = 2026-11-16T11:39:17+11:00
+lastmod = 2026-11-17T09:00:27+11:00
 tags = ["AI", "LaTeX", "Teaching", "Emacs"]
 categories = ["Blog"]
 draft = false
@@ -113,3 +113,5 @@ The final step is to point Goose to the HTTPS API endpoint, and configure an API
 Having set up my home infrastructure to be readily accessible from anywhere, I now have a "free" alternative to using the paid AI services (I say free, but of course I still pay electricity and hardware depreciation costs). The home setup produces high quality lesson notes documents. For cases where the home setup struggles, I still have the option of using the more powerful Claude or Gemini paid models.
 
 So, what else can I do with this setup? That of course will be the subject of the next article.
+
+_Update (November 2026):_ this setup grew up. The story of what the fleet became is told in a later series, starting with [A Life in Plain Text]({{< relref "20261116-ai-setup-0-plain-text" >}}).

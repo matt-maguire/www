@@ -2,7 +2,7 @@
 title = "My AI Teaching Setup, Part 1: Rented Intelligence"
 featuredImage = "20261116-ai-setup-1-rented-intelligence.png"
 date = 2026-11-16
-lastmod = 2026-11-16T15:43:56+11:00
+lastmod = 2026-11-17T08:59:57+11:00
 tags = ["AI", "LaTeX", "Teaching"]
 categories = ["Blog"]
 draft = false
@@ -47,4 +47,4 @@ What the experiments taught me was the shape of the problem: VRAM is the budget,
 
 By mid-year the decision had formed: if I was to go further into this, I would need a machine with some real headroom. The next article is about that purchase, its honest justifications, and its embarrassing résumé.
 
-_Next: Part 2 — The Fleet. The gaming PC that never gamed, the models that failed honestly, and the month I learned that the harness matters more than the model._
+_Next:_ [Part 2 — The Fleet]({{< relref "20261116-ai-setup-2-the-fleet" >}}). _The gaming PC that never gamed, the models that failed honestly, and the month I learned that the harness matters more than the model._

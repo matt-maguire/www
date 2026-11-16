@@ -2,7 +2,7 @@
 title = "My AI Teaching Setup, Part 0: A Life in Plain Text"
 featuredImage = "20261116-ai-setup-0-plain-text.png"
 date = 2026-11-16
-lastmod = 2026-11-16T11:39:12+11:00
+lastmod = 2026-11-17T08:59:44+11:00
 tags = ["AI", "LaTeX", "Teaching", "Emacs"]
 categories = ["Blog"]
 draft = false
@@ -44,4 +44,4 @@ And here is the quiet realisation that this series keeps circling back to: **I n
 
 That is the lesson of Part 0, and I did not earn it deliberately: **build your working life in plain text.** Not because AI is coming — although it is — but because text compounds. It links, it diffs, GitHub loves it, and it survives every vendor. Then, one day it turns out to be the foundation everything else gets built on.
 
-_Next: Part 1 — Rented Intelligence. The subscriptions that started it, the anxieties that followed, and the sacred first duty of an eight-gigabyte graphics card._
+_Next:_ [Part 1 — Rented Intelligence]({{< relref "20261116-ai-setup-1-rented-intelligence" >}}). _The subscriptions that started it, the anxieties that followed, and the sacred first duty of an eight-gigabyte graphics card._

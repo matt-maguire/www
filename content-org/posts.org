@@ -125,7 +125,7 @@ And here is the quiet realisation that this series keeps circling back to: *I ne
 
 That is the lesson of Part 0, and I did not earn it deliberately: *build your working life in plain text.* Not because AI is coming — although it is — but because text compounds. It links, it diffs, GitHub loves it, and it survives every vendor. Then, one day it turns out to be the foundation everything else gets built on.
 
-/Next: Part 1 — Rented Intelligence. The subscriptions that started it, the anxieties that followed, and the sacred first duty of an eight-gigabyte graphics card./
+/Next:/ [[#ai-setup-1][Part 1 — Rented Intelligence]]. /The subscriptions that started it, the anxieties that followed, and the sacred first duty of an eight-gigabyte graphics card./
 
 *** DONE Mia AI-medio por instruado, Parto 0: Vivo en pura teksto : A Life in Plain Text :AI:LaTeX:Teaching:Emacs:Lingvoj:Esperanto:
 :PROPERTIES:
@@ -214,7 +214,7 @@ What the experiments taught me was the shape of the problem: VRAM is the budget,
 
 By mid-year the decision had formed: if I was to go further into this, I would need a machine with some real headroom. The next article is about that purchase, its honest justifications, and its embarrassing résumé.
 
-/Next: Part 2 — The Fleet. The gaming PC that never gamed, the models that failed honestly, and the month I learned that the harness matters more than the model./
+/Next:/ [[#ai-setup-2][Part 2 — The Fleet]]. /The gaming PC that never gamed, the models that failed honestly, and the month I learned that the harness matters more than the model./
 
 *** DONE Mia AI-medio por instruado, Parto 1: Luita Inteligenteco : Rented Intelligence :AI:LaTeX:Teaching:Lingvoj:Esperanto:
 :PROPERTIES:
@@ -520,7 +520,7 @@ The pattern: give the model the parts that need judgement — wording, structure
 
 The last organ is the one that surprised me most: the system now has employees. Agents with persistent memory and named personalities run on the machines — one manages the office box, reads the monitoring reports each morning, writes handover notes to itself, and has genuinely caught problems before I did. A watchdog checks every backup /completed/, not merely that the disk has room, and messages a summary each morning; the week it went in, it found a machine that had never once finished a backup, four days into a failure nobody had noticed.
 
-This is where the persona stuff from Part 1 comes back around. An assistant with a personality is an interface, not a gimmick: it makes the interaction a conversation you /want/ to have, so you have it, daily, and the system stays tended rather than merely installed.
+This is where the persona stuff from [[#ai-setup-1][Part 1]] comes back around. An assistant with a personality is an interface, not a gimmick: it makes the interaction a conversation you /want/ to have, so you have it, daily, and the system stays tended rather than merely installed.
 
 **** The honest cost sheet
 
@@ -759,6 +759,8 @@ Having set up my home infrastructure to be readily accessible from anywhere, I n
 
 So, what else can I do with this setup? That of course will be the subject of the next article. 
 
+/Update (November 2026):/ this setup grew up. The story of what the fleet became is told in a later series, starting with [[#ai-setup-0][A Life in Plain Text]].
+
 
 *** DONE AI-agentoj kaj lokaj LLM-oj :AI:LaTeX:Teaching:Emacs:Lingvoj:Esperanto:
 :PROPERTIES:
@@ -957,7 +959,7 @@ During my initial experiments, I found it very easy to run out of usage quota, a
 
 With these optimisations, Claude becomes an affordable and very effective assistant in producing lesson notes. However, this pricing level is something of a loss-leader for these AI companies, and it is unlikely they will be able to continue offering these prices in the long term. I feel uneasy that I might get hooked on this type of workflow, and may not be able to afford it in the future.
 
-Next time I will talk about an alternative workflow that I set up to address this concern.
+Next time I will talk about an alternative workflow that I set up to address this concern. That follow-up is [[#gemma-goose][AI Agents and Local LLMs]], and the full story of where all this ended up starts with [[#ai-setup-0][A Life in Plain Text]].
 
 **** DONE AI-Agentoj Ekregas la Lecionpreparon :AI:LaTeX:Teaching:Emacs:Lingvoj:Esperanto:
 :PROPERTIES:

@@ -2,7 +2,7 @@
 title = "My AI Teaching Setup, Part 2: The Fleet"
 featuredImage = "20261116-ai-setup-2-the-fleet.png"
 date = 2026-11-16
-lastmod = 2026-11-16T17:02:27+11:00
+lastmod = 2026-11-16T17:35:49+11:00
 tags = ["AI", "LaTeX", "Teaching", "Hardware"]
 categories = ["Blog"]
 draft = false

@@ -2,7 +2,7 @@
 title = "AI Agents Take Over Lesson Prep"
 featuredImage = "20260822-claude-code.png"
 date = 2026-08-22
-lastmod = 2026-11-16T11:39:20+11:00
+lastmod = 2026-11-17T09:00:46+11:00
 tags = ["AI", "LaTeX", "Teaching", "Emacs"]
 categories = ["Blog"]
 draft = false
@@ -112,4 +112,4 @@ During my initial experiments, I found it very easy to run out of usage quota, a
 
 With these optimisations, Claude becomes an affordable and very effective assistant in producing lesson notes. However, this pricing level is something of a loss-leader for these AI companies, and it is unlikely they will be able to continue offering these prices in the long term. I feel uneasy that I might get hooked on this type of workflow, and may not be able to afford it in the future.
 
-Next time I will talk about an alternative workflow that I set up to address this concern.
+Next time I will talk about an alternative workflow that I set up to address this concern. That follow-up is [AI Agents and Local LLMs]({{< relref "20260823-gemma-goose" >}}), and the full story of where all this ended up starts with [A Life in Plain Text]({{< relref "20261116-ai-setup-0-plain-text" >}}).

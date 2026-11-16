@@ -2,7 +2,7 @@
 title = "La uzo de Org Mode / LaTeX por lecionaj notoj"
 featuredImage = "20250105_orgmode-banner.webp"
 date = 2025-01-06
-lastmod = 2026-11-16T11:29:58+11:00
+lastmod = 2026-11-16T11:39:36+11:00
 tags = ["Emacs", "OrgMode", "LaTeX", "Teaching", "Lingvoj", "Esperanto"]
 categories = ["Blog"]
 draft = false

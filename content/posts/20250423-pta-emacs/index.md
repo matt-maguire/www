@@ -2,7 +2,7 @@
 title = "Plain Text Accounting with Emacs"
 featuredImage = "20250423-hledger_report.png"
 date = 2025-04-23
-lastmod = 2026-11-16T11:29:44+11:00
+lastmod = 2026-11-16T11:39:23+11:00
 tags = ["PlainTextAccounting", "Emacs"]
 categories = ["Blog"]
 draft = false

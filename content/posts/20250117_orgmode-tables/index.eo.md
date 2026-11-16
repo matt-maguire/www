@@ -1,7 +1,7 @@
 +++
 title = "Eksportado de Org-reĝimaj tabeloj al LaTeX"
 date = 2025-01-17
-lastmod = 2026-11-16T11:29:54+11:00
+lastmod = 2026-11-16T11:39:34+11:00
 tags = ["Emacs", "OrgMode", "LaTeX", "Teaching", "Lingvoj", "Esperanto"]
 categories = ["Blog"]
 draft = false

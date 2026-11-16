@@ -2,7 +2,7 @@
 title = "Japana Elektronika Vortaro XD-Z20000"
 featuredImage = "20250320-xd_z20000.jpg"
 date = 2025-03-20
-lastmod = 2026-11-16T11:29:49+11:00
+lastmod = 2026-11-16T11:39:29+11:00
 tags = ["Languages", "Japanese", "Lingvoj", "Esperanto"]
 categories = ["Blog"]
 draft = false
@@ -10,7 +10,7 @@ weight = 4001
 author = "Matt Maguire"
 +++
 
-Lastatempe mi parolis pri [elektronika vortaro rilata al scienco]({{< relref "20250315-denshijisho_xd-g9850" >}}), kiun mi aĉetis en Japanio. Kiam mi estis tie, mi iom pli esploris kaj malkovris, ke mi tro rapide decidis kaj ke ekzistas aliaj modeloj, kiuj enhavas pli da enhavo rilata al komerco kaj literaturo kaj kiuj povus utili dum la lernado de la japana. Do mi aĉetis duan vortaron, la Casio XD-Z20000. Do, kiom granda ĝisdatigo estas ĉi tio kompare kun la scienca modelo XD-G9850? Por respondi al tiu demando, mi listigis ĉiujn vortarojn, glosarojn kaj enciklopediojn el ambaŭ modeloj kaj metis ilin en tabelon por komparo, kiun vi trovas sube. Ĝi montras, sub kiu kategorio ĉiu vortaro troviĝas en la du aparatoj. Mi ne penis rigardi la sekciojn de la English Training Gym, ĉar la angla jam estas mia denaska lingvo, kaj tial mi pensas, ke ĝia analizado utilus malmulte.
+Lastatempe mi parolis pri [elektronika vortaro rilata al scienco](https://teachmaths.org/20250315-denshijisho_xd-g9850/), kiun mi aĉetis en Japanio. Kiam mi estis tie, mi iom pli esploris kaj malkovris, ke mi tro rapide decidis kaj ke ekzistas aliaj modeloj, kiuj enhavas pli da enhavo rilata al komerco kaj literaturo kaj kiuj povus utili dum la lernado de la japana. Do mi aĉetis duan vortaron, la Casio XD-Z20000. Do, kiom granda ĝisdatigo estas ĉi tio kompare kun la scienca modelo XD-G9850? Por respondi al tiu demando, mi listigis ĉiujn vortarojn, glosarojn kaj enciklopediojn el ambaŭ modeloj kaj metis ilin en tabelon por komparo, kiun vi trovas sube. Ĝi montras, sub kiu kategorio ĉiu vortaro troviĝas en la du aparatoj. Mi ne penis rigardi la sekciojn de la English Training Gym, ĉar la angla jam estas mia denaska lingvo, kaj tial mi pensas, ke ĝia analizado utilus malmulte.
 
 
 ## Komparante la japanajn vortarojn {#komparante-la-japanajn-vortarojn}

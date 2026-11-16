@@ -2,7 +2,7 @@
 title = "From Lessons to Unit Planning"
 featuredImage = "20260824-unit-planning.png"
 date = 2026-08-24
-lastmod = 2026-11-16T11:29:35+11:00
+lastmod = 2026-11-16T11:39:12+11:00
 categories = ["Blog"]
 draft = true
 weight = 4001

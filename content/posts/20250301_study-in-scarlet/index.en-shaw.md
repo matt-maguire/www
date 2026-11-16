@@ -2,7 +2,7 @@
 title = "𐑩 𐑕𐑑𐑳𐑛𐑦 𐑦𐑯 𐑕𐑒𐑸𐑤𐑩𐑑"
 featuredImage = "20250301-study_in_scarlet.jpg"
 date = 2025-03-01
-lastmod = 2026-11-16T11:29:51+11:00
+lastmod = 2026-11-16T11:39:32+11:00
 tags = ["𐑖𐑱𐑝𐑾𐑯"]
 categories = ["Blog"]
 draft = false

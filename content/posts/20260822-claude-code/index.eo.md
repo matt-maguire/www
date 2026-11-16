@@ -2,7 +2,7 @@
 title = "AI-Agentoj Ekregas la Lecionpreparon"
 featuredImage = "20260822-claude-code.png"
 date = 2026-08-22
-lastmod = 2026-11-16T11:29:41+11:00
+lastmod = 2026-11-16T11:39:20+11:00
 tags = ["AI", "LaTeX", "Teaching", "Emacs", "Lingvoj", "Esperanto"]
 categories = ["Blog"]
 draft = false

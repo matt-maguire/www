@@ -1,7 +1,7 @@
 +++
 title = "Lerni la japanan per kantotekstoj (Houki Boshi el Bleach)"
 date = 2022-02-14
-lastmod = 2026-11-16T11:30:07+11:00
+lastmod = 2026-11-16T11:39:49+11:00
 tags = ["Music", "Languages", "Japanese", "Lingvoj", "Esperanto"]
 categories = ["Blog"]
 draft = false

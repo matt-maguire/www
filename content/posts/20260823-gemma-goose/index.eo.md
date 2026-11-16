@@ -2,7 +2,7 @@
 title = "AI-agentoj kaj lokaj LLM-oj"
 featuredImage = "20260823-gemma-goose.png"
 date = 2026-08-23
-lastmod = 2026-11-16T11:29:39+11:00
+lastmod = 2026-11-16T11:39:18+11:00
 tags = ["AI", "LaTeX", "Teaching", "Emacs", "Lingvoj", "Esperanto"]
 categories = ["Blog"]
 draft = false

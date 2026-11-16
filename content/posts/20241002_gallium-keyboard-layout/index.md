@@ -2,7 +2,7 @@
 title = "Gallium Keyboard Layout"
 featuredImage = "20241002-gallium-1536x678.png"
 date = 2024-10-02
-lastmod = 2026-11-16T11:30:00+11:00
+lastmod = 2026-11-16T11:39:40+11:00
 tags = ["Computers", "Keyboards", "AltKeyboardLayouts"]
 categories = ["Blog"]
 draft = false

@@ -2,7 +2,7 @@
 title = "Pura-Teksta Libroteado per Emacs"
 featuredImage = "20250423-hledger_report.png"
 date = 2025-04-23
-lastmod = 2026-11-16T11:29:45+11:00
+lastmod = 2026-11-16T11:39:24+11:00
 tags = ["PlainTextAccounting", "Emacs", "Lingvoj", "Esperanto"]
 categories = ["Blog"]
 draft = false

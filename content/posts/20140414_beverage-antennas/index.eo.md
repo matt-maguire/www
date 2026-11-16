@@ -1,7 +1,7 @@
 +++
 title = "Beverage-antenoj"
 date = 2014-04-14
-lastmod = 2026-11-16T11:30:15+11:00
+lastmod = 2026-11-16T11:39:57+11:00
 tags = ["HamRadio", "Lingvoj", "Esperanto"]
 categories = ["Blog"]
 draft = false

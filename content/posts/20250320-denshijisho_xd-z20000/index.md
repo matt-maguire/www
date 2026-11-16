@@ -2,7 +2,7 @@
 title = "Japanese Electronic Dictionary XD-Z20000"
 featuredImage = "20250320-xd_z20000.jpg"
 date = 2025-03-20
-lastmod = 2026-11-16T11:29:48+11:00
+lastmod = 2026-11-16T11:39:27+11:00
 tags = ["Languages", "Japanese"]
 categories = ["Blog"]
 draft = false

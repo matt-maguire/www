@@ -2,7 +2,7 @@
 title = "Corne v4 Keyboard Keymap"
 featuredImage = "20240711-corne_6x3.jpg"
 date = 2024-07-11
-lastmod = 2026-11-16T11:30:05+11:00
+lastmod = 2026-11-16T11:39:47+11:00
 tags = ["Computers", "Keyboards", "Corne", "AltKeyboardLayouts"]
 categories = ["Blog"]
 draft = false

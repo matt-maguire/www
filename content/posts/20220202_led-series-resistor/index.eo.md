@@ -2,7 +2,7 @@
 title = "Kiel kalkuli serian rezistilon por LED"
 featuredImage = "20220202-Screen-Shot-2022-02-02-at-6.32.54-pm.png"
 date = 2022-02-02
-lastmod = 2026-11-16T11:30:08+11:00
+lastmod = 2026-11-16T11:39:51+11:00
 tags = ["HamRadio", "Lingvoj", "Esperanto"]
 categories = ["Blog"]
 draft = false

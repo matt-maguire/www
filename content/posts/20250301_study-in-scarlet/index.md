@@ -2,7 +2,7 @@
 title = "A Study in Scarlet"
 featuredImage = "20250301-study_in_scarlet.jpg"
 date = 2025-03-01
-lastmod = 2026-11-16T11:29:51+11:00
+lastmod = 2026-11-16T11:39:31+11:00
 tags = ["Languages", "Shavian"]
 categories = ["Blog"]
 draft = false

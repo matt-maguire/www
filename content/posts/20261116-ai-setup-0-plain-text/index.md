@@ -2,7 +2,7 @@
 title = "My AI Teaching Setup, Part 0: A Life in Plain Text"
 featuredImage = "20261116-ai-setup-0-plain-text.png"
 date = 2026-11-16
-lastmod = 2026-11-16T11:29:36+11:00
+lastmod = 2026-11-16T11:39:12+11:00
 tags = ["AI", "LaTeX", "Teaching", "Emacs"]
 categories = ["Blog"]
 draft = false

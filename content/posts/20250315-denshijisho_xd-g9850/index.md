@@ -2,7 +2,7 @@
 title = "Japanese Electronic Dictionary (Casio XD-G9850)"
 featuredImage = "20250315-xd_g9850.jpg"
 date = 2025-03-15
-lastmod = 2026-11-16T11:29:50+11:00
+lastmod = 2026-11-16T11:39:29+11:00
 tags = ["Languages", "Japanese"]
 categories = ["Blog"]
 draft = false

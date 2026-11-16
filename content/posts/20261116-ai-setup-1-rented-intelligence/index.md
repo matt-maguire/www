@@ -2,10 +2,10 @@
 title = "My AI Teaching Setup, Part 1: Rented Intelligence"
 featuredImage = "20261116-ai-setup-1-rented-intelligence.png"
 date = 2026-11-16
-lastmod = 2026-11-16T14:13:54+11:00
+lastmod = 2026-11-16T14:16:02+11:00
 tags = ["AI", "LaTeX", "Teaching"]
 categories = ["Blog"]
-draft = true
+draft = false
 weight = 4001
 author = "Matt Maguire"
 +++
@@ -41,7 +41,7 @@ So the honest ordering is: **the GPU was bought for joy, and the lesson-prep emp
 
 Running a small quantised model on 8 GB of VRAM in early 2026 is a humbling business. Short context, modest quality, slow answers to anything complicated. The 2080 could roleplay Mistral acceptably but could not draft a decent Year 10 assessment task to save its life. The cloud models were better by a wide margin, and I knew exactly how wide because I was now paying for both.
 
-What the experiments taught me was the shape of the problem: VRAM is the budget, parameters and quantisation are the currency, and the interesting frontier models were clever enough to wonder how far the hardware could be stretched. That framing — which is really just "how much memory does the thing need" — is the whole of local AI. Once you see it, the rest is shopping.
+What the experiments taught me was the shape of the problem: VRAM is the budget, parameters and quantisation are the currency, and the interesting frontier was seeing how far the clever new models could stretch the hardware. That framing — which is really just "how much memory does the thing need" — is the whole of local AI. Once you see it, the rest is shopping.
 
 By mid-year the decision had formed: if I was to go further into this, I would need a machine with some real headroom. The next article is about that purchase, its honest justifications, and its embarrassing résumé.
 

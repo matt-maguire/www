@@ -239,7 +239,7 @@ The embarrassing résumé, three months later: games installed and played: zero.
 
 When I wrote the August article, the daily driver was Gemma — a 31-billion-parameter dense model served by Ollama, with the Goose agent driving it. That setup genuinely worked, and then the ground moved under it, because this is the year the ground keeps moving. Gemma gave way to a 27-billion-parameter Qwen, and the keeper today is a large Mixture-of-Experts model — a big library of smaller specialists where each query only wakes the few experts it needs. That architecture is what makes a 32 GB card serve something genuinely clever: the /whole/ model doesn't need to fit, just the parts being consulted. It drafts my lesson notes and my assessment tasks to a standard I sign off on, and it runs on electricity, not on someone's pricing page.
 
-[[file:fig-5090-gemma.png]]
+[[file:fig-5090-qwen.png]]
 
 [[file:fig-strata-tiers.png]]
 

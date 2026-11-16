@@ -332,6 +332,8 @@ The database part is what keeps this fast. Comparing a question against 190,000 
 
 Scores are relative, not probabilities. 0.80 means /very close/, 0.66 means /related, go and check it yourself/. The ranking is the signal; the number is a hint.
 
+[[file:fig-pizza-search.png]]
+
 **** Versus just keeping the text files
 
 The fair question: I already had all this as text. Why a database?

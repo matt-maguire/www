@@ -1,7 +1,7 @@
 +++
 title = "My AI Teaching Setup, Part 3: The Organs"
 date = 2026-11-16
-lastmod = 2026-11-16T16:50:52+11:00
+lastmod = 2026-11-16T16:59:22+11:00
 tags = ["AI", "LaTeX", "Teaching", "Emacs"]
 categories = ["Blog"]
 draft = true
@@ -37,6 +37,8 @@ Searching is the same trick aimed at a question. "What did the marker say studen
 The database part is what keeps this fast. Comparing a question against 190,000 chunks one by one is honest but slow at real scale, so Qdrant keeps a shortcut graph — every chunk linked to its nearest neighbours — and a search walks the map toward the answer instead of reading every shelf. (Honest aside: at 190,000 chunks, brute force is actually fine — milliseconds. The database earns its keep elsewhere: filters, incremental updates, snapshots, and a dozen agents querying at once.)
 
 Scores are relative, not probabilities. 0.80 means _very close_, 0.66 means _related, go and check it yourself_. The ranking is the signal; the number is a hint.
+
+{{< figure src="fig-pizza-search.png" >}}
 
 
 ## Versus just keeping the text files {#versus-just-keeping-the-text-files}

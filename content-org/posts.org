@@ -216,7 +216,7 @@ By mid-year the decision had formed: if I was to go further into this, I would n
 
 /Next: Part 2 — The Fleet. The gaming PC that never gamed, the models that failed honestly, and the month I learned that the harness matters more than the model./
 
-*** TODO My AI Teaching Setup, Part 2: The Fleet :AI:LaTeX:Teaching:Hardware:
+*** DONE My AI Teaching Setup, Part 2: The Fleet :AI:LaTeX:Teaching:Hardware:
 :PROPERTIES:
 :EXPORT_HUGO_WEIGHT: 4001
 :CUSTOM_ID: ai-setup-2
@@ -233,7 +233,7 @@ By mid-year the decision had formed: if I was to go further into this, I would n
 
 In July I built hyperion: a proper gaming PC, RTX 5090, 32 GB of VRAM. The justifications were two, and I was honest about both at the time. The AI justification: if I was going further into this, I needed headroom — enough VRAM for a genuinely good open model with a long context window. The hobby justification: I have wanted a big gaming PC for roughly a decade, and AI was the first excuse strong enough to survive my own accounting.
 
-The embarrassing résumé, three months later: games installed and played: zero. hyperion's entire working life is teaching. It serves the model that drafts my lessons, hosts my family's backups, and hums under the house doing nothing else at all. The hobby excuse never got spent; the work excuse turned out to be the true one. Whether the ATO agrees with that framing is a conversation for my accountant, not this blog.
+The embarrassing résumé, three months later: games installed and played: zero. hyperion's entire working life is teaching. It serves the model that drafts my lessons, hosts my family's backups, and hums under the house doing nothing else at all. The hobby excuse never got spent; the work excuse turned out to be the true one. I wonder whether I can claim it on my tax... probably a conversation for my accountant rather than this blog.
 
 **** Models: the honest failures
 
@@ -285,7 +285,7 @@ And the relationship changed somewhere in there. I stopped asking AI questions a
 
 Ten machines and a staff of agents is one thing; the data they share is another. The spine of the whole setup — the Nextcloud that syncs my notes between home and school — sat on two external Seagate portables in a USB dock, mirrored at each other. And the USB bridge boards refuse to report the health of the drives inside them: ask them how the disks are doing and they answer with silence. I was running the household's memory on hard drives I could not monitor. That, plus the sheer size of the thing — three and a half terabytes and growing — is what finally pushed me to build a proper NAS.
 
-There was one problem: I had not built a PC since the 1990s. hyperion had arrived prebuilt in July and I had not opened the side panel in months. Modern internals are a foreign country — drive cages and shrouds, SATA power, NVMe slots hiding under heatsinks. So the AI became my build partner, and its first act was reading. It downloaded the case and motherboard manuals, read them properly, and sent me the relevant pages as diagrams: where the 3.5-inch bays actually live, that the board has four SATA ports plus one connector that expands to four more, which slot the existing drive occupies — traced through the PCIe wiring without opening the case. It also corrected its own earlier guesses, which had come from my photographs. A photo shows what is installed today; a manual says what is possible. I have learned to tell them apart.
+There was one problem: I had not built a PC since the 1990s. hyperion had arrived prebuilt in July and I had not opened the side panel in the months since. Modern internals are a foreign country — drive cages and shrouds, SATA power, NVMe slots hiding under heatsinks. So the AI became my build partner, and its first act was reading. It downloaded the case and motherboard manuals, read them properly, and sent me the relevant pages as diagrams: where the 3.5-inch bays actually live, that the board has four SATA ports plus one connector that expands to four more, which slot the existing drive occupies — traced through the PCIe wiring without opening the case. It also corrected its own earlier guesses, which had come from my photographs. A photo shows what is installed today; a manual says what is possible. I have learned to tell them apart.
 
 Shopping had one trap worth knowing: the cheapest big shelf drives record *shingled* — SMR — and rebuild disastrously once a second drive fails. The rule was conventional recording only, which is how two Seagate IronWolf 8TB drives ended up in the cart, going into hyperion itself rather than a new box: the gaming PC that never gamed doubles as the household's storage spine. Before formatting anything, the agent ran an identity gate — model, capacity, serial number, spinning-disk flag, read back from the drives and checked against what we ordered, because a half-seated cable must not become half a RAID. The pair went in as a mirrored btrfs volume labelled *ironwolf*, with a nightly watcher that reads drive health and scrubs for silent bit-rot.
 

@@ -224,7 +224,7 @@ By mid-year the decision had formed: if I was to go further into this, I would n
 :EXPORT_HUGO_BUNDLE: 20261116-ai-setup-2-the-fleet
 :EXPORT_DATE: 2026-11-16
 :EXPORT_HUGO_MENU:
-:EXPORT_DESCRIPTION:
+:EXPORT_DESCRIPTION: 20261116-ai-setup-2-the-fleet.png
 :END:
 
 [[#ai-setup-1][Part 1]] ended with the 8 GB ceiling and a decision. This is the hardware part, and the part where the system stopped being a computer and started being a staff.

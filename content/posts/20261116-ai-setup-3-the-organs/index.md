@@ -1,7 +1,7 @@
 +++
 title = "My AI Teaching Setup, Part 3: The Organs"
 date = 2026-11-16
-lastmod = 2026-11-16T11:39:16+11:00
+lastmod = 2026-11-16T16:42:20+11:00
 tags = ["AI", "LaTeX", "Teaching", "Emacs"]
 categories = ["Blog"]
 draft = true
@@ -19,6 +19,66 @@ People ask how I got my teaching knowledge into the AI. The answer is anticlimac
 What the system needed was a way to _search by meaning_ rather than by keyword, so the model can be asked "what have I written about students confusing gradient with rise-over-run?" and get my own past thinking back, cited. That is what a vector database does: it indexes text by what it means. Qdrant, running on the office box, holds the knowledge base — my notes, the NESA syllabus, the textbooks, the maths resources — and every agent in the house queries it the same way.
 
 The decade of plain text paid for itself in an afternoon. No conversion project, no vendor export, no PDF archaeology. Point the index at the folders. Done.
+
+
+## How the index works: the embedder {#how-the-index-works-the-embedder}
+
+The trick starts with a small model called an **embedder**. Mine is nomic-embed-text — a few hundred megabytes, running on the office box without needing the GPU. You hand it a passage of text and it returns a list of 768 numbers. That is all it does, all day.
+
+The numbers are not arbitrary. The model was trained on enormous piles of text under a simple rule: passages that mean similar things must come out with similar lists, and unrelated passages with lists that differ. Nobody hand-assigned a meaning to any of the 768 coordinates — the geometry of meaning was learned, the same way any neural network learns anything. And the property holds up in use: "straight-line depreciation" and "modelling money with graphs" land close together, and both land far away from "photosynthesis".
+
+Feeding the database is then mechanical. Every document — a syllabus PDF, an Org file, a research paper — is cut into chunks of a few hundred words. Each chunk goes through the embedder and is stored with three things: its numbers, its original text, and its provenance — file path, page, year, course, type. The house currently holds just under 190,000 of these chunks.
+
+
+## How search works: nearest neighbours {#how-search-works-nearest-neighbours}
+
+Searching is the same trick aimed at a question. "What did the marker say students got wrong in financial modelling" appears nowhere in any document — but the embedder turns the **question** into 768 numbers too, and the database returns the chunks whose numbers sit closest to it. "Closest" is measured as an angle: passages that mean the same thing point in roughly the same direction, and the score says how tight the angle is, from 0 to 1.
+
+The database part is what keeps this fast. Comparing a question against 190,000 chunks one by one is honest but slow at real scale, so Qdrant keeps a shortcut graph — every chunk linked to its nearest neighbours — and a search walks the map toward the answer instead of reading every shelf. (Honest aside: at 190,000 chunks, brute force is actually fine — milliseconds. The database earns its keep elsewhere: filters, incremental updates, snapshots, and a dozen agents querying at once.)
+
+Scores are relative, not probabilities. 0.80 means _very close_, 0.66 means _related, go and check it yourself_. The ranking is the signal; the number is a hint.
+
+
+## Versus just keeping the text files {#versus-just-keeping-the-text-files}
+
+The fair question: I already had all this as text. Why a database?
+
+grep — the plain-text search from Part 0 — is still in daily use, and it beats the vector index at one thing: exactness. Ask for "quadratic" and every occurrence of quadratic appears, all of them, no judgement required. The vector index answers the questions grep cannot: the ones where you do not know the words the answer uses. The marker's report never says "got wrong"; it says "in better responses, students were able to…". grep shrugs at that question. The index answers it.
+
+And nothing about the plain-text life had to change. The files remain the source of truth — the index stores a copy of each chunk plus a pointer back to the real file. Delete the database and my notes lose nothing; one afternoon of re-embedding and the catalogue is back. The catalogue is disposable. The books are not.
+
+
+## The shelves {#the-shelves}
+
+Eight collections, just under 190,000 chunks:
+
+-   **research** — 124,020 chunks of pedagogy: the academic papers and education books I have collected over the years
+-   **maths_resources** — 27,144: the faculty resource library — alternative assessments, activities, the hooks other teachers have built
+-   **brain** — 17,793: my own notes and lesson files — "what did I do the last time I taught data analysis?"
+-   **caroline** — 12,338: resources shared by other teachers in the faculty
+-   **nesa** — 2,759: the syllabus documents and the markers' feedback, tagged by course, year and type
+-   **textbooks** — 4,614: exercises from the books actually in use in the school
+-   **killara** — 566: the school's own past exams — what my students have already sat
+-   **syllabus** — 485: outcomes and dot points, the small print that constrains everything else
+
+Separate shelves matter because the agents search with filters: "marking feedback, Standard Mathematics, 2020 to 2025" is a different question from "everything, forever". And every laptop keeps a nightly read-only copy of the whole thing, because the school network blocks the house — the agents do not care which copy they ask.
+
+
+## A live example {#a-live-example}
+
+A real query, run against the live database as I write this. The question: _what did the marker say students got wrong in financial modelling_. The top three hits, with their scores:
+
+-   0.69 — 2021 Standard, Question 19: "interpret information from the straight-line depreciation graph…"
+-   0.68 — 2020 Standard, Question 30: "recognise that when 4 marks are allocated, a question requires multiple steps…"
+-   0.66 — 2020 Standard, Question 13: "understand the difference between present and future value…"
+
+The question shares almost no vocabulary with the answers. That is the entire point.
+
+A second query, aimed at the research shelf — _research on using student-generated questions to deepen understanding_ — returns What Works Best at 0.80 and Killen's inquiry-questions activity at 0.80. (The same PDF appeared twice under two filenames — near-duplicates surface, and the agent reading the results notices and deduplicates. This is also what an unglamorous afternoon of housekeeping the library prevents.)
+
+This is how the system pulls in facts. Exam generation asks the **nesa** shelf what the markers reward, and writes its marking criteria in the examiner's own voice. Lesson planning asks **maths_resources** and **caroline** for hooks that actually exist rather than invented ones. Generated practice papers check **killara** so they sound like this school's papers and not a generic one. And **brain** answers "what did past-me already think about this?" — cited, with a file path.
+
+The verification rule from Part 0 still holds all the way down here: the index says _where to look_, never _what to believe_. Every hit carries its provenance, and the agent opens the real file before it quotes one.
 
 
 ## The reflexes: never let the model do a human's job {#the-reflexes-never-let-the-model-do-a-human-s-job}

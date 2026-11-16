@@ -1,7 +1,7 @@
 +++
 title = "My AI Teaching Setup, Part 2: The Fleet"
 date = 2026-11-16
-lastmod = 2026-11-16T15:54:35+11:00
+lastmod = 2026-11-16T15:59:17+11:00
 tags = ["AI", "LaTeX", "Teaching", "Hardware"]
 categories = ["Blog"]
 draft = true

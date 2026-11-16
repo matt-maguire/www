@@ -2,7 +2,7 @@
 title = "My AI Teaching Setup, Part 2: The Fleet"
 featuredImage = "20261116-ai-setup-2-the-fleet.png"
 date = 2026-11-16
-lastmod = 2026-11-16T16:20:45+11:00
+lastmod = 2026-11-16T16:22:36+11:00
 tags = ["AI", "LaTeX", "Teaching", "Hardware"]
 categories = ["Blog"]
 draft = true
@@ -68,5 +68,18 @@ But what I have effectively landed on is different in kind. Hermes is not a codi
 The scope quietly widened. AI stopped being something I use to produce documents and became something that helps run the little household of machines the teaching setup grew into. Which is where the promise from [Part 1]({{< relref "20261116-ai-setup-1-rented-intelligence" >}}) gets paid: the assistant with a personality on purpose has arrived, and it runs this house.
 
 And the relationship changed somewhere in there. I stopped asking AI questions and started bouncing designs with it — asking the local model to help evaluate which model to install, reviewing plans written by one agent for another to execute. The system now includes its own staff. The human job became direction, taste, and refusing to trust anything unverified.
+
+
+## The fleet needs a larder {#the-fleet-needs-a-larder}
+
+Ten machines and a staff of agents is one thing; the data they share is another. The spine of the whole setup — the Nextcloud that syncs my notes between home and school — sat on two external Seagate portables in a USB dock, mirrored at each other. And the USB bridge boards refuse to report the health of the drives inside them: ask them how the disks are doing and they answer with silence. I was running the household's memory on hard drives I could not monitor. That, plus the sheer size of the thing — three and a half terabytes and growing — is what finally pushed me to build a proper NAS.
+
+There was one problem: I had not built a PC since the 1990s. hyperion had arrived prebuilt in July and I had not opened the side panel in months. Modern internals are a foreign country — drive cages and shrouds, SATA power, NVMe slots hiding under heatsinks. So the AI became my build partner, and its first act was reading. It downloaded the case and motherboard manuals, read them properly, and sent me the relevant pages as diagrams: where the 3.5-inch bays actually live, that the board has four SATA ports plus one connector that expands to four more, which slot the existing drive occupies — traced through the PCIe wiring without opening the case. It also corrected its own earlier guesses, which had come from my photographs. A photo shows what is installed today; a manual says what is possible. I have learned to tell them apart.
+
+Shopping had one trap worth knowing: the cheapest big shelf drives record **shingled** — SMR — and rebuild disastrously once a second drive fails. The rule was conventional recording only, which is how two Seagate IronWolf 8TB drives ended up in the cart, going into hyperion itself rather than a new box: the gaming PC that never gamed doubles as the household's storage spine. Before formatting anything, the agent ran an identity gate — model, capacity, serial number, spinning-disk flag, read back from the drives and checked against what we ordered, because a half-seated cable must not become half a RAID. The pair went in as a mirrored btrfs volume labelled **ironwolf**, with a nightly watcher that reads drive health and scrubs for silent bit-rot.
+
+Then the move: 3.5 TB ferried across a direct 2.5-gigabit link between the machines — one pass against the live tree while the site kept serving, a final delta pass while it was paused for the cutover. The details the AI kept in its pocket are the ones that bite: the mount point must match the application's data directory exactly, one level off and the site comes back broken; the new mount line must be incapable of hanging the boot; and the backup tool must be checked to follow the new mount, or the larder goes unbacked-up in silence. The retired portables were reformatted as time dials — snapshot targets, one per machine — so a file deleted this morning is a minute from a restore, and one dead machine is still not a lost decade.
+
+For the story I have been telling, this is the beat that matters: the same assistant that patched Goose's Rust read a case manual and stood me up at the drive cage. AI did not just live inside the machine. It walked me through opening one, for the first time in twenty-five years.
 
 _Next: Part 3 — The Organs. The knowledge base that was already ten years old, the tools that make verification automatic, and the honest cost sheet, gaming column: zero._

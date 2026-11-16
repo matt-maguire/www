@@ -1,7 +1,7 @@
 +++
 title = "My AI Teaching Setup, Part 3: The Organs"
 date = 2026-11-16
-lastmod = 2026-11-16T16:42:20+11:00
+lastmod = 2026-11-16T16:49:24+11:00
 tags = ["AI", "LaTeX", "Teaching", "Emacs"]
 categories = ["Blog"]
 draft = true
@@ -55,13 +55,22 @@ Eight collections, just under 190,000 chunks:
 -   **research** — 124,020 chunks of pedagogy: the academic papers and education books I have collected over the years
 -   **maths_resources** — 27,144: the faculty resource library — alternative assessments, activities, the hooks other teachers have built
 -   **brain** — 17,793: my own notes and lesson files — "what did I do the last time I taught data analysis?"
--   **caroline** — 12,338: resources shared by other teachers in the faculty
+-   **khs_maths** — 12,338: resources shared by other teachers in the faculty
 -   **nesa** — 2,759: the syllabus documents and the markers' feedback, tagged by course, year and type
 -   **textbooks** — 4,614: exercises from the books actually in use in the school
 -   **killara** — 566: the school's own past exams — what my students have already sat
 -   **syllabus** — 485: outcomes and dot points, the small print that constrains everything else
 
 Separate shelves matter because the agents search with filters: "marking feedback, Standard Mathematics, 2020 to 2025" is a different question from "everything, forever". And every laptop keeps a nightly read-only copy of the whole thing, because the school network blocks the house — the agents do not care which copy they ask.
+
+
+## Whose computers are these? {#whose-computers-are-these}
+
+One thing I have not mentioned, and it matters: where all of this physically lives. Every chunk in those eight shelves — the syllabus annotations, the markers' feedback, the school's own exams, a decade of my own notes — sits on computers I own, in my own house. The small model that turns text into numbers runs on the same hardware. No vendor indexes my teaching brain, no cloud service holds a copy, and no terms of service give anyone the right to train on any of it.
+
+When the pipeline rents a frontier model from the cloud, that model sees only the handful of passages the agent hands it for the job at hand — never the library itself. And anything that identifies a student never leaves the house at all: the rented tier only ever receives student-neutral content.
+
+The plain-text habit from Part 0 pays off here too. Because the files are mine — on my disks, in my backups, in a format every future tool can read — the index is a convenience I own, not a permission I rent.
 
 
 ## A live example {#a-live-example}
@@ -76,7 +85,7 @@ The question shares almost no vocabulary with the answers. That is the entire po
 
 A second query, aimed at the research shelf — _research on using student-generated questions to deepen understanding_ — returns What Works Best at 0.80 and Killen's inquiry-questions activity at 0.80. (The same PDF appeared twice under two filenames — near-duplicates surface, and the agent reading the results notices and deduplicates. This is also what an unglamorous afternoon of housekeeping the library prevents.)
 
-This is how the system pulls in facts. Exam generation asks the **nesa** shelf what the markers reward, and writes its marking criteria in the examiner's own voice. Lesson planning asks **maths_resources** and **caroline** for hooks that actually exist rather than invented ones. Generated practice papers check **killara** so they sound like this school's papers and not a generic one. And **brain** answers "what did past-me already think about this?" — cited, with a file path.
+This is how the system pulls in facts. Exam generation asks the **nesa** shelf what the markers reward, and writes its marking criteria in the examiner's own voice. Lesson planning asks **maths_resources** and **khs_maths** for hooks that actually exist rather than invented ones. Generated practice papers check **killara** so they sound like this school's papers and not a generic one. And **brain** answers "what did past-me already think about this?" — cited, with a file path.
 
 The verification rule from Part 0 still holds all the way down here: the index says _where to look_, never _what to believe_. Every hit carries its provenance, and the agent opens the real file before it quotes one.
 

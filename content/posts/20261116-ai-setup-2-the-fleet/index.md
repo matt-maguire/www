@@ -1,7 +1,7 @@
 +++
 title = "My AI Teaching Setup, Part 2: The Fleet"
 date = 2026-11-16
-lastmod = 2026-11-16T15:37:24+11:00
+lastmod = 2026-11-16T15:43:59+11:00
 tags = ["AI", "LaTeX", "Teaching", "Hardware"]
 categories = ["Blog"]
 draft = true
@@ -23,6 +23,10 @@ The embarrassing résumé, three months later: games installed and played: zero.
 
 When I wrote the August article, the daily driver was Gemma — a 31-billion-parameter dense model served by Ollama, with the Goose agent driving it. That setup genuinely worked, and then the ground moved under it, because this is the year the ground keeps moving. Gemma gave way to a 27-billion-parameter Qwen, and the keeper today is a large Mixture-of-Experts model — a big library of smaller specialists where each query only wakes the few experts it needs. That architecture is what makes a 32 GB card serve something genuinely clever: the _whole_ model doesn't need to fit, just the parts being consulted. It drafts my lesson notes and my assessment tasks to a standard I sign off on, and it runs on electricity, not on someone's pricing page.
 
+{{< figure src="fig-5090-gemma.png" >}}
+
+{{< figure src="fig-strata-tiers.png" >}}
+
 In between, I collected failures, and they are the useful part:
 
 -   A much-hyped model arrived with a reputation for cleverness. It aced the pure maths verification and then, asked to draw a number line, confidently stacked every label at the same coordinate. **Maths brain, broken hands.** A model's benchmark reputation told me nothing about whether it could produce _my_ documents.
@@ -30,6 +34,8 @@ In between, I collected failures, and they are the useful part:
 -   A machine running two models at once started paging pieces of them to disk. The model got subtly worse, in no particular way, which is the worst way for software to fail. **A model that has been swapped out is a model with a headache.**
 
 The old office machine was not retired — it now runs a smaller, fast Qwen as the second-opinion engine, the 2080 finally earning a proper salary after its years of roleplay duty.
+
+{{< figure src="fig-msi-hybrid.png" >}}
 
 
 ## The harness is the product {#the-harness-is-the-product}

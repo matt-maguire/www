@@ -208,6 +208,8 @@ So the honest ordering is: *the GPU was bought for joy, and the lesson-prep empi
 
 Running a small quantised model on 8 GB of VRAM in early 2026 is a humbling business. Short context, modest quality, slow answers to anything complicated. The 2080 could roleplay Mistral acceptably but could not draft a decent Year 10 assessment task to save its life. The cloud models were better by a wide margin, and I knew exactly how wide because I was now paying for both.
 
+[[file:fig-2080-8gb.png]]
+
 What the experiments taught me was the shape of the problem: VRAM is the budget, parameters and quantisation are the currency, and the interesting frontier was seeing how far the clever new models could stretch the hardware. That framing — which is really just "how much memory does the thing need" — is the whole of local AI. Once you see it, the rest is shopping.
 
 By mid-year the decision had formed: if I was to go further into this, I would need a machine with some real headroom. The next article is about that purchase, its honest justifications, and its embarrassing résumé.
@@ -237,6 +239,10 @@ The embarrassing résumé, three months later: games installed and played: zero.
 
 When I wrote the August article, the daily driver was Gemma — a 31-billion-parameter dense model served by Ollama, with the Goose agent driving it. That setup genuinely worked, and then the ground moved under it, because this is the year the ground keeps moving. Gemma gave way to a 27-billion-parameter Qwen, and the keeper today is a large Mixture-of-Experts model — a big library of smaller specialists where each query only wakes the few experts it needs. That architecture is what makes a 32 GB card serve something genuinely clever: the /whole/ model doesn't need to fit, just the parts being consulted. It drafts my lesson notes and my assessment tasks to a standard I sign off on, and it runs on electricity, not on someone's pricing page.
 
+[[file:fig-5090-gemma.png]]
+
+[[file:fig-strata-tiers.png]]
+
 In between, I collected failures, and they are the useful part:
 
 - A much-hyped model arrived with a reputation for cleverness. It aced the pure maths verification and then, asked to draw a number line, confidently stacked every label at the same coordinate. *Maths brain, broken hands.* A model's benchmark reputation told me nothing about whether it could produce /my/ documents.
@@ -244,6 +250,8 @@ In between, I collected failures, and they are the useful part:
 - A machine running two models at once started paging pieces of them to disk. The model got subtly worse, in no particular way, which is the worst way for software to fail. *A model that has been swapped out is a model with a headache.*
 
 The old office machine was not retired — it now runs a smaller, fast Qwen as the second-opinion engine, the 2080 finally earning a proper salary after its years of roleplay duty.
+
+[[file:fig-msi-hybrid.png]]
 
 **** The harness is the product
 

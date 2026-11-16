@@ -456,7 +456,7 @@ buildFuture=true
       images = []
       # Publisher info
       [params.page.seo.publisher]
-        name = "xxxx"
+        name = "Matt's Meandering Mind"
         logoUrl = "/images/avatar.png"
 
   # TypeIt config

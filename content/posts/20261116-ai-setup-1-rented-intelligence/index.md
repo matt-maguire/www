@@ -1,7 +1,7 @@
 +++
 title = "My AI Teaching Setup, Part 1: Rented Intelligence"
 date = 2026-11-16
-lastmod = 2026-11-16T10:35:06+11:00
+lastmod = 2026-11-16T11:29:37+11:00
 tags = ["AI", "LaTeX", "Teaching"]
 categories = ["Blog"]
 draft = true

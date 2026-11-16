@@ -127,6 +127,48 @@ That is the lesson of Part 0, and I did not earn it deliberately: *build your wo
 
 /Next: Part 1 — Rented Intelligence. The subscriptions that started it, the anxieties that followed, and the sacred first duty of an eight-gigabyte graphics card./
 
+*** DONE Mia AI-medio por instruado, Parto 0: Vivo en pura teksto : A Life in Plain Text :AI:LaTeX:Teaching:Emacs:Lingvoj:Esperanto:
+:PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
+:CUSTOM_ID: ai-setup-0-eo
+:EXPORT_FILE_NAME: index.eo.md
+:EXPORT_HUGO_BUNDLE: 20261116-ai-setup-0-plain-text
+:EXPORT_DATE: 2026-11-16
+:EXPORT_DESCRIPTION: 20261116-ai-setup-0-plain-text.png
+:END:
+
+Tio ĉi estas la unua el kelkaj artikoloj pri la AI-sistemo, kiun mi uzas por instrui matematikon. Esence, antaŭ dek monatoj mi decidis aĉeti AI-abonon por lerni pli pri la teknologio, kaj hodiaŭ mi mastrumas malgrandan floton da maŝinoj kaj agentoj, kiuj skizas miajn lecionojn, kontrolas miajn ekzamenojn, indeksas mian laŭprogramon kaj kverelas kun mi pri dezajno je noktomezo. Tiu ĉi unua artikolo temas pri la lastaj jaroj /antaŭ/ io ajn el tio, ĉar montriĝas, ke ĝi estas la parto, kiu ebligis ĉion ceteran.
+
+**** Jaroj da LaTeX
+
+Preskaŭ ĉiun instruistan dokumenton de mia kariero mi verkis per LaTeX. Komence estis mia instruista diplomo, la Magistro pri Instruado, kiu estas postulo por fariĝi kvalifikita instruisto en mia hejmŝtato. Mi jam antaŭe uzis tipumajn pakaĵojn por akademiaj dokumentoj, ekzemple [[http://jeffreykingston.id.au/lout/][Lout]], kaj mi konis la potencon de koncentriĝi al la enhavo dum la iloj prizorgas la prezentaĵon. Aparte, ni devis uzi la APA-citan sistemon por ajnaj citaĵoj en niaj taskoj, kaj anstataŭ ĉieni pri ĉu mi bezonas kursivan tiparon /tie ĉi/ aŭ komon /tie/, mi decidis delegi tion al LaTeX, industria normo por tipumado de matematiko.
+
+Post la finiĝo de miaj studoj, mi studis la lecionajn notojn, kiujn produktis aliaj instruistoj en mia lernejo, kaj decidis, ke mi volas disvolgi mian propran stilon, en kiu la ekzemplaj bildoj ne estus fiksitaj neŝanĝeblaj bitmapoj, sed priskribitaj en LaTeX-kodo, kiun mi povus pli facile ŝanĝi kaj adapti. Komence la laboro estis malrapida, sed finfine ĝi kreskis en mian propran hejman stilon: lecionaj notoj, laborfolioj, taksotaskoj — ĉio tekstdosieroj, kiuj kunmetiĝas al PDF. Tiu elekto estas la malplej brila kaj plej konsekvoplena decido en la rakonto. Iom post iom, mia tuta profesia produktaĵo — ĉiu leciono, ĉiu demando, ĉiu poentodistribuo — migradis al pura teksto en dosierujoj.
+
+La kosto de tiu elekto estis kompreneble tempo. LaTeX estas postulema, kaj la diagramoj eĉ pli. Desegni unu nombrolinion kun etikeditaj frakcioj, aŭ cirkon dividitan por la enkonduko de frakcioj, povis postuli dudek minutojn da @@markdown:Ti*k*Z@@-ĉienado — koordinatoj, ankroj, superpoziciitaj etikedoj, la eta babilo de vektorgrafiko. Kaj la diagramoj gravas: mi forte apogas min je duala kodigo, kie la algebro kaj la bildo reciproce fortikigas unu la alian, do "preterlasu la diagramon" neniam estis opcio. La @@markdown:Ti*k*Z@@-imposto estis simple vivfakto, pagata en ĉiu lecion-plana sesio.
+
+Parton de tio mildigis la uzo de potenca teksta redaktilo nomata Emacs, kiu ofertas diversajn klavaro-ŝparvojojn kaj aŭtomatan kompletigon por forigi parton de la skribista peno. Mi de longe fojfoje eksperimentis kun Emacs, ofte revenante al la redaktilo Vi, kiun mi pli bone konis. Estis dum mia instruista diplomo, ke mi decidis plene kaj ĝuste lerni la Emacs-redaktilon, kaj dum la lernado mi malkovris, ke Emacs estas multe pli ol simpla teksta redaktilo.
+
+**** Org-mode-cerbo
+
+Dum mi serĉis produktivecsistemojn, kiuj helpus min organizi mian laboron, mi ekkonis diversajn sistemojn kiel [[https://en.wikipedia.org/wiki/Getting_Things_Done][Getting Things Done]], [[https://zettelkasten.de/introduction/][Zettelkasten]] kaj [[https://obsidian.md/][Obsidian]], kaj mi ekkomprenis, ke ĉio ĉi estas farebla en pura teksto per la [[https://orgmode.org][Org mode]] de Emacs: miaj notoj, taskoj, kalendaro, scibazo kaj lecionplanoj — ĉio estas tekstdosieroj, interligitaj laŭstile de zettelkasten. La instruada scio — NESA-atingoj, laŭprogramaj kapricoj, kiu klarigo funkciis por kiu temo — amasiĝis en miloj da malgrandaj ligitaj notoj.
+
+Tiam tio estis simple mi, teksta obsedato kun Emacs-forma kutimo. Ne venis al mi, ke mi konstruas ion celonte.
+
+**** La fono, kiun mi devus konfesi
+
+Antaŭ la instruado mi pasis jarojn kiel diplomita elektrika inĝeniero kaj komputoscienclististo, specialiĝinta ĉefe pri programaro, kaj mi estas komputila ŝatokupanto tiel longe kiel mi povas memori. Retoj, terminaloj, iom da neŭra-reto-teorio el miaj bakalaŭraj tagoj, kiam ĝi ankoraŭ estis nisega temo (unura elstara momento estis kiam Geoffrey Hinton mem venis prelegi en la universitato) — nenio el tio estis neformala tiam, kaj nenio el tio aparte preparis min por kio okazis en 2026. Mi mencias ĝin nur ĉar ĝi glatigis la fruan vojon, kaj ĉar la vojo iĝis eĉ pli glata, pro kialoj kiuj fariĝas la punkto de tiu ĉi tuta serio: la teknikaj partoj montriĝis la partoj, kiujn mi povis delegi.
+
+**** La unuaj reakiritaj horoj
+
+La unua afero, kiun AI iam faris por mi, estis helpi min pri LaTeX-@@markdown:Ti*k*Z@@-diagramoj. Mi vaste uzis [[https://stackexchange.com/][Stack Exchange]], interretan forumon plenan de helpemaj konsiletoj. Sciante, ke la AI verŝajne englutis tiun retejon, mi provis priskribi diagramojn en unu frazo por vidi, kion ĝi redonus. Ĝi produktis diagramojn plenajn de koordinatoj, kaj per iom da plia instigo, ĝi eĉ ĝeneraligis la kodon, tiel ke mi povis enigi iujn parametrojn por tuj modifi la diagramon. Dudek minutoj fariĝis du, kaj la du kutime donis pli bonajn rezultojn, ĉar la AI memoris ankorajn trukojn, kiujn mi forgesis aŭ pri kiuj mi eĉ ne konsciis. Tiam venis la LaTeX-prozo, la vortumado de la demandoj, kaj la petoj "pli malfaciligu tiun parton, sed lasu la poentojn samaj", kiuj antaŭe estis horo da atenta kirurgio.
+
+Kaj jen la kvieta ekkompreno, al kiu tiu ĉi serio daŭre revenas: *Mi neniam havis integrigan projekton.* Kiam la AI-iloj alvenis, ili jam povis legi mian tutan profesian vivon, ĉion metitan en puran tekston. Neniu lukto kun PDF-dosieroj, neniuj proprietaj formatoj, neniu eksporta paŝo — la lecionoj, la notoj, la cerbo mem estis tekstdosieroj, kaj teksto estas tio, kion tiuj iloj manĝas. Homoj demandas min, kiel mi enmetis mian scion en la AI. Mi ne faris. Mi jam jarojn skribis ĝin en la denaska lingvo de la AI. Mi nur devis direkti la AI-n al ĝi.
+
+Jen la leciono de Parto 0, kaj mi ne atingis ĝin deliberate: *konstruu vian laboran vivon en pura teksto.* Ne ĉar AI venas — kvankam ĝi venas — sed ĉar teksto akumuliĝas. Ĝi ligiĝas, ĝi estas linio-post-linio komparebla, GitHub ĝin amas, kaj ĝi transvivis ĉiun vendiston. Tiam, iun tagon, montriĝas, ke ĝi estas la fundamento, sur kio ĉio alia konstruiĝas.
+
+/Sekve: Parto 1 — Luita Inteligenteco. La abonoj, kiuj komencis ĉion, la angoro, kiu sekvis, kaj la sankta unua devo de okgigabajta grafika karto./
+
 *** TODO My AI Teaching Setup, Part 1: Rented Intelligence :AI:LaTeX:Teaching:
 :PROPERTIES:
 :EXPORT_HUGO_WEIGHT: 4001
@@ -370,6 +412,106 @@ Having set up my home infrastructure to be readily accessible from anywhere, I n
 So, what else can I do with this setup? That of course will be the subject of the next article. 
 
 
+*** DONE AI-agentoj kaj lokaj LLM-oj :AI:LaTeX:Teaching:Emacs:Lingvoj:Esperanto:
+:PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
+:CUSTOM_ID: gemma-goose-eo
+:EXPORT_FILE_NAME: index.eo.md
+:EXPORT_HUGO_BUNDLE: 20260823-gemma-goose
+:EXPORT_DATE: 2026-08-23
+:EXPORT_DESCRIPTION: 20260823-gemma-goose.png
+:END:
+
+En mia [[#claude-code][lasta artikolo]] pri AI-agentoj mi parolis pri la uzado de la AI-agento Claude Code. Temas pri komerca solvo, facile instalebla, kiu donas bonegajn rezultojn. La risko estas, ke la prezoj eble ne restos tiom alireblaj kiom hodiaŭ, kaj pro tio mi volis trovi alternativan solvon, kiu ŝirmas min de ŝanĝiĝantaj komercoj.
+
+Ekzistas pluraj modeloj kun malfermaj pezoj, kiujn oni povas elŝuti kaj ruli loke sur sia hejma komputilo. Kelkaj el la avantaĝoj estas:
+- Ne estas kotizoj laŭ tokenoj nek tokenaj limoj -- vi povas konsumi tiom da tokenoj kiom vi volas, kiam vi aĉetis vian aparataron.
+- Ĉio, kion vi tajpas en via loke rulanta LLM, restas sur via komputilo, kio forigas ajn privatecajn zorgojn.
+- Neniu ekstera ento povas subite "fermi" la LLM, al kiu vi ekfidis.
+- Vi ne bezonas retan konekton.  
+- vi ne devas kunhavi aparataron kun iu ajn alia.
+
+Kompreneble, estas ankaŭ kelkaj malavantaĝoj:
+- vi bezonas sufiĉe potencajn aparatarajn specifojn por bona rendimento.
+- la modeloj, kiujn vi povas ruli, ne estas tute tiom kapablaj kiom la nubo-bazitaj modeloj, kaj VRAM-limoj povas limigi la grandecon de la kunteksta fenestro, kiun vi realisme povas uzi.
+
+**** Elektante modelon 
+Laŭ mia sperto pri la uzado de Claude, mi trovis ke mi kutime uzas ĉirkaŭ 100k tokenojn por krei aron da lecionaj notoj. Mia komputilo estas luda PC ekipita per NVIDIA RTX 5090 kun 32GB da VRAM. La kvanto da VRAM determinas la grandecon de la modelo, kiun vi povas uzi, same kiel la longon de la kunteksta fenestro. Mi serĉis modelojn, kiuj donus al mi 128k+ kuntekstan fenestron kaj kongruus kun la havebla VRAM. Kompreneble, mi ankaŭ demandis AI-babilroboton pri rekomendoj.
+
+La unua rekomendo, kiu revenis, estis uzi Ollama por ruli la modelojn. Rulante lokan Ollama-servilon, estas simple elŝuti diversajn tipojn de modeloj kaj ŝalti inter ili. La rekomenditaj modeloj apartenis al du ĉefaj kategorioj:
+- *Densaj modeloj:* tiuj modeloj emas esti pli potencaj, sed povas ankaŭ esti pli malrapidaj
+- *Mixture of Experts:* ankaŭ konata kiel miksaĵo de spertuloj, tiuj konsistas el pluraj pli malgrandaj modeloj. Antaŭe estas iom da logiko, kiu direktas la demandon al unu el la "spertuloj", kiuj specialiĝas pri certaj taskoj, kaj tiam via videokarto bezonas ruli nur tiun pli malgrandan specialan modelon, kio rapidigas ĝin.
+
+Du modeloj, kiuj elstaris, estis /Qwen/ de la ĉina firmao Ali Baba kaj /Gemma/ de Deepmind de Google. Mi eksperimentis kun variantoj el ambaŭ familioj. Fine mi elektis Gemman, ĉefe pro ĝiaj kapabloj pri bild-procezado (pli pri tio poste).
+
+La du modeloj, al kiuj mi alvenis, estis:
+- gemma4:31b -- temas pri densa modelo kun 31 miliardoj da parametroj. Kun mia videokarto mi povas komforte ruli kuntekstan fenestron de 128k. Tio estas mia ĉiutaga laborilo.
+- gemma4:26b -- temas pri Mixture of Experts (MoE) modelo, kiu okupas malpli da memoro. Kun ĉi tiu modelo mi pliigis mian kuntekstan fenestron ĝis 256k, tiel ke mi povas interŝanĝi pli grandan kuntekstan fenestron kontraŭ iomete malpli kapabla modelo.
+
+Rimarku, ke Ollama defaŭlte uzas nur malgrandan kuntekstan fenestron. Vi povas anstataŭi la defaŭltan kuntekstan fenestron per Modelfile kun agorditaj parametroj, kaj poste uzi Ollama por krei agorditan modelon, kiu montras reen al la sama pezo-matrica dosiero, kiun vi jam elŝutis por la originala modelo. Vi povas demandi vian AI-LLM kiel fari tion. Kiam tio estis farita, venis la tempo ekigi la LLM:
+
+#+begin_example
+$ ollama run gemma4-31b-128k
+>>> Hi Gemma! Are you ready to make some lesson files for me?
+Thinking...
+"Hi Gemma! Are you ready to make some lesson files for me?"
+The user wants to create educational content (lesson files).
+Friendly, eager, collaborative.
+
+    *   Am I capable of creating lesson plans? Yes.
+    *   Can I generate worksheets, quizzes, slides outlines, and instructional materials? Yes.
+    *   What do I need from the user to be effective? Subject, grade level, learning objectives, duration, and specific 
+formats.
+
+    *   *Enthusiasm:* Acknowledge the request with a positive tone.
+    *   *Capability Statement:* Clearly state what can be done (lesson plans, quizzes, activities, etc.).
+    *   *Requirement Gathering:* Ask for the necessary details to ensure the quality of the output.
+...done thinking.
+
+I am absolutely ready! I would love to help you put together some high-quality lesson files.
+
+To make sure these are exactly what you need, just let me know a few details for each lesson:
+
+...
+
+#+end_example
+
+Kiel vi vidas, ĉi tiu LLM defaŭlte malkaŝas sian internan pensadon. Tio estas ankoraŭ unu parametro, kiun oni povas agordi.
+
+**** Elektante AI-agentan klienton
+Kiam mi havis Ollama-servilon funkciantan, mi volis agordi AI-agenton kiel mi faris kun Claude. Inspektante la Emacs-pakon /agent-shell/, mi rimarkis, ke ĝi subtenas AI-agenton nomatan /Goose/ de /Block Open Source/. Ĉi tiu agento subtenas orkestradon de kompleksaj plurpaŝaj taskoj per taskolistoj. Ĝin oni povas ruli tra Emacs agent-shell, aŭ ekzistas labortabla aplikaĵo, kiu ofertas uzant-amikan manieron agordi kaj uzi la AI-agenton.
+
+Mi provis krei kelkajn lecionojn uzante la agenton Goose. Ĝi funkcias sufiĉe bone, tre simile al Claude Code. Mi trejnis ĝin pri kiel formati lecionojn laŭ mia gusto, kiel mi faris kun Claude. Kiel Claude Code, Goose havas ebligeblan etendaĵon de skiloj.
+
+Unu afero, kiu ne tiom bone funkciis, estis kiam mi donis al Goose/Gemma fontan dokumenton enhavantan matematikan notacion kaj diagramojn. Ĝi provis elŝuti la tekston, sed formuloj fariĝis fuŝitaj, kaj enhavo ekzistanta kiel bildoj, ekzemple tabeloj kaj diagramoj, tute ne estis elŝutita. Ĉio ĉi funkciis glate kun Claude, sed mi ankoraŭ ne pretis rezigni.
+
+**** Importado de fontaj/referencaj dokumentoj
+Ni nun revenas al la punkto, ke la modelo Gemma subtenas bild-procezadon. Anstataŭ uzi nefideblan teksto-elŝutan ilon, mi serĉis vojojn utiligi la bild-procezajn kapablojn de Gemma por inspekti la fontan dokumenton kaj vide rekoni la matematikan notacion, tabelojn kaj diagramojn. Mi instalis programon nomatan =pdftopbm=, kiu konvertas ĉiun paĝon de PDF-dokumento en Portable Bitmap-dosieron, kiun Gemma povas rekon.
+
+Kompreneble, mi ne volas konverti ĉiujn paĝojn de PDF-dosiero mane, precipe se min interesas nur malgranda elekto de paĝoj. Kiel aŭtomatigi tiun procezon? Se nur ekzistus iuspeca AI-ilo, kiu povus aŭtomatigi tiuspecan monotonan laboron... ho, atendu, ĉu ne por tio Goose/Gemma ekzistas?
+
+Mi instrukciis Gemman ĉiam uzi =pdftopbm= por elŝuti paĝojn el ajna PDF-dokumento, pri kiu mi rakontas al ĝi, anstataŭ uzi teksto-elŝuton. Mi faris tion konstanta parto de skilosiero, kaj nun mi simple metis la PDF-en en mian lecian dosierujon, diris al Gemma kie la dosiero estas, kaj tra Goose ĝi trovos la PDF-en kaj englutos ĝin laŭbezone.
+
+Mi poste malkovris, ke tion faras iloj kiel Claude malantaŭ la scenoj --- konverti al bildoj kaj uzi OCR.
+
+Mi nun havis sufiĉe potencon AI-agentan aranĝon, plene loke rulantan sur mia luda PC. Dum mi estis hejme, mi povis ssh-en al mia luda PC kaj ruli emacs en teksta reĝimo. Sed kio se mi volus rigardi PDF-eligojn, aŭ aliri la LLM-for de hejmo? Sendube ekzistas vojo fari tion tra la interreto...
+
+**** Konektante la LLM al la interreto
+Kiam oni uzas la labortablan aplikaĵon Goose, oni devas montri al ĝi API-finejon, tra kiu ĝi povas aliri LLM. La Ollama-servilo rulanta sur mia luda PC aŭskultas TCP-pordon por envenantaj HTTP-petoj. Kutime ĝi ligiĝas al la loka loopback-aparato, tiel ke oni povas konektiĝi al ĉi tiu API nur loke de la luda PC mem. La demando estas, kiel mi povas eksponi ĉi tiun API-on sur la interreto sekure kaj sendanĝere.
+
+La Ollama-servilo ofertas OpenAI-kongruan API-finejon, kun kelkaj limigoj.
+1. La API estas alirebla per HTTP-petoj, kiuj ne estas ĉifritaj. Sendi neĉifritan informon tra la interreto ne estas rekomendinde.
+2. La API-finejo ne subtenas ajnan aŭtentikigon. Tio signifus, ke ĉiu ajn sur la interreto povus aliri la modelon.
+
+La solvo kompreneble estas enkonduki reversan prokurilon. La reversa prokurilo povas ricevi ĉifritajn HTTPS-konektojn kaj transsendi ilin al la HTTP-API-pordo de la Ollama-servilo. Ĝi povas ankaŭ prizorgi la aŭtentikigan funkcion por certigi, ke nur rajtigitaj klientoj povas aliri la API. Oni povas facile fari tion per programaro kiel /nginx/ aŭ /apache httpd/. Temas pri tre ofta aranĝotipo, kiun oni rapide trovas per reta serĉo aŭ demandante vian AI, do mi ne ripetos tiun informon ĉi tie.
+
+La lasta paŝo estas montri al Goose la HTTPS-API-finejon kaj agordi API-ŝlosilon, kiun la reversa prokurilo akceptos. 
+
+**** Sekvontaj paŝoj
+Kiam mi agordis mian hejman infrastrukturon tiel, ke ĝi estas facile alirebla de ie ajn, mi nun havas "senpagan" alternativon al la pagitaj AI-servoj (mi diras senpaga, sed kompreneble mi ankoraŭ pagas elektrokonsumon kaj aparataran amortizon). La hejma aranĝo produktas altkvalitajn lecionajn notojn. Okaze de kazoj, kie la hejma aranĝo malfacilas, mi ankoraŭ havas la eblon uzi la pli potencajn pagitajn modelojn Claude aŭ Gemini.
+
+Do, kion alian mi povas fari per ĉi tiu aranĝo? Tio kompreneble estos la temo de la sekva artikolo.
+
 *** AI Agents Take Over Lesson Prep
 **** DONE AI Agents Take Over Lesson Prep :AI:LaTeX:Teaching:Emacs:
 :PROPERTIES:
@@ -468,6 +610,104 @@ During my initial experiments, I found it very easy to run out of usage quota, a
 With these optimisations, Claude becomes an affordable and very effective assistant in producing lesson notes. However, this pricing level is something of a loss-leader for these AI companies, and it is unlikely they will be able to continue offering these prices in the long term. I feel uneasy that I might get hooked on this type of workflow, and may not be able to afford it in the future.
 
 Next time I will talk about an alternative workflow that I set up to address this concern.
+
+**** DONE AI-Agentoj Ekregas la Lecionpreparon :AI:LaTeX:Teaching:Emacs:Lingvoj:Esperanto:
+:PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
+:CUSTOM_ID: claude-code-eo
+:EXPORT_FILE_NAME: index.eo.md
+:EXPORT_HUGO_BUNDLE: 20260822-claude-code
+:EXPORT_DATE: 2026-08-22
+:EXPORT_DESCRIPTION: 20260822-claude-code.png
+:END:
+
+Delonge mi ne skribis pri kiel mi uzas Emacs/LaTeX por krei lecionnotojn por miaj studentoj. Sufiĉe multo okazis dum tiu tempo. Unu el la plej grandaj ŝanĝoj venis de la progresoj en "AI"-teknologio. En la sekvaj artikoloj mi intencas priskribi mian vojaĝon dum mi navigas tra ĉi tiu teknologio kaj aplikas ĝin al mia instrua praktiko.
+
+***** Babilrobotoj
+Kiam mi decidis enŝovi la piedfingron en la akvon, mi aliĝis al du el la ĉefaj ludantoj en ĉi tiu kampo, nome Google Gemini kaj Anthropic Claude. Miaj fruaj eksperimentoj kun ChatGPT donis iom seniluziigajn rezultojn, kie ĝi emfaze klopodis konvinki min, ke la valoro de la konstanto de Euler estas 1,5. Ekde tiam la teknologio signife progresis, kaj mi opiniis indan reprovi.
+
+Ĝis tiam mia laborfluo estis krei lecionnotojn en LaTeX mane. Kiam mi alkolisiĝis provante elpensi kiel desegni TiKZ-diagramojn, mi konsultis la retejon Stack Exchange kaj la referencan manlibron de TiKZ por ricevi ideojn. Mi kontentis pri la rezultoj, sed tio sufiĉe tempopostulis. Do ĉe tio mi unue provis uzi AI-n.
+
+Mi vizitis la retejon de la babilroboto kaj donis al la AI prompton priskribantan la tipon de diagramo, kiun mi volis, kaj ĝi generis la TiKZ-kodon. Mi kopi-algluis ĝin en mian dokumenton, kunmetis ĝin por vidi, kiel ĝi aspektis, kaj petis de la AI plibonigojn. Tiam mi malkovris, ke AI efektive povas preni bildon de ekzistanta diagramo kaj plenumi deĉan laboron generante TiKZ-kodon, kiu proksimumas la diagramon. Tio ŝparis al mi iom da tempo, sed estis iom enuiga kun ĉiu tiu kopi-algluado. Sendube devis ekzisti pli bona vojo...
+
+***** Envenas la AI-Agentoj
+Mi aŭdis, ke homoj uzas AI-n por kodadaj taskoj. Ĉar LaTeX estas nur alia programlingvo, eble mi povus uzi tiujn disvolvajn ilojn por generi miajn lecionnotojn. Tio kondukis min en la kuniklotruon de /AI-Agentoj/.
+
+Kiam vi havas fenestron de babilroboto, ĝi estas kiel izolita sablujo. Ĝi ne aliras la dosierojn en via sistemo. Se vi volas, ke la babilroboto konas dokumenton, vi devas alŝovi ĝin al la babilujo. La babilroboto povas generi kodon, sed vi devas kopi-alglui ĝin en vian redaktilan fenestron, por ke vi povu konservi ĝin en dosiero kaj kunmeti la kodon.
+
+AI-Agento, male, estas programaro, kiu funkcias sur via loka sistemo. La AI-modelo povas generi tekstan eligon en speciala JSON-formato, kiu priskribas, kiajn operaciojn ĝi volus plenumi sur via sistemo. La programaro de la AI-Agento interpretas ĉi tiun JSON-blokon de teksto kaj tiam plenumas la bezonatajn operaciojn sur via sistemo. Tiuj operacioj povas esti io kiel legado de dosiero, skribado de dosiero, rulado de ŝela komando kiel la LaTeX-kunmetilo, kaj eĉ forigado de dosieroj, kiuj ne plu bezonatas. Do, finiĝis la kopi-algluado --- la LLM-AI povas peti vian agenton fari ĉion, kio bezonatas.
+
+Kvankam ĉi tio estas ege konvenige, doni al la LLM liberan kampon por fari ŝanĝojn en via sistemo estas sufiĉe danĝere. Multaj el ĉi tiuj AI-Agentaj klientoj havas permesan sistemon, kie ili montras la komandon aŭ operacion, kiun ili planas ruli, kaj petas vian permeson por permesi, ke tiu operacio ruliĝu nur unufoje, ruliĝu ĉiun foje, aŭ eĉ rifuzi tiun operacion. Vi povas diri al la agento, ke ĝi rajtas operaci nur sur dosieroj en certa dosierujo (la "projekta" dosierujo), kaj estas prudente uzi sistemon de versia administrado kiel /git/, tiel ke se la LLM/Agento faros ion bedaŭrindan, vi povas restarigi viajn dosierojn al antaŭa commit.
+
+Volega provi ĉi tion, mi devis trovi iun AI-Agentan klientan programaron, kongruan kun la LLM, kiun mi decidis uzi.
+
+***** Claude Code
+Por maximumi miajn ŝancojn de sukceso, mi decidis komenci per la Claude-LLM de Anthropic, kiu famas kiel plej avangarda por kododisvolvo. Anthropic provizas AI-Agentan ingon nomatan "Claude Code", kiu estas desegnita por funkcii kun la Claude-modeloj, do ĉi tio ŝajnis bona elira punkto.
+
+****** Claude Code en Emacs
+Kiel Emacs-entuziulo, kompreneble mi volis vidi, ĉu mi povas funkcigi ĉion en Emacs, inkluzive de la AI-Agento, la LaTeX-fonto kaj la PDF-eligo. Kompreneble, mi povus ruli la CLI de Claude Code en vterm-bufro, sed mi malkovris, ke ekzistas Emacs-pako nomata /agent-shell/, kiu vokas AI-Agentojn kiel Claude Code en Emacs-bufro. Post kiam mi instalis Claude Code sur mia sistemo, mi informis Doom Emacs en mia =packages.el= dosiero, ke mi volas uzi la pakon /agent-shell/:
+#+begin_src elisp
+(package! agent-shell)
+#+end_src
+
+Tiam mi difinis praktikan klavonligon kaj agordis la defaŭltan Claude-modelon kiel /Sonnet/:
+
+#+begin_src elisp
+(use-package! agent-shell
+  :bind ("C-c a" . agent-shell)
+  :config
+  ;; 1. The ACP Driver Logic (Critical for Arch Linux paths)
+  (setq agent-shell-anthropic-claude-acp-command '("claude-agent-acp" "--model" "sonnet"))
+
+  ;; 2. Suppress the migration warning (as per the 2026 update)
+  (setq agent-shell-anthropic-claude-command nil)
+
+  ;; 3. Doom-specific UI Tweak
+  ;; This ensures the agent-shell buffers get proper syntax highlighting in Doom
+  (add-hook 'agent-shell-mode-hook #'doom-mark-buffer-as-real-h))
+#+end_src
+
+/Sonnet/ estas la LLM de meza nivelo. Aliaj opcioj estas /Haiku/, kiu estas malmultekosta kaj taŭga por bazaj redonoj, kaj /Opus/, kiu estas la altklassa modelo, pli multekosta sed kapabla pritrakti iom pli kompleksan kodon, kun kiu /Sonnet/ eble penus.
+
+Mi informas Emacs, ke mi volas uzi mian lecionan dosierujon, per la komando =M-x cd=, kaj startas la agenton per =M-x agent-shell=. Al mi estas prezentataj kelkaj agentaj opcioj, kaj mi elektas /Claude/. Mi funkcias!
+
+Do, kio nun? Ni kreu lecionon:
+#+begin_example
+Claude> Generate some lesson notes in my usual exesheets-based LaTeX format for my year 8 class on two-step equations. I want to demonstrate both the backtracking and balance methods of solving those equations. Provide some practice examples with space for working.
+#+end_example
+
+Claude tiam esploros la dosierujan strukturon de la projekto kaj malkovros, kie estas miaj lecionoj por la 8-a jaro. Ĝi vidos, kiujn lecionojn mi jam skribis, kaj generos la novan lecionon en simila formato, skribante la dosieron laŭ mia ekzistanta nomumada konvencio. Ĉio, kion mi devas fari, estas malfermi la dosieron =lesson.tex= en Emacs-bufro, kunmeti ĝin per =C-c C-c= kaj rigardi la PDF-eligon.
+
+Ho ve, la generita leciono ne kunmetiĝas! Claude min fiaskigis. Ni vidu, ĉu ĝi povas elaĉeti sin:
+#+begin_example
+Claude> The file you produced doesn't compile. When generating or changing tex files, always check they compile cleanly with "latexmk -synctex=1" and correct any errors.
+#+end_example
+
+Claude foriras kaj kontrolas la kunmetajn protokolojn. Ĝi rimarkas, ke ĝi forgesis inkluzivi gravan pakon, aldonas ĝin al la dokumenta antaŭparolo, kaj rekunmetas. Sukceso! Mi povas rigardi la dokumenton en Emacs kaj revizii la lecionnotojn. Se mi vidas iujn problemojn, mi povas doni al Claude rimarkigojn, kaj tre baldaŭ mi havas glatan aron de notoj, kiujn mi povas uzi.
+
+Mi volas certiĝi, ke Claude ne ripetos ĉi tiujn erarojn la sekvan fojon, kiam mi petos ĝin krei lecionnotojn:
+
+#+begin_example
+Claude> Create a skill for generating lesson notes, based on the feedback given throughout this session.
+#+end_example
+
+Skiloj estas aro de notoj, kutime en Markdown-formato, kiujn Claude povas legi ĉe la komenco de sesio. Ĉi tiuj notoj povas inkluzivi instrukciojn kiel ĉiam kontroli, ke dosieroj kunmetiĝas, kriz-kontroli la lecionenhavon kontraŭ la instruprogramo, ktp. Ĉi tiu informo fariĝas daŭra trans sesioj, tiel ke la sekvan fojon via prompto povas esti pli mallonga.
+
+****** Labortabla aplikaĵo Claude Code
+Post kiam mi ruligis claude en tiu maniero, mi elpensis laborfluon, kiu havis la LaTeX-fonton, la Claude-ŝelon kaj la PDF-dosieron en apartaj Emacs-fenestroj. Ĉi tio funkcuis bone, ĝis mi ekkomprenis, ke estas pli konvenige havi nur la LaTeX-fontan kaj PDF-fenestrojn en mia Emacs-fremo, kaj uzi la labortablan aplikaĵon Claude Code sur dua ekrano. La labortabla aplikaĵo ankoraŭ povas krei la dosierojn, ruli la kunmetilon, enŝovi aferojn en git ktp, kaj en Emacs mi havas pli da spaco por rigardi la dokumenton kaj ĝian fonton.
+
+***** Do, pri la kosto...
+Kun Claude Pro ekzistas malmultekosta monata abono por ĉirkaŭ $30/monato. Tio estas subvenciita kosto, kiu permesas al vi uzi Claude ĝis certa punkto, post kio aŭ vi estas blokita ĝis via uzada fenestro refreŝiĝas, aŭ vi povas pagi aldonon por daŭrigi, se vi ne volas atendi.
+
+Dum miaj komencaj eksperimentoj, mi trovis tre facile elĉerpi la uzadan kvoton, kaj do mi esploris kelkajn strategiojn por redukti mian tokenan uzadon:
+- ene de babela sesio, la /tuta/ babila historio estas transdonata al la LLM ĉiun fojon, kiam vi enigas novan prompton. Tio povas konsumi multajn tokenojn, kaj do estas plej bone teni la babelajn sesiojn mallongaj, limigitaj al unu leciono aŭ mallonga vico de rilataj lecionoj. Kiam vi transiras al nova jara grupo, komencu freŝan babilon.
+- se vi laboras pri leciovico, povas havi sencon uzi la komandon =/compact=. Tio igas la LLM generi resumon de la babela sesio kaj anstataŭigi la babilan historion per tiu mallonga resumo. Vi ankoraŭ konservas superrigardon pri tio, pri kio vi laboris, sen ĉiuj detaloj kaj mispaŝoj.
+- Se vi ofte referencas dokumenton kiel la instruprogramon, konvertu ĝin al teksta formato, kiun estas pli facile analizi por la LLM. Al mi plaĉas diri al la AI konverti la instruprogramon al Org mode-dosiero. Tio estas multekosta operacio, sed vi nur bezas fari ĝin unufoje. La AI povas tiam referenci la tekstan dosieron anstataŭ konverti la instruprogramon de PDF al teksto ĉiun unuopan fojon.
+- aliaj optimumigoj povus inkluzivi diri al la LLM uzi kunmetilajn flagojn, kiuj reduktas la tekston skribatan al =stdout=, kaj peti ĝin revizii la kunmetajn protokoldosierojn nur se la kunmetilo redonas erarkodon je la fino de la tasko.
+
+Kun ĉi tiuj optimumigoj, Claude fariĝas aligebla kaj tre efika asistanto en kreado de lecionnotoj. Tamen, ĉi tiu preznivelo estas por la AI-firmaoj iom kiel varoj vendataj sub kosto, kaj estas neverŝajne, ke ili povos longtempe daŭre oferti tiajn prezojn. Min maltrankviligas, ke mi eble alkutimiĝos al ĉi tiu tipo de laborfluo kaj poste eble ne povos pagi ĝin.
+
+Sekvatempe mi parolos pri alternativa laborfluo, kiun mi starigis por respondi al ĉi tiu zorgo.
 
 *** Plain Text Accounting with Emacs -- Part 3
 **** DONE Plain Text Accounting with Emacs -- Part 3 :PlainTextAccounting:Emacs:
@@ -1086,6 +1326,103 @@ I'll talk a bit more in a future article how to download market price data and h
 
 This has been a fun exercise where I have learned a lot about accounting, and also made some surprising discoveres such as how much I spend on coffee each month! I feel I am in a much better position to make better financial decisions, and it is nice to know that at tax time I will already have the key information available at my fingertips without having to trawl through mountains of paper. Entering a little bit each day is certainly preferable to letting everything pile up to be dealt with in a flurry of activity at Year End. If you want to become better organised, I suggest looking into these types of tools. You can make it as simple or as complicated as you like, and you will definitely learn something about managing money.
 
+**** DONE Pura-Teksta Libroteado per Emacs :PlainTextAccounting:Emacs:Lingvoj:Esperanto:
+:PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
+:CUSTOM_ID: pta-emacs-eo
+:EXPORT_FILE_NAME: index.eo.md
+:EXPORT_HUGO_BUNDLE: 20250423-pta-emacs
+:EXPORT_DATE: 2025-04-23
+:EXPORT_DESCRIPTION: 20250423-hledger_report.png
+:END:
+
+Delonge min maltrankviligis, ke mi ne vere regas miajn financojn tiel bone kiel mi devus, kaj mi decidis fronti la aferon kaj fari ion pri ĝi. Mi celas akiri multe pli bonan vidon pri mia akcia portofolio, kaj certiĝi, ke mi ĝin ĝuste spuradas, por ke se mi vendus iujn akciojn, mi povus facile kalkuli kapitalgajnojn kaj simile dum la impostado. Mi ankaŭ tre volas pli bone kompreni miajn elspezadajn ŝablonojn, por vidi, kie mi eble malŝparas monon.
+
+Ĉar mi lastatempe multe amuzis min enrigardante Emacs Org, mi esploris, ĉu ĝi povus helpi min pli firme regi miajn financojn. Post iom da esplorado, mi ekrealizis, ke Org-mode eble ne estas la plej bona ilo por tio, kion mi celis, sed mi vidis aron da homoj parolantaj pri programo nomata Ledger, kiu kiel enigon prenas purtekstajn dosierojn priskribantajn viajn financojn, kaj poste kribras la datumojn por produkti diversajn raportojn. Ĉar la datumoj estas administritaj per homlegeblaj tekstdosieroj ("librotenaj ĵurnaloj"), Emacs povas esti uzata kiel la preferata teksta redaktilo, kaj en Emacs eĉ ekzistas "Ledger mode" por prizorgi la kutiman sintaksan emfazon kaj aŭtomatan kompletigon, kiujn oni atendas de ajna teksta speciflingvo.
+
+***** Elektante Pura-Tekstan Libroteadan Ilon
+Ŝajnas, ke ekzistas fervora komunumo, kiu uzas diversajn ilojn kiel Ledger por spuradi siajn financojn per purtekstaj dosieroj. Unu el la ĉefaj centroj estas la retejo https://plaintextaccounting.org/. Tiu retejo klarigas kelkajn bazajn konceptojn de librotenado kaj mencias la diversajn haveblajn ilojn. Do, mia unua tasko estis decidi, kiun ilon mi uzu.
+1. [[https://ledger-cli.org/][Ledger]] estas la plej malnova komandlinia ilo, kaj ĝi havas la plej multajn funkciojn. La ĵurnala formato estas sufiĉe tolerema kaj vaste uzata, kaj Emacs havas /Ledger/-reĝimon.
+2. [[https://hledger.org/][HLedger]] estas pli moderna reskribo de Ledger, verkita en Haskell. La programisto provis "purigi" iujn apartaĵojn de Ledger kaj plifaciligi la ilon. Al ĝi mankas iuj funkcioj de Ledger, sed la programisto klarigas, kiel pritrakti iujn oftajn uzkazojn per la pli simpla funkciaro. Ĝi ŝajnas esti pli aktive evoluata ol la aliaj iloj de pura-teksta librotenado (PTA). Emacs ankaŭ havas /HLedger/-reĝimon.
+3. [[https://beancount.github.io/][Beancount]] estas verkita en Python, kaj uzas alian formaton por siaj ĵurnalaj dosieroj ol Ledger kaj ĝiaj derivaĵoj. La formatado de la ĵurnalo estas pli strikta ol ĉe la aliaj iloj.
+4. [[https://gnucash.org/][GNUCash]] estas GUI-bazita aplikaĵo, kiu uzas SQL-databazon por la daŭra datumkonservejo. Tio tute ne estas pura-teksta librotenada programaro, sed mi decidis tamen enrigardi ĝin por vidi, ĉu ĝi eble pli taŭgus por miaj uzkazoj.
+
+Post enrigardado de ĉi tiuj 4 iloj, mi decidis, ke mi vere volas pura-tekstan librotenadan ĵurnalon, kiun mi povus meti sub versian kontroladon uzante Git/Magit. GNUCash ŝajnis iom tro peza por tio, kion mi volas fari. Mi ne gvidas kompleksan entreprenon; mi simple gajnas salajron, faras iujn aksiajn transakciojn kaj provas regi miajn elspezojn. Por io tia simpla, tekstdosiero plene taŭgas, des pli ke mi jam intense uzas tekstdosierojn tra Emacs/Org-mode. Fine, mi decidis elekti HLedger:
+- ĝi estas pli ĝisdatigita, kaj al ĝi mankas la historiaj kapricoj kaj paŝoferoj de Ledger
+- la dosierformato estas tolerema, kaj ĉar al ĝi mankas iuj el la kompleksecoj de Ledger, mi kredis, ke mi ĝin pli rapide ekkaptus.
+- ĝi estas verkita en Haskell, kiu sonas kiel interesa lingvo, pri kiu mi eble lernos pli, se mi volus skribi iujn proprigojn.
+- se mi volus pli profunde enrigardi Beancount, ekzistas konvertaj iloj, kiuj povas helpi migri al la malsama formato.
+
+***** Bazaj Libroteadaj Terminoj
+Kiam mi jam elektis ilon, la sekva afero estis enrigardi, kiel librotenado funkcias. Ĉiuj ĉi PTA-iloj baziĝas sur la ideo de /duobla entrudado/. Mi ne volas detali ĉi tie pri duobla entrudado, ĉar aliaj faris ĝin pli bone ol mi povus. Mi rekomendas al vi legi la [[https://plaintextaccounting.org/What-is-Plain-Text-Accounting][enigantan artikolon]] sur la retejo plaintextaccounting.org. Sume tamen:
+- Mono estas spurata per enmetado de ĝi en /kontojn/ kaj elprenado el ili.
+- Estas 3 tipoj de kontoj, kiuj konservas valoron: *Aktivoj* (aĵoj, kiujn vi posedas), *Devoj* (aĵoj, kiujn vi ŝuldas al aliaj homoj) kaj *Kapitalo* (tio estas komplika, sed sur simpla nivelo ĝi estas mezuro de la mono, kiun vi enmetis en la entreprenon).
+- Estas 2 pliaj tipoj de kontoj, kiuj reprezentas monon enirantan aŭ elirantan el la entrepreno: *Enspezoj* (mono venanta de ekstera fonto) kaj *Elspezoj* (mono, kiun vi pagas al iu alia).
+- Se vi elprenas monon *el* unu aŭ pluraj kontoj, vi devas enmeti tiun saman sumon *en* unu aŭ plurajn kontojn. El fizika vidpunkto, tio estas io kiel la leĝo pri konservo de energio — mono ne povas esti kreita el nenio, ĝi povas nur esti translokigita de unu loko al alia.
+
+***** Agordante HLedger kaj HLedger-mode/Ledger-mode
+Tie ĉi ne estas magio: mi simple instalis /hledger/ per mia pakaĵadministrilo, en mia kazo:
+
+=pacman -Sy hledger hledger-ui hledger-web=
+
+La lastaj du pakaĵoj estas laŭvolaj.
+- =hledger-ui= estas teksta uzantointerfaco (TUI) por hledger. La gamo de raportojn, kiujn ĝi povas fari, estas limigita kompare kun tio, kio eblas per la komandlinia ilo hledger. Tamen ĝi estas oportuna maniero rigardi normaĵojn kiel bilancoj kaj enspezoraportojn.
+- =hledger-web= provizas minimuman retumilan servon, kiu realigas retan GUI. Mi tute ne enrigardis ĝin, ĉar min ĉefe interesas resti ĉe tekstaj raportojn/Emacs.
+
+Por instali hledger-mode en Emacs, vi povas sekvi la instrukciojn ĉe la [[https://github.com/narendraj9/hledger-mode][github de la programisto]]. Mi ne tre profunde enrigardis ĝin, kaj nun mi pensas, ke Ledger-mode en Emacs eble eĉ pli bona elekto ol hledger-mode:
+- ledger-mode estas antaŭpakumita en la Doom Emacs-distribuado, kiun mi uzas.
+- ĝi ŝajnas havi iujn belajn funkciojn kiel M-q por vicigi viajn valutosumojn. Por vidi, kion mi celas, rigardu [[https://archive.org/details/ledger-mode_EmacsConf2019][ĉi tiun demonstracion]] de Emacs ledger-mode de EmacsConf 2019.
+
+Mi devos esplori ĝin pli.
+
+***** Kreante Ĵurnalajn Entrudojn
+
+Ledger estas sufiĉe fleksebla laŭ la maniero, kiel vi uzas ĝin. Vi devas iom pripensi, kiajn aferojn vi volas spuradi. Ekzistas [[https://plaintextaccounting.org/Cookbook][kuirejoj]], kiuj sugestas diversajn manierojn strukturi viajn entrudojn. Kiel ekzemplon, mi volis spuradi mian salajran enspezon. Tre simple, vi povas registri, kiam vi vidas vian salajron kreditita al via banka konto:
+
+#+begin_src ledger
+2024-04-24 pay day!
+    revenues:salary      $-2000  ; out of my employer's account...
+    assets:bank:savings   $2000  ; ...and into mine!
+#+end_src
+
+Ĉi tiu transakcio prenas $2000 de mia dunganto (fonto de enspezo aŭ enfluo), kaj metas ĝin en mian ŝparadokonton. Ĉe duobla entrudado, la sumoj ene de la transakcio ĉiam devas sumiĝi al nul, kaj tial ni havas du sumojn de egala kaj kontraŭa signo. Se vi provas enigi "neekvilibrigitan" transakcion, la sistemo ploras, kaj vi devos ripari la transakcion, por ke la sumoj aldoniĝu al nul.
+
+Ĉar ĉi tiu regulo devas ĉiam validi, eblas lasi /unu/ el la sumoj blanka, kaj la sistemo deduktos, kia sumo devas iri tien, por ke ĉio sumiĝu al nul:
+
+#+begin_src ledger
+2024-04-24 pay day!
+    revenues:salary      $-2000  ; out of my employer's account...
+    assets:bank:savings          ; system knows that $2000 must go into my account to maintain balance
+#+end_src
+
+Tiam mi decidis, ke mi volis spuradi, kiom da imposto la dunganto forigis de mia salajra paketo, kaj kiom li kontribuis al mia pensia konto. Ankaŭ, la dato, je kiu mi ricevas mian salajran liston, ne nepre estas la sama dato, je kiu la mono efektive iras en mian konton. Por pli flekseblaj raportojn, mi povas fari ion kiel ĉi tio:
+
+#+begin_src ledger
+2024-04-23 Salary payslip
+    revenues:salary:gross         $-2500  ; gross salary excluding taxes
+    expenses:taxes:withholding      $500  ; employer pays this to tax office
+    assets:receivable:salary       $2000  ; store net salary as receivable until money is received
+    revenues:salary:super          $-200  ; compulsory employer contribution to superannuation account
+    assets:receivable:super         $200
+
+2024-04-24 Salary deposit
+    assets:receivable:salary      $-2000  ; money received, take it out of receivables account
+    assets:bank:savings                   ; and put it into my cheque acount.
+
+#+end_src
+
+Ĉi tie, mi povas spuradi en la konto =expenses:taxes:withholding=, kiom da mono la dunganto sendis al la impostoficejo. Kio ajn restas, dumtempe iras en konton nomatan =assets:receivable:salary=. Tio estas aktivo, ĉar la dunganto ŝuldas al mi monon. Tamen mi ne volas registri ĝin kiel eniron en mian ŝparadokonton, ĝis la dunganto efektive transigas la monon tien. Kiam li tion faras, mi tiam kreas duan transakcion, en kiu la mono estas translokigita el tiu tena "Receivables" (ricevota) konto kaj en mian ŝparadokonton je la dato, kiam la transigo efektive okazas. Se pro iu kaŭzo la transigo ne okazas, mi povas kuri raporton, kiu montras, ke mi havas iom da mono sidanta en "Receivables", kiu ankoraŭ ne trovis sian vojon al mia konto, kaj mi tiam scias, ke mi devas postkuri ĉe mia dunganto. Simile, mi povas spuradi la devigajn kontribuaĵojn, kiujn mia dunganto laŭleĝe devas fari al mia pensia konto, kaj mi povas rebilanci ĉe la fino de la jaro, kiam mi ricevas la jarraporton.
+
+***** Enigante Pli Da Datumoj
+
+Kiam mi ekkomprenis la bazojn de kiel la librotenado spuradas la fluon de mono tra diversaj kontoj, kiujn oni povas poste raporti, mi trairis kaj enigis ĉiujn transakciojn, kiujn mi faris dum la pasinta financa jaro. Estis multe da enigitaj datumoj, kio sufiĉe tempoprenis, sed ĝi estis utila ekzerco, ĉar ĝi igis min detale ekzameni miajn financojn. Ĝi estis aparte helpa por aksiaj transakcioj, kie mi devis spuri, kio okazis kun fuzioj kaj akiradoj, kaj enrigardi la decidojn de la impostoficejo, kiujn mi devus sekvi, se mi decidus vendi iujn el tiuj akcioj.
+
+Mi iom pli parolos en estonta artikolo pri kiel elŝuti merkatajn precdatumojn kaj kiel oni povas spuri la kapitalgajnojn de diversaj aksiaj eroj, kiujn oni eble aĉetis en malsamaj tempoj, kaj eble rigardi iujn el la raportojn, kiuj povas helpi kompreni, kie oni staras finance.
+
+***** Konkludo
+
+Tio estis amuza ekzerco, dum kiu mi lernis multe pri librotenado, kaj ankaŭ faris iujn surprizajn malkovrojn kiel ekzemple kiom da mono mi elspezas por kafo ĉiumonate! Mi sentas, ke mi estas en multe pli bona pozicio fari pli bonajn financajn decidojn, kaj estas agrable scii, ke dum la impostado mi jam havos la ŝlosilajn informojn ĉe la fingropintoj, sen devi traserĉi montojn da paperoj. Enigi iomete ĉiutage estas certe preferinde ol lasi ĉion amasiĝi por esti traktita en frenezega agado je la jarfino. Se vi volas iĝi pli bone organizita, mi sugestas enrigardi ĉi tiujn tipojn de iloj. Vi povas fari ĝin tiel simplan aŭ tiel kompleksan kiel vi volas, kaj vi certe lernos ion pri administrado de mono.
+
 *** Ergonomic Emacs
 **** DONE Ergonomic Emacs :Keyboards:AltKeyboardLayouts:Emacs:
 :PROPERTIES:
@@ -1208,6 +1545,203 @@ When I was in Japan, I actually bought a third electronic dictionary, this one c
 
 ***** Comparison Table
 
+|-----------------------------------+---------------------------+-----------------+-----------------|
+| 辞書                              | Description               | XD-G9850        | XD-Z20000       |
+|-----------------------------------+---------------------------+-----------------+-----------------|
+| 精選版 日本国語大辞典                | SELECT EDITOR             | ======          | 国語系１         |
+| 広辞苑                             | Kojien                    | ======          | 国語系１         |
+| デジタル大辞泉                      | Digital Daijisen          | 国語系１         | ======          |
+| 明鏡国語辞典                        | Myogakyo                  | 国語系１         | 国語系１         |
+| 新明解国語辞典                      | Shinmei                   | 国語系１         | 国語系１         |
+| 新漢語林                           | New CN Language Forest    | ======          | 国語系１         |
+| NHK 日本語発音アクセント辞典          | NHK JP Pronunciation      | 国語系１         | 国語系１         |
+| 日本語大シソーラス                   | JP Great Thesaurus        | ======          | 国語系１         |
+| 角川類語新辞典                      | Kadokawa Slang            | 国語系１         | 国語系１         |
+| 類語例解辞典                        | Synonyms                  | 国語系１         | 国語系１         |
+| 三省堂 反対語便覧                    | Sansei-do Antonyms        | 国語系１         | 国語系１         |
+|-----------------------------------+---------------------------+-----------------+-----------------|
+| 日本語コロケーション辞典              | JP Colocation             | 国語系１         | 国語系２         |
+| 現代カタカナ語辞典                   | Modern Katakana           | 国語系１         | 国語系２         |
+| 旺文社古語辞典                      | Obunsha Kogoji            | ======          | 国語系２         |
+| 旺文社全訳古語辞典                   | Obunsha Classical JP      | ======          | 国語系２         |
+| 大修館･全訳古語辞典                  | Taishukan Old JP          | 国語系２         | ======          |
+| 明鏡 ことわざ成句使い方辞典           | Myokyo Proverbs/Lyrics    | 国語系２         | 国語系２         |
+| 大修館 四字熟語辞典                  | Daishukan 4-Char Idioms   | 国語系２         | 国語系２         |
+| NHK 漢字表記辞典                    | NHK Kanji                 | ======          | 国語系２         |
+| 楷行草 筆順字典                     | Cursive Kanji             | 国語系２         | 国語系２         |
+|-----------------------------------+---------------------------+-----------------+-----------------|
+| リーダーズ英和辞典／リーダーズ･プラス   | Readers E-J               | 英語系１         | 英語系１         |
+| 新英和大辞典                        | New E-J                   | ======          | 英語系１         |
+| ジーニアス英和大辞典                 | Genius E-J Big            | 英語系１         | 英語系１         |
+| ランダムハウス英和大辞典              | Random House E-J          | ======          | 英語系１         |
+| オックスフォード新英英辞典            | Oxford New English        | ======          | 英語系１         |
+| オックスフォード米語辞典              | Oxford American           | ======          | 英語系１         |
+| ジーニアス英和辞典                   | Genius E-J                | 英語系１         | 英語系１         |
+| ウィズダム英和辞典                   | Wisdom E-J                | 英語系１         | 英語系１         |
+| オーレックス英和辞典                 | O'Rex E-J                 | ======          | 英語系１         |
+| 理化学英和辞典                      | Physics/Chem. E-J         | 英語系１         | ======          |
+| 自然科学系英和大辞典                 | Nat. Sci E-J              | 英語系１         | 英語系１         |
+|-----------------------------------+---------------------------+-----------------+-----------------|
+| オックスフォード現代英英辞典           | Oxford Modern E           | 英語系１         | 英語系２         |
+| ロングマン現代英英辞典                | Longman Modern E          | ======          | 英語系２         |
+| 200 万語専門用語 英和･和英大辞典       | 2M words E-J-E            | 英語系１         | 英語系２         |
+| 英和活用大辞典                      | E-J Usage                 | 英語系１         | 英語系２         |
+| オックスフォード類語辞典              | Oxford Synonyms           | ======          | 英語系２         |
+| オックスフォード連語辞典              | Oxford Lexicon            | ======          | 英語系２         |
+| オックスフォード英英活用辞典           | Oxford E-E                | ======          | 英語系２         |
+| オックスフォードイディオム辞典         | Oxford Idioms             | ======          | 英語系２         |
+| オックスフォード句動詞辞典            | Oxford Phrasal Verbs      | ======          | 英語系２         |
+| ロングマン英語アクティベータ           | Longman E Activator       | ======          | 英語系２         |
+|-----------------------------------+---------------------------+-----------------+-----------------|
+| 新和英大辞典                        | New J-E                   | ======          | 英語系３         |
+| ジーニアス和英辞典                   | Genius J-E                | 英語系２         | 英語系３         |
+| ウィズダム和英辞典                   | Wisdom J-E                | 英語系２         | 英語系３         |
+| オーレックス和英辞典                 | O'Rex J-E                 | ======          | 英語系３         |
+| 自然科学系和英大辞典                 | Nat. Sci J-E              | 英語系２         | 英語系３         |
+| 英語類語辞典                        | EN Synonyms               | 英語系２         | 英語系３         |
+| カタカナで引くスペリング辞典           | Katakana Spelling         | 英語系２         | 英語系３         |
+|-----------------------------------+---------------------------+-----------------+-----------------|
+| 発音トレーニング                     | Pronunciation             | 英会話・トラベル１ | 英会話・トラベル１ |
+| 英会話スキット･トレーニング            | Skits                     | 英会話・トラベル１ | 英会話・トラベル１ |
+| ｢英語の耳｣になる!                   | EN Ear                    | 英会話・トラベル１ | 英会話・トラベル１ |
+| キクタン英会話 初級編                | Kikutan Conversation      | 英会話・トラベル１ | 英会話・トラベル１ |
+| キクタン                           | Kikutan                   | 英会話・トラベル１ | 英会話・トラベル１ |
+| NHK ラジオ                         | NHK Radio                 | 英会話・トラベル１ | ======          |
+| 英語発音クリニック                   | EN Pronunciation Clinic   | 英会話・トラベル１ | ======          |
+| アメリカ英語表現辞典                 | US EN Expressions         | ======          | 英会話・トラベル１ |
+| 英語名演説･名せりふ集                | EN Speeches & Lines       | ======          | 英会話・トラベル１ |
+|-----------------------------------+---------------------------+-----------------+-----------------|
+| とっておきの英会話表現辞典            | Special EN                | 英会話・トラベル２ | 英会話・トラベル２ |
+| 英会話とっさのひとこと辞典            | EN Conversation           | 英会話・トラベル２ | 英会話・トラベル２ |
+| 英会話海外旅行ひとこと辞典            | Overseas Travel           | 英会話・トラベル２ | 英会話・トラベル２ |
+| 英会話ビジネスひとこと辞典            | EN Business               | ======          | 英会話・トラベル２ |
+| ひとり歩きの会話集(16 言語)           | Multilingual Travel       | 英会話・トラベル２ | 英会話・トラベル２ |
+| 怪我と病気の英語力                   | EN Injury & Illness       | 英会話・トラベル２ | 英会話・トラベル２ |
+| 一生に一度だけの旅                   | Once in a lifetime trip   | ======          | 英会話・トラベル２ |
+| ドクターパスポート                   | Doctor Passport           | 英会話・トラベル２ | 英会話・トラベル２ |
+| トラブルパスポート                   | Travel Passport           | 英会話・トラベル２ | 英会話・トラベル２ |
+| 世界の料理･メニュー辞典               | World Cuisine/Menu        | 英会話・トラベル２ | 英会話・トラベル２ |
+|-----------------------------------+---------------------------+-----------------+-----------------|
+| 日本大百科全書(ニッポニカ)            | Encycl Nipponica          | 生活・実用１      | 生活・実用１      |
+| ブリタニカ国際大百科事典              | Britannica Int. Encycl    | 生活・実用１      | 生活・実用１      |
+| 百科事典マイペディア                 | Encycl Mypedia            | 生活・実用１      | 生活・実用１      |
+| ビジュアル 大世界史                  | Visual World History      | 生活・実用１      | 生活・実用１      |
+| ビジュアル 科学大事典                | Visual Science            | 生活・実用１      | 生活・実用１      |
+| 里山の昆虫ハンドブック                | Satoyama Insect           | ======          | 生活・実用１      |
+| 里山の植物ハンドブック                | Sanoyama Plant            | ======          | 生活・実用１      |
+| 新ヤマケイポケットガイド 野鳥          | New Yamakei Birds         | ======          | 生活・実用１      |
+| 新ヤマケイポケットガイド 海水魚        | New Yamakei Fish          | ======          | 生活・実用１      |
+|-----------------------------------+---------------------------+-----------------+-----------------|
+| ブリタニカ･コンサイス百科事典(英語)     | Concise Britannica        | ======          | 生活・実用２      |
+| 日本歴史大事典                      | JP History                | ======          | 生活・実用２      |
+| エピソードで読む世界の国 243          | World Countries           | ======          | 生活・実用２      |
+| 和英：日本の文化･観光･歴史辞典         | J-E JP Tourist/History    | 生活・実用１      | 生活・実用２      |
+| 日本－その姿と心－                   | JP Appearance & Heart     | 生活・実用１      | 生活・実用２      |
+| 家族みんなのバランスごはん            | Whole Family Balance      | ======          | 生活・実用２      |
+| 冠婚葬祭マナー事典                   | Ceremonies                | 生活・実用２      | 生活・実用２      |
+| すぐに使える 基本法律用語辞典          | Basic Legal Glossary      | 生活・実用２      | 生活・実用２      |
+| 日本国憲法                         | JP Constitution           | ======          | 生活・実用２      |
+|-----------------------------------+---------------------------+-----------------+-----------------|
+| 数え方の辞典                        | Mathematics               | 生活・実用２      | 生活・実用３      |
+| みんなで国語辞典!                    | Everyday JP               | 生活・実用２      | 生活・実用３      |
+| 問題な日本語                        | Problem JP                | 生活・実用２      | 生活・実用３      |
+| 常用漢字の難読辞典                   | Obfuscated Kanji          | ======          | 生活・実用３      |
+| 日本語｢語源｣辞典                    | JP Etymology              | ======          | 生活・実用３      |
+| 日本語○×辞典                       | JP Mistakes               | ======          | 生活・実用３      |
+| 敬語早わかり辞典                     | Biling. Early Underst.    | ======          | 生活・実用３      |
+| 言葉の作法辞典                      | Glossary                  | ======          | 生活・実用３      |
+| 日本語知識辞典                      | JP Knowledge              | ======          | 生活・実用３      |
+| 続･日本語知識辞典                    | Cont. JP Knowledge        | ======          | 生活・実用３      |
+|-----------------------------------+---------------------------+-----------------+-----------------|
+| 全国方言一覧辞典                     | List JP Dialects          | ======          | 生活・実用４      |
+| 手紙文例集                         | Letters, Examples         | ======          | 生活・実用４      |
+| スピーチ文例集                      | Speech Examples           | ======          | 生活・実用４      |
+| 家庭医学大事典                      | Family Medicine           | ======          | 生活・実用４      |
+| 薬の手引き                         | Medication Guide          | ======          | 生活・実用４      |
+| サプリメント事典                     | Suppl. Encycl             | ======          | 生活・実用４      |
+| イヌ･ネコ 家庭動物の医学大百科         | Dogs, Cats, Vet           | ======          | 生活・実用４      |
+| 日本文学 2000 作品                  | 2K JP Literature          | 生活・実用２      | 生活・実用４      |
+| 世界文学 1000 作品                  | 1K World Literature       | 生活・実用２      | 生活・実用４      |
+| クラシック名曲 2000 フレーズ          | 2K Phrase (Classics)      | 生活・実用２      | 生活・実用４      |
+|-----------------------------------+---------------------------+-----------------+-----------------|
+| 関東周辺 週末の山登りベスト 120       | Kanto Mtn Climbing        | ======          | 生活・実用５      |
+| 関西周辺 週末の山登りベスト 120       | Kansai Mtn Climbing       | ======          | 生活・実用５      |
+| 日本三百名山 登山ガイド               | 300 Famous Mtn Guide      | ======          | 生活・実用５      |
+| ビジュアル･ワイド 日本名城百選         | 100 JP Castles            | ======          | 生活・実用５      |
+| ビジュアル･ワイド 日本の城            | Visual JP Castles         | ======          | 生活・実用５      |
+| 角川俳句大歳時記                     | Kadokawa Haiku            | ======          | 生活・実用５      |
+| ホトトギス俳句季題便覧                | Hottogisu Haiku           | ======          | 生活・実用５      |
+| 合本俳句歳時記                      | Toshiki Haiku             | ======          | 生活・実用５      |
+| スポーツ用語辞典                     | Sports Terms              | 生活・実用２      | 生活・実用５      |
+|-----------------------------------+---------------------------+-----------------+-----------------|
+| 経済･経営用語辞典                    | Econ+Mgmt Terms           | 実務・情報       | 実務・情報１      |
+| 図解雑学ドラッカー経営学              | Drucker Mgmt              | ======          | 実務・情報１      |
+| 図解雑学マルクス経済学                | Marxist Econ              | ======          | 実務・情報１      |
+| 図解雑学ケインズ経済学                | Keynsian Econ             | ======          | 実務・情報１      |
+| プロフェッショナル用語辞典            | Professional Glossary     | 実務・情報       | 実務・情報１      |
+| 経営のヒントとなる言葉 50             | 50 Business Tips          | 実務・情報       | 実務・情報１      |
+| 名経営者の至言                      | Business Owner Words      | 実務・情報       | 実務・情報１      |
+| 気配り美人のビジネスマナー ･ハンドブック | Business Ettiquete        | 実務・情報       | ======          |
+| 経済･ビジネス用語辞典                | Econ+Business Terms       | 実務・情報       | 実務・情報１      |
+| ビジネス便利事典                     | Business Convenience      | 実務・情報       | 実務・情報１      |
+|-----------------------------------+---------------------------+-----------------+-----------------|
+| バロンズ金融用語辞典                 | Barron's Fin. Terms       | ======          | 実務・情報２      |
+| NHK 出版 英語イディオム辞典           | NHK EN Idioms             | 実務・情報       | 実務・情報２      |
+| 経済ビジネス英語表現辞典              | Econ+Bus EN Expressions   | ======          | 実務・情報２      |
+| 経済･ビジネス英語 2 万語辞典          | Econ+Bus EN               | ======          | 実務・情報２      |
+| オックスフォードビジネス英語辞典        | Oxford Business EN        | ======          | 実務・情報２      |
+| ビジネス英語スーパー辞典              | Bus. EN Super             | 実務・情報       | 実務・情報２      |
+| ビジネス英語の最強フレーズ            | Strong Bus. EN Phrases    | ======          | 実務・情報２      |
+| 英文 E メール 200 の鉄則             | 200 EN Email Laws         | ======          | 実務・情報２      |
+| 英文手紙用例辞典                     | English Letters           | ======          | 実務・情報２      |
+|-----------------------------------+---------------------------+-----------------+-----------------|
+| TOEIC®テストスコアアップ            | TOEIC Score App           | ======          | TOEIC®テスト    |
+| TOEIC®テストハイパー模試            | TOEIC Test                | ======          | TOEIC®テスト    |
+|-----------------------------------+---------------------------+-----------------+-----------------|
+| 百人一首                           | 100 Poets                 | ======          | 学習１           |
+| 国語名作集(古文･現代文)              | JP Masterpieces (old+mod) | ======          | 学習１           |
+| 国語名作集(漢文)                    | JP Masterpieces (CN)      | ======          | 学習１           |
+| 近現代文学／古典文学／名歌名句         | Mod./Classic Lit+Songs    | ======          | 学習１           |
+| 実践ロイヤル英文法                   | Royal EN Grammar          | ======          | 学習１           |
+| ロイヤル英文法                      | Royal EN                  | ======          | 学習１           |
+| 論文･スピーチの英語表現               | EN Papers+Speeches        | ======          | 学習１           |
+|-----------------------------------+---------------------------+-----------------+-----------------|
+| 旺文社 生物事典                     | Obunsha Bio Encycl        | ======          | 学習２           |
+| 旺文社 物理事典                     | Obunsha Physics           | ======          | 学習２           |
+| 旺文社 化学事典                     | Obunsha Chemical          | ======          | 学習２           |
+| 山川 日本史小辞典                    | Yamakawa JP History       | ======          | 学習２           |
+| 山川 世界史小辞典                    | Yamakawa World History    | ======          | 学習２           |
+| もういちど読む山川                   | Read it again, Yamakawa   | ======          | 学習２           |
+| 論点解説 日経 TEST                  | Nikkei Test Explan.       | ======          | 学習２           |
+| 日経 TEST 公式練習問題集             | Nikkei Test Practice Qs   | ======          | 学習２           |
+|-----------------------------------+---------------------------+-----------------+-----------------|
+
+**** DONE Japana Elektronika Vortaro XD-Z20000 :Languages:Japanese:Lingvoj:Esperanto:
+:PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
+:CUSTOM_ID: xd-z20000-eo
+:EXPORT_FILE_NAME: index.eo.md
+:EXPORT_HUGO_BUNDLE: 20250320-denshijisho_xd-z20000
+:EXPORT_DATE: 2025-03-20
+:EXPORT_DESCRIPTION: 20250320-xd_z20000.jpg
+:END:
+
+Lastatempe mi parolis pri [[#xd-g9850][elektronika vortaro rilata al scienco]], kiun mi aĉetis en Japanio. Kiam mi estis tie, mi iom pli esploris kaj malkovris, ke mi tro rapide decidis kaj ke ekzistas aliaj modeloj, kiuj enhavas pli da enhavo rilata al komerco kaj literaturo kaj kiuj povus utili dum la lernado de la japana. Do mi aĉetis duan vortaron, la Casio XD-Z20000. Do, kiom granda ĝisdatigo estas ĉi tio kompare kun la scienca modelo XD-G9850? Por respondi al tiu demando, mi listigis ĉiujn vortarojn, glosarojn kaj enciklopediojn el ambaŭ modeloj kaj metis ilin en tabelon por komparo, kiun vi trovas sube. Ĝi montras, sub kiu kategorio ĉiu vortaro troviĝas en la du aparatoj. Mi ne penis rigardi la sekciojn de la English Training Gym, ĉar la angla jam estas mia denaska lingvo, kaj tial mi pensas, ke ĝia analizado utilus malmulte.
+
+***** Komparante la japanajn vortarojn
+Do, kiuj estas la ĉefaj diferencoj inter la du aparatoj? Jen kelkaj rimarkoj, kiujn mi faris:
+- La Z20000 havas preskaŭ tutan la enhavon de la G9850, escepte de kelkaj etaj enhavaĵoj, kiuj verŝajne jam estas kovritaj de aliaj kolektoj en la Z20000.
+- La Z20000 havas pli vastajn anglalingvajn vortarojn de Oxford.
+- Ĝi havas kelkajn kromajn japanlingvajn vortarojn, kiel la klasika japana vortaro de Obunsha kaj la japan–anglaj vortaroj de Random House kaj O'Rex.
+- La Z20000 havas pli da biologia enhavo ol la G9850, kiu pli centriĝas pri fiziko kaj kemio.
+- La Z20000 ankaŭ havas kelkajn aliajn interesa-aspektajn enhavaĵojn, kiel "Malklaraj kanji" (kio ajn tio estu), japanan etimologion, kaj alian enhavon pri historio, kulturo kaj ĉiutaga vivo.
+
+Do, kion mi konkludas? Nu, mi povus ŝpari mian monon, se mi estus irinta rekte al la Z20000, kaj mi estus preterpasinta nenion gravan. Tio dirita, realisme la G9850 havas multe pli da enhavo ol mi eble bezonus je mia komencant-nivelo de la japana, kaj ĉio estus en ordo, se mi simple estus restinta ĉe la G9850. Ne zorgu, ĝi povas servi kiel rezerva vortaro apud la Z20000.
+
+***** Kaj la ĉina?
+Kiam mi estis en Japanio, mi fakte aĉetis eĉ trian elektronikan vortaron, kiu kovras la ĉinan kaj la japanan. Mia nivelo de la ĉina estas eĉ pli malalta ol tiu de la japana, sed mi pensis, ke mi povus uzi tian vortaron por subteni la lernadon de ambaŭ lingvoj per la [[https://ai.glossika.com/blog/language-laddering][ŝtupariga tekniko]]. La ĉina estas probable pli utila lingvo por mi ol la japana, sed iel mi trovas la japanan multe pli amuza, kaj pro tio mi malfacile decidas, pri kiu mi koncentriĝu. Kiel la knabino diras en reklamo pri takoj, en kiu ŝia familio disputas, ĉu molaj aŭ hardaj tako-ŝeloj, "Por qué no los dos?".
+
+***** Kompara Tabelo
 |-----------------------------------+---------------------------+-----------------+-----------------|
 | 辞書                              | Description               | XD-G9850        | XD-Z20000       |
 |-----------------------------------+---------------------------+-----------------+-----------------|
@@ -1814,7 +2348,7 @@ As I said before, /tblr/ is a convenient modern way to specify $\LaTeX$ tables, 
 :EXPORT_DATE: 2025-01-17
 :END:
 
-En mia antaŭa afiŝo pri uzado de [[https://teachmaths.org/20250105_orgmode-lesson-notes/][Org-reĝimo por lecionaj notoj]], mi menciis, ke eblas eksporti Org-reĝimajn tabelojn al $\LaTeX$. Jen kelkaj avantaĝoj de Org-reĝimo kompare kun kruda $\LaTeX$ kiam oni faras tabelojn:
+En mia antaŭa afiŝo pri uzado de [[#orgmode-lesson-notes-eo][Org-reĝimo por lecionaj notoj]], mi menciis, ke eblas eksporti Org-reĝimajn tabelojn al $\LaTeX$. Jen kelkaj avantaĝoj de Org-reĝimo kompare kun kruda $\LaTeX$ kiam oni faras tabelojn:
 - Org-reĝimo havas potencon [[https://orgmode.org/manual/Built_002din-Table-Editor.html][tabelredaktilon]], kiu faciligas desegni tabelon kaj movi vicojn kaj kolumnojn. Org-reĝimo aŭtomate ĝustigas ĉiujn kolumnojn.
 - Ĉar la ĉeloj de Org-reĝima tabelo estas bele alĝustigitaj, multo pli facile estas vidi la tabelon sen nombradi =&=-simbolojn en kruda $\LaTeX$-kodo.
 - Org-reĝimo permesas uzi formulojn en tabelo, iom kiel kalkultabelo -- tio estas pli malfacile atingite rekte per $\LaTeX$.
@@ -2121,6 +2655,269 @@ The examples I gave were heavy in LaTeX code because I wanted to showcase the so
 I didn't show any examples of tables. Org Mode has a powerful table editor which makes tables much easier to produce and manage, and if you want to customise the look of a table, you can use the ~#+attr_latex:~ directive to tell Org Mode to use the powerful ~tblr~ package that all $\LaTeX$ users should learn about if they haven't already.
 
 One thing I would like to explore further is the embedding of code to generate content -- for example, to produce tables of $z$-values programatically.
+
+**** DONE La uzo de Org Mode / LaTeX por lecionaj notoj :Emacs:OrgMode:LaTeX:Teaching:Lingvoj:Esperanto:
+:PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
+:CUSTOM_ID: orgmode-lesson-notes-eo
+:EXPORT_FILE_NAME: index.eo.md
+:EXPORT_HUGO_BUNDLE: 20250105_orgmode-lesson-notes
+:EXPORT_DATE: 2025-01-06
+:EXPORT_DESCRIPTION: 20250105_orgmode-banner.webp
+:END:
+
+Dum la pasinta jaro mi uzas $\LaTeX$ kune kun Emacs por krei lecionajn notojn por kelkaj el miaj klasoj. Unu kialo, pro kiu mi elektis Emacs anstataŭ TeX Studio kaj similaj programoj, estas ke Emacs disponigas multajn rapidvojojn kaj kompletigajn funkciojn. Tamen mi rimarkis, ke $\LaTeX$-dokumentoj foje iĝas iom multvortaj, kaj mi ekpensis pri vojoj por pli facile navigi tra la dokumentoj.
+
+La alia afero, kun kiu mi eksperimentis pasintjare, estis la Org Mode de Emacs. Temas pri «markdown»-lingvo de pura teksto, kiu ebligas al vi strukturi viajn dokumentojn per ĉapo, kiujn oni povas malfermi kaj faldi, tiel ke vi povas rapide navigi tra dokumentoj, kaŝi nebezonatajn detalojn kaj koncentriĝi je tio, kio gravas ĉi-momente. La artikoloj en tiu ĉi bloga retejo ĉiuj estas skribitaj en Org Mode, kaj poste eksportitaj kaj publikigitaj en la reto. Mi demandis min, ĉu Org Mode ebligus al mi pli facile navigi tra la $\LaTeX$-lecionaj notoj, kiujn mi produktas, kaj generi PDF-dokumentojn por presi.
+
+***** Argumentoj favore al Org Mode
+Iom da esplorado montris, ke Org Mode-tekstodosieroj ja estas eksporteblaj al $\LaTeX$, kio poste uzeblas por generi belajn PDF-dokumentojn. Org Mode konscias pri $\LaTeX$, tiel ke se vi bezonas returni al $\LaTeX$-funkcioj, kioj transpasas tion, kion la simpla Org Mode-dokumenta formato povas priskribi, vi povas facile enmeti necesajn erojn de $\LaTeX$-kodo. La funkcio Babel de Org Mode ankaŭ ebligas al vi enmeti kodon kaj enhavon produktitan de aliaj programlingvoj kiel Gnuplot, Python kaj Lisp. La simpleco de la markdown-lingvo de Org Mode, ĝia kapablo mastrumi kompleksecon per sia konturiga reĝimo kaj la fleksebleco ĉe integrigo de aliaj programlingvoj formas konvinkan argumentaron por krei matematikan enhavon.
+
+Alia eblo, kiun mi rigardis, estis [[https://typst.app/][Typst]], pli nova markdown-bazita solvo por skribi teknikajn dokumentojn. La baza markdown-kompililo estas malfermfonta kaj instaleblas senpage sur via komputilo, sed la plena interreta servo estas komerca oferto. Kvankam la markdown-lingvo aspektas agrable, la ilo ne estas tiom matura kiom $\LaTeX$/TiKZ, kaj ekzistus ia lernkurbo por ekkoni [[https://github.com/johannes-wolf/cetz][CetZ]], kio estas la respondo de Typst al la grafika pako [[https://tikz.net/][TiKZ]] de $\LaTeX$. Ĉar mi jam uzas $\LaTeX$ kaj Org Mode en apartaj sferoj de mia laboro, mi decidis, ke estas sensence kombini ĉi tiujn du ilojn.
+
+***** Agordi Org Mode por uzi la klason /exesheet/ de $\LaTeX$
+
+La $\LaTeX$-dokumentoj, kiujn mi uzas, baziĝas sur la $\LaTeX$-pako [[https://ctan.org/pkg/exesheet][exesheet]]. Ĝi ebligas al mi facile kompostigi grupojn da problemoj en unukolumna aŭ plulkolumna reĝimo. Defaŭlte Org Mode uzas la $\LaTeX$-dokumentan klason /article/, do la unua paŝo estis ekscii, ĉu mi povus igi Org Mode uzi la klason /exesheet/ kaj ĝiajn rilatajn funkciojn. La alproksimiĝo, kiun mi uzis, estas priskribita en la sekvanta utila video:
+
+#+hugo: {{< youtube 0qHloGTT8XE >}}
+
+La kreinto de tiu video afiŝis la rilatajn rimedojn [[https://jakebox.github.io/youtube/org_latex_video.html][ĉi tie]].
+
+Laŭ tiu video, la unua paŝo estis agordi propran klason, por ke Org Mode rekonu la pakon /exesheet/. Tial mi aldonis la sekvutan kodon al mia dosiero /config.el/ de Doom Emacs:
+
+#+begin_src elisp
+(after! ox-latex
+(add-to-list 'org-latex-classes
+             '("org-exesheet"
+               "\\documentclass{exesheet}
+           [NO-DEFAULT-PACKAGES]
+           [PACKAGES]
+           [EXTRA]"
+               ("\\section{%s}" . "\\section*{%s}")
+               ("\\subsection{%s}" . "\\subsection*{%s}")
+               ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+               ("\\paragraph{%s}" . "\\paragraph*{%s}")
+               ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))))
+
+(after! ox
+  (require 'ox-extra)
+  (ox-extras-activate '(ignore-headlines)))
+#+end_src
+
+La makrooj ~after!~ certigas, ke Doom Emacs rulas la agordan kodon ĉe la ĝusta momento dum la starto. La unua difinas la propran dokumentan klason, kiu referencas al la $\LaTeX$-pako exesheet. La dua ebligas etenditan funkcion, kiu permesas al mi uzi Org Mode-ĉapon sole por strukturi mian dokumenton kaj kaŝi detalojn, sen krei respondan ĉapon de sekcio en la fina dokumento.
+
+La sekvanta paŝo estis krei agordan dosieron, kiu enhavas komunan antaŭaron por deklari pakojn kaj difini makroojn, kiuj estu haveblaj al ĉiuj miaj dokumentoj de lecionaj notoj. Mi kreis dosieron nomitan ~lesson-preamble.org~. Jen kelkaj elstaraĵoj el tiu dosiero:
+
+#+begin_src
+,#+LATEX_CLASS: org-exesheet
+,#+LATEX_CLASS_OPTIONS: [12pt,a4paper,marginwidth=unset]
+,#+OPTIONS: toc:nil
+,#+LATEX_HEADER: \usepackage{amssymb} % Access to extra math symbols
+,#+LATEX_HEADER: \usepackage{amsmath} % Access to extra math symbols
+,#+LATEX_HEADER: \usepackage{diffcoeff}
+...
+#+end_src
+
+La unua linio referencas al la propra klaso, kiun mi difinis en mia Emacs-agordo ~config.el~, kaj la dua linio agordas la paĝajn agordojn (ekz. en Aŭstralio ni kutime uzas A4-formatan paperon). La tria linio malaktivigas la generadon de tabelo de enhavo, kaj poste mi listigas la $\LaTeX$-pako, sur kiujn miaj lecionaj notoj kutime apogiĝas.
+
+Post la pako, mi sekve havas kelkajn makrodifinojn:
+
+#+begin_src
+,#+LATEX_HEADER: \geometry{margin=1.5cm}
+,#+LATEX_HEADER: \newcommand{\cloze}[1]{\underline{\hspace*{#1}}}
+,#+LATEX_HEADER: \newcommand{\notes}[3][\empty]{%
+,#+LATEX_HEADER:     \noindent\ifthenelse{\equal{#1}{\empty}}
+,#+LATEX_HEADER:             {\\}
+,#+LATEX_HEADER:             {\vspace{#1}\\}
+,#+LATEX_HEADER:     \foreach \n in {1,...,#2}{%
+,#+LATEX_HEADER:         \ifthenelse{\equal{#1}{\empty}}
+,#+LATEX_HEADER:             {\rule{#3}{0.5pt}\\}
+,#+LATEX_HEADER:             {\rule{#3}{0.5pt}\vspace{#1}\\}
+,#+LATEX_HEADER:         }
+,#+LATEX_HEADER: }
+#+end_src
+
+-   Mi agordas la marĝenojn por pli bone uzi la haveblan spacon sur la taskfolio (linio 1).
+-   La makroo ~cloze~ (linio 3) ebligas al mi facile krei substrekitan blankan spacon, kiun la studentoj plenigu dum la leciono.
+-   La makroo ~notes~ (linioj 5-14) ebligas al mi krei aron da linioj, sur kiuj la studentoj skribu siajn laborpaŝojn. Mi kutime ne tre uzas ĝin, preferante simple lasi iom da blanka spaco, ke la studentoj desegnu kaj skribu laŭplaĉe.
+
+***** Ni faru lecionon!
+Nun kiam ni faris la agordadon, ni kunmetu iujn lecionajn notojn. La unua afero estas krei dosieron finiĝantan per ~.org~ kaj referenci al la agorda dosiero, kiun ni ĵus kreis:
+
+#+begin_src
+,#+SETUPFILE: lesson-preamble.org
+#+end_src
+
+****** Titolo kaj celoj de la leciono
+Nun ni kreos Org-sekcion por montri la titolon de la leciono kaj la lernoceloj:
+
+#+begin_src org
+,* Header :ignore:
+,#+latex: \begin{center}\textsc{
+  Y12 Advanced Topic 1: Differential Calculus \\
+  Lesson 1: Introduction to Differentiation
+,#+latex: }\end{center}\begin{small}\begin{singlespacing}\begin{tcolorbox}[fonttitle=\bfseries,title=\textbf{Learning intentions:}]
+
+Students will:
+,#+attr_latex: :options [itemsep=0pt]
+- Revise the foundations of Indices, including index laws involving negative indices
+- Revise fractional indices.
+
+/Textbook Reference: Y11 Canbridge Advanced Ex. 7A, 7B/
+,#+latex: \end{tcolorbox}\end{singlespacing}\end{small}
+#+end_src
+
+- En linio 1 mi uzas la etikedon ~:ignore:~ por malebligi la kreadon de $\LaTeX$-ĉapo ~\section~. Kvankam Org Mode-ĉapo kutime kreas sekciojn kaj subsekciojn en via dokumento, ĉi tiu aparta Org Mode-ĉapo estas tie nur por organizaj celoj, tiel ke mi povas faldi kaj kaŝi ĉi tiun komencan parton de la dokumento kaj pli facile navigi rekte al la sekcio(j), kun kiuj mi nun laboras.
+
+- Linioj 2 kaj 5 eligas iom da $\LaTeX$-kodo por ke la ĉapo en linioj 3 kaj 4 esti presita per malgrandaj verskletoj kaj bele centre. Ĝi ankaŭ agordas belan $\LaTeX$-~tcolorbox~-on por emfazi la celojn de la leciono. La ~#+latex:~ ebligas al vi enmeti arbitrajn liniojn de $\LaTeX$-kodo en la finan dokumenton, se vi volas atingi efikojn, kiujn ne facile realigas la normaj Org Mode-strukturoj.
+
+  Fakte, la ~tex and latex output logo math modetex and latex output logo math mode#+latex:~ ne estas bezonata, ĉar se Org Mode detektas iun $\LaTeX$-kodin en via dokumento, ĝi devus aŭtomate trakti ĝin. Tamen en mia Emacs-etoso la ~#~ ĉe la komenco kaŭzas, ke la linio estas montrata per malhelgriza tiparo, tiel ke ĝi malhelas en la fonon kaj ne tiom distragas de la «vera» enhavo.
+
+- Sekve, en linioj 7-10, ni difinas la lernocelojn. Ni kreas liston en Org Mode simple per buleita signo kiel ~-~, ~+~ aŭ ~*~ (la lasta bezonas antaŭan blankan spacon, por ke ĝi ne estu interpretata kiel Org Mode-ĉapo). En linio 8 vi vidas la direktivon ~#+attr_latex:~, kiu ebligas al vi modifi la $\LaTeX$-medion, kiun sekvas — en ĉi tiu kaso buleitan liston ~itemize~. En ĉi tiu ekzemplo mi malpliigas la spacigon inter la eroj de la buleita listo por fari la liston pli kompakta. Ĉi tiun teknikon povas uzi por ĝustigi la aspekton de aliaj medioj tra la tuta dokumento.
+
+- En linio 12 mi donas lernolibran referencon, kiun mi kutime emfazas kursive, kio en Org Mode atingatas per ĉirkaŭigo de la teksto per ~/~-simboloj (multe pli bele ol skribi ~\emph{italic text}~, ĉu ne?).
+
+****** Varmiĝo / Faru nun
+Plej multaj instruistoj komprenas la avantaĝon de donado al la studentoj de io, per kio komenci, tuj kiam ili sidiĝas — la tiel nomata aktiveco «Faru nun». Ĝi ne nur helpas al la studentoj transiri en la lecionon; ĝi ankaŭ ebligas iom da «forma takso» por ekscii, kiom bone la studentoj komprenas la antaŭe traktitan materialon.
+
+Mi ŝatas meti la aktivecon «Faru nun» sur la unuan paĝon en skatolo. Do, ni skribu ĉapon kaj donu al la studentoj iujn varmiĝajn ekzercojn farendajn.
+
+#+begin_src org
+,* Warm-Up
+,#+attr_latex: :options [colback=white]
+,#+begin_tcolorbox
+1. The inverse operation to *differentiation* is \cloze{3cm}
+   \tcbline
+
+2. For each of the following equations, find $\diff{y}{x}$
+
+   ,#+attr_latex: :options [itemsep=2.8cm,after=\vspace{2cm}]
+   1. $y=x^2$
+   1. $y=\sin x$
+   \tcbline
+
+3. Differentiate the following:
+
+   ,#+attr_latex: :environment tablenuma :options [after-item-skip=2.8cm,after-skip=2cm](2)
+   1. $y=\cos(x)$
+   2. $f(x)=\tan x$
+   3. $g=\frac{1}{x^2}$
+   4. $y=e^{\sin x}$
+   ,#+latex: ~
+,#+end_tcolorbox
+
+#+end_src
+
+- Linio 1 enhavas Org Mode-ĉapon, kiu kreos novan sekcion en la dokumento (ĉar ne estas etikedo ~:ignore:~).
+- Poste mi kreas ~tcolorbox~-on ĉirkaŭ la varmiĝajn ekzercojn, ne tajpante $\LaTeX$-kodon rekte, sed ĉirkaŭigante la enhavon per paro ~#+begin_tcolorbox ... #+end_tcolorbox~. Jen ĝenerala tekniko, kiun vi povas uzi por enmeti $\LaTeX$-medion en vian dokumenton, tajpante ~#+begin_<environment>/ ... #+end_<environment>~, kie ~<environment>~ estas la nomo de la $\LaTeX$-medio, kiun vi volas uzi.
+
+  Defaŭlte ~tcolorbox~ havas grizan fonon. Por forigi tion, vi devas provizi iujn opciojn al la medio. Tio kompreneble fariĝas per la antaŭe menciita direktivo ~#+attr_latex:~. Vi povas vidi, ke linio 2 sendas al la ~tcolorbox~ opcion fari ĝian fonon blanka.
+
+- En linio 4 mi starigas la unuan demandon uzante kutiman numeritan liston. Mi uzas la makroon ~\cloze{}~, kiun mi difinis antaŭe, por doni al la studentoj substrekitan skribospacon por ĝin plenigi — simple specifiku la longon de la linio en la kurvaj krampoj.
+
+- Linio 7 enhavas la sekvutan demandon, kiu konsistas el kelkaj subdemandoj. Se mi volas skribi iun enlinian matematikan notacion, mi ĉirkaŭigas ĝin per ~$ ... $~-simboloj samkiel en ordinary $\LaTeX$. Se via teksto enhavas valuton, tio povas kaŭzi problemojn, do alia eblo estas uzi ~\( ... \)~.
+
+  Por disigi ĉi tiun demandon de la sekvanta, mi metas ~\tcbline~-disigilon (kiun vi povas laŭvole antaŭigi per ~#+latex:~-direktivo). Gravas enŝovi ĝin ĝustece, por ke Org Mode ne opiniiu, ke jen la fino de la numerita listo.
+
+- Poste mi volas listigi la subpartojn de la demando. Mi komencas novan numeritan liston, kiu estas enŝovita. Ĉi tie mi uzis ~1.~ por indiki listan eron, sed vere ne gravas, kiun numeron vi skribas ĉi tie. En la eligo, la enŝovitaj eroj estos skribitaj per literoj (a), (b), (c) ktp. Eble vi rimarkas, ke mi eĉ duobligis la numeron ~1.~ — ne gravas, $\LaTeX$ prizorgos la ĝustan numeradon.
+
+  La studentoj bezonos spacon por skribi siajn respondojn, do ĉe la komenco de la listo mi inkluzivas direktivon ~#+attr_latex:~, kie mi agordas la spacigon inter la listaj eroj per ~itemsep=2cm~.
+
+- Por la lasta demando, mi montras al vi specialan listan medion, kiun provizas la pako ~exesheet~: la liston ~tablenuma~. Ĝi ebligas al vi aranĝi viajn problemojn per pluraj kolumnoj, bonege taŭga por multaj mallongaj demandoj, kiuj ne bezonas okupi tutan linion.
+
+  Denove mi uzas numeritan liston de Org Mode, sed mi devas diri al Org Mode uzi la medion ~tablenuma~ per la parametro ~:environment tablenuma~. Denove mi volas doni al la studentoj iom da skribospaco. Tamen ĉi tiu medio ne uzas ~itemsep~; anstataŭe ĝi uzas ~after-item-skip~ por meti spacon inter la eroj kaj ~after-skip~ por meti spacon ĉe la fino de la listo.
+
+  Unu problemo kun ~after-skip~ estas ke, se vi ne daŭrigas per normala alineo, la spaco ĉe la fino estas «englutita» de $\LaTeX$. Truko, kiun vi povas uzi, estas meti nevideblan blankan spacon ĉe la fino per ~#+latex: ~, kiel mi faris en linio 21.
+
+****** Korpo de la leciono
+Nun ni povas aliri al la kerno de la leciono.
+
+#+begin_src org
+\newpage
+
+,* Differentiation Rules
+To differentiate a combination of functions, we have a number of rules.
+
+,** Product Rule
+To differentiate the product of functions $y=u(x) \times v(x)$, use the product rule:
+\[y = u'v + uv'\]
+
+\exe Differentiate $y=x \sin x$
+\vspace{3cm}
+
+,* Gradients
+To calculate a gradient:
+
+\begin{tikzpicture}
+  \begin{axis}[
+    minor tick num=0,
+    axis x line=middle, axis y line=middle,
+    xlabel=$x$,ylabel=$y$,
+    xmin=-2, xmax=5, ymin=-2, ymax=5,
+    xtick=\empty,
+    extra x ticks={1,3},
+    extra x tick labels={$x_1$,$x_2$},
+    ytick=\empty,
+    extra y ticks={1.8,3.4},
+    extra y tick labels={$y_1$,$y_2$},
+    ]
+    \addplot [mark=none,domain=-0.5:4] {1+0.8*x};
+    \addplot [mark=*] plot [
+    error bars/.cd,
+    y dir=minus,y fixed relative=1,
+    x dir=minus, x fixed relative=1,
+    error bar style={dotted},
+    ] coordinates {(1,1.8) (3,3.4)};
+    \draw (axis cs:3,3.4) |- (axis cs:1,1.8) node at (axis cs:2,1.5) {$x_2-x_1$} node at (axis cs:3.8,2.6) {$y_2-y_1$};
+  \end{axis}
+\end{tikzpicture}
+
+,#+attr_latex: :options [fonttitle=\bfseries,title={Gradient Formula}]
+,#+begin_tcolorbox
+To find the gradient:
+  \begin{align*}
+    \text{Gradient} &= \frac{\text{rise}}{\text{run}} \\
+                    &= \frac{y_2-y_1}{x_2-x_1}
+  \end{align*}
+,#+end_tcolorbox
+
+\exe Find the gradient of the line segment joining the points $P(1,2)$ and $Q(3,4)$
+\vspace{1cm}
+#+end_src
+
+Ĉi tie vi vidas, ke la Org Mode-ĉapo estas tradukataj al la diversaj sekcioj kaj subsekcioj, kaj ni povas «faldi for» ajnajn detalojn, kiujn ni ne volas vidi.
+- Ni komencas sur nova paĝo uzante ~\newpage~
+
+- Ni uzas Org Mode-ĉapo por aldoni novajn sekciojn/subsekciojn de la leciono, kaj ni povas uzi la ciklan ŝanĝadon de videbleco de Org Mode (la klavo ~<TAB>~) por kaŝi sekciojn.
+
+- Mi uzis la komandon de ~exesheet~ nome "~\exe~" por enkonduki ekzemplon, kiun mi volas solvi paŝon post paŝo kun la studentoj. Defaŭlte la numerado de la ~\exe~-ekzemploj/ekzercoj estas tutmonda tra la tuta dokumento.
+
+- Mi enmetis TikZ-diagramon, nur por montri kiel vi povas libere enmeti $\LaTeX$-kodon laŭbezone.
+
+****** Doni klaslaboron/hejmtaskojn
+
+Fine, eble vi volas doni al la studentoj iujn ekzercojn el la lernolibro.
+
+#+begin_src org
+,* Classwork/Homework
+,#+begin_tcolorbox
+Year 12 Awesome Maths Textbook
+- Ex. 13A Q2-11, 14, 15.
+,#+end_tcolorbox
+#+end_src
+
+***** Eksporto al PDF
+
+Nun kiam ni skribis niajn lecionajn notojn, ni povas eksporti al LaTeX/PDF. Por krei PDF-dosieron, mi tajpus ion kiel ~C-c C-e l p~, kaj mi ricevos PDF-an, kiu aspektos ie jene.
+
+#+hugo: {{< embed-pdf url="20250105_example-lesson.pdf" >}}
+
+***** Finaj pensoj
+La ekzemploj, kiujn mi donis, estis riĉaj je LaTeX-kodo, ĉar mi volis montri la specojn de aferoj, kiuj eblas dum eksportado el Org Mode. Entute, la faldaj ĉapo en Org Mode faciligas orientiĝon en komplika dokumento, kaj eblas aldoni eĉ pli da Org Mode-ĉapo kun la etikedo ~:ignore:~, se vi volas fari iujn partojn de la dokumento faldaj.
+
+Mi ne montris iujn ekzemplojn de tabeloj. Org Mode havas potencan tabelredaktilon, kio tre faciligas la produktadon kaj mastrumadon de tabeloj, kaj se vi volas laŭigi la aspekton de tabelo, vi povas uzi la direktivon ~#+attr_latex:~ por diri al Org Mode uzi la potencon de la pako ~tblr~, pri kiu ĉiuj $\LaTeX$-uzantoj devus lerni, se ili ankoraŭ ne faris.
+
+Unu afero, kiun mi ŝatus plu esplori, estas la enmetado de kodo por generi enhavon — ekzemple por produkti tabelojn de $z$-valoroj programme.
 
 *** Graphite Keyboard Layout
 **** DONE Graphite Keyboard Layout :Computers:Keyboards:AltKeyboardLayouts:
@@ -2827,6 +3624,35 @@ As I typed up the lyrics, I looked up any words I wasn't familiar with, and stud
 You may notice that the live performance above leaves out the first two lines of the second verse -- I presume this was to shorten the performance for television. In the bleach anime, the song is even more abridged -- only the first and last line of the first verse is sung, followed by the final chorus.
 
 Studying song lyrics is a great way to gain more exposure to a language, and is lots of fun!
+
+**** DONE Lerni la japanan per kantotekstoj (Houki Boshi el Bleach) :Music:Languages:Japanese:Lingvoj:Esperanto:
+:PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
+:CUSTOM_ID: houki-boshi-eo
+:EXPORT_FILE_NAME: index.eo.md
+:EXPORT_HUGO_BUNDLE: 20220214_houki-boshi
+:EXPORT_DATE: 2022-02-14
+:END:
+
+Bonega maniero lerni lingvon estas tra kantoj. Ili kutime estas ripetemaj, ofte (sed ne ĉiam) iom pli malrapidaj ol normala parolado, kaj havas kaptan melodion. Tio helpas fiksigi vortojn kaj strukturojn en la kapon.
+
+Mi rigardis animeon nomatan [[https://en.wikipedia.org/wiki/Bleach_(TV_series)][Bleach]], kaj eble post unu sezono ili havis kanton ĉe la fino de ĉiu epizodo, nomitan [[https://www.youtube.com/watch?v=2xs_-nl6C3E][Houki Boshi]] (ほうき星) de la kantisto kaj kantoverkisto [[https://en.wikipedia.org/wiki/Younha][Younha]]. Ŝi fakte estas korea, sed eldonis albumon [[https://en.wikipedia.org/wiki/Go!_Younha][Go! Younha]] en la japana, kaj /Houki Boshi/ estis unu el la furoraj singloj sur tiu albumo.
+
+Ekzistas viva prezentado de la kanto en YouTube, kiu havas japanajn subtekstojn:
+
+#+hugo: {{< youtube qaUvEOeFthE >}}
+
+Subtekstoj estas bonega rimedo por lingvolernantoj. Unu el la defioj de la japana, kompreneble, estas la nekonata skribsistemo. Tiuj subtekstoj enhavas kanji, la ĉin-stilajn karaktrojn kiujn japanoj ofte uzas en sia skribo. Unu problemo pri kanji estas ke povas esti malfacile ekscii kiel kanji-karaktro estas elparolata -- kaj la elparolo en la japana ofte dependas de la kunteksto. Unu maniero solvi ĉi tion estas skribi la elparolon super la kanji per malgrandaj hiragana-karaktriloj -- la hiragana donas senambigua gvidilon pri kiel la karaktro estas elparolata. Ni nomas tiujn etajn hiragana-elparolgvidilojn /furigana/, kaj ili ofte uziĝas en infanlibroj por helpi la infanojn lerni la elparolon de la kanji.
+
+La supra video ne havas furigana, do por pli familiariziĝi kun la kanji, mi decidis skribi la kantotekston kaj inkluzivi la furigana. Por tio mi uzis la tipografian programon $\LaTeX$ kun la kantlibra pako [[https://ctan.org/pkg/leadsheets][leadsheets]], kaj la pako /ruby/ por aldoni la furigana. Ĉar mi tajpis la japanan per unikodo, mi bezonis uzi =xelatex= por krei la PDF-on. Mi trovis [[https://www.animelyrics.com/anime/bleach/houkiboushi.jis.txt][tie en la reto]] anglan tradukon por helpi min memori kion signifas la diversaj vortoj. La fina rezulto estas ĉi tie:
+
+#+hugo: {{< embed-pdf url="20220214-houki_boshi.pdf" >}}
+
+Dum mi tajpis la kantotekston, mi serĉis ĉiujn vortojn kiujn mi ne konis, kaj studis la gramatikajn strukturojn kiuj estis uzataj (tie la angla traduko helpis, ĉar mi povis vidi kiel apartan nuancon en la angla oni povas esprimi en la japana). Eble vi rimarkos ke ne estas romaji (skribi la japanan per la latina alfabeto). Kiam oni lernas la japanan, oni rekomendas lerni la kana kiel eble plej rapide. Kiam vi skribas la japanan per latinaj literoj: tio povas kaŝi la manieron kiel vortoj ŝanĝiĝas dum konjugacio, ĝi estas tre malfacile legebla, kaj se vi vidas veran japanan ĉirkaŭe, ĝi preskaŭ neniam estas skribita per romaji. Tial estas plej bone forlasi ĝin kiel eble plej baldaŭ.
+
+Eble vi rimarkos ke la supra viva prezentado preterlasas la unuajn du liniojn de la dua strofo -- mi supozas ke tio estis farita por mallongigi la prezentadon por televido. En la Bleach-animeo, la kanto estas eĉ pli mallongigita -- oni kantas nur la unuan kaj la lastan linion de la unua strofo, kaj poste venas la fina refreno.
+
+Studi kantotekstojn estas bonega maniero akiri pli da kontakto kun lingvo, kaj estas tre amuze!
 
 *** How to calculate the series resistor for an LED
 **** DONE How to calculate the series resistor for an LED :HamRadio:

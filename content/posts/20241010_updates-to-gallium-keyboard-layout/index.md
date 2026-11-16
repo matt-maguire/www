@@ -2,7 +2,7 @@
 title = "Updates to Gallium Keyboard Layout"
 featuredImage = "20241010-Screenshot_2024-10-10_18-16-04-1024x234.png"
 date = 2024-10-10
-lastmod = 2026-11-16T10:38:19+11:00
+lastmod = 2026-11-16T11:30:00+11:00
 tags = ["Computers", "Keyboards", "AltKeyboardLayouts"]
 categories = ["Blog"]
 draft = false

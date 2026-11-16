@@ -1,7 +1,7 @@
 +++
 title = "My AI Teaching Setup, Part 3: The Organs"
 date = 2026-11-16
-lastmod = 2026-11-16T10:35:20+11:00
+lastmod = 2026-11-16T11:29:38+11:00
 tags = ["AI", "LaTeX", "Teaching", "Emacs"]
 categories = ["Blog"]
 draft = true

@@ -2,7 +2,7 @@
 title = "Cifereca Fotado por Radioamatoroj"
 featuredImage = "20200120-Screenshot_2022-02-02_21-07-23-1024x550.png"
 date = 2022-01-20
-lastmod = 2026-11-16T10:41:16+11:00
+lastmod = 2026-11-16T11:30:09+11:00
 tags = ["Photography", "HamRadio", "Lingvoj", "Esperanto"]
 categories = ["Blog"]
 draft = false

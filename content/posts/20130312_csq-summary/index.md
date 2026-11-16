@@ -1,7 +1,7 @@
 +++
 title = "CSQ Summary"
 date = 2013-03-12
-lastmod = 2026-11-16T10:54:03+11:00
+lastmod = 2026-11-16T11:30:16+11:00
 tags = ["HamRadio"]
 categories = ["Blog"]
 draft = false

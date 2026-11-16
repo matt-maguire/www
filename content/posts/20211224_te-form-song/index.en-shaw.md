@@ -1,7 +1,7 @@
 +++
 title = "〜て-𐑓𐑹𐑥 𐑕𐑪𐑙"
 date = 2021-12-24
-lastmod = 2026-11-16T10:41:41+11:00
+lastmod = 2026-11-16T11:30:12+11:00
 tags = ["𐑤𐑨𐑙𐑜𐑢𐑦𐑡𐑩𐑟", "𐑡𐑨𐑐𐑩𐑯𐑰𐑟"]
 categories = ["Blog"]
 draft = false

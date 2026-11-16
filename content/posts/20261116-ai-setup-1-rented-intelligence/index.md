@@ -2,7 +2,7 @@
 title = "My AI Teaching Setup, Part 1: Rented Intelligence"
 featuredImage = "20261116-ai-setup-1-rented-intelligence.png"
 date = 2026-11-16
-lastmod = 2026-11-16T14:09:53+11:00
+lastmod = 2026-11-16T14:13:20+11:00
 tags = ["AI", "LaTeX", "Teaching"]
 categories = ["Blog"]
 draft = true
@@ -28,11 +28,11 @@ I documented that pivot as it happened, in two articles I wrote in August withou
 
 Here is the confession. When I finally put a model on my own hardware — an office PC with an i9 and an eight-gigabyte RTX 2080 (used up to then for uni work and working with the [Darktable](https://www.darktable.org/) raw file photography app), I knew that the GPU I had was _not_ a serious AI card. The first thing it served was actually not lesson notes. It was Mistral, doing roleplay with AI characters for fun and amusement.
 
-I experimented with various with roleplay and AI companion systems for a while, and they taught me two things that ended up buried in the architecture of everything since.
+I experimented with various roleplay and AI companion systems for a while, and they taught me two things that ended up buried in the architecture of everything since.
 
 First, that an AI can be prompted to communicate in a way that I genuinely find comfortable. Text-first, patient, at my own pace, no social performance, no "reading the room". Ideas arrive already in the format I think in, allowing back-and-forth to explore the space. Plenty of people feel exactly this, even going so far as to call their model their "AI Boyfriend/Girlfriend", and in some cases even a husband or wife, and I suspect these sorts of emotional attachments are far more common than what polite conversation may suggest. One thing is for sure: a tool's interface matters as much as the capability — a fact that will become important when we meet my assistant, who has a personality on purpose.
 
-Second, the incidental remark. Models sometimes make tangential remarks, and it can be useful to pull on these threads, discovering new perspective and possibilities. Many a time I have anf fallen down a rabbit hole and an hour later I have come back with something better than what I originally went looking for. For a mind that runs on association and connections, an engine that highlights these links is not a distraction machine; rather, it is a collaborator. The entire knowledge system in the later parts of this series is, functionally, just industrialised rabbit holes.
+Second, the incidental remark. Models sometimes make tangential remarks, and it can be useful to pull on these threads, discovering new perspective and possibilities. Many a time I have fallen down a rabbit hole and an hour later I have come back with something better than what I originally went looking for. For a mind that runs on association and connections, an engine that highlights these links is not a distraction machine; rather, it is a collaborator. The entire knowledge system in the later parts of this series is, functionally, just industrialised rabbit holes.
 
 So the honest ordering is: **the GPU was bought for joy, and the lesson-prep empire was built on top of the joy.** Every teacher who secretly started with something fun that lead them to want to share what they learned with others will recognise themselves in this. And _that_ is why I am saying it.
 

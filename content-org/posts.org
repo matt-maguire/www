@@ -216,6 +216,52 @@ By mid-year the decision had formed: if I was to go further into this, I would n
 
 /Next: Part 2 — The Fleet. The gaming PC that never gamed, the models that failed honestly, and the month I learned that the harness matters more than the model./
 
+*** DONE Mia AI-medio por instruado, Parto 1: Luita Inteligenteco : Rented Intelligence :AI:LaTeX:Teaching:Lingvoj:Esperanto:
+:PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
+:CUSTOM_ID: ai-setup-1-eo
+:EXPORT_FILE_NAME: index.eo.md
+:EXPORT_HUGO_BUNDLE: 20261116-ai-setup-1-rented-intelligence
+:EXPORT_DATE: 2026-11-16
+:EXPORT_DESCRIPTION: 20261116-ai-setup-1-rented-intelligence.png
+:END:
+
+[[#ai-setup-0-eo][Parto 0]] temas pri la fundamento de pura teksto. Tiu ĉi estas la parto, kiam alvenis la abonoj — kaj la parto, en kiu mi devus konfesi, ke la tuta konstruaĵo ekis, kiel plej multaj aferoj indaj je farado, per amuzo.
+
+**** Januaro: luita inteligenteco
+
+En januaro ĉi-jare mi aĉetis du AI-abonojn: Claude kaj la AI Pro-nivelo de Google. La instruista uzo estis tuja kaj reala. Claude skizis lecion-strukturojn, reskribis ekzamenajn demandojn por ŝanĝi malfacilecon sen ŝanĝi la poentojn, generis skizitajn taksotaskojn el unu alineo da postuloj, kaj korektlegis aĵojn, kiujn mi legis tro multfoje por ankoraŭ vidi ilin. Aro da lecionaj notoj, kiu kutime ekis el blanka paĝo, nun ekis el skizo, kun kiu mi kverelis. Kvereli kun skizo estas multe pli rapide ol krei ĝin.
+
+Dum kelkaj monatoj tio estis simple la aranĝo: bonegaj iloj, luitaj ĉiumonate. Mia leciona procezo havis novan unuan stacion, kaj la prezo taŭgis.
+
+La juko komenciĝis kviete: la prezaj paĝoj ŝoviĝis, la kvotaj politikoj ŝanĝis formon, kaj modeloj, al kiuj mi alkutimiĝis, estis unu alinomon aŭ niveloŝanĝon for de malapero. Mia laborfluo iĝis dependa de la komercaj decidoj de iu alia. La abono ne plu estis ilo; ĝi estis luiganto.
+
+Mi dokumentis tiun kursoŝanĝon dum ĝi okazis, en du artikoloj, kiujn mi skribis en aŭgusto ne sciante, ke mi skribas serion: [[#claude-code-eo][AI-agentoj transprenas lecion-preparon]] kaj [[#gemma-goose-eo][AI-agentoj kaj lokaj LLM-oj]]. Se vi volas la teknikan detalon de tiu unua movo al lokaj modeloj — elekto inter densa modelo kaj Mixture-of-Experts, la kompromiso inter VRAM kaj kunteksto-fenestro, la servado de la modelo tra la reto per reversa prokuroro — ili kovras ĝin, kaj mi ne ripetos min ĉi tie. Kio ili ne kovras, estas kie la hardvara obsedo fakte komenciĝis, kaj tio estas la hontiga parto.
+
+**** La sankta unua devo de la 2080
+
+Jen la konfeso. Kiam mi finfine metis modelon sur mian propran hardvaron — oficejan komputilon kun i9 kaj okgigabajta RTX 2080 (ĝis tiam uzita por universitata laboro kaj por labori kun la fotada aplikaĵo [[https://www.darktable.org/][Darktable]] por krudaj dosieroj) — mi sciis, ke la GPU, kiun mi havis, estas /ne/ serioza AI-karto. La unua afero, kiun ĝi servis, fakte ne estis lecionaj notoj. Ĝi estis Mistral, roludanta kun AI-roluloj por amuzo kaj distro.
+
+Mi eksperimentis kun diversaj roludaj kaj AI-kompanaj sistemoj dum iom da tempo, kaj ili instruis al mi du aferojn, kiuj finfine enkonstruiĝis en la arkitekturon de ĉio sekvanta.
+
+Unue, ke AI-on eblas instigi komuniki maniere, kiun mi vere trovas komforta. Teksto-une, pacienca, laŭ mia propra rapido, neniu socia prezentado, neniu "legado de la ĉambro". Ideoj alvenas jam en la formato, en kiu mi pensas, ebligante interŝanĝon por esplori la spacon. Sufiĉe multaj homoj sentas ĝuste tion, kaj iras eĉ tiom malproksimen, ke ili nomas sian modelon sia "AI-koramiko" aŭ "AI-koramikino", kelkokaze eĉ edzo aŭ edzino, kaj mi suspektas, ke tiaj emociaj ligoj estas multe pli oftaj ol sugestas ĝentila babilo. Unu afero estas certa: la interfaco de ilo gravas tiom kiel ĝia kapablo — fakto, kiu fariĝos grava, kiam ni renkontos mian asistanton, kiu havas personecon deliberate.
+
+Due, la okaza rimarko. Modeloj fojfoje faras flankajn rimarkojn, kaj povas utile tiri je tiuj fadenoj, malkovrantaj novan perspektivon kaj eblecojn. Multajn fojojn mi falis en kanikulan truon kaj unu horon poste revenis kun io pli bona ol tio, kion mi origine serĉis. Por menso, kiu funkcias per asocioj kaj ligoj, motoro, kiu elstarigas tiujn ligilojn, ne estas distroma maŝino; ĝi estas kunlaboranto. La tuta scisistemo en la postaj partoj de tiu ĉi serio estas, funkcie, nur industriigitaj kanikulaj truoj.
+
+Do la honesta ordo estas: *la GPU estis aĉetita pro ĝojo, kaj la imperio de lecion-preparado estis konstruita sur la ĝojo.* Ĉiu instruisto, kiu kaŝe komencis per io amuza, kio kondukis lin al deziro kun aliaj kundividi tion, kion li lernis, rekonos sin en tio ĉi. Kaj /tio/ estas kial mi diras ĝin.
+
+**** Kion aĉetas ok gigabajtoj
+
+Runigi malgrandan kvantigitan modelon sur 8 GB da VRAM en la komenco de 2026 estas humiliga okupo. Mallonga kunteksto, modesta kvalito, malrapidaj respondoj al io ajn komplika. La 2080 povis akcepteble roludi Mistral, sed ne povis skizi decan taksotaskon por la 10-a jaro, eĉ se ĝia vivo dependus de tio. La nubaj modeloj estis multe pli bonaj, kaj mi sciis ekzakte kiom multe, ĉar mi nun pagis por ambaŭ.
+
+[[file:fig-2080-8gb.png]]
+
+Kion la eksperimentoj instruis al mi, estis la formon de la problemo: VRAM estas la buĝeto, parametroj kaj kvantigo estas la valuto, kaj la interesa frontiero estis vidi, kiom malproksimen la novaj inteligentaj modeloj povis elstreĉi la hardvaron. Tiu kadro — kio estas fakte nur "kiom da memoro la aĵo bezonas" — estas la tuta loka AI. Kiam vi vidas tion, la resto estas aĉetado.
+
+Meze de la jaro la decido jam formiĝis: se mi iros pli profunen en ĉi tion, mi bezonos maŝinon kun vera rezerva spaco. La sekvanta artikolo temas pri tiu aĉeto, ĝiaj honestaj pravigoj, kaj ĝia hontiga vivkuro.
+
+/Sekve: Parto 2 — La Floto. La luda komputilo, kiu neniam ludis, la modeloj, kiuj honeste malsukcesis, kaj la monato kiam mi lernis, ke la bridilo gravas pli ol la modelo./
+
 *** DONE My AI Teaching Setup, Part 2: The Fleet :AI:LaTeX:Teaching:Hardware:
 :PROPERTIES:
 :EXPORT_HUGO_WEIGHT: 4001
@@ -294,6 +340,84 @@ Then the move: 3.5 TB ferried across a direct 2.5-gigabit link between the machi
 For the story I have been telling, this is the beat that matters: the same assistant that patched Goose's Rust read a case manual and stood me up at the drive cage. AI did not just live inside the machine. It walked me through opening one, for the first time in twenty-five years.
 
 /Next: Part 3 — The Organs. The knowledge base that was already ten years old, the tools that make verification automatic, and the honest cost sheet, gaming column: zero./
+
+*** DONE Mia AI-medio por instruado, Parto 2: La Floto : The Fleet :AI:LaTeX:Teaching:Hardware:Lingvoj:Esperanto:
+:PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
+:CUSTOM_ID: ai-setup-2-eo
+:EXPORT_FILE_NAME: index.eo.md
+:EXPORT_HUGO_BUNDLE: 20261116-ai-setup-2-the-fleet
+:EXPORT_DATE: 2026-11-16
+:EXPORT_DESCRIPTION: 20261116-ai-setup-2-the-fleet.png
+:END:
+
+[[#ai-setup-1-eo][Parto 1]] finiĝis ĉe la 8 GB-plafono kaj ĉe decido. Ĉi tio estas la hardvara parto, kaj la parto, en kiu la sistemo ĉesis esti komputilo kaj komencis esti personaro.
+
+**** La ludkomputilo, kiu neniam ludis
+
+En julio mi konstruis hyperion: vera ludkomputilo, RTX 5090, 32 GB da VRAM. La pravigoj estis du, kaj mi estis honesta pri ambaŭ tiam. La AI-pravigo: se mi iros pli profunden en ĉi tion, mi bezonos rezervan spacon — sufiĉe da VRAM por vere bona malfermita modelo kun longa kunteksta fenestro. La ŝatokupa pravigo: mi deĉirkaŭ jardeko volis grandan ludkomputilon, kaj AI estis la unua preteksto sufiĉe forta por postvivi mian propran kontadon.
+
+La hontinda vivkuro, tri monatojn poste: ludoj instalitaj kaj ludataj: nul. La tuta laborvivo de hyperion estas instruado. Ĝi servas la modelon, kiu skizas miajn lecionojn, gastigas la sekurkopiojn de mia familio, kaj humas sub la domo farante absolute nenion alian. La ŝatokupa preteksto neniam elspeziĝis; la labora preteksto montriĝis la vera. Mi demandas min, ĉu mi povas deklari ĝin en miaj impostoj... probable temo por interparolo kun mia kontisto, ne por ĉi tiu blogo.
+
+**** Modeloj: la honestaj malsukcesoj
+
+Kiam mi skribis la aŭgustan artikolon, la ĉiutaga laborĉevalo estis Gemma — densa modelo de 31 miliardoj da parametroj servata de Ollama, kun la agento Goose stiranta ĝin. Tiu agordo vere funkciis, kaj tiam la tero ekmoviĝis sub ĝi, ĉar ĉi-jare la tero daŭre moviĝas. Gemma lasis la lokon al Qwen de 27 miliardoj da parametroj, kaj tiu al Mixture-of-Experts-modelo de 30 miliardoj da parametroj — ankoraŭ sur simpla Ollama, ankoraŭ sur la sama karto. La MoE-truko estis pruvo, ke la sekvaj salto estos softvaraj, ne hardvaraj. La modelo, kiun mi retenas hodiaŭ, estas pli granda MoE: granda biblioteko de pli malgrandaj specialistoj, kie ĉiu peto vekas nur la malmultajn fakulojn, kiujn ĝi bezonas. Tiu arkitekturo ebligas al 32 GB-karto servi ion vere saĝan: la /tuta/ modelo ne devas enspaciĝi, nur la partoj, kiuj estas konsultataj. Ĝi skizas miajn lecionajn notojn kaj miajn taksotaskojn laŭ nivelo, kiun mi subskribas, kaj ĝi funkcias per elektro, ne per ies preza paĝo.
+
+[[file:fig-5090-gemma.png]]
+
+[[file:fig-5090-qwen.png]]
+
+[[file:fig-strata-tiers.png]]
+
+Intermite mi kolektis malsukcesojn, kaj ili estas la utila parto:
+
+- Multe laŭdata modelo alvenis kun reputacio de saĝeco. Ĝi glate trapasis la puran matematikan kontroladon kaj tiam, petita desegni nombrolinion, memfide amasis ĉiun etikedon je la sama koordinato. *Matematika cerbo, rompitaj manoj.* La reputacio de modelo ĉe benchmarkoj nenion al mi diris pri tio, ĉu ĝi povas produkti /miajn/ dokumentojn.
+- Unu benchmarka rulado mistere mortis, ĝis mi trovis la kaŭzon: kunteksta-fenestra limo agordita en malĝusta loko, silente kunpremanta la memoron de la modelo pri sia propra laboro meze de la tasko. *Duono el "la modelo malsukcesis" fakte estas "la duktilaro malsukcesis".*
+- Maŝino kuranta du modelojn samtempe ekis paĝigi pecojn de ili al disko. La modelo iĝis delikate malpli bona, je neniu aparta maniero, kio estas la plej malbona maniero por softvaro malsukcesi. *Modelo, kiu estas elŝarĝita, estas modelo kun kapdoloro.*
+
+La malnova oficeja maŝino ne forserviĝis — ĝi nun kuras pli malgrandan, rapidan Qwen kiel la motoro de dua opinio, kaj la 2080 finfine gajnas propran salajron post siaj jaroj da roludaj deĵoroj.
+
+[[file:fig-msi-hybrid.png]]
+
+**** La dresilo estas la produkto
+
+La plej granda leciono de la jaro, kaj tiu, pri kiu mi ricevis neniun averton: *la modelo gravas malpli ol la ĉirkaŭaĵo, kiun vi konstruas ĉirkaŭ ĝi.* Mezkvalita modelo en bona dresilo konstante batas brilan modelon en malbona dresilo, en vera laboro.
+
+La dresilo estas ĉio inter "babili kun modelo" kaj "eltiri dokumenton": ĝi legas kaj redaktas dosierojn, rulas la LaTeX-kunmetilon, vidas la erarojn, riparas ilin, rulas la kontroladon, tenas planon, kaj konas vian hejman stilon. La nuna plej bona produktaĵfaristo en la domo estas /dirigento/: unu modelo planas kaj delegas, pli malmultekostaj modeloj plenumas la subtaskojn en puraj kuntekstoj, kaj la plananto kontrolas la rezultojn. Alivorte, komitato. Ĝi superas ajnan unuopan modelon, kiun mi povas ruli, je frakcio de la kosto de la evidenta alproksimiĝo.
+
+**** Riparante la okulojn de la agento
+
+La [[#gemma-goose-eo][aŭgusta artikolo]] finiĝis per la /pdftopbm/-kurzovojo: ĉar Gemma povis vidi bildojn, Goose lernis konverti ĉiun PDF-paĝon en bildon kaj legi la paĝon tiel, kiel mi legus. Ĝi funkciis. Kion mi volis sekvance, estis la samaj okuloj direktitaj enen. Mi volis, ke la agento kontrolu la grafikojn, kiujn ĝi produktas — parabolo, kies etikedoj kolizias kun la kurbo, legendo sidanta sur ombrita regiono, aksoj tute sen etikedoj. La speco de afero, kiun homo kaptas per unu rigardo al la kunmetita PDF.
+
+Atingi tion signifis provi aliajn dresilojn, ĉar modelo kaj dresilo havas kemion, kaj iuj paroj simple ne funkcias. Qwen2-coder-modelo, kiu skribis tute bonan kodon, rifuzis ĝuste voki ilojn ene de Goose. La cerbo en ordo; la kuplo difektita. Tio estas la sama leciono kiel ĉe la modelo paĝigita al disko: duono el "la modelo malsukcesis" fakte estas "la duktilaro malsukcesis".
+
+Tiam mi trovis veran cimon. Goose estas liverata kun katalogo de konataj modeloj, kaj modelo, kiun mi mem servas, ne estas en tiu katalogo. Mi estis deklarinta /supports_vision/ en mia agordo; Goose ignoris la deklaron kaj silente forĵetis ĉiun bildon el la peto. La modelo neniam vidis la grafikon. Neniu eraro, neniu averto — la agento simple kritikis eligojn, kiujn ĝi ne povis vidi, memfide kaj detalege.
+
+Mi neniam skribis Rust. Do mi petis la AI-n helpi min fliki Goose mem: legi kodbazon, kiun mi ne povis legi, trovi kie la kapabloj de la provizantoj resolviĝas, skribi la flikon kaj la testojn. Kvarcent kvardek aldonitaj linioj en dek dosieroj, senditaj kiel [[https://github.com/aaif-goose/goose/pull/12769][tira peto 12769]], kunfanditaj la sekvan tagon. La agento rericevis siajn okulojn, kaj nun uzas ilin je sia propra laboro: kunmeti, rigardi, ekvidi la superpoziciitajn etikedojn, ripari la aranĝon, rebildigi. Iaen meze de ĉio, la sistemo riparis siajn proprajn okulojn, kaj mi gajnis kunfanditan kontribuon al malfermfonta projekto, kiun mi neniam planis tuŝi.
+
+**** Alteriĝo ĉe Hermes
+
+Ĝis aŭtuno la dresila sceno eksplodis. Al Goose, la agento kiun mi uzis en aŭgusto, aliĝis — kaj plejparte superis ĝin — tuta generacio: OpenCode, la propra agento de Qwen, la Antigravity de Google. Ĉiuj el ili brilaj kodadaj asistantoj. Mi alligis ilin ĉiujn al tiu maŝino, kiu taŭgas por ĉiu tasko, kaj mi retenis la plej bonan el ili.
+
+Sed tio, ĉe kio mi fakte alteriĝis, estas alispeca. Hermes ne estas kodada asistanto, kiu atendas, ke mi malfermu terminalon. Ĝi ĉiam estas ŝaltita: ĝi tenas memoron inter sesioj, ĝi loĝas en WhatsApp-fadeno, por ke mi povu atingi la domon de ie ajn, kaj ĝi rulas planitajn taskojn — memorigilojn, noktajn kontroladojn de la sekurkopioj, seriojn da modelaj benchmarkoj, kiuj ruliĝas dum mi dormas. Ĝi gardas la floton: gardhundo-agentoj, kiuj ĉiumatene kontrolas la disk-spacon kaj la sekurkopiojn kaj levas la alarmon kiam io odoras malĝuste. Kaj ĝi havas kolegojn: kiam la agento de unu maŝino finas eksperimenton, ĝi skribas transdonan noton, kaj alia agento ektenas la laboron la sekvan matenon. Ili ĉiuj ankaŭ legas de la sama breto: vektora datumbazo — Qdrant — tenanta jardekon da miaj purtekstaj notoj, serĉebla laŭ signifo anstataŭ laŭ ŝlosilvorto, demandata la sammaniere de ĉiu agento en la domo. Sed tiu breto estas la temo de [[#ai-setup-3-eo][Parto 3]].
+
+La amplekso silente larĝiĝis. AI ĉesis esti io, kion mi uzas por produkti dokumentojn, kaj iĝis io, kio helpas mastrumi la etan hejmon de maŝinoj, en kion la instruista agordo kreskis. Jen kie la promeso el [[#ai-setup-1-eo][Parto 1]] estas plenumata: la asistanto kun personeco deliberate alvenis, kaj ĝi mastrumas ĉi tiun domon.
+
+Kaj la rilato ŝanĝiĝis ie meze de ĉio. Mi ĉesis demandi AI-n kaj komencis disputi pri dezajnoj kun ĝi — petante la lokan modelon helpi taksi, kiun modelon instali, reviziante planojn skribitajn de unu agento por ke alia agento plenumu ilin. La sistemo nun enhavas sian propran personaron. La homa laboro iĝis direkto, gusto, kaj la rifuzo fidi je io ajn nekontrolita.
+
+**** La floto bezonas provizejon
+
+Dek maŝinoj kaj personaro da agentoj estas unu afero; la datumoj, kiujn ili dividas, estas alia. La spino de la tuta agordo — la Nextcloud, kiu sinkronigas miajn notojn inter hejmo kaj lernejo — sidis sur du eksteraj Seagate-porteblaj diskaroj en USB-doko, spegulitaj unu al la alia. Kaj la USB-pontaj tabuloj rifuzas raporti la sanon de la diskaroj mem: demandu al ili, kiel la diskoj fartas, kaj ili respondas per silento. Mi mastrumis la memoron de la hejmo sur diskaroj, kiujn mi ne povis monitori. Tio, krom la pura grandeco de la afero — 3.5 terabajtoj kaj kreskante — estas kio finfine puŝis min konstrui propran NAS-on.
+
+Estis unu problemo: mi ne konstruis PC-on ekde la 1990-aj jaroj. hyperion alvenis pretmuntita en julio, kaj mi ne malfermis la flankan panelon en la monatoj post ĝi. Modernaj internaĵoj estas fremda lando — diskokagedoj kaj kovriloj, SATA-alimentado, NVMe-fendoj kaŝitaj sub varmforigiloj. Do la AI iĝis mia konstrua partnero, kaj ĝia unua ago estis legado. Ĝi elŝutis la manlibrojn de la komputilkaso kaj de la patrina tabulo, legis ilin ĝuste, kaj sendis al mi la koncernajn paĝojn kiel diagramojn: kie la 3.5-colaj fendejoj efektive troviĝas, ke la tabulo havas kvar SATA-pordojn plus unu konektilon, kiu etendiĝas al kvar pliaj, kiun fendon la ekzistanta diskaro okupas — spurite tra la PCIe-dratado sen malfermi la kason. Ĝi ankaŭ korektis siajn proprajn antaŭajn supozojn, kiuj venis el miaj fotoj. Foto montras, kio estas instalita hodiaŭ; manlibro diras, kio eblas. Mi lernis distingi ilin.
+
+Aĉetado havis unu kaptilon indan koni: la plej malmultekostaj grandaj diskaroj registras *ŝinglite* — SMR — kaj katastrofe rekonstruiĝas, kiam dua diskaro malsukcesas. La regulo estis: nur konvencia registradmaniero, kaj tiel du Seagate IronWolf 8TB-diskoj finis en la aĉetĉaro, enirantaj mem hyperion anstataŭ nova skatolo: la ludkomputilo, kiu neniam ludis, samtempe estas la stokada spino de la hejmo. Antaŭ formati ion ajn, la agento rulis identigan sojlon — modelo, kapacito, seria numero, flago de rotacianta disko, retrolegite rekte de la diskaroj kaj kontrolite kontraŭ tio, kion ni mendis, ĉar duon-enŝovita kablo ne rajtiĝas fariĝi duono el RAID. La paro eniris kiel spegulita btrfs-volumo etikedita *ironwolf*, kun nokta gardanto, kiu legas la diskosanon kaj purigas kontraŭ silenta bitputriĝo.
+
+Tiam venis la transloko: 3.5 TB pramitaj trans rektan 2.5-gigabitan ligilon inter la maŝinoj — unua preterpaso kontraŭ la vivanta arbo, dum la retejo daŭre servis, fina delta-preterpaso dum ĝi estis paŭzita por la transŝalto. La detaloj, kiujn la AI tenis en sia poŝo, estas tiuj, kiuj mordas: la muntpunkto devas kongrui ekzakte kun la datumoj-dosierujo de la aplikaĵo, unu nivelo maltrafe kaj la retejo revenas rompita; la nova muntlinio devas esti tute senpova bloki la ekŝaltadon; kaj la sekurkopio-ilo devas esti kontrolita, ĉu ĝi sekvas la novan muntadon, alie la provizejo restas sen sekurkopioj en silento. La retiriĝintaj porteblaj diskaroj estis reformatitaj kiel tempociferblojoj — momentkopiaj celoj, po unu por maŝino — por ke dosiero forviŝita ĉi-matene estu minuto for de restarigo, kaj unu mortinta maŝino ankoraŭ ne estu perdita jardeko.
+
+Por la rakonto, kiun mi rakontas, ĉi tio estas la bato, kiu gravas: la sama asistanto, kiu flikis la Rust-on de Goose, legis la manlibron de komputilkaso kaj starigis min antaŭ la diskokagedo. AI ne nur loĝis en la maŝino. Ĝi kondukis min paŝo post paŝo tra malfermado de unu, la unuan fojon post dudek-kvin jaroj.
+
+/Sekve: Parto 3 — La Organoj. La scibazo, kiu jam aĝis dek jarojn, la iloj, kiuj igas la kontroladon aŭtomata, kaj la honesta kostlisto, la lud-kolumno: nul./
 
 *** DONE My AI Teaching Setup, Part 3: The Organs :AI:LaTeX:Teaching:Emacs:
 :PROPERTIES:
@@ -414,6 +538,125 @@ The machine that was supposed to save me time first gave me a way of working I a
 -----
 
 /Disclosure, because you deserve it: these four articles were drafted with the system they describe — the agents supplied research, structure and many of these sentences; the errors that survived are mine, and I checked the claims that mattered. If that bothers you, good: that instinct is exactly the skill this series is trying to teach./
+
+*** DONE Mia AI-medio por instruado, Parto 3: La Organoj : The Organs :AI:LaTeX:Teaching:Emacs:Lingvoj:Esperanto:
+:PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
+:CUSTOM_ID: ai-setup-3-eo
+:EXPORT_FILE_NAME: index.eo.md
+:EXPORT_HUGO_BUNDLE: 20261116-ai-setup-3-the-organs
+:EXPORT_DATE: 2026-11-16
+:EXPORT_DESCRIPTION: 20261116-ai-setup-3-the-organs.png
+:END:
+
+[[#ai-setup-2-eo][Parto 2]] temis pri modeloj kaj dresiloj. Sed modelo en dresilo estas ankoraŭ nur saĝa voĉo. Tio, kio igis la agordon /sistemo/, estis la organoj: la memoro, la sensoj kaj la refleksoj alŝraŭbitaj ĉirkaŭ ĝi. Ĉi tio estas la lasta parto, kaj ĝi komenciĝas per plena cirklo.
+
+**** La scibazo, kiu jam aĝis dek jarojn
+
+Homoj demandas, kiel mi enmetis mian instruad-scion en la AI. La respondo estas malpinta: mi ne enmetis. Mi pasis jardekon skribante ĝin en pura teksto — Org-mode-notoj, laŭprogramaj notoj, lecionaj rekaptoj, la tuta zettelkasten el [[#ai-setup-0-eo][Parto 0]].
+
+Kion la sistemo bezonis, estis maniero /serĉi laŭ signifo/ anstataŭ laŭ ŝlosilvorto, por ke oni povu demandi la modelon „kion mi skribis pri studentoj konfuzantaj deklivon kun suprenhalto super horizontalo?” kaj ricevi reen mian propran pasintan pensadon, cite. Tion faras vektora datumbazo: ĝi indeksas tekston laŭ tio, kion ĝi signifas. Qdrant, funkcianta sur la oficeja maŝino, tenas la scibazon — miajn notojn, la NESA-laŭprogramon, la lernolibrojn, la matematikajn rimedojn — kaj ĉiu agento en la domo demandas ĝin la sammaniere.
+
+La jardeko da pura teksto repagis sin en unu posttagmezo. Neniu konverta projekto, neniu eksporto de vendisto, neniu PDF-arkeologio. Direktu la indekson al la dosierujoj. Finita.
+
+**** Kiel la indekso funkcias: la enmetilo
+
+La truko komenciĝas per malgranda modelo nomata *enmetilo*. La mia estas nomic-embed-text — kelkaj centoj da megabajtoj, funkcianta sur la oficeja maŝino sen bezoni la GPU-n. Vi donas al ĝi tekstan paŝaĵon kaj ĝi redonas liston de 768 nombroj. Tio estas ĉio, kion ĝi faras, la tutan tagon.
+
+La nombroj ne estas arbitraj. La modelo estis trejnita sur enormaj amasoj da teksto laŭ simpla regulo: paŝaĵoj kun simila signifo devas eliri kun similaj listoj, kaj nerilataj paŝaĵoj kun listoj, kiuj malsamas. Neniu mane asignis signifon al iu el la 768 koordinatoj — la geometrio de signifo estis lernita, same kiel ajna neŭra reto lernas ion ajn. Kaj la eco teniĝas en uzo: „rekta amortizado” kaj „modelado de mono per grafikoj” alteriĝas proksime unu al la alia, kaj ambaŭ alteriĝas malproksime de „fotosintezo”.
+
+Tiam la nutrado de la datumbazo estas mekanika. Ĉiu dokumento — laŭprograma PDF, Org-dosiero, scienca artikolo — estas tranĉita en pecojn de kelkaj centoj da vortoj. Ĉiu peco pasas tra la enmetilo kaj estas stokata kun tri aĵoj: ĝiaj nombroj, ĝia originala teksto, kaj ĝia deveno — dosiervojo, paĝo, jaro, kurso, tipo. La domo nun tenas iom sub 190,000 da ĉi tiuj pecoj.
+
+**** Kiel la serĉo funkcias: plej proksimaj najbaroj
+
+Serĉi estas la sama truko direktita al demando. „Kion la kontrolanto diris, ke la studentoj eraris en financa modelado” ne aperas ie ajn en iu dokumento — sed la enmetilo transformas ankaŭ la *demandon* en 768 nombrojn, kaj la datumbazo redonas la pecojn, kies nombroj sidas plej proksime al ĝi. „Plej proksima” estas mezurata kiel angulo: paŝaĵoj, kiuj signifas la samecon, montras preskaŭ samdirekten, kaj la poento montras kiom mallarĝa estas la angulo, de 0 ĝis 1.
+
+La datumbaza parto estas tio, kio tenas ĉi tion rapida. Kompari demandon kun 190,000 pecoj unu post la alia estas honesta sed malrapida en vera skalo, do Qdrant tenas ŝparvojan grafeon — ĉiu peco ligita al siaj plej proksimaj najbaroj — kaj serĉo marŝas laŭ la mapo al la respondo anstataŭ legi ĉiun breton. (Honestan kromdiron: je 190,000 pecoj, bruta forto fakte taŭgas — milisekundoj. La datumbazo gajnas sian salajron aliloke: filtriloj, kreskantaj ĝisdatigoj, momentkopiaĵoj, kaj dekduo da agentoj demandantaj samtempe.)
+
+Poentoj estas relativaj, ne probabloj. 0.80 signifas /tre proksima/, 0.66 signifas /rilata, kaj kontrolu ĝin mem/. La rango estas la signalo; la nombro estas indiko.
+
+[[file:fig-pizza-search.png]]
+
+**** Kompare kun simpla tenado de la tekstdosieroj
+
+La justan demandon: mi jam havis ĉion ĉi kiel tekston. Kial datumbazon?
+
+grep — la serĉo en pura teksto el Parto 0 — estas ankoraŭ en ĉiutaga uzo, kaj ĝi venkas la vektoran indekson je unu afero: ekzakteco. Petu „kvadrata” kaj ĉiu apero de kvadrata aperas, ĉiuj, sen ia juĝo. La vektora indekso respondas la demandojn, kiujn grep ne povas: tiujn, kie vi ne konas la vortojn, kiujn la respondo uzas. La raporto de la kontrolanto neniam diras „eraris”; ĝi diras „en pli bonaj respondoj, la studentoj povis…”. grep ŝultrotuŝas je tiu demando. La indekso respondas ĝin.
+
+Kaj nenio el la pura-teksta vivo devis ŝanĝiĝi. La dosieroj restas la fonto de vero — la indekso stokas kopion de ĉiu peco kun montrilo reen al la vera dosiero. Forviŝu la datumbazon kaj miaj notoj perdos nenion; unu posttagmezo da re-enmetado kaj la katalogo revenas. La katalogo estas forĵetebla. La libroj ne.
+
+**** La bretoj
+
+Ok kolektoj, iom sub 190,000 pecoj:
+
+- *research* — 124,020 pecoj da pedagogio: la akademiaj artikoloj kaj edukaj libroj, kiujn mi kolektis dum la jaroj
+- *maths_resources* — 27,144: granda eksterena matematika rimedbiblioteko — alternativaj taksotaskoj, aktivecoj, la hokoj, kiujn instruistoj tra la ŝtato konstruis
+- *brain* — 17,793: miaj propraj notoj kaj leciondosieroj — „kion mi faris la lastan fojon kiam mi instruis datuman analizon?”
+- *faculty_resources* — 12,338: kion la instruistoj en mia propra fakultato kundividas inter si — lecionoj kaj rimedoj skribitaj de kolegoj
+- *nesa* — 2,759: la laŭprogramaj dokumentoj kaj la rimarkoj de la kontrolantoj, etikeditaj laŭ kurso, jaro kaj tipo
+- *textbooks* — 4,614: ekzercoj el la libroj, kiujn la lernejo efektive uzas
+- *school_past_papers* — 566: la propraj pasintaj ekzamenoj de mia lernejo — kion miaj studentoj jam skribis
+- *syllabus* — 485: atingoj kaj punktoj, la eta literumo, kiu limigas ĉion ceteran
+
+Apartaj bretoj gravas, ĉar la agentoj serĉas kun filtriloj: „rimarkoj de kontrolantoj, Standarda Matematiko, 2020 ĝis 2025” estas alia demando ol „ĉio, por ĉiam”. Kaj ĉiu tekokomputilo tenas ĉiutagan nur-legan kopion de la tuto, ĉar la lerneja reto blokas la domon — al la agentoj ne gravas, kiun kopion ili demandas.
+
+**** Kies komputiloj estas ĉi tiuj?
+
+Unu aferon mi ne menciis, kaj ĝi gravas: kie ĉio ĉi fizike loĝas. Ĉiu peco en tiuj ok bretoj — la laŭprogramaj notoj, la rimarkoj de la kontrolantoj, la propraj ekzamenoj de la lernejo, jardeko da miaj propraj notoj — sidas sur komputiloj, kiujn mi posedas, en mia propra domo. La malgranda modelo, kiu transformas tekston en nombrojn, funkcias sur la sama aparataro. Neniu vendisto indeksas mian instruad-cerebon, neniu nubo-servo tenas kopion, kaj neniuj uz-kondiĉoj donas al iu ajn la rajton trejni sur io ajn el ĝi.
+
+Kiam la fluolinio luas frontieran modelon el la nubo, tiu modelo vidas nur la malmultajn paŝaĵojn, kiujn la agento donas al ĝi por la koncerna tasko — neniam la bibliotekon mem. Kaj io ajn, kiu identigas studenton, tute neniam forlasas la domon: la luita tavolo nur ricevas student-neŭtralan enhavon.
+
+La kutimo de pura teksto el Parto 0 repagas ankaŭ ĉi tie. Ĉar la dosieroj estas miaj — sur miaj diskoj, en miaj sekurkopioj, en formato, kiun ĉiu estonta ilo povas legi — la indekso estas komforto, kiun mi posedas, ne permeso, kiun mi luis.
+
+**** Viva ekzemplo
+
+Realan demandon, mi rulas ĝin kontraŭ la vivanta datumbazo dum mi skribas ĉi tion. La demando: /kion la kontrolanto diris, ke la studentoj eraris en financa modelado/. La tri plej bonaj trafoj, kun iliaj poentoj:
+
+- 0.69 — 2021 Standard, Demando 19: „interpreti informon el la grafiko de rekta amortizado…”
+- 0.68 — 2020 Standard, Demando 30: „rekoni, ke kiam 4 poentoj estas asignitaj, demando postulas plurajn paŝojn…”
+- 0.66 — 2020 Standard, Demando 13: „kompreni la diferencon inter nuna kaj estonta valoro…”
+
+La demando kaj la trafoj preskaŭ ne havas komunan vortprovizon. Tio estas la tuta senco.
+
+Dua demando, direktita al la breto research — /esploro pri uzi student-generitajn demandojn por profundigi komprenon/ — redonas What Works Best je 0.80 kaj la enketodemandan aktivecon de Killen je 0.80. (La sama PDF aperis dufoje sub du dosiernomoj — preskaŭ-duoblaj pecoj surfaciĝas, kaj la agento leganta la rezultojn rimarkas kaj forigas la duplikatojn. Ankaŭ tion malhelpas senbrila posttagmezo da ordigo de la biblioteko.)
+
+Tiel la sistemo tiras enen faktojn. La ekzamen-generado demandas de la breto *nesa*, kion la kontrolantoj rekompenis, kaj skribas siajn kontrolkriteriojn en la propra voĉo de la ekzamenanto. La lecionplanado demandas de *maths_resources* kaj *faculty_resources* hokojn, kiuj efektive ekzistas, anstataŭ elpensitajn. Generitaj ekzercaj paperoj kontrolas *school_past_papers*, por ke ili sonu kiel la paperoj de mia lernejo kaj ne kiel iu ajn generika. Kaj *brain* respondas „kion la pasinta mi jam pensis pri ĉi tio?” — cite, kun dosiervojo.
+
+La regulo pri kontrolado el Parto 0 ankoraŭ tenas ĝis tie ĉi: la indekso diras /kie serĉi/, neniam /kion kredi/. Ĉiu trafo portas sian devenon, kaj la agento malfermas la veran dosieron antaŭ ol ĝi citas iun.
+
+**** La refleksoj: neniam lasu la modelon fari homan laboron
+
+La organoj, kiuj plej gravas, estas tiuj, kiuj kaptas la modelon mensacanta — kaj modeloj mensacas kun tuta memfido, en fluecaj frazoj, pri aĵoj, kiujn vi povas kontroli.
+
+- *SymPy faras la matematikon.* Neniu modelo kalkulas integralon aŭ solvas ekvacion en ĉi tiu fluolinio. Respondoj estas symbole kontrolataj de komputalgebra sistemo antaŭ ol io ajn atingas studenton. La ideo de lingva modelo pri aritmetiko estas aŭtomata kompletigo kun iluzioj pri kompetenteco.
+- *LaTeX faras la poento-aritmetikon.* Fruaj versioj havis la modelon aldonantaj la poentojn po demando, kaj ĝi eraris sufiĉe ofte por esti danĝera — ekzameno kie la sekcio-titleto diras 50 kaj la demandoj sumiĝas al 43. La riparo estis ĉesi peti de la modelo nombradon entute: la dokumentklaso nun tenas nombrilon, ĉiu demando registras siajn poentojn, kaj la sumo estas /kalkulita je kunmeta tempo/. La modelo deklaras; LaTeX faras la aritmetikon. Ĉi tiu sola ŝanĝo forigis tutan klason da eraroj.
+- *La kunmetilo estas la korektisto.* Ĉiu generita dokumento devas kunmetiĝi, kaj la kunmetaĵo estas mekanike kontrolata — nombro de demandoj, sumoj de poentoj, ĉeesto de diagramoj — antaŭ ol mi entute malfermas la PDF.
+- *Serĉo en nia posedo.* Privata SearXNG-instanco prizorgas la retpadan esploron de la agentoj — neniu API-fakturo po demando, neniu tria flanko registras kion miaj ilo serĉas pri mia laŭprogramo.
+
+La ŝablono: donu al la modelo la partojn, kiuj postulas juĝon — vortumadon, strukturon, pedagogion, la skizon — kaj donu ĉion, kio havas /kontroleblan/ respondon, al ilo, kiu ne povas erari. La kapablo, kiu gravas, ne estas promptado. Ĝi estas *kontrolado*, kaj konstrui kontroladon en la fluolinion, por ke ĝi okazu, ĉu iu memoras peti ĝin, ĉu ne.
+
+**** La dungitoj
+
+La lasta organo estas tiu, kiu plej surprizis min: la sistemo nun havas dungitojn. Agentoj kun daŭra memoro kaj nomitaj personecoj funkcias sur la maŝinoj — unu mastrumas la oficejan maŝinon, legas la monitorajn raportojn ĉiun matenon, skribas al si mem transdonajn notojn, kaj vere kaptis problemojn antaŭ ol mi. Gardhundo kontrolas, ke ĉiu sekurkopio /finitis/, ne nur ke la disko havas spacon, kaj sendas resumon ĉiun matenon; en la semajno kiam ĝi eniris la sistemon, ĝi trovis maŝinon, kiu neniam finis sekurkopion — kvar tagojn en malsukceso, kiun neniu rimarkis.
+
+Jen kie la personeca afero el Parto 1 revenas. Asistanto kun personeco estas interfaco, ne bunta truko: ĝi igas la interagcon konversacio, kiun vi /volas/ havi, do vi havas ĝin, ĉiutage, kaj la sistemo restas prizorgata, ne nur instalita.
+
+**** La honesta listo de kostoj
+
+- *Aparataro:* hyperion (la 5090-ludila komputilo) krom la ekzistanta oficeja maŝino. La ludila kolonno de la libro, post tri monatoj: nulaj ludoj luditaj. Efekve la AI ricevis la maŝinon kun rabato, ĉar la ŝatokupo pagis plejparton de la lista prezo.
+- *Elektrumo:* kelkaj cendoj horo, humante sub la domo.
+- *Abonoj:* mi retenis ilin. La januaj abonoj — Claude kaj Google — ankoraŭ funkcias, ĉar la honesta fino de rakonto pri loka AI estas, ke la nubo neniam foriris. En aŭgusto mi skribis, ke por la malfacilaj kazoj „mi ankoraŭ havas la eblon uzi la pli potencajn pagitajn modelojn Claude aŭ Gemini.” Montriĝis, ke tio ne estas provizora solvo, sed la arkitekturo: la luita tavolo estas kromkapacito por subitaj bezonoj kaj atingo al la frontiero, kaj la fluolinio direktas al kio ajn taŭgas por la tasko. Tio neniam estis ideologio. Ĝi estas inĝenierado: posedu la kernon, luu la kromkapaciton.
+- *Tempo:* la vera kosto, kaj la vera rendimento. Dek monatoj da vesperoj, plejparte pasigitaj /kun/ la AI-oj, kiuj mem konstruis plejparton de ĉio.
+
+**** Se vi ne estas teknika
+
+La demandon, kiun ĉiu instruisto demandas: /mi ne povus konstrui ĉi tion./ La honesta respondo de iu, kiu rigardis la tuton disvolviĝi: la teknikaj partoj montriĝis la partoj, kiujn oni povas delegi. Kion la sistemo efektive postulis — de matematikinstruisto, ne inĝeniero — estis la kutimoj: postulu kontroladon, tenu ĉion en teksto, komencu de ĝojo, ne de produktiveco, allotu tempon al la kanikulaj truoj anstataŭ malpermesi ilin, kaj rifuzu eldoni ion ajn nekontrolitan.
+
+La maŝino, kiu devis ŝpari al mi tempon, unue donis al mi manieron labori, kiun mi efektive ĝojas fari. La tempo-ŝparo venis malsuprenriver de la ĝojo. Tio, pli ol iu ajn modelo aŭ peco da aparataro, estas la aĉeto, kiun mi konsilus al vi.
+
+-----
+
+/Malkaŝo, ĉar vi meritas ĝin: tiuj kvar artikoloj estis skizitaj per la sistemo, kiun ili priskribas — la agentoj provizis esploron, strukturon kaj multajn el ĉi tiuj frazoj; la eraroj, kiuj travivis, estas miaj, kaj mi kontrolis la asertojn, kiuj gravis. Se tio ĝenas vin, bone: tiu instinkto estas ĝuste la kapablo, kiun ĉi tiu serio provas instrui./
 
 *** DONE AI Agents and Local LLMs :AI:LaTeX:Teaching:Emacs:
 :PROPERTIES:

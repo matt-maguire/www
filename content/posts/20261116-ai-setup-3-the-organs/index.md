@@ -1,7 +1,7 @@
 +++
 title = "My AI Teaching Setup, Part 3: The Organs"
 date = 2026-11-16
-lastmod = 2026-11-16T16:49:24+11:00
+lastmod = 2026-11-16T16:50:52+11:00
 tags = ["AI", "LaTeX", "Teaching", "Emacs"]
 categories = ["Blog"]
 draft = true
@@ -53,12 +53,12 @@ And nothing about the plain-text life had to change. The files remain the source
 Eight collections, just under 190,000 chunks:
 
 -   **research** — 124,020 chunks of pedagogy: the academic papers and education books I have collected over the years
--   **maths_resources** — 27,144: the faculty resource library — alternative assessments, activities, the hooks other teachers have built
+-   **maths_resources** — 27,144: a large external maths resource library — alternative assessments, activities, the hooks teachers across the state have built
 -   **brain** — 17,793: my own notes and lesson files — "what did I do the last time I taught data analysis?"
--   **khs_maths** — 12,338: resources shared by other teachers in the faculty
+-   **faculty_resources** — 12,338: what the teachers in my own faculty share with each other — lessons and resources written by colleagues
 -   **nesa** — 2,759: the syllabus documents and the markers' feedback, tagged by course, year and type
 -   **textbooks** — 4,614: exercises from the books actually in use in the school
--   **killara** — 566: the school's own past exams — what my students have already sat
+-   **school_past_papers** — 566: my school's own past exams — what my students have already sat
 -   **syllabus** — 485: outcomes and dot points, the small print that constrains everything else
 
 Separate shelves matter because the agents search with filters: "marking feedback, Standard Mathematics, 2020 to 2025" is a different question from "everything, forever". And every laptop keeps a nightly read-only copy of the whole thing, because the school network blocks the house — the agents do not care which copy they ask.
@@ -85,7 +85,7 @@ The question shares almost no vocabulary with the answers. That is the entire po
 
 A second query, aimed at the research shelf — _research on using student-generated questions to deepen understanding_ — returns What Works Best at 0.80 and Killen's inquiry-questions activity at 0.80. (The same PDF appeared twice under two filenames — near-duplicates surface, and the agent reading the results notices and deduplicates. This is also what an unglamorous afternoon of housekeeping the library prevents.)
 
-This is how the system pulls in facts. Exam generation asks the **nesa** shelf what the markers reward, and writes its marking criteria in the examiner's own voice. Lesson planning asks **maths_resources** and **khs_maths** for hooks that actually exist rather than invented ones. Generated practice papers check **killara** so they sound like this school's papers and not a generic one. And **brain** answers "what did past-me already think about this?" — cited, with a file path.
+This is how the system pulls in facts. Exam generation asks the **nesa** shelf what the markers reward, and writes its marking criteria in the examiner's own voice. Lesson planning asks **maths_resources** and **faculty_resources** for hooks that actually exist rather than invented ones. Generated practice papers check **school_past_papers** so they sound like my school's papers and not a generic one. And **brain** answers "what did past-me already think about this?" — cited, with a file path.
 
 The verification rule from Part 0 still holds all the way down here: the index says _where to look_, never _what to believe_. Every hit carries its provenance, and the agent opens the real file before it quotes one.
 

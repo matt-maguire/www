@@ -1,5 +1,6 @@
 +++
-title = "Corne v4 Keyboard Keymap"
+title = "Corne v4 Keyboard Layout — COLEMAK-DH + Miryoku Layers (QMK)"
+description = "Full QMK keymap for the Corne v4 split keyboard: COLEMAK-DH base layer with Miryoku-inspired layers for symbols, numbers, navigation, and mouse. Layer diagrams included."
 featuredImage = "20240711-corne_6x3.jpg"
 date = 2024-07-11
 lastmod = 2026-11-16T11:39:47+11:00

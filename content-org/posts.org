@@ -84,6 +84,86 @@
 - Future explorations: Developing custom Model Context Protocol (MCP) servers, interactive classroom visualizers, or student feedback loops.
   
 ** AI Agents and Local LLMs
+*** TODO My AI Teaching Setup, Part 4: The 108-Gigabyte Gamble :AI:LaTeX:Hardware:Teaching:
+:PROPERTIES:
+:EXPORT_HUGO_WEIGHT: 4001
+:CUSTOM_ID: ai-setup-4
+:EXPORT_FILE_NAME: index
+:EXPORT_HUGO_BUNDLE: 20261121-ai-setup-4-the-gamble
+:EXPORT_DATE: 2026-11-21
+:EXPORT_HUGO_MENU:
+:EXPORT_DESCRIPTION:
+:END:
+
+Parts [[#ai-setup-2][two]] and [[#ai-setup-3][three]] of this series were about what works: the fleet, the resident model, the knowledge base. This one is about what didn't. I think it's the more useful post.
+
+-----
+
+**** Why gamble at all
+
+The open-weight model MiniMax M2.7 has been doing something remarkable: it sits on the SWE-bench podium next to closed frontier models, and the industry generally treats it as roughly "Sonnet-class" --- about eight to ten points behind the current Opus on Terminal-Bench (57.0% vs 65.4%), which used to be a chasm and is now a measurable notch.
+
+For my setup the appeal was specific, not general:
+
+- **Student data stays home.** Names, marks and registers never leave the house --- that's a hard rule. A local model can process marked student work; a cloud model, by that same rule, cannot.
+- **Marginal cost is the price of electricity.** I already made this argument about [[#ai-setup-3][Strata]]. Doing it at flagship-adjacent quality is the obvious next step.
+- **No outage tail risk.** I watched a cloud cascade idle a continent one week; my brain on my own wire can't be downed by someone's config push.
+
+The narrow question I set for a Saturday: *can a Sonnet-class model, running locally at zero marginal cost, take overnight artifact generation --- exam candidates, lesson drafts --- off the cloud entirely?*
+
+**** The plan
+
+M2.7 in IQ4~_XS quantisation is 108 GB of weights. No single machine in the fleet holds that. But [[#ai-setup-2][Part 2]] described two that, together, nearly do: ~hyperion~ (RTX 5090, 32 GB VRAM, Strata's home) and ~msi~ (64 GB RAM, an 8 GB 2080 SUPER), wired together by a dedicated 2.5 GbE Ethernet link. llama.cpp has an RPC mode that splits a model across machines. On paper: reasonable.
+
+The Saturday schedule was: pause Strata, load M2.7 distributed, run my fixed bench kit (a @@markdown:Ti*k*Z@@ diagram task, an exam generation task, a lesson task, and a pure-maths task), then restore Strata.
+
+**** Round one: the GPU that wasn't
+
+The model loaded. Everything looked fine. Except ~nvidia-smi~ showed the 5090 using 18 megabytes.
+
+The prebuilt llama.cpp binaries were missing their CUDA libraries, so the whole "GPU" run had quietly fallen back to the processors. No error, no warning --- a silent fallback that would have wasted the entire day if I'd trusted the load message instead of the memory readout. Lesson one: *verify the hardware is actually involved before believing the software says so.*
+
+**** Round two: the RAM arithmetic
+
+With the right CUDA 13.5 libraries installed, the 5090 finally showed up --- 25 of its 32 GB in use. Beautiful. Then I looked at the other machine.
+
+The RPC peer had been handed 80 GB of model weights. It has 64 GB of RAM. It did what any machine would do and started swapping to disk, thrashing at about 120 MB/s. A ten-word test prompt took over thirty seconds and never finished.
+
+Lesson two: *do the RAM arithmetic before the download.* 108 GB of weights into 32 + 64 GB of addressable memory leaves no room for optimism, let alone for key-value cache.
+
+**** Round three: the physics
+
+One more try: a three-way split --- 5090 VRAM, plus the host's own RAM, plus the second machine. The allocator kept putting too much onto the graphics card and it died with an out-of-memory error.
+
+And here's the honest truth I'd have learned cheaper by thinking first: even if it had loaded, splitting one model across a network means *every token waits for the slowest link*. 2.5 GbE sounds fast until you realise MoE routing makes the model weights a stream, not a pile. It would have been slow anyway. Distributed inference is a bandwidth problem wearing a compute costume.
+
+So we stopped. Strata came back online --- fast, healthy, vision included --- and the fleet went back to its normal shape.
+
+**** Bonus round: the little GPU that could
+
+While the big gamble was dying, I'd staged a small vision model (Qwen3-VL-8B) on the 8 GB 2080 SUPER. It solved a maths worksheet --- photographed, not typed --- in under a second, with correct answers. It later failed spectacularly at identifying an engineering diagram, but for worksheet-in, answers-out it is genuinely useful, on a card I bought for a different decade entirely.
+
+**** What the bench kit said instead
+
+M2.7 never generated a single token, but the bench kit ran against everything that *could* --- the resident Strata, Claude via API, and a parade of other local candidates. A few honest numbers:
+
+| Task        | Strata (local) | Claude (API) | Best other local |
+|-------------+----------------+--------------+------------------|
+| Pure maths  | *1 s*          | 7 s          | 57 s             |
+| @@markdown:Ti*k*Z@@ diagram | 221 s | 69 s      | 491 s            |
+| Exam paper  | 556 s (gave up mid-run) | *152 s* | 698 s    |
+| Lesson draft| *142 s*        | 165 s        | 926 s            |
+
+The local resident wins the short tasks and chokes on the long ones; the cloud entry wins the long ones --- and in one run died outright with "Credit balance is too low", five seconds in. Both facts are in the table because both facts are true.
+
+**** What the gamble bought
+
+One Saturday, 108 GB of downloads, and zero dollars. What I got back: the fleet's real shape, measured. The frontier-class long tail stays in the cloud; the overnight batch dream stays un-proven; the 8 GB card is now officially a vision worker; and the rule for any future big-model ambition is three numbers on a napkin --- weights, RAM, link speed --- before a single download starts.
+
+The Eternity, it turns out, has a bandwidth limit.
+
+/End of series. The fleet goes back to work./
+
 *** DONE My AI Teaching Setup, Part 0: A Life in Plain Text :AI:LaTeX:Teaching:Emacs:
 :PROPERTIES:
 :EXPORT_HUGO_WEIGHT: 4001

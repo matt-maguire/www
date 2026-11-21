@@ -95,67 +95,68 @@
 :EXPORT_DESCRIPTION:
 :END:
 
-Parts [[#ai-setup-2][two]] and [[#ai-setup-3][three]] of this series were about what works: the fleet, the resident model, the knowledge base. This one is about what didn't. I think it's the more useful post.
+
+Parts [[#ai-setup-2][two]] and [[#ai-setup-3][three]] of this series were about the tidy part: the fleet, the resident model, and the knowledge base working the way the architecture diagrams promised. This is the part where I try something ambitious on a Saturday and spend the day watching my own assumptions lose an argument with physics. In a build log, the experiments that fail are usually the ones worth keeping.
 
 -----
 
 **** What already worked
 
-Before the gamble, a reminder of what the fleet already had. [[#ai-setup-3][Part 3]] went into detail on Strata --- the Qwen-Next-style MoE that lives on ~hyperion~ and answers at about 250 tokens per second with vision included --- so here is the one-paragraph version of *why* it works:
+Before the gamble, it helps to remember what the fleet was already doing without breaking a sweat. [[#ai-setup-3][Part 3]] covered Strata in detail --- the Qwen-Next-style MoE living on ~hyperion~ and answering at about 250 tokens per second, vision included --- so here is the short version of /why/ it runs that fast.
 
-Strata is a mixture-of-experts model: 24,576 little specialist sub-networks, of which only a handful fire per token. The trick was deliberate tiering on a single machine. The hottest 10,720 experts, chosen from the model's own routing-frequency profile, are pinned into the 5090's VRAM at boot. All 24,576 sit in a pinned ~47 GB RAM arena one step behind. There is no SSD cold tier by design --- the rare cold routings ride PCIe instead. Every tier runs deliberately full, and the network cable is nowhere in the picture: a token never leaves the machine that owns it.
+Strata is a mixture-of-experts model: 24,576 small specialist sub-networks, with only a handful firing for any given token. The trick was tiering it deliberately on one machine. The hottest 10,720 experts, picked from the model's own routing-frequency profile, get pinned into the 5090's VRAM at boot. All 24,576 sit in a pinned ~47 GB RAM arena one step behind. There is no SSD cold tier by design --- the rare cold routings take the PCIe bus instead. Every tier runs deliberately full, and there is not a network cable in sight: a token never leaves the machine that owns it.
 
-Hold that design in mind, because the MiniMax experiment broke every part of it.
+Keep that design in mind, because the MiniMax experiment walked up to every piece of it and did the opposite.
 
 **** Why gamble at all
 
-The open-weight model MiniMax M2.7 has been doing something remarkable: it sits on the SWE-bench podium next to closed frontier models, and the industry generally treats it as roughly "Sonnet-class" --- about eight to ten points behind the current Opus on Terminal-Bench (57.0% vs 65.4%), which used to be a chasm and is now a measurable notch.
+The open-weight model MiniMax M2.7 has been doing something hard to ignore: sitting on the SWE-bench podium next to closed frontier models, and treated across the industry as roughly "Sonnet-class" --- about eight to ten points behind the current Opus on Terminal-Bench (57.0% vs 65.4%). Not long ago that gap was a chasm; now it is a measurable notch.
 
-For my setup the appeal was specific, not general:
+For my setup, the temptation was not abstract curiosity. It was three very specific constraints:
 
-- **Student data stays home.** Names, marks and registers never leave the house --- that's a hard rule. A local model can process marked student work; a cloud model, by that same rule, cannot.
-- **Marginal cost is the price of electricity.** I already made this argument about [[#ai-setup-3][Strata]]. Doing it at flagship-adjacent quality is the obvious next step.
-- **No outage tail risk.** I watched a cloud cascade idle a continent one week; my brain on my own wire can't be downed by someone's config push.
+- *Student data stays home.* Names, marks and registers never leave the house --- that is a hard rule, not a preference. A local model can process marked student work; a cloud model, by that same rule, cannot.
+- *Marginal cost is the price of electricity.* I already made this argument for [[#ai-setup-3][Strata]]. Having the same economics at flagship-adjacent quality is the obvious next itch to scratch.
+- *No outage tail risk.* I watched a cloud cascade idle a continent for a week; a brain on my own wire cannot be knocked offline by someone else's config push.
 
-The narrow question I set for a Saturday: *can a Sonnet-class model, running locally at zero marginal cost, take overnight artifact generation --- exam candidates, lesson drafts --- off the cloud entirely?*
+So the Saturday question was narrow enough to look sensible: /can a Sonnet-class model, running locally at zero marginal cost, take overnight artifact generation --- exam candidates, lesson drafts --- off the cloud altogether?/
 
 **** The plan
 
-M2.7 in IQ4~_XS quantisation is 108 GB of weights. No single machine in the fleet holds that. But [[#ai-setup-2][Part 2]] described two that, together, nearly do: ~hyperion~ (RTX 5090, 32 GB VRAM, Strata's home) and ~msi~ (64 GB RAM, an 8 GB 2080 SUPER), wired together by a dedicated 2.5 GbE Ethernet link. llama.cpp has an RPC mode that splits a model across machines. On paper: reasonable.
+M2.7 in IQ4~_XS quantisation is 108 GB of weights. No single machine in the fleet holds that on its own. What I did have, as [[#ai-setup-2][Part 2]] laid out, were two machines that nearly get there together: ~hyperion~ (an RTX 5090 with 32 GB VRAM, normally Strata's home) and ~msi~ (64 GB RAM and an 8 GB 2080 SUPER), wired together by a dedicated 2.5 GbE Ethernet link. llama.cpp has an RPC mode built to split a model across machines. On paper, it looked close enough to try.
 
-The Saturday schedule was: pause Strata, load M2.7 distributed, run my fixed bench kit (a @@markdown:Ti*k*Z@@ diagram task, an exam generation task, a lesson task, and a pure-maths task), then restore Strata.
+The Saturday schedule was neat: pause Strata, load M2.7 distributed across the link, run my fixed bench kit (a @@markdown:Ti*k*Z@@ diagram task, an exam generation task, a lesson task, and a pure-maths task), then hand the machine back to Strata.
 
 **** Round one: the GPU that wasn't
 
-The model loaded. Everything looked fine. Except ~nvidia-smi~ showed the 5090 using 18 megabytes.
+The model loaded. No complaints, no warnings, everything looking fine. Then I checked ~nvidia-smi~, which reported the 5090 using 18 megabytes.
 
-The prebuilt llama.cpp binaries were missing their CUDA libraries, so the whole "GPU" run had quietly fallen back to the processors. No error, no warning --- a silent fallback that would have wasted the entire day if I'd trusted the load message instead of the memory readout. Lesson one: *verify the hardware is actually involved before believing the software says so.*
+The prebuilt llama.cpp binaries had arrived missing their CUDA libraries, so my grand "GPU" run had quietly shrugged and fallen back to the processors. No error, no protest --- just a silent fallback that would have wasted the entire day if I had trusted the load message instead of checking what the hardware was actually holding. Lesson one, learned cheaply enough: /verify the hardware is actually involved before taking the software's word for it./
 
 **** Round two: the RAM arithmetic
 
-With the right CUDA 13.5 libraries installed, the 5090 finally showed up --- 25 of its 32 GB in use. Beautiful. Then I looked at the other machine.
+With the right CUDA 13.5 libraries installed, the 5090 finally showed up to work --- 25 of its 32 GB in use. For a moment, that looked like progress. Then I looked at the other machine.
 
-The RPC peer had been handed 80 GB of model weights. It has 64 GB of RAM. It did what any machine would do and started swapping to disk, thrashing at about 120 MB/s. A ten-word test prompt took over thirty seconds and never finished.
+The RPC peer had been handed 80 GB of model weights. It has 64 GB of RAM. Doing what any literal-minded machine would do, it started swapping to disk, thrashing along at about 120 MB/s. A ten-word test prompt took over thirty seconds and never finished.
 
-Lesson two: *do the RAM arithmetic before the download.* 108 GB of weights into 32 + 64 GB of addressable memory leaves no room for optimism, let alone for key-value cache.
+Lesson two, which really should have been step zero: /do the RAM arithmetic before the download./ Pouring 108 GB of weights into 32 + 64 GB of addressable memory leaves no room for optimism, let alone for a key-value cache.
 
 **** Round three: the physics
 
-One more try: a three-way split --- 5090 VRAM, plus the host's own RAM, plus the second machine. The allocator kept putting too much onto the graphics card and it died with an out-of-memory error.
+One last swing at it: a three-way split across the 5090's VRAM, the host's own RAM, and the second machine. The allocator kept putting too much onto the graphics card and died with an out-of-memory error.
 
-And here's the honest truth I'd have learned cheaper by thinking first: even if it had loaded, splitting one model across a network means *every token waits for the slowest link*. 2.5 GbE sounds fast until you realise MoE routing makes the model weights a stream, not a pile. It would have been slow anyway. Distributed inference is a bandwidth problem wearing a compute costume.
+Here is the honest truth I could have learned cheaper by thinking first: even if the split had loaded, slicing one model across a network means /every token waits for the slowest link/. 2.5 GbE sounds fast until you realise MoE routing turns the model weights into a stream, not a static pile. It would have been slow anyway. Distributed inference is a bandwidth problem wearing a compute costume.
 
-Compare that with the recap above: Strata is the same *kind* of model --- a big MoE that doesn't fit in VRAM --- and it runs at 250 tokens per second on one machine. The difference isn't the model or even the hardware. It's that Strata's tiers are all on-board (VRAM, pinned RAM, PCIe), chosen with the model's own routing statistics, and sized so the slowest hop is measured in nanoseconds. The RPC experiment inverted every one of those choices: naive splitting, no routing intelligence, and an Ethernet cable inside every forward pass. Same physics, opposite direction.
+Put that alongside the recap at the top. Strata is the same /kind/ of model --- a big MoE that does not fit in VRAM --- and it runs at 250 tokens per second on one machine. The difference is not the model or even the hardware. It is that Strata's tiers sit entirely on-board (VRAM, pinned RAM, PCIe), chosen with the model's own routing statistics, and sized so the slowest hop is measured in nanoseconds. The RPC experiment inverted every one of those choices: naive splitting, no routing intelligence, and an Ethernet cable dropped straight inside every forward pass. Same physics, opposite direction.
 
 So we stopped. Strata came back online --- fast, healthy, vision included --- and the fleet went back to its normal shape.
 
 **** Bonus round: the little GPU that could
 
-While the big gamble was dying, I'd staged a small vision model (Qwen3-VL-8B) on the 8 GB 2080 SUPER. It solved a maths worksheet --- photographed, not typed --- in under a second, with correct answers. It later failed spectacularly at identifying an engineering diagram, but for worksheet-in, answers-out it is genuinely useful, on a card I bought for a different decade entirely.
+While the big gamble was dying, I had staged a small vision model (Qwen3-VL-8B) on the 8 GB 2080 SUPER. Handed a maths worksheet --- photographed, not typed --- it returned the right answers in under a second. It later failed spectacularly at identifying an engineering diagram, which keeps expectations honest. Still, for worksheet-in, answers-out, it is genuinely useful work out of a card I bought for a different decade entirely.
 
 **** What the bench kit said instead
 
-M2.7 never generated a single token, but the bench kit ran against everything that *could* --- the resident Strata, Claude via API, and a parade of other local candidates. A few honest numbers:
+M2.7 never generated a single token, so it stayed off the scoreboard. The bench kit ran against everything else that /could/ --- the resident Strata, Claude via API, and a parade of other local candidates. A few honest numbers:
 
 | Task        | Strata (local) | Claude (API) | Best other local |
 |-------------+----------------+--------------+------------------|
@@ -164,11 +165,11 @@ M2.7 never generated a single token, but the bench kit ran against everything th
 | Exam paper  | 556 s (gave up mid-run) | *152 s* | 698 s    |
 | Lesson draft| *142 s*        | 165 s        | 926 s            |
 
-The local resident wins the short tasks and chokes on the long ones; the cloud entry wins the long ones --- and in one run died outright with "Credit balance is too low", five seconds in. Both facts are in the table because both facts are true.
+The split is plain enough. The local resident wins the short tasks and chokes on the long ones; the cloud entry wins the long ones --- and in one run died outright five seconds in with "Credit balance is too low". Both facts are in the table because both facts are true, and pretending either side is infallible helps nobody.
 
 **** What the gamble bought
 
-One Saturday, 108 GB of downloads, and zero dollars. What I got back: the fleet's real shape, measured. The frontier-class long tail stays in the cloud; the overnight batch dream stays un-proven; the 8 GB card is now officially a vision worker; and the rule for any future big-model ambition is three numbers on a napkin --- weights, RAM, link speed --- before a single download starts.
+One Saturday, 108 GB of downloads, and zero dollars. What I actually got back was the fleet's real shape, measured instead of guessed at. The frontier-class long tail stays in the cloud; the overnight batch dream stays un-proven; the 8 GB card is now officially a vision worker; and the rule for any future big-model ambition is three numbers on a napkin --- weights, RAM, link speed --- before a single download starts.
 
 The Eternity, it turns out, has a bandwidth limit.
 

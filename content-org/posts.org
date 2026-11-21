@@ -99,6 +99,14 @@ Parts [[#ai-setup-2][two]] and [[#ai-setup-3][three]] of this series were about 
 
 -----
 
+**** What already worked
+
+Before the gamble, a reminder of what the fleet already had. [[#ai-setup-3][Part 3]] went into detail on Strata --- the Qwen-Next-style MoE that lives on ~hyperion~ and answers at about 250 tokens per second with vision included --- so here is the one-paragraph version of *why* it works:
+
+Strata is a mixture-of-experts model: 24,576 little specialist sub-networks, of which only a handful fire per token. The trick was deliberate tiering on a single machine. The hottest 10,720 experts, chosen from the model's own routing-frequency profile, are pinned into the 5090's VRAM at boot. All 24,576 sit in a pinned ~47 GB RAM arena one step behind. There is no SSD cold tier by design --- the rare cold routings ride PCIe instead. Every tier runs deliberately full, and the network cable is nowhere in the picture: a token never leaves the machine that owns it.
+
+Hold that design in mind, because the MiniMax experiment broke every part of it.
+
 **** Why gamble at all
 
 The open-weight model MiniMax M2.7 has been doing something remarkable: it sits on the SWE-bench podium next to closed frontier models, and the industry generally treats it as roughly "Sonnet-class" --- about eight to ten points behind the current Opus on Terminal-Bench (57.0% vs 65.4%), which used to be a chasm and is now a measurable notch.
@@ -136,6 +144,8 @@ Lesson two: *do the RAM arithmetic before the download.* 108 GB of weights into 
 One more try: a three-way split --- 5090 VRAM, plus the host's own RAM, plus the second machine. The allocator kept putting too much onto the graphics card and it died with an out-of-memory error.
 
 And here's the honest truth I'd have learned cheaper by thinking first: even if it had loaded, splitting one model across a network means *every token waits for the slowest link*. 2.5 GbE sounds fast until you realise MoE routing makes the model weights a stream, not a pile. It would have been slow anyway. Distributed inference is a bandwidth problem wearing a compute costume.
+
+Compare that with the recap above: Strata is the same *kind* of model --- a big MoE that doesn't fit in VRAM --- and it runs at 250 tokens per second on one machine. The difference isn't the model or even the hardware. It's that Strata's tiers are all on-board (VRAM, pinned RAM, PCIe), chosen with the model's own routing statistics, and sized so the slowest hop is measured in nanoseconds. The RPC experiment inverted every one of those choices: naive splitting, no routing intelligence, and an Ethernet cable inside every forward pass. Same physics, opposite direction.
 
 So we stopped. Strata came back online --- fast, healthy, vision included --- and the fleet went back to its normal shape.
 

@@ -2,7 +2,7 @@
 title = "My AI Teaching Setup, Part 4: The 108-Gigabyte Gamble"
 featuredImage = "20261121-ai-setup-4-the-gamble.png"
 date = 2026-11-21
-lastmod = 2026-11-23T09:15:35+11:00
+lastmod = 2026-11-23T09:35:05+11:00
 tags = ["AI", "LaTeX", "Hardware", "Teaching"]
 categories = ["Blog"]
 draft = false

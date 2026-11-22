@@ -2,7 +2,7 @@
 title = "My AI Teaching Setup, Part 5: Tuning an 8 GB Card"
 featuredImage = "20261122-ai-setup-5-tuning-an-8gb-card.png"
 date = 2026-11-22
-lastmod = 2026-11-23T09:15:24+11:00
+lastmod = 2026-11-23T09:34:53+11:00
 tags = ["AI", "Hardware", "Teaching"]
 categories = ["Blog"]
 draft = false
@@ -17,7 +17,11 @@ There is a particular kind of trouble that starts with a reasonable question. I 
 
 The box is the one I called _msi_ in [Part 2]({{< relref "20261116-ai-setup-2-the-fleet" >}}): an Intel i9 Gen10 box with 64 GB of 2020-era DDR4, an RTX 2080 SUPER with 8 GB of VRAM, running day and night as the house gateway. The model is Qwen3.6-35B-A3B, a community build, quantised down to 19.8 GB on disk. It carries 35 billion parameters, but only about three billion of them take part in generating any one token. That gap is the whole trick, and it is what makes an 8 GB card worth arguing about.
 
-The architecture is a mixture of experts. Each of the model's 40 layers carries 256 small feed-forward networks, the experts, and a router picks 8 of them per token. The shared parts of the model, the attention layers and embeddings, are small: about 2.6 GB. The experts are the bulk: about 17 GB. So llama.cpp splits them by location. The shared path lives on the graphics card; all 10,240 experts sit in system RAM, and for each token the CPU reads the eight chosen experts per layer across the memory bus. The 64 GB of RAM holds the expert weights with room to spare. The card holds the shared path and the context bookkeeping.
+{{< figure src="fig-qwen36-logical.png" >}}
+
+Before packing anything, it helps to see what is actually inside the model. The embedding and the LM head turn tokens into 2048-number vectors and back; small, and always in use. Attention is hybrid: three of every four layers use a linear, state-space form whose state never grows however long the context gets, and one in four uses full attention, 16 query heads reading just 2 key/value heads. Only those ten layers accumulate a KV cache, which is how a 192,000-token context fits in about 2.9 GB. The feed-forward is the mixture of experts: a tiny router reads each token and wakes 8 of 256 experts, plus one shared expert that is always on, each expert a narrow 512-wide network. Nearly all the knowledge, about 17.2 of the 19.8 GB, lives in those experts, and only about 3 billion parameters are touched by any one token: the A3B in the name. Vision is a bolt-on, a separate f16 encoder (the `mmproj` file) that projects images into the same vector space, with position encoding that knows about image rows and columns. And one thing that is not in there: no MTP head, no multi-token prediction, so this build still guesses one token at a time.
+
+Now the packing. The shared path, embedding and attention and routers and shared experts and head, is small: about 2.6 GB. The experts are the bulk: about 17 GB. So llama.cpp splits them by location. The shared path lives on the graphics card; all 10,240 experts sit in system RAM, and for each token the CPU reads the eight chosen experts per layer across the memory bus. The 64 GB of RAM holds the expert weights with room to spare. The card holds the shared path and the context bookkeeping.
 
 {{< figure src="fig-moe-split.png" >}}
 

@@ -2988,7 +2988,7 @@ As I said before, /tblr/ is a convenient modern way to specify $\LaTeX$ tables, 
 :EXPORT_DATE: 2025-01-17
 :END:
 
-En mia antaŭa afiŝo pri uzado de [[#orgmode-lesson-notes-eo][Org-reĝimo por lecionaj notoj]], mi menciis, ke eblas eksporti Org-reĝimajn tabelojn al $\LaTeX$. Jen kelkaj avantaĝoj de Org-reĝimo kompare kun kruda $\LaTeX$ kiam oni faras tabelojn:
+En mia antaŭa afiŝo pri uzado de [[https://www.teachmaths.org/eo/20250105_orgmode-lesson-notes/][Org-reĝimo por lecionaj notoj]], mi menciis, ke eblas eksporti Org-reĝimajn tabelojn al $\LaTeX$. Jen kelkaj avantaĝoj de Org-reĝimo kompare kun kruda $\LaTeX$ kiam oni faras tabelojn:
 - Org-reĝimo havas potencon [[https://orgmode.org/manual/Built_002din-Table-Editor.html][tabelredaktilon]], kiu faciligas desegni tabelon kaj movi vicojn kaj kolumnojn. Org-reĝimo aŭtomate ĝustigas ĉiujn kolumnojn.
 - Ĉar la ĉeloj de Org-reĝima tabelo estas bele alĝustigitaj, multo pli facile estas vidi la tabelon sen nombradi =&=-simbolojn en kruda $\LaTeX$-kodo.
 - Org-reĝimo permesas uzi formulojn en tabelo, iom kiel kalkultabelo -- tio estas pli malfacile atingite rekte per $\LaTeX$.

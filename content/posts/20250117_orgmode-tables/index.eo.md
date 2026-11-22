@@ -1,7 +1,7 @@
 +++
 title = "Eksportado de Org-reĝimaj tabeloj al LaTeX"
 date = 2025-01-17
-lastmod = 2026-11-16T11:39:34+11:00
+lastmod = 2026-11-22T18:57:59+11:00
 tags = ["Emacs", "OrgMode", "LaTeX", "Teaching", "Lingvoj", "Esperanto"]
 categories = ["Blog"]
 draft = false
@@ -9,7 +9,7 @@ weight = 4001
 author = "Matt Maguire"
 +++
 
-En mia antaŭa afiŝo pri uzado de [Org-reĝimo por lecionaj notoj]({{< relref "index.eo.md" >}}), mi menciis, ke eblas eksporti Org-reĝimajn tabelojn al \\(\LaTeX\\). Jen kelkaj avantaĝoj de Org-reĝimo kompare kun kruda \\(\LaTeX\\) kiam oni faras tabelojn:
+En mia antaŭa afiŝo pri uzado de [Org-reĝimo por lecionaj notoj](https://www.teachmaths.org/eo/20250105_orgmode-lesson-notes/), mi menciis, ke eblas eksporti Org-reĝimajn tabelojn al \\(\LaTeX\\). Jen kelkaj avantaĝoj de Org-reĝimo kompare kun kruda \\(\LaTeX\\) kiam oni faras tabelojn:
 
 -   Org-reĝimo havas potencon [tabelredaktilon](https://orgmode.org/manual/Built_002din-Table-Editor.html), kiu faciligas desegni tabelon kaj movi vicojn kaj kolumnojn. Org-reĝimo aŭtomate ĝustigas ĉiujn kolumnojn.
 -   Ĉar la ĉeloj de Org-reĝima tabelo estas bele alĝustigitaj, multo pli facile estas vidi la tabelon sen nombradi `&`-simbolojn en kruda $\LaTeX$-kodo.

@@ -115,9 +115,11 @@ Lesson one, learned the expensive way: get the observer off the machine you are 
 
 **** "That is the ceiling"
 
-With the baseline honest, I asked the assistant to try putting some experts on the GPU instead of all in RAM, and watched the VRAM number to see what happened. It did not move at all. I tried a different value of the same setting. Still nothing. So I asked the question that started this: why is only 69% of the card in use?
+With the baseline honest, I asked the assistant to try putting some experts on the GPU instead of all in RAM, and watched the VRAM number to see what happened. It did not move at all. I tried a different value of the same setting. Still nothing.
 
-The confident answer, the one I quoted at the top, was the assistant answering from experience with models of this shape rather than from my particular file. Fair enough: nothing in my question told it to check the file. The fix was to ask something better. Pointed at the model's own header, the same assistant produced the ground truth in one pass: the model has 40 layers. The setting I had been tuning takes a layer count, and any value above 40 means exactly the same thing. My careful sweep of settings had been comparing identical configurations. Nothing had actually been tried, and the ceiling was a misread flag.
+That flat number is the whole reason for the pushback, and it is worth spelling out how it works, because it generalises to any work you do with these assistants. A change that moves weights onto the card has to move the memory number. When it does not, one of two things is true: there is a sound explanation for why the change cannot matter, or the change is not actually taking effect. Both are checkable, and neither is acceptable to skip. So my second question carried an ultimatum: either explain why the memory utilisation did not go up, or go and find out whether the setting was doing anything at all. A change that produces no observable effect is a fault report, and I treated it as one.
+
+The first answer I got was the confident one quoted at the top, and it dodged the ultimatum quietly: it was the assistant answering from experience with models of this shape rather than from my particular file. Fair enough: nothing in my question told it to check the file. The fix was to ask something better. Pointed at the model's own header, the same assistant produced the ground truth in one pass: the model has 40 layers. The setting I had been tuning takes a layer count, and any value above 40 means exactly the same thing. My careful sweep of settings had been comparing identical configurations. Nothing had actually been tried, and the ceiling was a misread flag.
 
 Once the real numbers were on the table the arithmetic was easy. Each layer's experts weigh about 428 MB at this quantisation, and the card had about 2.5 GB free. Five layers fit.
 
@@ -138,7 +140,8 @@ Reading a prompt is batched matrix math, hundreds of tokens per kernel launch, a
 | Mistake | What it cost | What fixed it |
 |-------------------------------|------------|--------------------------|
 | Benchmark client on the test box | ~45% of the measured speed | Run the client elsewhere |
-| Tuning a flag past the layer count | An afternoon and a false ceiling | Read the model file header |
+| Letting a no-op change pass | A false ceiling, unnoticed | Treat "nothing moved" as a fault report |
+| Tuning a flag past the layer count | An afternoon | Read the model file header |
 | Believing a confident first answer | The above, twice | Ask again, with the numbers |
 | Trusting the utilisation gauge | Worry, nothing | Watch tokens per second |
 

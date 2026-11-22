@@ -27,7 +27,7 @@
   <path d="M 354 284 l -14 8 M 364 302 l 16 6" fill="none" stroke="#b91c1c" stroke-width="2.5" stroke-linecap="round"/>
   <!-- badge -->
   <rect x="322" y="336" width="76" height="18" rx="4" fill="#ccfbf1" stroke="#2b2b2b" stroke-width="1.5"/>
-  <text x="360" y="349" font-family="Menlo, monospace" font-size="12" fill="#2b2b2b" text-anchor="middle">32 GB</text>
+  <text x="360" y="349" font-family="Menlo, monospace" font-size="12" fill="#2b2b2b" text-anchor="middle">32+64 GB</text>
 
   <!-- right server (msi): buckled wavy walls, deep dented roof -->
   <path d="M 726 360
@@ -44,7 +44,7 @@
   <path d="M 790 262 l 8 20 l -10 18 l 6 22" fill="none" stroke="#b91c1c" stroke-width="3" stroke-linecap="round"/>
   <path d="M 798 282 l 14 6 M 788 300 l -16 8" fill="none" stroke="#b91c1c" stroke-width="2.5" stroke-linecap="round"/>
   <rect x="752" y="336" width="76" height="18" rx="4" fill="#fef3c7" stroke="#2b2b2b" stroke-width="1.5"/>
-  <text x="790" y="349" font-family="Menlo, monospace" font-size="12" fill="#2b2b2b" text-anchor="middle">64 GB</text>
+  <text x="790" y="349" font-family="Menlo, monospace" font-size="12" fill="#2b2b2b" text-anchor="middle">8+64 GB</text>
 
   <!-- ethernet cable between them, snapped taut -->
   <path d="M 424 344 Q 480 328 545 336" fill="none" stroke="#0f766e" stroke-width="3" stroke-linecap="round"/>
@@ -99,5 +99,5 @@
   </g>
 
   <!-- caption (garnish) -->
-  <text x="575" y="408" font-family="Menlo, monospace" font-size="14" fill="#2b2b2b" text-anchor="middle">(weights: 108 GB — addressable: 96 GB)</text>
+  <text x="575" y="408" font-family="Menlo, monospace" font-size="14" fill="#2b2b2b" text-anchor="middle">(168 GB addressable, 108 GB of weights — and it still died)</text>
 </svg>

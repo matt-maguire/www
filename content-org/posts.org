@@ -84,7 +84,7 @@
 - Future explorations: Developing custom Model Context Protocol (MCP) servers, interactive classroom visualizers, or student feedback loops.
   
 ** AI Agents and Local LLMs
-*** TODO My AI Teaching Setup, Part 5: Tuning an 8 GB Card :AI:Hardware:Teaching:
+*** DONE My AI Teaching Setup, Part 5: Tuning an 8 GB Card :AI:Hardware:Teaching:
 :PROPERTIES:
 :EXPORT_HUGO_WEIGHT: 4001
 :CUSTOM_ID: ai-setup-5
@@ -92,16 +92,18 @@
 :EXPORT_HUGO_BUNDLE: 20261122-ai-setup-5-tuning-an-8gb-card
 :EXPORT_DATE: 2026-11-22
 :EXPORT_HUGO_MENU:
-:EXPORT_DESCRIPTION:
+:EXPORT_DESCRIPTION: 20261122-ai-setup-5-tuning-an-8gb-card.png
 :END:
 
 There is a particular kind of trouble that starts with a reasonable question. I asked my AI assistant why the graphics card in one of my desktops was only 69% full, when I had deliberately squeezed a 19.8 GB model onto an 8 GB card and expected it to be tight. The answer came back fast and tidy: that is the ceiling, the expert layers live in system RAM, nothing more can fit. It was wrong, and it took me pushing back twice before the real answer showed up. The temptation with an assistant is to switch your brain off, because the answers arrive so easily. This story is an argument that the opposite is what pays: critical thinking becomes more important, not less, when the typing is someone else's job.
 
 **** The machine and the model
 
-The box is the one I called /msi/ in [[#ai-setup-2][Part 2]]: an i9-10900K with 64 GB of 2020-era DDR4, an RTX 2080 SUPER with 8 GB of VRAM, running day and night as the house gateway. The model is Qwen3.6-35B-A3B, a community build, quantised down to 19.8 GB on disk. It carries 35 billion parameters, but only about three billion of them take part in generating any one token. That gap is the whole trick, and it is what makes an 8 GB card worth arguing about.
+The box is the one I called /msi/ in [[#ai-setup-2][Part 2]]: an Intel i9 Gen10 box with 64 GB of 2020-era DDR4, an RTX 2080 SUPER with 8 GB of VRAM, running day and night as the house gateway. The model is Qwen3.6-35B-A3B, a community build, quantised down to 19.8 GB on disk. It carries 35 billion parameters, but only about three billion of them take part in generating any one token. That gap is the whole trick, and it is what makes an 8 GB card worth arguing about.
 
 The architecture is a mixture of experts. Each of the model's 40 layers carries 256 small feed-forward networks, the experts, and a router picks 8 of them per token. The shared parts of the model, the attention layers and embeddings, are small: about 2.6 GB. The experts are the bulk: about 17 GB. So llama.cpp splits them by location. The shared path lives on the graphics card; all 10,240 experts sit in system RAM, and for each token the CPU reads the eight chosen experts per layer across the memory bus. The 64 GB of RAM holds the expert weights with room to spare. The card holds the shared path and the context bookkeeping.
+
+[[file:fig-moe-split.png]]
 
 This is not new territory for the blog. The first mixture-of-experts model on this same card was the Qwen3-30B-A3B bridge I mentioned in [[#gemma-goose][AI Agents and Local LLMs]]. What is new is that this time I tried to tune it properly, and the tuning went somewhere I did not expect.
 
@@ -137,13 +139,13 @@ Reading a prompt is batched matrix math, hundreds of tokens per kernel launch, a
 
 **** What I would tell myself
 
-| Mistake | What it cost | What fixed it |
-|-------------------------------|------------|--------------------------|
-| Benchmark client on the test box | ~45% of the measured speed | Run the client elsewhere |
-| Letting a no-op change pass | A false ceiling, unnoticed | Treat "nothing moved" as a fault report |
-| Tuning a flag past the layer count | An afternoon | Read the model file header |
-| Believing a confident first answer | The above, twice | Ask again, with the numbers |
-| Trusting the utilisation gauge | Worry, nothing | Watch tokens per second |
+| Mistake                            | What it cost               | What fixed it                           |
+|------------------------------------+----------------------------+-----------------------------------------|
+| Benchmark client on the test box   | about 45% of measured speed | Run the client elsewhere               |
+| Letting a no-op change pass        | A false ceiling, unnoticed | Treat "nothing moved" as a fault report |
+| Tuning a flag past the layer count | An afternoon               | Read the model file header              |
+| Believing a confident first answer | The above, twice           | Ask again, with the numbers             |
+| Trusting the utilisation gauge     | Worry, nothing             | Watch tokens per second                 |
 
 The last row of that table is the one about the assistant, and I want to frame it fairly. The wrong answer was fluent, specific, and shaped exactly like a right answer, because the assistant was answering from experience with models of this shape. That is the fast, cheap first draft that makes the whole working relationship worth having. What it needs from me is scorekeeping. I noticed that a setting I had changed had not moved the number it was supposed to move, and I asked again with that observation attached. The assistant took the pushback without friction, went and read the file, handed back the correction, and then did the arithmetic, ran the experiment, and measured the result. Getting a good answer out of these models is mostly a skill with questions: point them at the ground truth, keep track of which numbers moved, and treat the first answer as a draft worth testing. The models are genuinely good at this work. The human gets the most out of them by staying in the loop with receipts. That is the key message, and it is the opposite of the fear these models usually inspire. The assistant takes over the typing and the tool-running, and that is exactly why the human has to keep doing the judging: deciding which answers deserve to be believed, and asking for the receipts. Switching your brain off is the one move that wastes the whole arrangement.
 
@@ -257,7 +259,7 @@ And the arrangement itself got its proof of work. The assistant ran the whole be
 
 The Eternity, it turns out, has a bandwidth limit.
 
-/Next: Part 5 --- Tuning an 8 GB Card. The little GPU's second act./
+/Next:/ [[#ai-setup-5][Part 5 — Tuning an 8 GB Card]]. /The little GPU's second act./
 
 *** DONE Mia AI-medio por instruado, Parto 4: La 108-GB-a Veteto : The 108-Gigabyte Gamble :AI:LaTeX:Hardware:Teaching:Lingvoj:Esperanto:
 :PROPERTIES:

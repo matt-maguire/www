@@ -2,7 +2,7 @@
 title = "My AI Teaching Setup, Part 4: The 108-Gigabyte Gamble"
 featuredImage = "20261121-ai-setup-4-the-gamble.png"
 date = 2026-11-21
-lastmod = 2026-11-22T18:26:06+11:00
+lastmod = 2026-11-23T09:15:35+11:00
 tags = ["AI", "LaTeX", "Hardware", "Teaching"]
 categories = ["Blog"]
 draft = false
@@ -118,4 +118,4 @@ And the arrangement itself got its proof of work. The assistant ran the whole be
 
 The Eternity, it turns out, has a bandwidth limit.
 
-_Next: Part 5 --- Tuning an 8 GB Card. The little GPU's second act._
+_Next:_ [Part 5 — Tuning an 8 GB Card]({{< relref "20261122-ai-setup-5-tuning-an-8gb-card" >}}). _The little GPU's second act._

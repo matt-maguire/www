@@ -148,7 +148,7 @@ Reading a prompt is batched matrix math, hundreds of tokens per kernel launch, a
 The last row of that table is the one about the assistant, and I want to frame it fairly. The wrong answer was fluent, specific, and shaped exactly like a right answer, because the assistant was answering from experience with models of this shape. That is the fast, cheap first draft that makes the whole working relationship worth having. What it needs from me is scorekeeping. I noticed that a setting I had changed had not moved the number it was supposed to move, and I asked again with that observation attached. The assistant took the pushback without friction, went and read the file, handed back the correction, and then did the arithmetic, ran the experiment, and measured the result. Getting a good answer out of these models is mostly a skill with questions: point them at the ground truth, keep track of which numbers moved, and treat the first answer as a draft worth testing. The models are genuinely good at this work. The human gets the most out of them by staying in the loop with receipts. That is the key message, and it is the opposite of the fear these models usually inspire. The assistant takes over the typing and the tool-running, and that is exactly why the human has to keep doing the judging: deciding which answers deserve to be believed, and asking for the receipts. Switching your brain off is the one move that wastes the whole arrangement.
 
 The card is now genuinely full at 94.8%, the model answers at about 38 tokens a second with a 192,000-token context window, and the next real gain will come from faster memory rather than from any flag. The 2080 SUPER keeps its job for now. It has earned it. And the method it taught me, ask, check the numbers, ask again, has turned out to be the best deal in the whole setup, assistant included.
-*** TODO My AI Teaching Setup, Part 4: The 108-Gigabyte Gamble :AI:LaTeX:Hardware:Teaching:
+*** DONE My AI Teaching Setup, Part 4: The 108-Gigabyte Gamble :AI:LaTeX:Hardware:Teaching:
 :PROPERTIES:
 :EXPORT_HUGO_WEIGHT: 4001
 :CUSTOM_ID: ai-setup-4
@@ -168,7 +168,7 @@ Parts [[#ai-setup-2][two]] and [[#ai-setup-3][three]] of this series were about 
 
 Before the gamble, it helps to remember what the fleet was already doing without breaking a sweat. [[#ai-setup-3][Part 3]] covered Strata in detail --- the Qwen-Next-style MoE living on ~hyperion~ and answering at about 250 tokens per second, vision included --- so here is the short version of /why/ it runs that fast.
 
-Strata is a mixture-of-experts model: 24,576 small specialist sub-networks, with only a handful firing for any given token. The trick was tiering it deliberately on one machine. The hottest 10,720 experts, picked from the model's own routing-frequency profile, get pinned into the 5090's VRAM at boot. All 24,576 sit in a pinned ~47 GB RAM arena one step behind. There is no SSD cold tier by design --- the rare cold routings take the PCIe bus instead. Every tier runs deliberately full, and there is not a network cable in sight: a token never leaves the machine that owns it.
+Strata is a mixture-of-experts model: 24,576 small specialist sub-networks, with only a handful firing for any given token. The trick was tiering it deliberately on one machine. The hottest 10,720 experts, picked from the model's own routing-frequency profile, get pinned into the 5090's VRAM at boot. All 24,576 sit in a pinned 47 GB RAM arena one step behind. There is no SSD cold tier by design --- the rare cold routings take the PCIe bus instead. Every tier runs deliberately full, and there is not a network cable in sight: a token never leaves the machine that owns it.
 
 Keep that design in mind, because the MiniMax experiment walked up to every piece of it and did the opposite.
 
@@ -186,9 +186,9 @@ So the Saturday question was narrow enough to look sensible: /can a Sonnet-class
 
 **** The plan
 
-M2.7 is a 230-billion-parameter mixture-of-experts model; in IQ4~_XS quantisation its weights are 108 GB of file. No single machine in the fleet holds that on its own. What I did have, as [[#ai-setup-2][Part 2]] laid out, were two machines that nearly get there together: ~hyperion~ (an RTX 5090 with 32 GB VRAM, normally Strata's home) and ~msi~ (64 GB RAM and an 8 GB 2080 SUPER), wired together by a dedicated 2.5 GbE Ethernet link. llama.cpp has an RPC mode built to split a model across machines. On paper, it looked close enough to try.
+M2.7 is a 230-billion-parameter mixture-of-experts model; in IQ4_XS quantisation its weights are 108 GB of file. No single machine in the fleet holds that on its own. What I did have, as [[#ai-setup-2][Part 2]] laid out, were two machines that nearly get there together: ~hyperion~ (an RTX 5090 with 32 GB VRAM, normally Strata's home) and ~msi~ (64 GB RAM and an 8 GB 2080 SUPER), wired together by a dedicated 2.5 GbE Ethernet link. llama.cpp has an RPC mode built to split a model across machines. On paper, it looked close enough to try.
 
-The Saturday schedule was neat: pause Strata, load M2.7 distributed across the link, run my fixed bench kit (a @@markdown:Ti*k*Z@@ diagram task, an exam generation task, a lesson task, and a pure-maths task), then hand the machine back to Strata.
+The Saturday schedule was set: pause Strata, load M2.7 distributed across the link, run my fixed bench kit (a @@markdown:Ti*k*Z@@ diagram task, an exam generation task, a lesson task, and a pure-maths task), then hand the machine back to Strata.
 
 **** Who ran the bench
 
@@ -214,7 +214,7 @@ Lesson two, which really should have been step zero: /do the RAM arithmetic befo
 
 **** Round three: the physics
 
-One last swing at it: a three-way split. The 5090, ~msi~ across the wire, and hyperion's own 60-odd GB of RAM exposed as a third device through a loopback RPC server. On paper that is 160 GB of addressable memory for 108 GB of weights --- room enough, finally. In practice, the split is sized statically at load time, the GPU still needs ~10 GB for working context and activations, and I had pinned ~n_gpu_layers~ at 99 --- every layer on the card --- which told the memory-fit routine to stand aside rather than help. The allocator then asked ~cudaMalloc~ for 40 GB on a 32 GB card, and seven minutes and forty-five seconds after the load started, the server died with an out-of-memory error. The RPC server's log for that attempt is a row of identical lines --- /Accepted client connection / recv returned 0 (peer closed?) / Client connection closed/ --- the client dying again and again, politely.
+One last swing at it: a three-way split. The 5090, ~msi~ across the wire, and hyperion's own 60-odd GB of RAM exposed as a third device through a loopback RPC server. On paper that is 160 GB of addressable memory for 108 GB of weights --- room enough, finally. In practice, the split is sized statically at load time, the GPU still needs 10 GB for working context and activations, and I had pinned ~n_gpu_layers~ at 99 --- every layer on the card --- which told the memory-fit routine to stand aside rather than help. The allocator then asked ~cudaMalloc~ for 40 GB on a 32 GB card, and seven hours and forty-five minutes after the server had started, it died with an out-of-memory error. The RPC server's log for that attempt is a row of identical lines --- /Accepted client connection / recv returned 0 (peer closed?) / Client connection closed/ --- the client dying again and again, politely.
 
 Here is the honest truth I could have learned cheaper by thinking first: even if the split had loaded, slicing one model across a network means /every token waits for the slowest link/. 2.5 GbE sounds fast until you realise MoE routing turns the model weights into a stream, not a static pile. It would have been slow anyway. Distributed inference is a bandwidth problem wearing a compute costume.
 
@@ -236,7 +236,7 @@ While the big gamble was dying, I had staged a small vision model (Qwen3-VL-8B) 
 
 **** What the bench kit said instead
 
-M2.7 never generated a single token, so it stayed off the scoreboard. The bench kit ran against everything else that /could/ --- the resident Strata, Claude via API, and a parade of other local candidates. A few honest numbers:
+M2.7 never completed a bench run, so it stayed off the scoreboard. The bench kit ran against everything else that /could/ --- the resident Strata, Claude via API, and a parade of other local candidates. A few honest numbers:
 
 | Task        | Strata (local) | Claude (API) | Best other local |
 |-------------+----------------+--------------+------------------|
@@ -249,13 +249,13 @@ The split is plain enough. The local resident wins the short tasks and chokes on
 
 **** What the gamble bought
 
-One Saturday, 108 GB of downloads, and zero dollars. What I actually got back was the fleet's real shape, measured instead of guessed at. The frontier-class long tail stays in the cloud; the overnight batch dream stays un-proven; the 8 GB card is now officially a vision worker; and the rule for any future big-model ambition is three numbers on a napkin --- weights, RAM, link speed --- before a single download starts.
+One Saturday, 108 GB of downloads, and zero dollars. What I actually got back was the fleet's real shape, measured instead of guessed at. The frontier-class long tail stays in the cloud; the overnight batch dream stays unproven; the 8 GB card is now officially a vision worker; and the rule for any future big-model ambition is three numbers on a napkin --- weights, RAM, link speed --- before a single download starts.
 
-And the arrangement itself got its proof of work. The assistant ran the whole bench --- the download script, the installs, the servers, the logs, the timing table, the parts-log verdict in the bench notes ("Evaluated & Retired") --- while my contribution was the plan, the napkin arithmetic, the nvidia-smi glance that caught the silent fallback, and the stop calls. A lab partner that good doesn't make the experiment honest; it makes the failure legible, down to the megabyte, the moment it happens. That's the deal, and Saturday proved both halves of it.
+And the arrangement itself got its proof of work. The assistant ran the whole bench --- the download script, the installs, the servers, the logs, the timing table, the "Evaluated & Retired" verdict in the bench notes --- while my contribution was the plan, the napkin arithmetic, the nvidia-smi glance that caught the silent fallback, and the stop calls. A lab partner that good doesn't make the experiment honest; it makes the failure legible, down to the megabyte, the moment it happens. That's the deal, and Saturday proved both halves of it.
 
 The Eternity, it turns out, has a bandwidth limit.
 
-/End of series. The fleet goes back to work./
+/Next: Part 5 --- Tuning an 8 GB Card. The little GPU's second act./
 
 *** DONE My AI Teaching Setup, Part 0: A Life in Plain Text :AI:LaTeX:Teaching:Emacs:
 :PROPERTIES:

@@ -95,7 +95,7 @@
 :EXPORT_DESCRIPTION:
 :END:
 
-There is a particular kind of trouble that starts with a reasonable question. I asked my AI assistant why the graphics card in one of my desktops was only 69% full, when I had deliberately squeezed a 19.8 GB model onto an 8 GB card and expected it to be tight. The answer came back fast and tidy: that is the ceiling, the expert layers live in system RAM, nothing more can fit. It sounded right. It was wrong, and it took me pushing back twice before the real answer showed up. That is a better story about working with these models than most of the triumphs on this blog.
+There is a particular kind of trouble that starts with a reasonable question. I asked my AI assistant why the graphics card in one of my desktops was only 69% full, when I had deliberately squeezed a 19.8 GB model onto an 8 GB card and expected it to be tight. The answer came back fast and tidy: that is the ceiling, the expert layers live in system RAM, nothing more can fit. It was wrong, and it took me pushing back twice before the real answer showed up. The exchange, and what my half of it contributed, is the subject of this post: how to get a good answer out of an assistant, and what I had to bring to make it happen.
 
 **** The machine and the model
 
@@ -117,7 +117,7 @@ Lesson one, learned the expensive way: get the observer off the machine you are 
 
 With the baseline honest, I asked the assistant to try putting some experts on the GPU instead of all in RAM, and watched the VRAM number to see what happened. It did not move at all. I tried a different value of the same setting. Still nothing. So I asked the question that started this: why is only 69% of the card in use?
 
-The confident answer, the one I quoted at the top, arrived without the assistant ever checking the model file. What finally worked was reading the file's own header: the model has 40 layers. The setting I had been tuning takes a layer count, and any value above 40 means exactly the same thing. My careful sweep of settings had been comparing identical configurations. Nothing had actually been tried, and the ceiling was a misread flag.
+The confident answer, the one I quoted at the top, was the assistant answering from experience with models of this shape rather than from my particular file. Fair enough: nothing in my question told it to check the file. The fix was to ask something better. Pointed at the model's own header, the same assistant produced the ground truth in one pass: the model has 40 layers. The setting I had been tuning takes a layer count, and any value above 40 means exactly the same thing. My careful sweep of settings had been comparing identical configurations. Nothing had actually been tried, and the ceiling was a misread flag.
 
 Once the real numbers were on the table the arithmetic was easy. Each layer's experts weigh about 428 MB at this quantisation, and the card had about 2.5 GB free. Five layers fit.
 
@@ -142,9 +142,9 @@ Reading a prompt is batched matrix math, hundreds of tokens per kernel launch, a
 | Believing a confident first answer | The above, twice | Ask again, with the numbers |
 | Trusting the utilisation gauge | Worry, nothing | Watch tokens per second |
 
-The last row of that table is the one about the assistant, and I want to be honest about it. The wrong answer was fluent, specific, and shaped exactly like a right answer. It used real terms, expert layers, system RAM, and it explained the 69% neatly. Nothing about its tone marked it as a guess. What corrected it was a small thing: noticing that a setting I had changed had not moved the number it was supposed to move, and asking the question a second time. These models will tell you something wrong with the same voice they use to tell you something right, and the cheapest debugging tool in the whole setup is still a human who keeps score.
+The last row of that table is the one about the assistant, and I want to frame it fairly. The wrong answer was fluent, specific, and shaped exactly like a right answer, because the assistant was answering from experience with models of this shape. That is the fast, cheap first draft that makes the whole working relationship worth having. What it needs from me is scorekeeping. I noticed that a setting I had changed had not moved the number it was supposed to move, and I asked again with that observation attached. The assistant took the pushback without friction, went and read the file, handed back the correction, and then did the arithmetic, ran the experiment, and measured the result. Getting a good answer out of these models is mostly a skill with questions: point them at the ground truth, keep track of which numbers moved, and treat the first answer as a draft worth testing. The models are genuinely good at this work. The human gets the most out of them by staying in the loop with receipts.
 
-The card is now genuinely full at 94.8%, the model answers at about 38 tokens a second with a 192,000-token context window, and the next real gain will come from faster memory rather than from any flag. The 2080 SUPER keeps its job for now. It has earned it, and I have stopped believing the first answer I get about it, from anyone.
+The card is now genuinely full at 94.8%, the model answers at about 38 tokens a second with a 192,000-token context window, and the next real gain will come from faster memory rather than from any flag. The 2080 SUPER keeps its job for now. It has earned it. And the method it taught me, ask, check the numbers, ask again, has turned out to be the best deal in the whole setup, assistant included.
 *** TODO My AI Teaching Setup, Part 4: The 108-Gigabyte Gamble :AI:LaTeX:Hardware:Teaching:
 :PROPERTIES:
 :EXPORT_HUGO_WEIGHT: 4001

@@ -2,7 +2,7 @@
 title = "Mia AI-medio por instruado, Parto 3: La Organoj : The Organs"
 featuredImage = "20261116-ai-setup-3-the-organs.png"
 date = 2026-11-16
-lastmod = 2026-11-22T18:14:23+11:00
+lastmod = 2026-11-22T18:56:10+11:00
 tags = ["AI", "LaTeX", "Teaching", "Emacs", "Lingvoj", "Esperanto"]
 categories = ["Blog"]
 draft = false
@@ -10,12 +10,12 @@ weight = 4001
 author = "Matt Maguire"
 +++
 
-[Parto 2]({{< relref "index.eo.md" >}}) temis pri modeloj kaj dresiloj. Sed modelo en dresilo estas ankoraŭ nur saĝa voĉo. Tio, kio igis la agordon _sistemo_, estis la organoj: la memoro, la sensoj kaj la refleksoj alŝraŭbitaj ĉirkaŭ ĝi. Ĉi tio estas la lasta parto, kaj ĝi komenciĝas per plena cirklo.
+[Parto 2](https://www.teachmaths.org/eo/20261116-ai-setup-2-the-fleet/) temis pri modeloj kaj dresiloj. Sed modelo en dresilo estas ankoraŭ nur saĝa voĉo. Tio, kio igis la agordon _sistemo_, estis la organoj: la memoro, la sensoj kaj la refleksoj alŝraŭbitaj ĉirkaŭ ĝi. Kaj ĉi tiu parto komenciĝas per plena cirklo.
 
 
 ## La scibazo, kiu jam aĝis dek jarojn {#la-scibazo-kiu-jam-aĝis-dek-jarojn}
 
-Homoj demandas, kiel mi enmetis mian instruad-scion en la AI. La respondo estas malpinta: mi ne enmetis. Mi pasis jardekon skribante ĝin en pura teksto — Org-mode-notoj, laŭprogramaj notoj, lecionaj rekaptoj, la tuta zettelkasten el [Parto 0]({{< relref "index.eo.md" >}}).
+Homoj demandas, kiel mi enmetis mian instruad-scion en la AI. La respondo estas malpinta: mi ne enmetis. Mi pasis jardekon skribante ĝin en pura teksto — Org-mode-notoj, laŭprogramaj notoj, lecionaj rekaptoj, la tuta zettelkasten el [Parto 0](https://www.teachmaths.org/eo/20261116-ai-setup-0-plain-text/).
 
 Kion la sistemo bezonis, estis maniero _serĉi laŭ signifo_ anstataŭ laŭ ŝlosilvorto, por ke oni povu demandi la modelon „kion mi skribis pri studentoj konfuzantaj deklivon kun suprenhalto super horizontalo?” kaj ricevi reen mian propran pasintan pensadon, cite. Tion faras vektora datumbazo: ĝi indeksas tekston laŭ tio, kion ĝi signifas. Qdrant, funkcianta sur la oficeja maŝino, tenas la scibazon — miajn notojn, la NESA-laŭprogramon, la lernolibrojn, la matematikajn rimedojn — kaj ĉiu agento en la domo demandas ĝin la sammaniere.
 
@@ -129,3 +129,5 @@ La maŝino, kiu devis ŝpari al mi tempon, unue donis al mi manieron labori, kiu
 ---
 
 _Malkaŝo, ĉar vi meritas ĝin: la artikoloj de ĉi tiu serio estis skizitaj per la sistemo, kiun ili priskribas — la agentoj provizis esploron, strukturon kaj multajn el ĉi tiuj frazoj; la eraroj, kiuj travivis, estas miaj, kaj mi kontrolis la asertojn, kiuj gravis. Se tio ĝenas vin, bone: tiu instinkto estas ĝuste la kapablo, kiun ĉi tiu serio provas instrui._
+
+_Sekve:_ [Parto 4 — La 108-GB-a Veteto](https://www.teachmaths.org/eo/20261121-ai-setup-4-the-gamble/). _Unu sabato, 108 GB da elŝutoj, kaj la tago kiam miaj supozoj perdis argumenton kontraŭ la fiziko._

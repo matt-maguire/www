@@ -2,7 +2,7 @@
 title = "Mia AI-medio por instruado, Parto 4: La 108-GB-a Veteto : The 108-Gigabyte Gamble"
 featuredImage = "20261121-ai-setup-4-the-gamble.png"
 date = 2026-11-21
-lastmod = 2026-11-22T18:52:32+11:00
+lastmod = 2026-11-22T18:56:20+11:00
 tags = ["AI", "LaTeX", "Hardware", "Teaching", "Lingvoj", "Esperanto"]
 categories = ["Blog"]
 draft = false
@@ -10,14 +10,14 @@ weight = 4001
 author = "Matt Maguire"
 +++
 
-Partoj [du]({{< relref "index.eo.md" >}}) kaj [tri]({{< relref "index.eo.md" >}}) de ĉi tiu serio temis pri la ordo: la floto, la loĝanta modelo kaj la scibazo, funkciantaj kiel la arkitekturaj diagramoj promesis. Ĉi tio estas la parto, en kiu mi provas ion ambician sabato kaj pasigas la tagon rigardante, kiel miaj propraj supozoj perdas argumenton kontraŭ la fiziko. En konstrua taglibro, la malsukcesintaj eksperimentoj kutime estas la indaj je konservado.
+Partoj [du](https://www.teachmaths.org/eo/20261116-ai-setup-2-the-fleet/) kaj [tri](https://www.teachmaths.org/eo/20261116-ai-setup-3-the-organs/) de ĉi tiu serio temis pri la ordo: la floto, la loĝanta modelo kaj la scibazo, funkciantaj kiel la arkitekturaj diagramoj promesis. Ĉi tio estas la parto, en kiu mi provas ion ambician sabato kaj pasigas la tagon rigardante, kiel miaj propraj supozoj perdas argumenton kontraŭ la fiziko. En konstrua taglibro, la malsukcesintaj eksperimentoj kutime estas la indaj je konservado.
 
 ---
 
 
 ## Kio jam funkcis {#kio-jam-funkcis}
 
-Antaŭ la veteto, indas memori, kion la floto jam faris sen ŝvito. [Parto 3]({{< relref "index.eo.md" >}}) priskribis Strata-n detale --- Qwen-Next-stila MoE, loĝanta sur `hyperion` kaj respondanta je ĉirkaŭ 250 tokenoj/sekunde, kun vidado --- do jen la mallonga versio de _kial_ ĝi kuras tiel rapide.
+Antaŭ la veteto, indas memori, kion la floto jam faris sen ŝvito. [Parto 3](https://www.teachmaths.org/eo/20261116-ai-setup-3-the-organs/) priskribis Strata-n detale --- Qwen-Next-stila MoE, loĝanta sur `hyperion` kaj respondanta je ĉirkaŭ 250 tokenoj/sekunde, kun vidado --- do jen la mallonga versio de _kial_ ĝi kuras tiel rapide.
 
 Strata estas miksaĵo-de-ekspertoj (MoE) modelo: 24,576 malgrandaj specialistaj subretoj, kaj nur kelkaj aktiviĝas por iu ajn tokeno. La truko estis intence tavoligi ĝin sur unu maŝino. La 10,720 plej varmajn ekspertojn, elektitajn el la propra profilo de vojo-elektaj frekvencoj de la modelo, oni alligas al la VRAM de la 5090 je ŝalto. Ĉiuj 24,576 sidas en alligita 47-GB-RAM-areno, unu paŝon malantaŭe. Laŭ la dezajno ne ekzistas malvarma tavolo de SSD --- la raraj malvarmaj vojo-elektoj anstataŭe prenas la PCIe-buson. Ĉiu tavolo intence funkcias ĝisplene, kaj ne videblas retkablo: tokeno neniam forlasas la maŝinon, kiu ĝin posedas.
 
@@ -31,7 +31,7 @@ La malferm-peza modelo MiniMax M2.7 faras ion malfacile ignoreblan: ĝi sidas su
 Por mia agordo, la tento ne estis abstrakta scivolemo. Ĝi estis tri tre specifaj limigoj:
 
 -   **Studentaj datumoj restas hejme.** Nomoj, poentoj kaj klasregistroj neniam forlasas la domon --- tio estas fera regulo, ne prefero. Loka modelo povas prilabori kontrolitajn studentajn laborojn; nuba modelo, laŭ la sama regulo, ne povas.
--   **La marĝena kosto estas la prezo de elektrumo.** Mi jam faris ĉi tiun argumenton por [Strata]({{< relref "index.eo.md" >}}). Havi la saman ekonomion je preskaŭ-flaŭgŝipa kvalito estas la evidenta sekva skrapo.
+-   **La marĝena kosto estas la prezo de elektrumo.** Mi jam faris ĉi tiun argumenton por [Strata](https://www.teachmaths.org/eo/20261116-ai-setup-3-the-organs/). Havi la saman ekonomion je preskaŭ-flaŭgŝipa kvalito estas la evidenta sekva skrapo.
 -   **Neniu vosta risko de maldisponebleco.** Mi vidis nuban kaskadon, kiu halbigis kontinenton dum semajno; cerbo sur mia propra drato ne povas esti forŝaltita de ies alia konfigura ĝisdatigo.
 
 Do la sabato-demando estis sufiĉe mallarĝa por aspekti prudenta: _ĉu Sonnet-klasa modelo, kuranta loke je nulaj marĝenaj kostoj, povas tute preni la noktan generadon de dokumentoj --- ekzamen-kandidatoj, lecionaj skizoj --- el la nubo?_
@@ -39,7 +39,7 @@ Do la sabato-demando estis sufiĉe mallarĝa por aspekti prudenta: _ĉu Sonnet-k
 
 ## La plano {#la-plano}
 
-M2.7 estas 230-miliard-parametra miksaĵo-de-ekspertoj (MoE) modelo; en IQ4_XS-kvantigo ĝiaj pezoj estas dosiero de 108 GB. Neniu unuopa maŝino en la floto tenas tion memstare. Kion mi havis, kiel [Parto 2]({{< relref "index.eo.md" >}}) klarigis, estis du maŝinoj, kiuj kune tenis multe pli ol sufiĉan krudan memoron: `hyperion` (RTX 5090 kun 32 GB da VRAM kaj 64 GB da DDR5, kutime la hejmo de Strata) kaj `msi` (64 GB da DDR4 kaj 8-GB 2080 SUPER), kabitaj kune per dediĉita 2.5 GbE-etareta linio. Tio estas 168 GB da memoro por 108 GB da pezoj --- la kapaco neniam estis la problemo. La kuriozaĵo estas, ke ĝi venis kiel kvar apartaj memorujoj, kaj la RPC-reĝimo de llama.cpp, konstruita por disigi modelon trans maŝinoj, devus elspezi ilin kiel unu laborantan aron. Sur papero, tio aspektis sufiĉe proksima por provi.
+M2.7 estas 230-miliard-parametra miksaĵo-de-ekspertoj (MoE) modelo; en IQ4_XS-kvantigo ĝiaj pezoj estas dosiero de 108 GB. Neniu unuopa maŝino en la floto tenas tion memstare. Kion mi havis, kiel [Parto 2](https://www.teachmaths.org/eo/20261116-ai-setup-2-the-fleet/) klarigis, estis du maŝinoj, kiuj kune tenis multe pli ol sufiĉan krudan memoron: `hyperion` (RTX 5090 kun 32 GB da VRAM kaj 64 GB da DDR5, kutime la hejmo de Strata) kaj `msi` (64 GB da DDR4 kaj 8-GB 2080 SUPER), kabitaj kune per dediĉita 2.5 GbE-etareta linio. Tio estas 168 GB da memoro por 108 GB da pezoj --- la kapaco neniam estis la problemo. La kuriozaĵo estas, ke ĝi venis kiel kvar apartaj memorujoj, kaj la RPC-reĝimo de llama.cpp, konstruita por disigi modelon trans maŝinoj, devus elspezi ilin kiel unu laborantan aron. Sur papero, tio aspektis sufiĉe proksima por provi.
 
 La sabato-horaro estis fiksita: paŭzigi Strata-n, ŝargi M2.7 disigitan trans la linio, ruli mian fiksan testaron (tasko pri Ti*k*Z-diagramo, tasko pri ekzamen-generado, tasko pri leciono, kaj tasko pri pura matematiko), kaj tiam redoni la maŝinon al Strata.
 
@@ -78,7 +78,7 @@ Jen la honesta vero, kiun mi povus lerni pli malmultekoste per pensado unue: eĉ
 
 ## Kial simple ne disigi la ekspertojn? {#kial-simple-ne-disigi-la-ekspertojn}
 
-La evidenta demando --- [Parto 3]({{< relref "index.eo.md" >}}) jam montris la trukon. Strata estas MoE, kiu ankaŭ ne taŭgas en la VRAM, kaj ĝi funkcias metante la plej varmajn ekspertojn sur la rapidan memoron kaj la malvarmajn unu paŝon malantaŭen. Kial ne fari la saman aferon trans du maŝinoj: varmaj ekspertoj sur la 5090, malvarmaj ekspertoj sur `msi`?
+La evidenta demando --- [Parto 3](https://www.teachmaths.org/eo/20261116-ai-setup-3-the-organs/) jam montris la trukon. Strata estas MoE, kiu ankaŭ ne taŭgas en la VRAM, kaj ĝi funkcias metante la plej varmajn ekspertojn sur la rapidan memoron kaj la malvarmajn unu paŝon malantaŭen. Kial ne fari la saman aferon trans du maŝinoj: varmaj ekspertoj sur la 5090, malvarmaj ekspertoj sur `msi`?
 
 Ĉar la RPC-reĝimo de llama.cpp ne havas tiun ŝaltilon, kaj la diferenco ne estas kosmetika. `tensor-split` asignas tutajn tensorojn al aparatoj je ŝarg-tempo kaj traktas foran memoron kiel sinkronan plenum-unuon: la komputa grafeo atendas la partneron unufoje po transformila bloko, trans la drato, sendepende de tio, al kiuj ekspertoj tokeno hazarde vojiĝas. La tavoligo de Strata funkcias, ĉar la disloko venas el la propraj vojo-elektaj statistikoj de la modelo kaj ĉiu saltono estas surboarda --- PCIe, nanosekundoj, tabelo de vojo-elekto, kiun la loka CPU mem konsultas. La RPC-disigo ne havas vojo-elektajn statistikojn, nek varmajn/malvarmajn arenojn, nek alligadon laŭ frekvenca profilo. Ĝi estas statika amaso da tensoroj kun etareta kablo tra la mezo de la komputa grafeo.
 

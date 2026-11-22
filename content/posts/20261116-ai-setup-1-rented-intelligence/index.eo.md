@@ -2,7 +2,7 @@
 title = "Mia AI-medio por instruado, Parto 1: Luita Inteligenteco : Rented Intelligence"
 featuredImage = "20261116-ai-setup-1-rented-intelligence.png"
 date = 2026-11-16
-lastmod = 2026-11-16T18:02:00+11:00
+lastmod = 2026-11-22T18:57:23+11:00
 tags = ["AI", "LaTeX", "Teaching", "Lingvoj", "Esperanto"]
 categories = ["Blog"]
 draft = false
@@ -10,7 +10,7 @@ weight = 4001
 author = "Matt Maguire"
 +++
 
-[Parto 0]({{< relref "index.eo.md" >}}) temas pri la fundamento de pura teksto. Tiu ĉi estas la parto, kiam alvenis la abonoj — kaj la parto, en kiu mi devus konfesi, ke la tuta konstruaĵo ekis, kiel plej multaj aferoj indaj je farado, per amuzo.
+[Parto 0](https://www.teachmaths.org/eo/20261116-ai-setup-0-plain-text/) temas pri la fundamento de pura teksto. Tiu ĉi estas la parto, kiam alvenis la abonoj — kaj la parto, en kiu mi devus konfesi, ke la tuta konstruaĵo ekis, kiel plej multaj aferoj indaj je farado, per amuzo.
 
 
 ## Januaro: luita inteligenteco {#januaro-luita-inteligenteco}
@@ -21,7 +21,7 @@ Dum kelkaj monatoj tio estis simple la aranĝo: bonegaj iloj, luitaj ĉiumonate.
 
 La juko komenciĝis kviete: la prezaj paĝoj ŝoviĝis, la kvotaj politikoj ŝanĝis formon, kaj modeloj, al kiuj mi alkutimiĝis, estis unu alinomon aŭ niveloŝanĝon for de malapero. Mia laborfluo iĝis dependa de la komercaj decidoj de iu alia. La abono ne plu estis ilo; ĝi estis luiganto.
 
-Mi dokumentis tiun kursoŝanĝon dum ĝi okazis, en du artikoloj, kiujn mi skribis en aŭgusto ne sciante, ke mi skribas serion: [AI-agentoj transprenas lecion-preparon]({{< relref "index.eo.md" >}}) kaj [AI-agentoj kaj lokaj LLM-oj]({{< relref "index.eo.md" >}}). Se vi volas la teknikan detalon de tiu unua movo al lokaj modeloj — elekto inter densa modelo kaj Mixture-of-Experts, la kompromiso inter VRAM kaj kunteksto-fenestro, la servado de la modelo tra la reto per reversa prokuroro — ili kovras ĝin, kaj mi ne ripetos min ĉi tie. Kio ili ne kovras, estas kie la hardvara obsedo fakte komenciĝis, kaj tio estas la hontiga parto.
+Mi dokumentis tiun kursoŝanĝon dum ĝi okazis, en du artikoloj, kiujn mi skribis en aŭgusto ne sciante, ke mi skribas serion: [AI-agentoj transprenas lecion-preparon](https://www.teachmaths.org/eo/20260822-claude-code/) kaj [AI-agentoj kaj lokaj LLM-oj](https://www.teachmaths.org/eo/20260823-gemma-goose/). Se vi volas la teknikan detalon de tiu unua movo al lokaj modeloj — elekto inter densa modelo kaj Mixture-of-Experts, la kompromiso inter VRAM kaj kunteksto-fenestro, la servado de la modelo tra la reto per reversa prokuroro — ili kovras ĝin, kaj mi ne ripetos min ĉi tie. Kio ili ne kovras, estas kie la hardvara obsedo fakte komenciĝis, kaj tio estas la hontiga parto.
 
 
 ## La sankta unua devo de la 2080 {#la-sankta-unua-devo-de-la-2080}

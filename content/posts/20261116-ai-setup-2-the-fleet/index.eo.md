@@ -2,7 +2,7 @@
 title = "Mia AI-medio por instruado, Parto 2: La Floto : The Fleet"
 featuredImage = "20261116-ai-setup-2-the-fleet.png"
 date = 2026-11-16
-lastmod = 2026-11-16T18:02:06+11:00
+lastmod = 2026-11-22T18:57:34+11:00
 tags = ["AI", "LaTeX", "Teaching", "Hardware", "Lingvoj", "Esperanto"]
 categories = ["Blog"]
 draft = false
@@ -10,7 +10,7 @@ weight = 4001
 author = "Matt Maguire"
 +++
 
-[Parto 1]({{< relref "index.eo.md" >}}) finiĝis ĉe la 8 GB-plafono kaj ĉe decido. Ĉi tio estas la hardvara parto, kaj la parto, en kiu la sistemo ĉesis esti komputilo kaj komencis esti personaro.
+[Parto 1](https://www.teachmaths.org/eo/20261116-ai-setup-1-rented-intelligence/) finiĝis ĉe la 8 GB-plafono kaj ĉe decido. Ĉi tio estas la hardvara parto, kaj la parto, en kiu la sistemo ĉesis esti komputilo kaj komencis esti personaro.
 
 
 ## La ludkomputilo, kiu neniam ludis {#la-ludkomputilo-kiu-neniam-ludis}
@@ -50,7 +50,7 @@ La dresilo estas ĉio inter "babili kun modelo" kaj "eltiri dokumenton": ĝi leg
 
 ## Riparante la okulojn de la agento {#riparante-la-okulojn-de-la-agento}
 
-La [aŭgusta artikolo]({{< relref "index.eo.md" >}}) finiĝis per la _pdftopbm_-kurzovojo: ĉar Gemma povis vidi bildojn, Goose lernis konverti ĉiun PDF-paĝon en bildon kaj legi la paĝon tiel, kiel mi legus. Ĝi funkciis. Kion mi volis sekvance, estis la samaj okuloj direktitaj enen. Mi volis, ke la agento kontrolu la grafikojn, kiujn ĝi produktas — parabolo, kies etikedoj kolizias kun la kurbo, legendo sidanta sur ombrita regiono, aksoj tute sen etikedoj. La speco de afero, kiun homo kaptas per unu rigardo al la kunmetita PDF.
+La [aŭgusta artikolo](https://www.teachmaths.org/eo/20260823-gemma-goose/) finiĝis per la _pdftopbm_-kurzovojo: ĉar Gemma povis vidi bildojn, Goose lernis konverti ĉiun PDF-paĝon en bildon kaj legi la paĝon tiel, kiel mi legus. Ĝi funkciis. Kion mi volis sekvance, estis la samaj okuloj direktitaj enen. Mi volis, ke la agento kontrolu la grafikojn, kiujn ĝi produktas — parabolo, kies etikedoj kolizias kun la kurbo, legendo sidanta sur ombrita regiono, aksoj tute sen etikedoj. La speco de afero, kiun homo kaptas per unu rigardo al la kunmetita PDF.
 
 Atingi tion signifis provi aliajn dresilojn, ĉar modelo kaj dresilo havas kemion, kaj iuj paroj simple ne funkcias. Qwen2-coder-modelo, kiu skribis tute bonan kodon, rifuzis ĝuste voki ilojn ene de Goose. La cerbo en ordo; la kuplo difektita. Tio estas la sama leciono kiel ĉe la modelo paĝigita al disko: duono el "la modelo malsukcesis" fakte estas "la duktilaro malsukcesis".
 
@@ -63,9 +63,9 @@ Mi neniam skribis Rust. Do mi petis la AI-n helpi min fliki Goose mem: legi kodb
 
 Ĝis aŭtuno la dresila sceno eksplodis. Al Goose, la agento kiun mi uzis en aŭgusto, aliĝis — kaj plejparte superis ĝin — tuta generacio: OpenCode, la propra agento de Qwen, la Antigravity de Google. Ĉiuj el ili brilaj kodadaj asistantoj. Mi alligis ilin ĉiujn al tiu maŝino, kiu taŭgas por ĉiu tasko, kaj mi retenis la plej bonan el ili.
 
-Sed tio, ĉe kio mi fakte alteriĝis, estas alispeca. Hermes ne estas kodada asistanto, kiu atendas, ke mi malfermu terminalon. Ĝi ĉiam estas ŝaltita: ĝi tenas memoron inter sesioj, ĝi loĝas en WhatsApp-fadeno, por ke mi povu atingi la domon de ie ajn, kaj ĝi rulas planitajn taskojn — memorigilojn, noktajn kontroladojn de la sekurkopioj, seriojn da modelaj benchmarkoj, kiuj ruliĝas dum mi dormas. Ĝi gardas la floton: gardhundo-agentoj, kiuj ĉiumatene kontrolas la disk-spacon kaj la sekurkopiojn kaj levas la alarmon kiam io odoras malĝuste. Kaj ĝi havas kolegojn: kiam la agento de unu maŝino finas eksperimenton, ĝi skribas transdonan noton, kaj alia agento ektenas la laboron la sekvan matenon. Ili ĉiuj ankaŭ legas de la sama breto: vektora datumbazo — Qdrant — tenanta jardekon da miaj purtekstaj notoj, serĉebla laŭ signifo anstataŭ laŭ ŝlosilvorto, demandata la sammaniere de ĉiu agento en la domo. Sed tiu breto estas la temo de [Parto 3]({{< relref "index.eo.md" >}}).
+Sed tio, ĉe kio mi fakte alteriĝis, estas alispeca. Hermes ne estas kodada asistanto, kiu atendas, ke mi malfermu terminalon. Ĝi ĉiam estas ŝaltita: ĝi tenas memoron inter sesioj, ĝi loĝas en WhatsApp-fadeno, por ke mi povu atingi la domon de ie ajn, kaj ĝi rulas planitajn taskojn — memorigilojn, noktajn kontroladojn de la sekurkopioj, seriojn da modelaj benchmarkoj, kiuj ruliĝas dum mi dormas. Ĝi gardas la floton: gardhundo-agentoj, kiuj ĉiumatene kontrolas la disk-spacon kaj la sekurkopiojn kaj levas la alarmon kiam io odoras malĝuste. Kaj ĝi havas kolegojn: kiam la agento de unu maŝino finas eksperimenton, ĝi skribas transdonan noton, kaj alia agento ektenas la laboron la sekvan matenon. Ili ĉiuj ankaŭ legas de la sama breto: vektora datumbazo — Qdrant — tenanta jardekon da miaj purtekstaj notoj, serĉebla laŭ signifo anstataŭ laŭ ŝlosilvorto, demandata la sammaniere de ĉiu agento en la domo. Sed tiu breto estas la temo de [Parto 3](https://www.teachmaths.org/eo/20261116-ai-setup-3-the-organs/).
 
-La amplekso silente larĝiĝis. AI ĉesis esti io, kion mi uzas por produkti dokumentojn, kaj iĝis io, kio helpas mastrumi la etan hejmon de maŝinoj, en kion la instruista agordo kreskis. Jen kie la promeso el [Parto 1]({{< relref "index.eo.md" >}}) estas plenumata: la asistanto kun personeco deliberate alvenis, kaj ĝi mastrumas ĉi tiun domon.
+La amplekso silente larĝiĝis. AI ĉesis esti io, kion mi uzas por produkti dokumentojn, kaj iĝis io, kio helpas mastrumi la etan hejmon de maŝinoj, en kion la instruista agordo kreskis. Jen kie la promeso el [Parto 1](https://www.teachmaths.org/eo/20261116-ai-setup-1-rented-intelligence/) estas plenumata: la asistanto kun personeco deliberate alvenis, kaj ĝi mastrumas ĉi tiun domon.
 
 Kaj la rilato ŝanĝiĝis ie meze de ĉio. Mi ĉesis demandi AI-n kaj komencis disputi pri dezajnoj kun ĝi — petante la lokan modelon helpi taksi, kiun modelon instali, reviziante planojn skribitajn de unu agento por ke alia agento plenumu ilin. La sistemo nun enhavas sian propran personaron. La homa laboro iĝis direkto, gusto, kaj la rifuzo fidi je io ajn nekontrolita.
 

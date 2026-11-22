@@ -271,13 +271,13 @@ The Eternity, it turns out, has a bandwidth limit.
 :END:
 
 
-Partoj [[#ai-setup-2-eo][du]] kaj [[#ai-setup-3-eo][tri]] de ĉi tiu serio temis pri la ordo: la floto, la loĝanta modelo kaj la scibazo, funkciantaj kiel la arkitekturaj diagramoj promesis. Ĉi tio estas la parto, en kiu mi provas ion ambician sabato kaj pasigas la tagon rigardante, kiel miaj propraj supozoj perdas argumenton kontraŭ la fiziko. En konstrua taglibro, la malsukcesintaj eksperimentoj kutime estas la indaj je konservado.
+Partoj [[https://www.teachmaths.org/eo/20261116-ai-setup-2-the-fleet/][du]] kaj [[https://www.teachmaths.org/eo/20261116-ai-setup-3-the-organs/][tri]] de ĉi tiu serio temis pri la ordo: la floto, la loĝanta modelo kaj la scibazo, funkciantaj kiel la arkitekturaj diagramoj promesis. Ĉi tio estas la parto, en kiu mi provas ion ambician sabato kaj pasigas la tagon rigardante, kiel miaj propraj supozoj perdas argumenton kontraŭ la fiziko. En konstrua taglibro, la malsukcesintaj eksperimentoj kutime estas la indaj je konservado.
 
 -----
 
 **** Kio jam funkcis
 
-Antaŭ la veteto, indas memori, kion la floto jam faris sen ŝvito. [[#ai-setup-3-eo][Parto 3]] priskribis Strata-n detale --- Qwen-Next-stila MoE, loĝanta sur ~hyperion~ kaj respondanta je ĉirkaŭ 250 tokenoj/sekunde, kun vidado --- do jen la mallonga versio de /kial/ ĝi kuras tiel rapide.
+Antaŭ la veteto, indas memori, kion la floto jam faris sen ŝvito. [[https://www.teachmaths.org/eo/20261116-ai-setup-3-the-organs/][Parto 3]] priskribis Strata-n detale --- Qwen-Next-stila MoE, loĝanta sur ~hyperion~ kaj respondanta je ĉirkaŭ 250 tokenoj/sekunde, kun vidado --- do jen la mallonga versio de /kial/ ĝi kuras tiel rapide.
 
 Strata estas miksaĵo-de-ekspertoj (MoE) modelo: 24,576 malgrandaj specialistaj subretoj, kaj nur kelkaj aktiviĝas por iu ajn tokeno. La truko estis intence tavoligi ĝin sur unu maŝino. La 10,720 plej varmajn ekspertojn, elektitajn el la propra profilo de vojo-elektaj frekvencoj de la modelo, oni alligas al la VRAM de la 5090 je ŝalto. Ĉiuj 24,576 sidas en alligita 47-GB-RAM-areno, unu paŝon malantaŭe. Laŭ la dezajno ne ekzistas malvarma tavolo de SSD --- la raraj malvarmaj vojo-elektoj anstataŭe prenas la PCIe-buson. Ĉiu tavolo intence funkcias ĝisplene, kaj ne videblas retkablo: tokeno neniam forlasas la maŝinon, kiu ĝin posedas.
 
@@ -290,14 +290,14 @@ La malferm-peza modelo MiniMax M2.7 faras ion malfacile ignoreblan: ĝi sidas su
 Por mia agordo, la tento ne estis abstrakta scivolemo. Ĝi estis tri tre specifaj limigoj:
 
 - *Studentaj datumoj restas hejme.* Nomoj, poentoj kaj klasregistroj neniam forlasas la domon --- tio estas fera regulo, ne prefero. Loka modelo povas prilabori kontrolitajn studentajn laborojn; nuba modelo, laŭ la sama regulo, ne povas.
-- *La marĝena kosto estas la prezo de elektrumo.* Mi jam faris ĉi tiun argumenton por [[#ai-setup-3-eo][Strata]]. Havi la saman ekonomion je preskaŭ-flaŭgŝipa kvalito estas la evidenta sekva skrapo.
+- *La marĝena kosto estas la prezo de elektrumo.* Mi jam faris ĉi tiun argumenton por [[https://www.teachmaths.org/eo/20261116-ai-setup-3-the-organs/][Strata]]. Havi la saman ekonomion je preskaŭ-flaŭgŝipa kvalito estas la evidenta sekva skrapo.
 - *Neniu vosta risko de maldisponebleco.* Mi vidis nuban kaskadon, kiu halbigis kontinenton dum semajno; cerbo sur mia propra drato ne povas esti forŝaltita de ies alia konfigura ĝisdatigo.
 
 Do la sabato-demando estis sufiĉe mallarĝa por aspekti prudenta: /ĉu Sonnet-klasa modelo, kuranta loke je nulaj marĝenaj kostoj, povas tute preni la noktan generadon de dokumentoj --- ekzamen-kandidatoj, lecionaj skizoj --- el la nubo?/
 
 **** La plano
 
-M2.7 estas 230-miliard-parametra miksaĵo-de-ekspertoj (MoE) modelo; en IQ4_XS-kvantigo ĝiaj pezoj estas dosiero de 108 GB. Neniu unuopa maŝino en la floto tenas tion memstare. Kion mi havis, kiel [[#ai-setup-2-eo][Parto 2]] klarigis, estis du maŝinoj, kiuj kune tenis multe pli ol sufiĉan krudan memoron: ~hyperion~ (RTX 5090 kun 32 GB da VRAM kaj 64 GB da DDR5, kutime la hejmo de Strata) kaj ~msi~ (64 GB da DDR4 kaj 8-GB 2080 SUPER), kabitaj kune per dediĉita 2.5 GbE-etareta linio. Tio estas 168 GB da memoro por 108 GB da pezoj --- la kapaco neniam estis la problemo. La kuriozaĵo estas, ke ĝi venis kiel kvar apartaj memorujoj, kaj la RPC-reĝimo de llama.cpp, konstruita por disigi modelon trans maŝinoj, devus elspezi ilin kiel unu laborantan aron. Sur papero, tio aspektis sufiĉe proksima por provi.
+M2.7 estas 230-miliard-parametra miksaĵo-de-ekspertoj (MoE) modelo; en IQ4_XS-kvantigo ĝiaj pezoj estas dosiero de 108 GB. Neniu unuopa maŝino en la floto tenas tion memstare. Kion mi havis, kiel [[https://www.teachmaths.org/eo/20261116-ai-setup-2-the-fleet/][Parto 2]] klarigis, estis du maŝinoj, kiuj kune tenis multe pli ol sufiĉan krudan memoron: ~hyperion~ (RTX 5090 kun 32 GB da VRAM kaj 64 GB da DDR5, kutime la hejmo de Strata) kaj ~msi~ (64 GB da DDR4 kaj 8-GB 2080 SUPER), kabitaj kune per dediĉita 2.5 GbE-etareta linio. Tio estas 168 GB da memoro por 108 GB da pezoj --- la kapaco neniam estis la problemo. La kuriozaĵo estas, ke ĝi venis kiel kvar apartaj memorujoj, kaj la RPC-reĝimo de llama.cpp, konstruita por disigi modelon trans maŝinoj, devus elspezi ilin kiel unu laborantan aron. Sur papero, tio aspektis sufiĉe proksima por provi.
 
 La sabato-horaro estis fiksita: paŭzigi Strata-n, ŝargi M2.7 disigitan trans la linio, ruli mian fiksan testaron (tasko pri @@markdown:Ti*k*Z@@-diagramo, tasko pri ekzamen-generado, tasko pri leciono, kaj tasko pri pura matematiko), kaj tiam redoni la maŝinon al Strata.
 
@@ -331,7 +331,7 @@ Jen la honesta vero, kiun mi povus lerni pli malmultekoste per pensado unue: eĉ
 
 **** Kial simple ne disigi la ekspertojn?
 
-La evidenta demando --- [[#ai-setup-3-eo][Parto 3]] jam montris la trukon. Strata estas MoE, kiu ankaŭ ne taŭgas en la VRAM, kaj ĝi funkcias metante la plej varmajn ekspertojn sur la rapidan memoron kaj la malvarmajn unu paŝon malantaŭen. Kial ne fari la saman aferon trans du maŝinoj: varmaj ekspertoj sur la 5090, malvarmaj ekspertoj sur ~msi~?
+La evidenta demando --- [[https://www.teachmaths.org/eo/20261116-ai-setup-3-the-organs/][Parto 3]] jam montris la trukon. Strata estas MoE, kiu ankaŭ ne taŭgas en la VRAM, kaj ĝi funkcias metante la plej varmajn ekspertojn sur la rapidan memoron kaj la malvarmajn unu paŝon malantaŭen. Kial ne fari la saman aferon trans du maŝinoj: varmaj ekspertoj sur la 5090, malvarmaj ekspertoj sur ~msi~?
 
 Ĉar la RPC-reĝimo de llama.cpp ne havas tiun ŝaltilon, kaj la diferenco ne estas kosmetika. ~tensor-split~ asignas tutajn tensorojn al aparatoj je ŝarg-tempo kaj traktas foran memoron kiel sinkronan plenum-unuon: la komputa grafeo atendas la partneron unufoje po transformila bloko, trans la drato, sendepende de tio, al kiuj ekspertoj tokeno hazarde vojiĝas. La tavoligo de Strata funkcias, ĉar la disloko venas el la propraj vojo-elektaj statistikoj de la modelo kaj ĉiu saltono estas surboarda --- PCIe, nanosekundoj, tabelo de vojo-elekto, kiun la loka CPU mem konsultas. La RPC-disigo ne havas vojo-elektajn statistikojn, nek varmajn/malvarmajn arenojn, nek alligadon laŭ frekvenca profilo. Ĝi estas statika amaso da tensoroj kun etareta kablo tra la mezo de la komputa grafeo.
 
@@ -512,7 +512,7 @@ By mid-year the decision had formed: if I was to go further into this, I would n
 :EXPORT_DESCRIPTION: 20261116-ai-setup-1-rented-intelligence.png
 :END:
 
-[[#ai-setup-0-eo][Parto 0]] temas pri la fundamento de pura teksto. Tiu ĉi estas la parto, kiam alvenis la abonoj — kaj la parto, en kiu mi devus konfesi, ke la tuta konstruaĵo ekis, kiel plej multaj aferoj indaj je farado, per amuzo.
+[[https://www.teachmaths.org/eo/20261116-ai-setup-0-plain-text/][Parto 0]] temas pri la fundamento de pura teksto. Tiu ĉi estas la parto, kiam alvenis la abonoj — kaj la parto, en kiu mi devus konfesi, ke la tuta konstruaĵo ekis, kiel plej multaj aferoj indaj je farado, per amuzo.
 
 **** Januaro: luita inteligenteco
 
@@ -522,7 +522,7 @@ Dum kelkaj monatoj tio estis simple la aranĝo: bonegaj iloj, luitaj ĉiumonate.
 
 La juko komenciĝis kviete: la prezaj paĝoj ŝoviĝis, la kvotaj politikoj ŝanĝis formon, kaj modeloj, al kiuj mi alkutimiĝis, estis unu alinomon aŭ niveloŝanĝon for de malapero. Mia laborfluo iĝis dependa de la komercaj decidoj de iu alia. La abono ne plu estis ilo; ĝi estis luiganto.
 
-Mi dokumentis tiun kursoŝanĝon dum ĝi okazis, en du artikoloj, kiujn mi skribis en aŭgusto ne sciante, ke mi skribas serion: [[#claude-code-eo][AI-agentoj transprenas lecion-preparon]] kaj [[#gemma-goose-eo][AI-agentoj kaj lokaj LLM-oj]]. Se vi volas la teknikan detalon de tiu unua movo al lokaj modeloj — elekto inter densa modelo kaj Mixture-of-Experts, la kompromiso inter VRAM kaj kunteksto-fenestro, la servado de la modelo tra la reto per reversa prokuroro — ili kovras ĝin, kaj mi ne ripetos min ĉi tie. Kio ili ne kovras, estas kie la hardvara obsedo fakte komenciĝis, kaj tio estas la hontiga parto.
+Mi dokumentis tiun kursoŝanĝon dum ĝi okazis, en du artikoloj, kiujn mi skribis en aŭgusto ne sciante, ke mi skribas serion: [[https://www.teachmaths.org/eo/20260822-claude-code/][AI-agentoj transprenas lecion-preparon]] kaj [[https://www.teachmaths.org/eo/20260823-gemma-goose/][AI-agentoj kaj lokaj LLM-oj]]. Se vi volas la teknikan detalon de tiu unua movo al lokaj modeloj — elekto inter densa modelo kaj Mixture-of-Experts, la kompromiso inter VRAM kaj kunteksto-fenestro, la servado de la modelo tra la reto per reversa prokuroro — ili kovras ĝin, kaj mi ne ripetos min ĉi tie. Kio ili ne kovras, estas kie la hardvara obsedo fakte komenciĝis, kaj tio estas la hontiga parto.
 
 **** La sankta unua devo de la 2080
 
@@ -637,7 +637,7 @@ For the story I have been telling, this is the beat that matters: the same assis
 :EXPORT_DESCRIPTION: 20261116-ai-setup-2-the-fleet.png
 :END:
 
-[[#ai-setup-1-eo][Parto 1]] finiĝis ĉe la 8 GB-plafono kaj ĉe decido. Ĉi tio estas la hardvara parto, kaj la parto, en kiu la sistemo ĉesis esti komputilo kaj komencis esti personaro.
+[[https://www.teachmaths.org/eo/20261116-ai-setup-1-rented-intelligence/][Parto 1]] finiĝis ĉe la 8 GB-plafono kaj ĉe decido. Ĉi tio estas la hardvara parto, kaj la parto, en kiu la sistemo ĉesis esti komputilo kaj komencis esti personaro.
 
 **** La ludkomputilo, kiu neniam ludis
 
@@ -673,7 +673,7 @@ La dresilo estas ĉio inter "babili kun modelo" kaj "eltiri dokumenton": ĝi leg
 
 **** Riparante la okulojn de la agento
 
-La [[#gemma-goose-eo][aŭgusta artikolo]] finiĝis per la /pdftopbm/-kurzovojo: ĉar Gemma povis vidi bildojn, Goose lernis konverti ĉiun PDF-paĝon en bildon kaj legi la paĝon tiel, kiel mi legus. Ĝi funkciis. Kion mi volis sekvance, estis la samaj okuloj direktitaj enen. Mi volis, ke la agento kontrolu la grafikojn, kiujn ĝi produktas — parabolo, kies etikedoj kolizias kun la kurbo, legendo sidanta sur ombrita regiono, aksoj tute sen etikedoj. La speco de afero, kiun homo kaptas per unu rigardo al la kunmetita PDF.
+La [[https://www.teachmaths.org/eo/20260823-gemma-goose/][aŭgusta artikolo]] finiĝis per la /pdftopbm/-kurzovojo: ĉar Gemma povis vidi bildojn, Goose lernis konverti ĉiun PDF-paĝon en bildon kaj legi la paĝon tiel, kiel mi legus. Ĝi funkciis. Kion mi volis sekvance, estis la samaj okuloj direktitaj enen. Mi volis, ke la agento kontrolu la grafikojn, kiujn ĝi produktas — parabolo, kies etikedoj kolizias kun la kurbo, legendo sidanta sur ombrita regiono, aksoj tute sen etikedoj. La speco de afero, kiun homo kaptas per unu rigardo al la kunmetita PDF.
 
 Atingi tion signifis provi aliajn dresilojn, ĉar modelo kaj dresilo havas kemion, kaj iuj paroj simple ne funkcias. Qwen2-coder-modelo, kiu skribis tute bonan kodon, rifuzis ĝuste voki ilojn ene de Goose. La cerbo en ordo; la kuplo difektita. Tio estas la sama leciono kiel ĉe la modelo paĝigita al disko: duono el "la modelo malsukcesis" fakte estas "la duktilaro malsukcesis".
 
@@ -685,9 +685,9 @@ Mi neniam skribis Rust. Do mi petis la AI-n helpi min fliki Goose mem: legi kodb
 
 Ĝis aŭtuno la dresila sceno eksplodis. Al Goose, la agento kiun mi uzis en aŭgusto, aliĝis — kaj plejparte superis ĝin — tuta generacio: OpenCode, la propra agento de Qwen, la Antigravity de Google. Ĉiuj el ili brilaj kodadaj asistantoj. Mi alligis ilin ĉiujn al tiu maŝino, kiu taŭgas por ĉiu tasko, kaj mi retenis la plej bonan el ili.
 
-Sed tio, ĉe kio mi fakte alteriĝis, estas alispeca. Hermes ne estas kodada asistanto, kiu atendas, ke mi malfermu terminalon. Ĝi ĉiam estas ŝaltita: ĝi tenas memoron inter sesioj, ĝi loĝas en WhatsApp-fadeno, por ke mi povu atingi la domon de ie ajn, kaj ĝi rulas planitajn taskojn — memorigilojn, noktajn kontroladojn de la sekurkopioj, seriojn da modelaj benchmarkoj, kiuj ruliĝas dum mi dormas. Ĝi gardas la floton: gardhundo-agentoj, kiuj ĉiumatene kontrolas la disk-spacon kaj la sekurkopiojn kaj levas la alarmon kiam io odoras malĝuste. Kaj ĝi havas kolegojn: kiam la agento de unu maŝino finas eksperimenton, ĝi skribas transdonan noton, kaj alia agento ektenas la laboron la sekvan matenon. Ili ĉiuj ankaŭ legas de la sama breto: vektora datumbazo — Qdrant — tenanta jardekon da miaj purtekstaj notoj, serĉebla laŭ signifo anstataŭ laŭ ŝlosilvorto, demandata la sammaniere de ĉiu agento en la domo. Sed tiu breto estas la temo de [[#ai-setup-3-eo][Parto 3]].
+Sed tio, ĉe kio mi fakte alteriĝis, estas alispeca. Hermes ne estas kodada asistanto, kiu atendas, ke mi malfermu terminalon. Ĝi ĉiam estas ŝaltita: ĝi tenas memoron inter sesioj, ĝi loĝas en WhatsApp-fadeno, por ke mi povu atingi la domon de ie ajn, kaj ĝi rulas planitajn taskojn — memorigilojn, noktajn kontroladojn de la sekurkopioj, seriojn da modelaj benchmarkoj, kiuj ruliĝas dum mi dormas. Ĝi gardas la floton: gardhundo-agentoj, kiuj ĉiumatene kontrolas la disk-spacon kaj la sekurkopiojn kaj levas la alarmon kiam io odoras malĝuste. Kaj ĝi havas kolegojn: kiam la agento de unu maŝino finas eksperimenton, ĝi skribas transdonan noton, kaj alia agento ektenas la laboron la sekvan matenon. Ili ĉiuj ankaŭ legas de la sama breto: vektora datumbazo — Qdrant — tenanta jardekon da miaj purtekstaj notoj, serĉebla laŭ signifo anstataŭ laŭ ŝlosilvorto, demandata la sammaniere de ĉiu agento en la domo. Sed tiu breto estas la temo de [[https://www.teachmaths.org/eo/20261116-ai-setup-3-the-organs/][Parto 3]].
 
-La amplekso silente larĝiĝis. AI ĉesis esti io, kion mi uzas por produkti dokumentojn, kaj iĝis io, kio helpas mastrumi la etan hejmon de maŝinoj, en kion la instruista agordo kreskis. Jen kie la promeso el [[#ai-setup-1-eo][Parto 1]] estas plenumata: la asistanto kun personeco deliberate alvenis, kaj ĝi mastrumas ĉi tiun domon.
+La amplekso silente larĝiĝis. AI ĉesis esti io, kion mi uzas por produkti dokumentojn, kaj iĝis io, kio helpas mastrumi la etan hejmon de maŝinoj, en kion la instruista agordo kreskis. Jen kie la promeso el [[https://www.teachmaths.org/eo/20261116-ai-setup-1-rented-intelligence/][Parto 1]] estas plenumata: la asistanto kun personeco deliberate alvenis, kaj ĝi mastrumas ĉi tiun domon.
 
 Kaj la rilato ŝanĝiĝis ie meze de ĉio. Mi ĉesis demandi AI-n kaj komencis disputi pri dezajnoj kun ĝi — petante la lokan modelon helpi taksi, kiun modelon instali, reviziante planojn skribitajn de unu agento por ke alia agento plenumu ilin. La sistemo nun enhavas sian propran personaron. La homa laboro iĝis direkto, gusto, kaj la rifuzo fidi je io ajn nekontrolita.
 
@@ -837,11 +837,11 @@ The machine that was supposed to save me time first gave me a way of working I a
 :EXPORT_DESCRIPTION: 20261116-ai-setup-3-the-organs.png
 :END:
 
-[[#ai-setup-2-eo][Parto 2]] temis pri modeloj kaj dresiloj. Sed modelo en dresilo estas ankoraŭ nur saĝa voĉo. Tio, kio igis la agordon /sistemo/, estis la organoj: la memoro, la sensoj kaj la refleksoj alŝraŭbitaj ĉirkaŭ ĝi. Ĉi tio estas la lasta parto, kaj ĝi komenciĝas per plena cirklo.
+[[https://www.teachmaths.org/eo/20261116-ai-setup-2-the-fleet/][Parto 2]] temis pri modeloj kaj dresiloj. Sed modelo en dresilo estas ankoraŭ nur saĝa voĉo. Tio, kio igis la agordon /sistemo/, estis la organoj: la memoro, la sensoj kaj la refleksoj alŝraŭbitaj ĉirkaŭ ĝi. Kaj ĉi tiu parto komenciĝas per plena cirklo.
 
 **** La scibazo, kiu jam aĝis dek jarojn
 
-Homoj demandas, kiel mi enmetis mian instruad-scion en la AI. La respondo estas malpinta: mi ne enmetis. Mi pasis jardekon skribante ĝin en pura teksto — Org-mode-notoj, laŭprogramaj notoj, lecionaj rekaptoj, la tuta zettelkasten el [[#ai-setup-0-eo][Parto 0]].
+Homoj demandas, kiel mi enmetis mian instruad-scion en la AI. La respondo estas malpinta: mi ne enmetis. Mi pasis jardekon skribante ĝin en pura teksto — Org-mode-notoj, laŭprogramaj notoj, lecionaj rekaptoj, la tuta zettelkasten el [[https://www.teachmaths.org/eo/20261116-ai-setup-0-plain-text/][Parto 0]].
 
 Kion la sistemo bezonis, estis maniero /serĉi laŭ signifo/ anstataŭ laŭ ŝlosilvorto, por ke oni povu demandi la modelon „kion mi skribis pri studentoj konfuzantaj deklivon kun suprenhalto super horizontalo?” kaj ricevi reen mian propran pasintan pensadon, cite. Tion faras vektora datumbazo: ĝi indeksas tekston laŭ tio, kion ĝi signifas. Qdrant, funkcianta sur la oficeja maŝino, tenas la scibazon — miajn notojn, la NESA-laŭprogramon, la lernolibrojn, la matematikajn rimedojn — kaj ĉiu agento en la domo demandas ĝin la sammaniere.
 
@@ -945,6 +945,8 @@ La maŝino, kiu devis ŝpari al mi tempon, unue donis al mi manieron labori, kiu
 -----
 
 /Malkaŝo, ĉar vi meritas ĝin: la artikoloj de ĉi tiu serio estis skizitaj per la sistemo, kiun ili priskribas — la agentoj provizis esploron, strukturon kaj multajn el ĉi tiuj frazoj; la eraroj, kiuj travivis, estas miaj, kaj mi kontrolis la asertojn, kiuj gravis. Se tio ĝenas vin, bone: tiu instinkto estas ĝuste la kapablo, kiun ĉi tiu serio provas instrui./
+
+/Sekve:/ [[https://www.teachmaths.org/eo/20261121-ai-setup-4-the-gamble/][Parto 4 — La 108-GB-a Veteto]]. /Unu sabato, 108 GB da elŝutoj, kaj la tago kiam miaj supozoj perdis argumenton kontraŭ la fiziko./
 
 *** DONE AI Agents and Local LLMs :AI:LaTeX:Teaching:Emacs:
 :PROPERTIES:

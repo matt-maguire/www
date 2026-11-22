@@ -156,7 +156,7 @@ The card is now genuinely full at 94.8%, the model answers at about 38 tokens a 
 :EXPORT_HUGO_BUNDLE: 20261121-ai-setup-4-the-gamble
 :EXPORT_DATE: 2026-11-21
 :EXPORT_HUGO_MENU:
-:EXPORT_DESCRIPTION:
+:EXPORT_DESCRIPTION: 20261121-ai-setup-4-the-gamble.png
 :END:
 
 

@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1150" height="430" viewBox="0 0 1150 430">
+  <!-- background -->
+  <rect x="0" y="0" width="1150" height="430" fill="#faf6ef"/>
+
+  <!-- ground line -->
+  <line x1="60" y1="360" x2="1090" y2="360" stroke="#2b2b2b" stroke-width="2.5"/>
+  <!-- ground cracks under the servers -->
+  <path d="M 330 360 l -18 14 m -4 8 l 10 -6 M 380 360 l 14 16 m 6 6 l -8 -4 M 430 360 l 20 12" stroke="#2b2b2b" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M 740 360 l -16 16 m -6 4 l 12 -8 M 800 360 l 12 14 M 850 360 l 18 12 m 8 6 l -10 -4" stroke="#2b2b2b" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- left server (hyperion): buckled wavy walls, deep dented roof -->
+  <path d="M 296 360
+           C 286 336 308 312 296 288
+           C 288 268 300 244 306 232
+           Q 360 262 414 232
+           C 420 244 432 268 424 288
+           C 412 312 434 336 424 360 Z"
+        fill="#fffdf7" stroke="#2b2b2b" stroke-width="2.5"/>
+  <!-- drive slots -->
+  <line x1="318" y1="292" x2="402" y2="292" stroke="#2b2b2b" stroke-width="2"/>
+  <line x1="318" y1="310" x2="402" y2="310" stroke="#2b2b2b" stroke-width="2"/>
+  <!-- LEDs -->
+  <circle cx="326" cy="326" r="4" fill="#0f766e" stroke="#2b2b2b" stroke-width="1.5"/>
+  <circle cx="340" cy="326" r="4" fill="#d97706" stroke="#2b2b2b" stroke-width="1.5"/>
+  <!-- radiating crack from the dent -->
+  <path d="M 360 262 l -6 22 l 10 18 l -8 24" fill="none" stroke="#b91c1c" stroke-width="3" stroke-linecap="round"/>
+  <path d="M 354 284 l -14 8 M 364 302 l 16 6" fill="none" stroke="#b91c1c" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- badge -->
+  <rect x="322" y="336" width="76" height="18" rx="4" fill="#ccfbf1" stroke="#2b2b2b" stroke-width="1.5"/>
+  <text x="360" y="349" font-family="Menlo, monospace" font-size="12" fill="#2b2b2b" text-anchor="middle">32 GB</text>
+
+  <!-- right server (msi): buckled wavy walls, deep dented roof -->
+  <path d="M 726 360
+           C 716 336 738 312 726 288
+           C 718 268 730 244 736 232
+           Q 790 262 844 232
+           C 850 244 862 268 854 288
+           C 842 312 864 336 854 360 Z"
+        fill="#fffdf7" stroke="#2b2b2b" stroke-width="2.5"/>
+  <line x1="748" y1="292" x2="832" y2="292" stroke="#2b2b2b" stroke-width="2"/>
+  <line x1="748" y1="310" x2="832" y2="310" stroke="#2b2b2b" stroke-width="2"/>
+  <circle cx="756" cy="326" r="4" fill="#b91c1c" stroke="#2b2b2b" stroke-width="1.5"/>
+  <circle cx="770" cy="326" r="4" fill="#b91c1c" stroke="#2b2b2b" stroke-width="1.5"/>
+  <path d="M 790 262 l 8 20 l -10 18 l 6 22" fill="none" stroke="#b91c1c" stroke-width="3" stroke-linecap="round"/>
+  <path d="M 798 282 l 14 6 M 788 300 l -16 8" fill="none" stroke="#b91c1c" stroke-width="2.5" stroke-linecap="round"/>
+  <rect x="752" y="336" width="76" height="18" rx="4" fill="#fef3c7" stroke="#2b2b2b" stroke-width="1.5"/>
+  <text x="790" y="349" font-family="Menlo, monospace" font-size="12" fill="#2b2b2b" text-anchor="middle">64 GB</text>
+
+  <!-- ethernet cable between them, snapped taut -->
+  <path d="M 424 344 Q 480 328 545 336" fill="none" stroke="#0f766e" stroke-width="3" stroke-linecap="round"/>
+  <path d="M 605 338 Q 660 328 726 346" fill="none" stroke="#0f766e" stroke-width="3" stroke-linecap="round"/>
+  <!-- snap burst -->
+  <g stroke="#b91c1c" stroke-width="2.5" stroke-linecap="round">
+    <line x1="560" y1="330" x2="550" y2="318"/>
+    <line x1="575" y1="326" x2="577" y2="312"/>
+    <line x1="590" y1="330" x2="603" y2="318"/>
+    <line x1="572" y1="344" x2="568" y2="358"/>
+  </g>
+  <text x="575" y="382" font-family="Menlo, monospace" font-size="13" fill="#b91c1c" text-anchor="middle">snap</text>
+
+  <!-- flames at the right server's roof corners, drawn BEFORE the ingot so they
+       lick out from under its edge -->
+  <g fill="#b91c1c" stroke="#d97706" stroke-width="1.5">
+    <path d="M 728 250 Q 722 234 716 248 Q 710 240 712 254 Q 720 262 728 250 Z"/>
+    <path d="M 884 254 Q 890 240 896 252 Q 902 240 906 254 Q 912 248 914 260 Q 898 268 884 254 Z"/>
+  </g>
+
+  <!-- the giant weight: bottom edge traces the dented roofs exactly (contact) -->
+  <path d="M 250 250
+           L 290 110 L 860 110 L 900 252
+           L 844 232
+           Q 790 262 736 232
+           L 414 232
+           Q 360 262 306 232
+           Z"
+        fill="#2b2b2b" stroke="#2b2b2b" stroke-width="2.5"/>
+  <text x="575" y="163" font-family="Menlo, monospace" font-size="30" fill="#d97706" text-anchor="middle" font-weight="bold">MiniMax M2.7</text>
+  <text x="575" y="216" font-family="Menlo, monospace" font-size="56" fill="#d97706" text-anchor="middle" font-weight="bold">108 GB</text>
+
+  <!-- downward pressure chevrons -->
+  <g stroke="#b91c1c" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 545 40 L 575 66 L 605 40"/>
+    <path d="M 545 70 L 575 96 L 605 70"/>
+    <path d="M 268 66 L 290 86 L 312 66"/>
+    <path d="M 838 66 L 860 86 L 882 66"/>
+  </g>
+
+  <!-- smoke wisps rising beside the ingot edges -->
+  <g fill="none" stroke="#8a8577" stroke-width="3" stroke-linecap="round">
+    <path d="M 250 218 Q 236 194 250 174 Q 262 156 250 136"/>
+    <path d="M 912 222 Q 928 198 914 178 Q 902 160 916 140"/>
+    <path d="M 940 240 Q 956 218 944 198"/>
+  </g>
+
+  <!-- teardrop sweat beside the left server (pointed top, round bottom) -->
+  <g fill="#0f766e" stroke="#2b2b2b" stroke-width="1.5">
+    <path d="M 258 268 Q 266 284 258 290 Q 250 284 258 268 Z"/>
+    <path d="M 460 250 Q 468 266 460 272 Q 452 266 460 250 Z"/>
+  </g>
+
+  <!-- caption (garnish) -->
+  <text x="575" y="408" font-family="Menlo, monospace" font-size="14" fill="#2b2b2b" text-anchor="middle">(weights: 108 GB — addressable: 96 GB)</text>
+</svg>

@@ -2,7 +2,7 @@
 title = "My AI Teaching Setup, Part 2: The Fleet"
 featuredImage = "20261116-ai-setup-2-the-fleet.png"
 date = 2026-11-16
-lastmod = 2026-11-16T17:35:49+11:00
+lastmod = 2026-11-22T18:13:57+11:00
 tags = ["AI", "LaTeX", "Teaching", "Hardware"]
 categories = ["Blog"]
 draft = false
@@ -82,4 +82,4 @@ Then the move: 3.5 TB ferried across a direct 2.5-gigabit link between the machi
 
 For the story I have been telling, this is the beat that matters: the same assistant that patched Goose's Rust read a case manual and stood me up at the drive cage. AI did not just live inside the machine. It walked me through opening one, for the first time in twenty-five years.
 
-_Next: Part 3 — The Organs. The knowledge base that was already ten years old, the tools that make verification automatic, and the honest cost sheet, gaming column: zero._
+_Next:_ [Part 3 — The Organs]({{< relref "20261116-ai-setup-3-the-organs" >}}). _The knowledge base that was already ten years old, the tools that make verification automatic, and the honest cost sheet, gaming column: zero._

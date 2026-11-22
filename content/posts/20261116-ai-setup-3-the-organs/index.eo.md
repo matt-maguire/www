@@ -2,7 +2,7 @@
 title = "Mia AI-medio por instruado, Parto 3: La Organoj : The Organs"
 featuredImage = "20261116-ai-setup-3-the-organs.png"
 date = 2026-11-16
-lastmod = 2026-11-16T18:02:14+11:00
+lastmod = 2026-11-22T18:14:23+11:00
 tags = ["AI", "LaTeX", "Teaching", "Emacs", "Lingvoj", "Esperanto"]
 categories = ["Blog"]
 draft = false
@@ -128,4 +128,4 @@ La maŝino, kiu devis ŝpari al mi tempon, unue donis al mi manieron labori, kiu
 
 ---
 
-_Malkaŝo, ĉar vi meritas ĝin: tiuj kvar artikoloj estis skizitaj per la sistemo, kiun ili priskribas — la agentoj provizis esploron, strukturon kaj multajn el ĉi tiuj frazoj; la eraroj, kiuj travivis, estas miaj, kaj mi kontrolis la asertojn, kiuj gravis. Se tio ĝenas vin, bone: tiu instinkto estas ĝuste la kapablo, kiun ĉi tiu serio provas instrui._
+_Malkaŝo, ĉar vi meritas ĝin: la artikoloj de ĉi tiu serio estis skizitaj per la sistemo, kiun ili priskribas — la agentoj provizis esploron, strukturon kaj multajn el ĉi tiuj frazoj; la eraroj, kiuj travivis, estas miaj, kaj mi kontrolis la asertojn, kiuj gravis. Se tio ĝenas vin, bone: tiu instinkto estas ĝuste la kapablo, kiun ĉi tiu serio provas instrui._

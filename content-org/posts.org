@@ -512,7 +512,7 @@ Then the move: 3.5 TB ferried across a direct 2.5-gigabit link between the machi
 
 For the story I have been telling, this is the beat that matters: the same assistant that patched Goose's Rust read a case manual and stood me up at the drive cage. AI did not just live inside the machine. It walked me through opening one, for the first time in twenty-five years.
 
-/Next: Part 3 — The Organs. The knowledge base that was already ten years old, the tools that make verification automatic, and the honest cost sheet, gaming column: zero./
+/Next:/ [[#ai-setup-3][Part 3 — The Organs]]. /The knowledge base that was already ten years old, the tools that make verification automatic, and the honest cost sheet, gaming column: zero./
 
 *** DONE Mia AI-medio por instruado, Parto 2: La Floto : The Fleet :AI:LaTeX:Teaching:Hardware:Lingvoj:Esperanto:
 :PROPERTIES:
@@ -710,7 +710,9 @@ The machine that was supposed to save me time first gave me a way of working I a
 
 -----
 
-/Disclosure, because you deserve it: these four articles were drafted with the system they describe — the agents supplied research, structure and many of these sentences; the errors that survived are mine, and I checked the claims that mattered. If that bothers you, good: that instinct is exactly the skill this series is trying to teach./
+/Disclosure, because you deserve it: the articles in this series were drafted with the system they describe — the agents supplied research, structure and many of these sentences; the errors that survived are mine, and I checked the claims that mattered. If that bothers you, good: that instinct is exactly the skill this series is trying to teach./
+
+/Next:/ [[#ai-setup-4][Part 4 — The 108-Gigabyte Gamble]]. /A Saturday, 108 GB of downloads, and the day my assumptions lost an argument with physics./
 
 *** DONE Mia AI-medio por instruado, Parto 3: La Organoj : The Organs :AI:LaTeX:Teaching:Emacs:Lingvoj:Esperanto:
 :PROPERTIES:
@@ -829,7 +831,7 @@ La maŝino, kiu devis ŝpari al mi tempon, unue donis al mi manieron labori, kiu
 
 -----
 
-/Malkaŝo, ĉar vi meritas ĝin: tiuj kvar artikoloj estis skizitaj per la sistemo, kiun ili priskribas — la agentoj provizis esploron, strukturon kaj multajn el ĉi tiuj frazoj; la eraroj, kiuj travivis, estas miaj, kaj mi kontrolis la asertojn, kiuj gravis. Se tio ĝenas vin, bone: tiu instinkto estas ĝuste la kapablo, kiun ĉi tiu serio provas instrui./
+/Malkaŝo, ĉar vi meritas ĝin: la artikoloj de ĉi tiu serio estis skizitaj per la sistemo, kiun ili priskribas — la agentoj provizis esploron, strukturon kaj multajn el ĉi tiuj frazoj; la eraroj, kiuj travivis, estas miaj, kaj mi kontrolis la asertojn, kiuj gravis. Se tio ĝenas vin, bone: tiu instinkto estas ĝuste la kapablo, kiun ĉi tiu serio provas instrui./
 
 *** DONE AI Agents and Local LLMs :AI:LaTeX:Teaching:Emacs:
 :PROPERTIES:

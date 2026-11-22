@@ -2,7 +2,7 @@
 title = "My AI Teaching Setup, Part 3: The Organs"
 featuredImage = "20261116-ai-setup-3-the-organs.png"
 date = 2026-11-16
-lastmod = 2026-11-17T09:00:09+11:00
+lastmod = 2026-11-22T18:14:09+11:00
 tags = ["AI", "LaTeX", "Teaching", "Emacs"]
 categories = ["Blog"]
 draft = false
@@ -128,4 +128,6 @@ The machine that was supposed to save me time first gave me a way of working I a
 
 ---
 
-_Disclosure, because you deserve it: these four articles were drafted with the system they describe — the agents supplied research, structure and many of these sentences; the errors that survived are mine, and I checked the claims that mattered. If that bothers you, good: that instinct is exactly the skill this series is trying to teach._
+_Disclosure, because you deserve it: the articles in this series were drafted with the system they describe — the agents supplied research, structure and many of these sentences; the errors that survived are mine, and I checked the claims that mattered. If that bothers you, good: that instinct is exactly the skill this series is trying to teach._
+
+_Next:_ [Part 4 — The 108-Gigabyte Gamble]({{< relref "20261121-ai-setup-4-the-gamble" >}}). _A Saturday, 108 GB of downloads, and the day my assumptions lost an argument with physics._

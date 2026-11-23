@@ -1,0 +1,9 @@
+{{- $analytics := .Scratch.Get "analytics" | default dict -}}
+
+{{- if $analytics.enable -}}
+    {{- /* GoatCounter — cookieless, consent-free analytics */ -}}
+    {{- with $analytics.goatcounter.id -}}
+        <script data-goatcounter="https://{{ . }}.goatcounter.com/count"
+                async src="//gc.zgo.at/count.js"></script>
+    {{- end -}}
+{{- end -}}

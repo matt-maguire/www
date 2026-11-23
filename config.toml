@@ -272,7 +272,7 @@ buildFuture=true
     Vine = ""
     Googlescholar = ""
     Researchgate = ""
-    Mastodon = ""
+    Mastodon = "https://mathstodon.xyz/@MattEducator"
     Thingiverse = ""
     Devto = ""
     Gitea = ""
@@ -375,7 +375,7 @@ buildFuture=true
       Bluesky = true
     # Comment config
     [params.page.comment]
-      enable = true
+      enable = false
       # Disqus comment config (https://disqus.com/)
       [params.page.comment.disqus]
         enable = false

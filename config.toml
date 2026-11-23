@@ -502,12 +502,13 @@ buildFuture=true
 
   # Cookie consent config
   [params.cookieconsent]
-    enable = false
+    enable = true
     # text strings used for Cookie consent banner
     [params.cookieconsent.content]
-      message = ""
-      dismiss = ""
-      link = ""
+      message = "This site uses Google Analytics cookies to understand which posts are useful."
+      dismiss = "Got it!"
+      link = "Google&#39;s privacy policy"
+      href = "https://policies.google.com/privacy"
 
   # CDN config for third-party library files
   [params.cdn]

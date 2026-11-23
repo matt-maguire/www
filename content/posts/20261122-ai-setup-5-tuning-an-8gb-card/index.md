@@ -2,7 +2,7 @@
 title = "My AI Teaching Setup, Part 5: Tuning an 8 GB Card"
 featuredImage = "20261122-ai-setup-5-tuning-an-8gb-card.png"
 date = 2026-11-22
-lastmod = 2026-11-23T09:34:53+11:00
+lastmod = 2026-11-23T11:50:05+11:00
 tags = ["AI", "Hardware", "Teaching"]
 categories = ["Blog"]
 draft = false

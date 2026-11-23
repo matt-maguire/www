@@ -2898,7 +2898,7 @@ There are other books published in Shavian, such as Alice in Wonderland and Jane
 
 
 *** Graphite Layout on Corne Keyboard
-**** DONE Graphite Layout on Corne Keyboard :Computers:Keyboards:Corne:AltKeyboardLayouts:
+**** DONE Graphite layout — the Corne split-keyboard port :Computers:Keyboards:Corne:AltKeyboardLayouts:
 :PROPERTIES:
 :EXPORT_HUGO_WEIGHT: 4001
 :CUSTOM_ID: graphite-layout-corne
@@ -3039,7 +3039,7 @@ Se ni poste eksportas al PDF, la tabelo aspektos tiel:
 Kiel mi diris antaŭe, /tblr/ estas oportuna moderna maniero specifi $\LaTeX$-tabelojn, kaj ĝi estas tre potenca pako. Por pli da informoj pri tio, kion ĝi povas fari, rigardu la [[https://mirror.aarnet.edu.au/pub/CTAN/macros/latex/contrib/tabularray/tabularray.pdf][dokumentaron]] de /tabularray/.
 
 *** Using Org Mode for Lesson Notes
-**** DONE Using Org Mode / LaTeX for Lesson Notes :Emacs:OrgMode:LaTeX:Teaching:
+**** DONE Org Mode + LaTeX for lesson notes (workflow & setup) :Emacs:OrgMode:LaTeX:Teaching:
 :PROPERTIES:
 :EXPORT_HUGO_WEIGHT: 4001
 :CUSTOM_ID: orgmode-lesson-notes
@@ -3696,7 +3696,7 @@ Se vi volas ion por ridetigi vin, spektu la suban videon pri la ĉiel utila Emac
 #+hugo: {{< youtube urcL86UpqZc >}}
 
 *** Updates to Gallium Keyboard Layout
-**** DONE Updates to Gallium Keyboard Layout :Computers:Keyboards:AltKeyboardLayouts:
+**** DONE Gallium v2: what changed in the keyboard layout :Computers:Keyboards:AltKeyboardLayouts:
 :PROPERTIES:
 :EXPORT_HUGO_WEIGHT: 4001
 :CUSTOM_ID: update-gallium-keyboard-layout
@@ -3880,7 +3880,7 @@ I have to say, I am loving these Choc Red switches! They are so buttery-smooth c
 In the meantime, I will keep working on building typing speed on my ISRT layout. It is slow progress, but I am getting more and more comfortable with it as I use it for my daily work.
 
 *** Home Row Layer Keys
-**** DONE Home Row Layer Keys :Computers:Keyboards:AltKeyboardLayouts:
+**** DONE Miryoku-style Home Row Layers (keyboard layout) :Computers:Keyboards:AltKeyboardLayouts:
 :PROPERTIES:
 :EXPORT_HUGO_WEIGHT: 4001
 :CUSTOM_ID: home-row-layer-keys
@@ -4178,7 +4178,7 @@ I put some backspace and delete shortcuts on the outer thumb keys for convenienc
 As I use the keyboard more, I’ll get a better idea what else I will need to add as well as what I can strip away. I’ll post more updates here as I learn more.
 
 *** Corne v4 Keyboard Keymap
-**** DONE Corne v4 Keyboard Keymap :Computers:Keyboards:Corne:AltKeyboardLayouts:
+**** DONE Corne Keyboard Layout (v4) — QMK, Colemak-DH + Miryoku layers :Computers:Keyboards:Corne:AltKeyboardLayouts:
 :PROPERTIES:
 :EXPORT_HUGO_WEIGHT: 4001
 :CUSTOM_ID: corne-v4
@@ -4186,6 +4186,7 @@ As I use the keyboard more, I’ll get a better idea what else I will need to ad
 :EXPORT_HUGO_BUNDLE: 20240711_corne-v4-keymap
 :EXPORT_DATE: 2024-07-11
 :EXPORT_DESCRIPTION: 20240711-corne_6x3.jpg
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description "Full QMK keymap for the Corne v4 split keyboard: COLEMAK-DH base layer with Miryoku-inspired layers for symbols, numbers, navigation, and mouse. Layer diagrams included."
 :END:
 I recently acquired a pre-built Corne 46-key ergonomic split keyboard.
 
@@ -4242,7 +4243,7 @@ This is just an initial proposal, which may well change over time as a get more 
 
 I’ll post updates here as I gain more experience and have something to report.
 *** Learn Japanese with Song Lyrics (Houki Boshi from Bleach)
-**** DONE Learn Japanese with Song Lyrics (Houki Boshi from Bleach) :Music:Languages:Japanese:
+**** DONE Houki Boshi (Bleach) — song meaning, lyrics & learning Japanese :Music:Languages:Japanese:
 :PROPERTIES:
 :EXPORT_HUGO_WEIGHT: 4001
 :CUSTOM_ID: houki-boshi

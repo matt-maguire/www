@@ -1,8 +1,8 @@
 +++
-title = "Updates to Gallium Keyboard Layout"
+title = "Gallium v2: what changed in the keyboard layout"
 featuredImage = "20241010-Screenshot_2024-10-10_18-16-04-1024x234.png"
 date = 2024-10-10
-lastmod = 2026-11-16T11:39:39+11:00
+lastmod = 2026-11-23T11:51:09+11:00
 tags = ["Computers", "Keyboards", "AltKeyboardLayouts"]
 categories = ["Blog"]
 draft = false

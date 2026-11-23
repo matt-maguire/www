@@ -1,8 +1,8 @@
 +++
-title = "Home Row Layer Keys"
+title = "Miryoku-style Home Row Layers (keyboard layout)"
 featuredImage = "20240811-IMG_0418sm-1536x733.jpg"
 date = 2024-08-11
-lastmod = 2026-11-16T11:39:43+11:00
+lastmod = 2026-11-23T11:51:17+11:00
 tags = ["Computers", "Keyboards", "AltKeyboardLayouts"]
 categories = ["Blog"]
 draft = false

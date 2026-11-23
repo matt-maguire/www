@@ -1,8 +1,8 @@
 +++
-title = "Graphite Layout on Corne Keyboard"
+title = "Graphite layout — the Corne split-keyboard port"
 featuredImage = "20250120_vial-graphite.png"
 date = 2025-01-20
-lastmod = 2026-11-16T11:39:32+11:00
+lastmod = 2026-11-23T11:50:51+11:00
 tags = ["Computers", "Keyboards", "Corne", "AltKeyboardLayouts"]
 categories = ["Blog"]
 draft = false

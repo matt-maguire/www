@@ -2,3 +2,13 @@
 // Custom style
 // 自定义样式
 // ==============================
+
+// Exam/practice problem lists: roomy line spacing so display-style
+// maths in adjacent items never collides. Answers lists stay tight
+// (deliberately — the answers are meant to be glanced at, not read).
+.problem-set ol > li,
+.problem-set > ol > li,
+ol.problem-set > li {
+  line-height: 2.4;
+  margin-block: 1.2em;
+}

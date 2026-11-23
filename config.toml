@@ -349,6 +349,7 @@ buildFuture=true
     # Social share links in post page
     [params.page.share]
       enable = true
+      Mastodon = true
       Twitter = true
       Facebook = true
       Linkedin = false

@@ -3,6 +3,19 @@
 {{- if $analytics.enable -}}
     {{- /* GoatCounter — cookieless, consent-free analytics */ -}}
     {{- with $analytics.goatcounter.id -}}
+        <script>
+            // Normalise the reported path: keep only utm_* campaign params, drop
+            // all other query junk (?fbclid=, ?ref=, ?igshid=...). The site has no
+            // rel=canonical, and count.js' default path is pathname+search — without
+            // this, tagged links split a page's stats into separate rows.
+            window.goatcounter = {
+                path: function () {
+                    var utm = (location.search.match(/[?&](utm_[^=&]+=[^&]*)/gi) || [])
+                        .map(function (m) { return m.slice(1); });
+                    return location.pathname + (utm.length ? "?" + utm.join("&") : "");
+                }
+            };
+        </script>
         <script data-goatcounter="https://{{ . }}.goatcounter.com/count"
                 async src="//gc.zgo.at/count.js"></script>
     {{- end -}}

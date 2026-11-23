@@ -230,10 +230,9 @@ Next in this series: differential equations (separation of variables,
 Newton's law of cooling, and the \(Q = P + Ae^{kt}\) model), then proof by
 mathematical induction.
 
-Questions? Ask me on Mastodon:
-[[https://mathstodon.xyz/@MattEducator][@MattEducator@mathstodon.xyz]] — reply to one of my posts or send a
-mention; I read everything, and the answers to common questions become new
-posts.
+New notes like this one land on Mastodon:
+[[https://mathstodon.xyz/@MattEducator][@MattEducator@mathstodon.xyz]] —
+follow along there.
 ** AI Agents: From Lessons to Unit Planning
 *** TODO From Lessons to Unit Planning
 :PROPERTIES:

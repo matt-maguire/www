@@ -120,7 +120,7 @@ buildFuture=true
   [params.footer]
     enable = true
     # Custom content (HTML format is supported)
-    custom = ""
+    custom = "Personal site — my own views and work, not my employer&#39;s."
     # whether to show Hugo and theme info
     hugo = true
     # whether to show copyright info

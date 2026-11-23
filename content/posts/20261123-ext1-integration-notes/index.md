@@ -1,7 +1,7 @@
 +++
 title = "Maths Extension 1: Integration — complete notes with worked examples"
 date = 2026-11-23
-lastmod = 2026-11-23T14:50:08+11:00
+lastmod = 2026-11-23T15:04:20+11:00
 tags = ["Maths", "Teaching", "HSC"]
 categories = ["Blog"]
 draft = false
@@ -235,7 +235,6 @@ Next in this series: differential equations (separation of variables,
 Newton's law of cooling, and the \\(Q = P + Ae^{kt}\\) model), then proof by
 mathematical induction.
 
-Questions? Ask me on Mastodon:
-[@MattEducator@mathstodon.xyz](https://mathstodon.xyz/@MattEducator) — reply to one of my posts or send a
-mention; I read everything, and the answers to common questions become new
-posts.
+New notes like this one land on Mastodon:
+[@MattEducator@mathstodon.xyz](https://mathstodon.xyz/@MattEducator) —
+follow along there.

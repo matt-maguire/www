@@ -1,10 +1,10 @@
 +++
 title = "Maths Extension 1: Integration — complete notes with worked examples"
 date = 2026-11-23
-lastmod = 2026-11-23T13:50:23+11:00
+lastmod = 2026-11-23T14:50:08+11:00
 tags = ["Maths", "Teaching", "HSC"]
 categories = ["Blog"]
-draft = true
+draft = false
 weight = 4001
 description = "Maths Extension 1 integration notes: substitution, trig integrals, inverse-trig forms and volumes of revolution, with worked examples and the traps NESA examiners actually report."
 toc = true
@@ -238,4 +238,4 @@ mathematical induction.
 Questions? Ask me on Mastodon:
 [@MattEducator@mathstodon.xyz](https://mathstodon.xyz/@MattEducator) — reply to one of my posts or send a
 mention; I read everything, and the answers to common questions become new
-posts. No GitHub account, no comment login, no fuss.
+posts.

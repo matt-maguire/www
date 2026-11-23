@@ -12,7 +12,7 @@
 
 * Content
 ** HSC Maths
-*** TODO Maths Extension 1: Integration — complete notes with worked examples :Maths:Teaching:HSC:
+*** DONE Maths Extension 1: Integration — complete notes with worked examples :Maths:Teaching:HSC:
 :PROPERTIES:
 :EXPORT_DATE: 2026-11-23
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :description "Maths Extension 1 integration notes: substitution, trig integrals, inverse-trig forms and volumes of revolution, with worked examples and the traps NESA examiners actually report." :toc true :comment false
@@ -233,7 +233,7 @@ mathematical induction.
 Questions? Ask me on Mastodon:
 [[https://mathstodon.xyz/@MattEducator][@MattEducator@mathstodon.xyz]] — reply to one of my posts or send a
 mention; I read everything, and the answers to common questions become new
-posts. No GitHub account, no comment login, no fuss.
+posts.
 ** AI Agents: From Lessons to Unit Planning
 *** TODO From Lessons to Unit Planning
 :PROPERTIES:

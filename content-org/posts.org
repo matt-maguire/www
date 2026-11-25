@@ -326,6 +326,12 @@ ANECDOTE (first 36h, n=82): Windows 50%, iOS 18%, Linux 16%, macOS 11% —
 more Linux readers than macOS. The readership is the Emacs/plain-text/
 homelab crowd; /tags/emacs is a top referrer. Caveat to disclose honestly:
 agent verification visits (Linux Chrome) and t14 self-visits inflate it.
+ANECDOTE 2: Luxembourg 10/80 views — more than Australia. Geoloc is by IP:
+10 views = 1-2 readers on a VPN exit (Lux = top EU VPN hub), or a
+francophone Emacs commuter. Line for the post: "more traffic from
+Luxembourg than Australia — that's not cartography, that's VPN exit
+nodes." Verified NOT our own traffic: cloud browser egress = home Telstra,
+DoE egress = Lithgow AU.
 *** DONE My AI Teaching Setup, Part 5: Tuning an 8 GB Card :AI:Hardware:Teaching:
 :PROPERTIES:
 :EXPORT_HUGO_WEIGHT: 4001

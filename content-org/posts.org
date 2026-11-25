@@ -244,6 +244,10 @@ follow along there.
 :EXPORT_HUGO_MENU:
 :EXPORT_DESCRIPTION: 20260824-unit-planning.png
 :END:
+# NOTE 25 Nov: outline is Goose/Gemma-era with stale "Part 3" numbering.
+# Rewrite against current stack (Strata + Hermes agents + agy QA). Receipts
+# now exist: T15 vectors unit, T11 similarity rebuild, scope-and-sequence
+# audits, thursday-quiz pipeline. See GTD "Blog Content" project.
 
 **** Introduction: Moving from Micro to Macro
 ***** The Limitation of Isolated Lesson Prep
@@ -306,6 +310,18 @@ follow along there.
 - Future explorations: Developing custom Model Context Protocol (MCP) servers, interactive classroom visualizers, or student feedback loops.
   
 ** AI Agents and Local LLMs
+*** TODO My AI Teaching Setup, Part 6: Evaluated & Retired :AI:Teaching:
+Backlog stub 25 Nov (no export properties until drafting). How a new
+open-weight model gets bench-tested on real lesson tasks before earning a
+fleet slot. Ground truth: ~/bench/RESULTS.md, run.sh, timing.csv, hyperion
+bench logs. Continues after Part 5's "next gain is faster memory".
+*** TODO The Two-Voice Post :AI:Teaching:
+Backlog stub 25 Nov (idea parked 22 Nov). MAGM voice as spine + one section
+in the assistant's own voice; exchanges quoted verbatim from real session
+transcripts. No invented interiority. Craft-heavy --- schedule deliberately.
+*** TODO Killing Google Analytics: GoatCounter on a teacher's site :Blog:Privacy:
+Backlog stub 25 Nov. GA4 sunset -> GoatCounter live 24 Nov. Practical
+privacy post, zero DoE-IP risk; palate-cleanser between series parts.
 *** DONE My AI Teaching Setup, Part 5: Tuning an 8 GB Card :AI:Hardware:Teaching:
 :PROPERTIES:
 :EXPORT_HUGO_WEIGHT: 4001

@@ -2411,7 +2411,7 @@ The solution I came up with was to use Combo keys on the number row at the top.
 So far I haven't noticed any false triggering, so I think this setup should be ok. For more detail on how I have set up my layers and combo keys, check out my [[https://configure.zsa.io/voyager/layouts/34PvY/latest/0][Oryx configuration page]], and feel free to clone it if you think it may be useful to you.
 
 *** Japanese Electronic Dictionary XD-Z20000
-**** DONE Japanese Electronic Dictionary XD-Z20000 :Languages:Japanese:
+**** DONE Casio XD-Z20000 — the flagship denshijisho, reviewed :Languages:Japanese:
 :PROPERTIES:
 :EXPORT_HUGO_WEIGHT: 4001
 :CUSTOM_ID: xd-z20000
@@ -2808,7 +2808,7 @@ Kiam mi estis en Japanio, mi fakte aĉetis eĉ trian elektronikan vortaron, kiu 
 |-----------------------------------+---------------------------+-----------------+-----------------|
 
 *** Japanese Electronic Dictonary XD-G9850
-**** DONE Japanese Electronic Dictionary (Casio XD-G9850) :Languages:Japanese:
+**** DONE Japanese Electronic Dictionary: Casio XD-G9850 (denshijisho review) :Languages:Japanese:
 :PROPERTIES:
 :EXPORT_HUGO_WEIGHT: 4001
 :CUSTOM_ID: xd-g9850
@@ -2898,6 +2898,8 @@ For more info on using this device, there is available an English-language quick
 #+hugo: {{< embed-pdf url="20250315-qrg-xd_g9850.pdf" >}}
 
 The main userguide is available in Japanese only from the [[https://www.casio.com/jp/support/exword/][Casio Japanese support website]] -- just type in the model number of your device.
+
+If you're weighing up which model to buy, I later compared this against the flagship [[#xd-z20000][Casio XD-Z20000]] -- the short version is that the Z20000 covers almost everything this one does, plus more.
 
 Hopefully though between the english quick reference guide and the info here, you are in a good position to start making use of this useful device with your study of the Japanese language.
 

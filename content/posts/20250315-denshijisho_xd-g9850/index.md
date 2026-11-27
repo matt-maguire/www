@@ -1,8 +1,8 @@
 +++
-title = "Japanese Electronic Dictionary (Casio XD-G9850)"
+title = "Japanese Electronic Dictionary: Casio XD-G9850 (denshijisho review)"
 featuredImage = "20250315-xd_g9850.jpg"
 date = 2025-03-15
-lastmod = 2026-11-16T11:39:29+11:00
+lastmod = 2026-11-27T20:27:45+11:00
 tags = ["Languages", "Japanese"]
 categories = ["Blog"]
 draft = false
@@ -95,5 +95,7 @@ For more info on using this device, there is available an English-language quick
 {{< embed-pdf url="20250315-qrg-xd_g9850.pdf" >}}
 
 The main userguide is available in Japanese only from the [Casio Japanese support website](https://www.casio.com/jp/support/exword/) -- just type in the model number of your device.
+
+If you're weighing up which model to buy, I later compared this against the flagship [Casio XD-Z20000]({{< relref "20250320-denshijisho_xd-z20000" >}}) -- the short version is that the Z20000 covers almost everything this one does, plus more.
 
 Hopefully though between the english quick reference guide and the info here, you are in a good position to start making use of this useful device with your study of the Japanese language.

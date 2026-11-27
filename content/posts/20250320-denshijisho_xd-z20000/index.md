@@ -1,8 +1,8 @@
 +++
-title = "Japanese Electronic Dictionary XD-Z20000"
+title = "Casio XD-Z20000 — the flagship denshijisho, reviewed"
 featuredImage = "20250320-xd_z20000.jpg"
 date = 2025-03-20
-lastmod = 2026-11-16T11:39:27+11:00
+lastmod = 2026-11-27T20:27:36+11:00
 tags = ["Languages", "Japanese"]
 categories = ["Blog"]
 draft = false

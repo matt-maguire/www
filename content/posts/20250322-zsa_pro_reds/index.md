@@ -1,8 +1,8 @@
 +++
-title = "ZSA Voyager with Pro Red Switches"
+title = "ZSA Voyager with Pro Red Switches — a review"
 featuredImage = "20250322-zsa_pro_reds.jpg"
 date = 2025-03-22
-lastmod = 2026-11-16T11:39:26+11:00
+lastmod = 2026-11-27T20:14:19+11:00
 tags = ["Keyboards", "AltKeyboardLayouts"]
 categories = ["Blog"]
 draft = false

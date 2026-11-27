@@ -2375,7 +2375,7 @@ Do, mi faris kelkajn ĝustigojn de frapi-kaj-teni al mia agordo, ebligis la funk
 Ĉar mi iom malthavas tempon nun, mi restos ĉe Doom Emacs dummomenta kaj elsitos mian cerbon en ĉi tiun blogan afiŝon, por ke mi povu daŭrigi la esploron iom poste, kiam mi havos pli da tempo.
 
 *** ZSA Pro Reds
-**** DONE ZSA Voyager with Pro Red Switches :Keyboards:AltKeyboardLayouts:
+**** DONE ZSA Voyager with Pro Red Switches — a review :Keyboards:AltKeyboardLayouts:
 :PROPERTIES:
 :EXPORT_HUGO_WEIGHT: 4001
 :CUSTOM_ID: zsa-pro-red

@@ -1,13 +1,13 @@
 +++
 title = "Shavian Alphabet"
 date = 2024-12-30
-lastmod = 2026-11-16T10:46:54+11:00
+lastmod = 2026-11-27T20:03:52+11:00
 categories = ["Docs"]
 draft = false
 weight = 4001
 author = "Matt Maguire"
 hiddenFromHomePage = false
-aliases = ["/docs-shavian-alphabet/"]
+aliases = ["/docs-shavian-alphabet/", "/eo/docs-shavian-alphabet/"]
 +++
 
 Antaŭ longa tempo mi ĉeestis esperantan kongreson, kaj mi ricevis libreton kun strangan literojn. Mi forgesis precize kiu donis ĝin al mi, sed mi memoras ke la literoj estas propono de plibona metodo skribi. Mi dankeme akceptis la libreton, intencante ke mi provos ekzameni la proponon kiam mi havos pli da tempo. Kiam mi revenis hejmen, mi metis la libraton sur mian librobreton, kie ĝi restis plurajn jarojn.

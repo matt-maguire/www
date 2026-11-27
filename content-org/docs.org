@@ -45,7 +45,7 @@ The following websites have resources I have stumbled across that may be useful 
 ** Programming Languages
 *** DONE Introduction to Programming Languages :Programming:LISP:
 :PROPERTIES:
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :author "Matt Maguire" :hiddenFromHomePage "true" :aliases '("/docs-programming-languages/")
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :author "Matt Maguire" :hiddenFromHomePage "true" :aliases '("/docs-programming-languages/")'
 :EXPORT_HUGO_WEIGHT: 4001
 :EXPORT_FILE_NAME: index
 :EXPORT_HUGO_BUNDLE: docs-programming-languages
@@ -83,7 +83,7 @@ This is of course a good one to learn if you use the Emacs editor. Since it is a
 :PROPERTIES:
 :EXPORT_HUGO_WEIGHT: 4001
 :EXPORT_FILE_NAME: index.en-shaw.md
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :author "Matt Maguire" :hiddenFromHomePage "true" :aliases '("/docs-programming-languages/")'
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :author "Matt Maguire" :hiddenFromHomePage "true" :aliases '("/docs-programming-languages/" "/en-shaw/docs-programming-languages/")'
 :EXPORT_HUGO_BUNDLE: docs-programming-languages
 :EXPORT_DATE: 2024-12-28
 :EXPORT_HUGO_MENU:
@@ -118,7 +118,7 @@ This is of course a good one to learn if you use the Emacs editor. Since it is a
 :PROPERTIES:
 :EXPORT_HUGO_WEIGHT: 4001
 :EXPORT_FILE_NAME: index.eo.md
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :author "Matt Maguire" :hiddenFromHomePage "true" :aliases '("/docs-programming-languages/")'
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :author "Matt Maguire" :hiddenFromHomePage "true" :aliases '("/docs-programming-languages/" "/eo/docs-programming-languages/")'
 :EXPORT_HUGO_BUNDLE: docs-programming-languages
 :EXPORT_DATE: 2024-12-28
 :EXPORT_HUGO_MENU:
@@ -156,7 +156,7 @@ Tiu kompreneble estas bona por lerni se oni jam uzas la Emacs redaktilo. Pro tio
 :EXPORT_FILE_NAME: index.eo.md
 :EXPORT_HUGO_BUNDLE: docs-shavian-alphabet
 :EXPORT_DATE: 2024-12-30
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :author "Matt Maguire" :hiddenFromHomePage "false" :aliases '("/docs-shavian-alphabet/")'
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :author "Matt Maguire" :hiddenFromHomePage "false" :aliases '("/docs-shavian-alphabet/" "/eo/docs-shavian-alphabet/")'
 :END:
 
 Antaŭ longa tempo mi ĉeestis esperantan kongreson, kaj mi ricevis libreton kun strangan literojn. Mi forgesis precize kiu donis ĝin al mi, sed mi memoras ke la literoj estas propono de plibona metodo skribi. Mi dankeme akceptis la libreton, intencante ke mi provos ekzameni la proponon kiam mi havos pli da tempo. Kiam mi revenis hejmen, mi metis la libraton sur mian librobreton, kie ĝi restis plurajn jarojn.
